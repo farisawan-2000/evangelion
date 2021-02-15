@@ -16281,6 +16281,4 @@ glabel yay0_00EC0780
 .balign 8
 glabel yay0_00EC07C0
 .incbin "bin/Yay0/EC07C0.szp"
-.balign 8
-glabel bin_00EC08D8
-.incbin "bin/bin_EC08D8.bin"
+

@@ -1,0 +1,13 @@
+.set noat      # allow manual use of $at
+.set noreorder # don't insert nops after branches
+
+glabel func_800B6880
+.L800B6880:
+/* 21480 800B6880 3C028017 */  lui        $v0, %hi(D_8016D060)
+/* 21484 800B6884 8C42D060 */  lw         $v0, %lo(D_8016D060)($v0)
+/* 21488 800B6888 1440FFFD */  bnez       $v0, .L800B6880
+/* 2148C 800B688C 00000000 */   nop
+/* 21490 800B6890 03E00008 */  jr         $ra
+/* 21494 800B6894 00000000 */   nop
+/* 21498 800B6898 00000000 */  nop
+/* 2149C 800B689C 00000000 */  nop

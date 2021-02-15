@@ -40,3 +40,7 @@ for i in range(len(fb)):
 			print(".incbin \"bin/bin_%X.bin\"" % j)
 		# if "%08X" % i == "001C0128":
 		# 	print(hardcode1)
+
+print(".balign 8")
+print("glabel bin_%08X" % j)
+print(".incbin \"bin/bin_%X.bin\"" % j)

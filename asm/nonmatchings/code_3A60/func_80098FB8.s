@@ -1,0 +1,80 @@
+.set noat      # allow manual use of $at
+.set noreorder # don't insert nops after branches
+
+glabel func_80098FB8
+/* 3BB8 80098FB8 27BDFF88 */  addiu      $sp, $sp, -0x78
+/* 3BBC 80098FBC 00002021 */  addu       $a0, $zero, $zero
+/* 3BC0 80098FC0 00002821 */  addu       $a1, $zero, $zero
+/* 3BC4 80098FC4 AFBF0060 */  sw         $ra, 0x60($sp)
+/* 3BC8 80098FC8 F7B60070 */  sdc1       $f22, 0x70($sp)
+/* 3BCC 80098FCC F7B40068 */  sdc1       $f20, 0x68($sp)
+/* 3BD0 80098FD0 0C0327A8 */  jal        func_800C9EA0
+/* 3BD4 80098FD4 00003021 */   addu      $a2, $zero, $zero
+/* 3BD8 80098FD8 00002021 */  addu       $a0, $zero, $zero
+/* 3BDC 80098FDC 00002821 */  addu       $a1, $zero, $zero
+/* 3BE0 80098FE0 0C0325E8 */  jal        func_800C97A0
+/* 3BE4 80098FE4 00003021 */   addu      $a2, $zero, $zero
+/* 3BE8 80098FE8 00002021 */  addu       $a0, $zero, $zero
+/* 3BEC 80098FEC 0C0325D8 */  jal        func_800C9760
+/* 3BF0 80098FF0 00002821 */   addu      $a1, $zero, $zero
+/* 3BF4 80098FF4 3C018010 */  lui        $at, %hi(D_800F9B40)
+/* 3BF8 80098FF8 D42C9B40 */  ldc1       $f12, %lo(D_800F9B40)($at)
+/* 3BFC 80098FFC 3C013F80 */  lui        $at, 0x3f80
+/* 3C00 80099000 4481A000 */  mtc1       $at, $f20
+/* 3C04 80099004 00000000 */  nop
+/* 3C08 80099008 0C0327E0 */  jal        func_800C9F80
+/* 3C0C 8009900C 46206386 */   mov.d     $f14, $f12
+/* 3C10 80099010 4600A306 */  mov.s      $f12, $f20
+/* 3C14 80099014 4480B000 */  mtc1       $zero, $f22
+/* 3C18 80099018 00000000 */  nop
+/* 3C1C 8009901C 0C032884 */  jal        func_800CA210
+/* 3C20 80099020 4600A386 */   mov.s     $f14, $f20
+/* 3C24 80099024 4405B000 */  mfc1       $a1, $f22
+/* 3C28 80099028 00000000 */  nop
+/* 3C2C 8009902C 4406B000 */  mfc1       $a2, $f22
+/* 3C30 80099030 00000000 */  nop
+/* 3C34 80099034 4407B000 */  mfc1       $a3, $f22
+/* 3C38 80099038 00000000 */  nop
+/* 3C3C 8009903C 0C02FECA */  jal        func_800BFB28
+/* 3C40 80099040 27A40020 */   addiu     $a0, $sp, 0x20
+/* 3C44 80099044 4405A000 */  mfc1       $a1, $f20
+/* 3C48 80099048 00000000 */  nop
+/* 3C4C 8009904C 4406A000 */  mfc1       $a2, $f20
+/* 3C50 80099050 00000000 */  nop
+/* 3C54 80099054 4407A000 */  mfc1       $a3, $f20
+/* 3C58 80099058 00000000 */  nop
+/* 3C5C 8009905C 0C02FF48 */  jal        func_800BFD20
+/* 3C60 80099060 27A40020 */   addiu     $a0, $sp, 0x20
+/* 3C64 80099064 4405B000 */  mfc1       $a1, $f22
+/* 3C68 80099068 00000000 */  nop
+/* 3C6C 8009906C 4406A000 */  mfc1       $a2, $f20
+/* 3C70 80099070 00000000 */  nop
+/* 3C74 80099074 4407A000 */  mfc1       $a3, $f20
+/* 3C78 80099078 00000000 */  nop
+/* 3C7C 8009907C 27A40020 */  addiu      $a0, $sp, 0x20
+/* 3C80 80099080 0C02F70F */  jal        func_800BDC3C
+/* 3C84 80099084 E7B40010 */   swc1      $f20, 0x10($sp)
+/* 3C88 80099088 3C05C320 */  lui        $a1, 0xc320
+/* 3C8C 8009908C 3C064320 */  lui        $a2, 0x4320
+/* 3C90 80099090 3C07C2F0 */  lui        $a3, 0xc2f0
+/* 3C94 80099094 3C0142F0 */  lui        $at, 0x42f0
+/* 3C98 80099098 44811000 */  mtc1       $at, $f2
+/* 3C9C 8009909C 00000000 */  nop
+/* 3CA0 800990A0 3C01C4FA */  lui        $at, 0xc4fa
+/* 3CA4 800990A4 44812000 */  mtc1       $at, $f4
+/* 3CA8 800990A8 00000000 */  nop
+/* 3CAC 800990AC 27A40020 */  addiu      $a0, $sp, 0x20
+/* 3CB0 800990B0 3C018015 */  lui        $at, %hi(D_80149FE8)
+/* 3CB4 800990B4 C4209FE8 */  lwc1       $f0, %lo(D_80149FE8)($at)
+/* 3CB8 800990B8 46800020 */  cvt.s.w    $f0, $f0
+/* 3CBC 800990BC E7A00018 */  swc1       $f0, 0x18($sp)
+/* 3CC0 800990C0 E7B4001C */  swc1       $f20, 0x1c($sp)
+/* 3CC4 800990C4 E7A20010 */  swc1       $f2, 0x10($sp)
+/* 3CC8 800990C8 0C02FB64 */  jal        func_800BED90
+/* 3CCC 800990CC E7A40014 */   swc1      $f4, 0x14($sp)
+/* 3CD0 800990D0 8FBF0060 */  lw         $ra, 0x60($sp)
+/* 3CD4 800990D4 D7B60070 */  ldc1       $f22, 0x70($sp)
+/* 3CD8 800990D8 D7B40068 */  ldc1       $f20, 0x68($sp)
+/* 3CDC 800990DC 27BD0078 */  addiu      $sp, $sp, 0x78
+/* 3CE0 800990E0 03E00008 */  jr         $ra
+/* 3CE4 800990E4 00000000 */   nop

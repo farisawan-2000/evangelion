@@ -1,0 +1,23 @@
+.set noat      # allow manual use of $at
+.set noreorder # don't insert nops after branches
+
+glabel func_800C1D10
+/* 2C910 800C1D10 8C820000 */  lw         $v0, ($a0)
+/* 2C914 800C1D14 10400009 */  beqz       $v0, .L800C1D3C
+/* 2C918 800C1D18 00000000 */   nop
+.L800C1D1C:
+/* 2C91C 800C1D1C 54450004 */  bnel       $v0, $a1, .L800C1D30
+/* 2C920 800C1D20 00402021 */   addu      $a0, $v0, $zero
+/* 2C924 800C1D24 8C420000 */  lw         $v0, ($v0)
+/* 2C928 800C1D28 0803074F */  j          .L800C1D3C
+/* 2C92C 800C1D2C AC820000 */   sw        $v0, ($a0)
+.L800C1D30:
+/* 2C930 800C1D30 8C420000 */  lw         $v0, ($v0)
+/* 2C934 800C1D34 1440FFF9 */  bnez       $v0, .L800C1D1C
+/* 2C938 800C1D38 00000000 */   nop
+.L800C1D3C:
+/* 2C93C 800C1D3C 03E00008 */  jr         $ra
+/* 2C940 800C1D40 00000000 */   nop
+/* 2C944 800C1D44 00000000 */  nop
+/* 2C948 800C1D48 00000000 */  nop
+/* 2C94C 800C1D4C 00000000 */  nop

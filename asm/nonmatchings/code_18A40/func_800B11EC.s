@@ -1,0 +1,45 @@
+.set noat      # allow manual use of $at
+.set noreorder # don't insert nops after branches
+
+glabel func_800B11EC
+/* 1BDEC 800B11EC 908200DB */  lbu        $v0, 0xdb($a0)
+/* 1BDF0 800B11F0 2446FFFF */  addiu      $a2, $v0, -1
+/* 1BDF4 800B11F4 00864021 */  addu       $t0, $a0, $a2
+/* 1BDF8 800B11F8 91070120 */  lbu        $a3, 0x120($t0)
+/* 1BDFC 800B11FC 240200FF */  addiu      $v0, $zero, 0xff
+/* 1BE00 800B1200 30E300FF */  andi       $v1, $a3, 0xff
+/* 1BE04 800B1204 10620007 */  beq        $v1, $v0, .L800B1224
+/* 1BE08 800B1208 24E2FFFF */   addiu     $v0, $a3, -1
+/* 1BE0C 800B120C A1020120 */  sb         $v0, 0x120($t0)
+/* 1BE10 800B1210 304200FF */  andi       $v0, $v0, 0xff
+/* 1BE14 800B1214 14400003 */  bnez       $v0, .L800B1224
+/* 1BE18 800B1218 00000000 */   nop
+/* 1BE1C 800B121C A08600DB */  sb         $a2, 0xdb($a0)
+/* 1BE20 800B1220 2406FFFF */  addiu      $a2, $zero, -1
+.L800B1224:
+/* 1BE24 800B1224 04C00016 */  bltz       $a2, .L800B1280
+/* 1BE28 800B1228 00061880 */   sll       $v1, $a2, 2
+/* 1BE2C 800B122C 00641821 */  addu       $v1, $v1, $a0
+/* 1BE30 800B1230 8C6200F0 */  lw         $v0, 0xf0($v1)
+/* 1BE34 800B1234 8C6500E0 */  lw         $a1, 0xe0($v1)
+/* 1BE38 800B1238 C482006C */  lwc1       $f2, 0x6c($a0)
+/* 1BE3C 800B123C AC820038 */  sw         $v0, 0x38($a0)
+/* 1BE40 800B1240 8C620100 */  lw         $v0, 0x100($v1)
+/* 1BE44 800B1244 AC820034 */  sw         $v0, 0x34($a0)
+/* 1BE48 800B1248 00861021 */  addu       $v0, $a0, $a2
+/* 1BE4C 800B124C 90420124 */  lbu        $v0, 0x124($v0)
+/* 1BE50 800B1250 A08200BC */  sb         $v0, 0xbc($a0)
+/* 1BE54 800B1254 C4600128 */  lwc1       $f0, 0x128($v1)
+/* 1BE58 800B1258 00061040 */  sll        $v0, $a2, 1
+/* 1BE5C 800B125C E4800070 */  swc1       $f0, 0x70($a0)
+/* 1BE60 800B1260 C4800070 */  lwc1       $f0, 0x70($a0)
+/* 1BE64 800B1264 00441021 */  addu       $v0, $v0, $a0
+/* 1BE68 800B1268 94430110 */  lhu        $v1, 0x110($v0)
+/* 1BE6C 800B126C 46020002 */  mul.s      $f0, $f0, $f2
+/* 1BE70 800B1270 A48300A2 */  sh         $v1, 0xa2($a0)
+/* 1BE74 800B1274 94420118 */  lhu        $v0, 0x118($v0)
+/* 1BE78 800B1278 A48200A4 */  sh         $v0, 0xa4($a0)
+/* 1BE7C 800B127C E4800024 */  swc1       $f0, 0x24($a0)
+.L800B1280:
+/* 1BE80 800B1280 03E00008 */  jr         $ra
+/* 1BE84 800B1284 00A01021 */   addu      $v0, $a1, $zero

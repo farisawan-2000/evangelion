@@ -1,0 +1,35 @@
+.set noat      # allow manual use of $at
+.set noreorder # don't insert nops after branches
+
+glabel func_800A6B28
+/* 11728 800A6B28 27BDFFE0 */  addiu      $sp, $sp, -0x20
+/* 1172C 800A6B2C AFBF001C */  sw         $ra, 0x1c($sp)
+/* 11730 800A6B30 AFB20018 */  sw         $s2, 0x18($sp)
+/* 11734 800A6B34 AFB10014 */  sw         $s1, 0x14($sp)
+/* 11738 800A6B38 AFB00010 */  sw         $s0, 0x10($sp)
+/* 1173C 800A6B3C 8C820000 */  lw         $v0, ($a0)
+/* 11740 800A6B40 00068400 */  sll        $s0, $a2, 0x10
+/* 11744 800A6B44 00108403 */  sra        $s0, $s0, 0x10
+/* 11748 800A6B48 00108840 */  sll        $s1, $s0, 1
+/* 1174C 800A6B4C 8C520014 */  lw         $s2, 0x14($v0)
+/* 11750 800A6B50 00A02021 */  addu       $a0, $a1, $zero
+/* 11754 800A6B54 02203021 */  addu       $a2, $s1, $zero
+/* 11758 800A6B58 0C03006C */  jal        func_800C01B0
+/* 1175C 800A6B5C 02402821 */   addu      $a1, $s2, $zero
+/* 11760 800A6B60 2A020100 */  slti       $v0, $s0, 0x100
+/* 11764 800A6B64 10400006 */  beqz       $v0, .L800A6B80
+/* 11768 800A6B68 02322821 */   addu      $a1, $s1, $s2
+.L800A6B6C:
+/* 1176C 800A6B6C A4A00000 */  sh         $zero, ($a1)
+/* 11770 800A6B70 26100001 */  addiu      $s0, $s0, 1
+/* 11774 800A6B74 2A020100 */  slti       $v0, $s0, 0x100
+/* 11778 800A6B78 1440FFFC */  bnez       $v0, .L800A6B6C
+/* 1177C 800A6B7C 24A50002 */   addiu     $a1, $a1, 2
+.L800A6B80:
+/* 11780 800A6B80 8FBF001C */  lw         $ra, 0x1c($sp)
+/* 11784 800A6B84 8FB20018 */  lw         $s2, 0x18($sp)
+/* 11788 800A6B88 8FB10014 */  lw         $s1, 0x14($sp)
+/* 1178C 800A6B8C 8FB00010 */  lw         $s0, 0x10($sp)
+/* 11790 800A6B90 27BD0020 */  addiu      $sp, $sp, 0x20
+/* 11794 800A6B94 03E00008 */  jr         $ra
+/* 11798 800A6B98 00000000 */   nop
