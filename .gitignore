@@ -1,0 +1,5 @@
+baserom.eva.z64
+bin/*
+build/*
+.splat_cache
+asm/.splat_cache
