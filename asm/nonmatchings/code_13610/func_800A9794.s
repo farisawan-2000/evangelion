@@ -1,0 +1,22 @@
+.set noat      # allow manual use of $at
+.set noreorder # don't insert nops after branches
+
+glabel func_800A9794
+/* 14394 800A9794 3C01437F */  lui        $at, 0x437f
+/* 14398 800A9798 44811000 */  mtc1       $at, $f2
+/* 1439C 800A979C 00000000 */  nop
+/* 143A0 800A97A0 44840000 */  mtc1       $a0, $f0
+/* 143A4 800A97A4 00000000 */  nop
+/* 143A8 800A97A8 46800020 */  cvt.s.w    $f0, $f0
+/* 143AC 800A97AC 46001083 */  div.s      $f2, $f2, $f0
+/* 143B0 800A97B0 24020001 */  addiu      $v0, $zero, 1
+/* 143B4 800A97B4 3C018017 */  lui        $at, %hi(D_8016D208)
+/* 143B8 800A97B8 AC24D208 */  sw         $a0, %lo(D_8016D208)($at)
+/* 143BC 800A97BC 3C018010 */  lui        $at, %hi(D_80100540)
+/* 143C0 800A97C0 AC200540 */  sw         $zero, %lo(D_80100540)($at)
+/* 143C4 800A97C4 3C018010 */  lui        $at, %hi(D_8010053C)
+/* 143C8 800A97C8 A022053C */  sb         $v0, %lo(D_8010053C)($at)
+/* 143CC 800A97CC 3C018010 */  lui        $at, %hi(D_80100544)
+/* 143D0 800A97D0 E4220544 */  swc1       $f2, %lo(D_80100544)($at)
+/* 143D4 800A97D4 03E00008 */  jr         $ra
+/* 143D8 800A97D8 00000000 */   nop

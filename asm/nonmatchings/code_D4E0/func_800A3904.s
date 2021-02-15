@@ -1,0 +1,13 @@
+.set noat      # allow manual use of $at
+.set noreorder # don't insert nops after branches
+
+glabel func_800A3904
+/* E504 800A3904 93A30013 */  lbu        $v1, 0x13($sp)
+/* E508 800A3908 9482001E */  lhu        $v0, 0x1e($a0)
+/* E50C 800A390C A0850018 */  sb         $a1, 0x18($a0)
+/* E510 800A3910 A0860019 */  sb         $a2, 0x19($a0)
+/* E514 800A3914 A087001A */  sb         $a3, 0x1a($a0)
+/* E518 800A3918 34420040 */  ori        $v0, $v0, 0x40
+/* E51C 800A391C A083001B */  sb         $v1, 0x1b($a0)
+/* E520 800A3920 03E00008 */  jr         $ra
+/* E524 800A3924 A482001E */   sh        $v0, 0x1e($a0)

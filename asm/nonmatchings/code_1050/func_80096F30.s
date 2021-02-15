@@ -1,0 +1,29 @@
+.set noat      # allow manual use of $at
+.set noreorder # don't insert nops after branches
+
+glabel func_80096F30
+/* 1B30 80096F30 27BDFFE8 */  addiu      $sp, $sp, -0x18
+/* 1B34 80096F34 AFB00010 */  sw         $s0, 0x10($sp)
+/* 1B38 80096F38 00A08021 */  addu       $s0, $a1, $zero
+/* 1B3C 80096F3C 00000000 */  nop
+/* 1B40 80096F40 00900018 */  mult       $a0, $s0
+/* 1B44 80096F44 00002012 */  mflo       $a0
+/* 1B48 80096F48 00000000 */  nop
+/* 1B4C 80096F4C 00000000 */  nop
+/* 1B50 80096F50 AFBF0014 */  sw         $ra, 0x14($sp)
+/* 1B54 80096F54 0C032663 */  jal        func_800C998C
+/* 1B58 80096F58 24840008 */   addiu     $a0, $a0, 8
+/* 1B5C 80096F5C 14400005 */  bnez       $v0, .L80096F74
+/* 1B60 80096F60 24430008 */   addiu     $v1, $v0, 8
+/* 1B64 80096F64 3C048010 */  lui        $a0, %hi(D_800F9B30)
+/* 1B68 80096F68 24849B30 */  addiu      $a0, $a0, %lo(D_800F9B30)
+/* 1B6C 80096F6C 0C032934 */  jal        func_800CA4D0
+/* 1B70 80096F70 00000000 */   nop
+.L80096F74:
+/* 1B74 80096F74 AC500000 */  sw         $s0, ($v0)
+/* 1B78 80096F78 AC430004 */  sw         $v1, 4($v0)
+/* 1B7C 80096F7C 8FBF0014 */  lw         $ra, 0x14($sp)
+/* 1B80 80096F80 8FB00010 */  lw         $s0, 0x10($sp)
+/* 1B84 80096F84 27BD0018 */  addiu      $sp, $sp, 0x18
+/* 1B88 80096F88 03E00008 */  jr         $ra
+/* 1B8C 80096F8C 00000000 */   nop

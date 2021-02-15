@@ -1,0 +1,53 @@
+.set noat      # allow manual use of $at
+.set noreorder # don't insert nops after branches
+
+glabel func_80097A60
+/* 2660 80097A60 10A00028 */  beqz       $a1, .L80097B04
+/* 2664 80097A64 24020001 */   addiu     $v0, $zero, 1
+/* 2668 80097A68 8CA2FFF8 */  lw         $v0, -8($a1)
+/* 266C 80097A6C 14400003 */  bnez       $v0, .L80097A7C
+/* 2670 80097A70 24A7FFF0 */   addiu     $a3, $a1, -0x10
+/* 2674 80097A74 08025EC1 */  j          .L80097B04
+/* 2678 80097A78 24020001 */   addiu     $v0, $zero, 1
+.L80097A7C:
+/* 267C 80097A7C 8CA8FFF0 */  lw         $t0, -0x10($a1)
+/* 2680 80097A80 8CA5FFF4 */  lw         $a1, -0xc($a1)
+/* 2684 80097A84 01003021 */  addu       $a2, $t0, $zero
+/* 2688 80097A88 50C00009 */  beql       $a2, $zero, .L80097AB0
+/* 268C 80097A8C 00803021 */   addu      $a2, $a0, $zero
+/* 2690 80097A90 8CC20008 */  lw         $v0, 8($a2)
+/* 2694 80097A94 54400006 */  bnezl      $v0, .L80097AB0
+/* 2698 80097A98 00803021 */   addu      $a2, $a0, $zero
+/* 269C 80097A9C 8CC30004 */  lw         $v1, 4($a2)
+/* 26A0 80097AA0 8CC80000 */  lw         $t0, ($a2)
+/* 26A4 80097AA4 24A20010 */  addiu      $v0, $a1, 0x10
+/* 26A8 80097AA8 00432821 */  addu       $a1, $v0, $v1
+/* 26AC 80097AAC 00803021 */  addu       $a2, $a0, $zero
+.L80097AB0:
+/* 26B0 80097AB0 8CC30000 */  lw         $v1, ($a2)
+/* 26B4 80097AB4 10670007 */  beq        $v1, $a3, .L80097AD4
+/* 26B8 80097AB8 00E6102B */   sltu      $v0, $a3, $a2
+/* 26BC 80097ABC 5440000D */  bnezl      $v0, .L80097AF4
+/* 26C0 80097AC0 00E03021 */   addu      $a2, $a3, $zero
+/* 26C4 80097AC4 1060000A */  beqz       $v1, .L80097AF0
+/* 26C8 80097AC8 00603021 */   addu      $a2, $v1, $zero
+/* 26CC 80097ACC 08025EAC */  j          .L80097AB0
+/* 26D0 80097AD0 00000000 */   nop
+.L80097AD4:
+/* 26D4 80097AD4 8CC20008 */  lw         $v0, 8($a2)
+/* 26D8 80097AD8 54400006 */  bnezl      $v0, .L80097AF4
+/* 26DC 80097ADC 00E03021 */   addu      $a2, $a3, $zero
+/* 26E0 80097AE0 8CC30004 */  lw         $v1, 4($a2)
+/* 26E4 80097AE4 00C03821 */  addu       $a3, $a2, $zero
+/* 26E8 80097AE8 24A20010 */  addiu      $v0, $a1, 0x10
+/* 26EC 80097AEC 00432821 */  addu       $a1, $v0, $v1
+.L80097AF0:
+/* 26F0 80097AF0 00E03021 */  addu       $a2, $a3, $zero
+.L80097AF4:
+/* 26F4 80097AF4 00001021 */  addu       $v0, $zero, $zero
+/* 26F8 80097AF8 ACC80000 */  sw         $t0, ($a2)
+/* 26FC 80097AFC ACC50004 */  sw         $a1, 4($a2)
+/* 2700 80097B00 ACC00008 */  sw         $zero, 8($a2)
+.L80097B04:
+/* 2704 80097B04 03E00008 */  jr         $ra
+/* 2708 80097B08 00000000 */   nop
