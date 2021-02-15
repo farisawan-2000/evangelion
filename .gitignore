@@ -3,3 +3,5 @@ bin/*
 build/*
 .splat_cache
 asm/.splat_cache
+undefined_syms_auto.txt
+undefined_funcs_auto.txt
