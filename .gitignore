@@ -1,5 +1,5 @@
 baserom.eva.z64
-asm/non_matchings/**/*
+asm/nonmatchings/**/*
 bin/*
 build/*
 .splat_cache
