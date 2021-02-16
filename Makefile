@@ -19,18 +19,22 @@ ALL_DIRS = $(BUILD_DIR) $(addprefix $(BUILD_DIR)/,$(ASM_DIRS) $(SRC_DIRS) $(YAY0
 DUMMY != mkdir -p $(ALL_DIRS)
 
 N64AS = tools/n64_gcc2/mips-nintendo-nu64-as
-AS = mips-linux-gnu-as
-ASFLAGS := -march=vr4300 -mtune=vr4300 -mabi=32 -mips3 -Ibuild/ -I.
+AS = tools/n64_gcc2/mips-nintendo-nu64-as
+# AS = mips-linux-gnu-as
+ASFLAGS := -mcpu=vr4300 -mips3 -Ibuild/ -I.
 
 CC = tools/n64_gcc2/cc1
-CFLAGS = -O2 -quiet -G 0 -mcpu=vr4300 -mfix4300 -mips3 -mfp32 -Wuninitialized -Wshadow 
+OPT_FLAGS := -O2
+CFLAGS = $(OPT_FLAGS) -quiet -G 0 -mcpu=vr4300 -mfix4300 -mips3 -mfp32 -Wuninitialized -Wshadow 
 
 LD = mips-linux-gnu-ld
 LD_SCRIPT = eva.ld
 LDFLAGS := --no-check-sections -m elf32btsmip -mips3 --accept-unknown-input-arch -T $(BUILD_DIR)/$(LD_SCRIPT) -T undefined_syms_auto.txt -T undefined_funcs_auto.txt
 
 CPP := mips-linux-gnu-cpp -P -Wno-trigraphs
-CPPFLAGS := -Iinclude/ -I. -D__sgi -ffreestanding -D _LANGUAGE_C -D _FINALROM -DF3DEX_GBI_2 -D_MIPS_SZLONG=32
+CPPFLAGS := -Iinclude/ -I. -D__sgi -ffreestanding -D _LANGUAGE_C -D_FINALROM -DF3DEX_GBI_2 -D_MIPS_SZLONG=32
+
+CC_CHECK := gcc -fsyntax-only -fsigned-char -m32 $(CPPFLAGS) -std=gnu90 -Wall -Wextra -Wno-format-security -Wno-main -DNON_MATCHING -DAVOID_UB
 
 N64CRC := tools/n64crc
 
@@ -41,13 +45,13 @@ DUMMY != make -C tools
 
 default: all
 
-# build/src/%.o: CC := python3 tools/asm_processor/build.py $(CC) -- $(AS) $(ASFLAGS) -- $(CFLAGS)
+build/src/code_183B0.o: OPT_FLAGS = -O0
 
 $(BUILD_DIR)/%.o: %.s $(SZP_FILES)
 	$(AS) $(ASFLAGS) -o $@ $<
 
 $(BUILD_DIR)/%.o: %.c
-	$(print $(BUILD_DIR)/$*.tmp.c)
+	@$(CC_CHECK) -MMD -MP -MT $@ -MF $(BUILD_DIR)/$*.d $<
 	$(CPP) $(CPPFLAGS) $< -o $(BUILD_DIR)/$*.tmp.c
 	$(CC) $(CFLAGS) -o $(BUILD_DIR)/$*.tmp.s $(BUILD_DIR)/$*.tmp.c
 	$(AS) $(ASFLAGS) -o $@ $(BUILD_DIR)/$*.tmp.s

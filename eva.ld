@@ -52,7 +52,7 @@ SECTIONS
         BUILD_DIR/src/code_162C0.o(.text);
         BUILD_DIR/src/code_17D80.o(.text);
         BUILD_DIR/src/code_17E80.o(.text);
-        BUILD_DIR/src/code_183B0.o(.text);
+        BUILD_DIR/src/entry.o(.text);
         BUILD_DIR/src/code_184F0.o(.text);
         BUILD_DIR/src/code_18770.o(.text);
         BUILD_DIR/src/code_187A0.o(.text);
@@ -197,6 +197,7 @@ SECTIONS
         BUILD_DIR/src/code_350D0.o(.text);
     }
     END_SEG(main)
+    _mainSegNoloadStart = 0x800FF2E0;
 
     BEGIN_SEG(data, __romPos) {
         BUILD_DIR/asm/bin_354B0.o(.data);

@@ -1,11 +1,22 @@
 #ifndef _MACROS_H_
 #define _MACROS_H_
 
-#ifndef SPLAT
+// #ifndef SPLAT
+// #ifndef INCLUDE_ASM
+// #define INCLUDE_ASM(TYPE, FOLDER, NAME, ARGS...) \
+//   TYPE __attribute__((naked)) NAME(ARGS) {\
+//   	__asm__( ".set noat\n.set noreorder\n.include \"macro.inc\"\n.include \"asm/nonmatchings/"FOLDER"/"#NAME".s\"\n.set reorder\n.set at\n.set gp=64"); }
+// #endif
+// #else
+// #define INCLUDE_ASM(TYPE, FOLDER, NAME, ARGS...)
+// #endif
+
+#if !defined(SPLAT) && !defined(__CTX__)
 #ifndef INCLUDE_ASM
 #define INCLUDE_ASM(TYPE, FOLDER, NAME, ARGS...) \
-  TYPE __attribute__((naked)) NAME(ARGS) { __asm__( ".include \"include/macro.inc\"\n.include \"asm/nonmatchings/"FOLDER"/"#NAME".s\"\n.set noreorder\n.set noat\n.set gp=64"); }
+  __asm__( ".include \"asm/nonmatchings/"FOLDER"/"#NAME".s\"\nglabel "#NAME"_end\n.set reorder\n.set at");
 #endif
+__asm__( ".include \"macro.inc\"\n");
 #else
 #define INCLUDE_ASM(TYPE, FOLDER, NAME, ARGS...)
 #endif

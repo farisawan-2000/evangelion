@@ -1,0 +1,6 @@
+entry_point = 0x80096400; // type:func rom:0x1000
+_mainSegNoloadStart = 0x800FF2E0; // type:data
+osCreateThread = 0x800C1970; // type:func rom:0x2C570
+osStartThread = 0x800C1B30; // type:func
+evangelion_main = 0x800AD7B0; // type:func
+thread1_idle = 0x800AD814; // type:func

@@ -19,3 +19,7 @@
 	.half \bank
 	.half \index
 .endm
+
+.macro move a, b
+    addu \a, \b, $zero
+.endm

@@ -4,7 +4,8 @@ options:
   find_file_boundaries: True
   compiler: "GCC"
   ld_o_replace_extension: True
-  ld_addrs_header: include/ld_addrs.h
+  do_c_func_detection: False
+  symbol_addrs_path: tools/symbol_addrs.txt
 segments:
   - name: header
     type: header
@@ -47,7 +48,7 @@ segments:
     - [0x162C0, c, code_162C0]
     - [0x17D80, c, code_17D80]
     - [0x17E80, c, code_17E80]
-    - [0x183B0, c, code_183B0]
+    - [0x183B0, c, entry]
     - [0x184F0, c, code_184F0]
     - [0x18770, c, code_18770]
     - [0x187A0, c, code_187A0]
