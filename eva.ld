@@ -195,7 +195,6 @@ SECTIONS
         BUILD_DIR/src/code_350B0.o(.text);
         BUILD_DIR/src/code_350C0.o(.text);
         BUILD_DIR/src/code_350D0.o(.text);
-
     }
     END_SEG(main)
 
