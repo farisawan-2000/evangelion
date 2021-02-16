@@ -18,8 +18,8 @@ SZP_FILES = $(foreach file,$(YAY0_FILES),$(BUILD_DIR)/$(file:.bin=.szp))
 ALL_DIRS = $(BUILD_DIR) $(addprefix $(BUILD_DIR)/,$(ASM_DIRS) $(SRC_DIRS) $(YAY0_DIR))
 DUMMY != mkdir -p $(ALL_DIRS)
 
-AS = mips-linux-gnu-as
 N64AS = tools/n64_gcc2/mips-nintendo-nu64-as
+AS = mips-linux-gnu-as
 ASFLAGS := -march=vr4300 -mtune=vr4300 -mabi=32 -mips3 -Ibuild/ -I.
 
 CC = tools/n64_gcc2/cc1
