@@ -47,7 +47,7 @@ SECTIONS
         BUILD_DIR/src/code_D4E0.o(.text);
         BUILD_DIR/src/code_10160.o(.text);
         BUILD_DIR/src/code_132F0.o(.text);
-        BUILD_DIR/src/code_13610.ido.o(.text);
+        BUILD_DIR/src/code_13610.o(.text);
         BUILD_DIR/src/code_15150.o(.text);
         BUILD_DIR/src/code_162C0.o(.text);
         BUILD_DIR/src/code_17D80.o(.text);

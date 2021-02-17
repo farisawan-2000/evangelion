@@ -65,7 +65,7 @@ $(BUILD_DIR)/%.o: %.c
 $(BUILD_DIR)/%.ido.o: %.ido.c
 	$(info Compiling IDO file)
 	$(CC_CHECK) -nostdinc -MMD -MP -MT $@ -MF $(BUILD_DIR)/$*.d $<
-	python3 tools/asm_processor/build.py tools/ido7/cc -- mips-linux-gnu-as -mtune=vr4300 -march=vr4300 -mabi=32 -mips3 -Ibuild/us -- -c -Wab,-r4300_mul -non_shared -G0 -Xcpluscomm -Xfullwarn -signed -O2 -nostdinc -I include/libc -DTARGET_N64 -DF3DEX_GBI_2 -I include -I build/us -I build/us/include -I src -I . -mips2 -32 -o $@ $<
+	python3 tools/asm_processor/build.py tools/ido7/cc -- mips-linux-gnu-as -mtune=vr4300 -march=vr4300 -mabi=32 -mips3 -Ibuild/us -- -c -Wab,-r4300_mul -non_shared -G0 -Xcpluscomm -Xfullwarn -signed -g -nostdinc -I include/libc -DTARGET_N64 -DF3DEX_GBI_2 -I include -I build/us -I build/us/include -I src -I . -mips2 -32 -o $@ $<
 # 	$(CC) $(IDO_CFLAGS) -o $@ $<
 
 
