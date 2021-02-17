@@ -10,15 +10,20 @@
 // #else
 // #define INCLUDE_ASM(TYPE, FOLDER, NAME, ARGS...)
 // #endif
-
-#if !defined(SPLAT) && !defined(__CTX__)
-#ifndef INCLUDE_ASM
-#define INCLUDE_ASM(TYPE, FOLDER, NAME, ARGS...) \
-  __asm__( ".include \"asm/nonmatchings/"FOLDER"/"#NAME".s\"\nglabel "#NAME"_end\n.set reorder\n.set at");
+#if !defined(__sgi) || defined(__CTX__)
+#define GLOBAL_ASM(...)
 #endif
-__asm__( ".include \"macro.inc\"\n");
-#else
-#define INCLUDE_ASM(TYPE, FOLDER, NAME, ARGS...)
+
+#if !defined(__sgi)
+	#if (!defined(SPLAT) && !defined(__CTX__))
+	#ifndef INCLUDE_ASM
+	#define INCLUDE_ASM(TYPE, FOLDER, NAME, ARGS...) \
+	  __asm__( ".set noat\n.set noreorder\n.include \"asm/nonmatchings/"FOLDER"/"#NAME".s\"\nglabel "#NAME"_end\n.set reorder\n.set at");
+	#endif
+	__asm__( ".include \"macro.inc\"\n");
+	#else
+	#define INCLUDE_ASM(TYPE, FOLDER, NAME, ARGS...)
+	#endif
 #endif
 
 #define ALIGN16(val) (((val) + 0xF) & ~0xF)
