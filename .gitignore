@@ -7,3 +7,5 @@ asm/.splat_cache
 undefined_syms_auto.txt
 undefined_funcs_auto.txt
 evangelion.ld
+tools/slienc
+tools/n64crc
