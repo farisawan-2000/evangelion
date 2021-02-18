@@ -22,14 +22,19 @@ ALL_DIRS = $(BUILD_DIR) $(addprefix $(BUILD_DIR)/,$(ASM_DIRS) $(SRC_DIRS) $(YAY0
 DUMMY != mkdir -p $(ALL_DIRS)
 
 N64AS = tools/n64_gcc2/mips-nintendo-nu64-as
-AS = mips-linux-gnu-as
-ASFLAGS := -march=vr4300 -mtune=vr4300 -mips3 -Iinclude -I. -I$(BUILD_DIR)
 N64ASFLAGS := -EB -mcpu=vr4300 -mips3 -Ibuild/ -I.
+# N64AS := tools/qemu_ido_as/usr/bin/as
+# N64ASFLAGS := -v -Wab,-r4300_mul -non_shared -G 0 -mips2 -Ibuild/ -I. -O1
+AS = mips-linux-gnu-as
+ASFLAGS := -march=vr4300 -O3  -mtune=vr4300 -mips3 -Iinclude -I. -I$(BUILD_DIR)
 
-CC = tools/n64_gcc2/cc1
+# CC = tools/n64_gcc2.7/cc1
+# CC = tools/n64_gcc2/cc1
+# CC = tools/sn_cc1/cc1
+CC = tools/gcc2_8/cc1
 OPT_FLAGS := -O2
 TARGET_CFLAGS := -nostdinc -I include/libc -DTARGET_N64 -DF3DEX_GBI_2
-CFLAGS = $(OPT_FLAGS) -quiet -G 0 -mcpu=vr4300 -mfix4300 -mips3 -mfp32 -Wuninitialized -Wshadow 
+CFLAGS = $(OPT_FLAGS) -msplit-addresses -mgas -quiet -G 0 -mcpu=vr4300 -mfix4300 -mips3 -mfp32 -mgp32
 IDO_CFLAGS = $(TARGET_CFLAGS) -Wab,-r4300_mul -non_shared -G0 -Xcpluscomm -Xfullwarn -signed -O2 -Iinclude -I. -Isrc/
 
 LD = mips-linux-gnu-ld
@@ -48,26 +53,31 @@ OBJCOPY_FLAGS = --pad-to=0x2000000 --gap-fill=0xFF
 
 DUMMY != make -C tools
 
+PYTHON := python3
+POSTPROCESS = $(PYTHON) tools/postprocess_asm.py
+
 default: all
 
+$(BUILD_DIR)/src/code_13610.o: OPT_FLAGS = -O2
+$(BUILD_DIR)/src/entry.o: OPT_FLAGS = -O0
 
 $(BUILD_DIR)/%.o: %.s $(SZP_FILES)
 	$(N64AS) $(N64ASFLAGS) -o $@ $<
+# 	$(AS) $(ASFLAGS) -o $@ $<
 
 $(BUILD_DIR)/%.o: %.c
 	@$(CC_CHECK) -MMD -MP -MT $@ -MF $(BUILD_DIR)/$*.d $<
 	$(CPP) $(CPPFLAGS) -nostdinc $< -o $(BUILD_DIR)/$*.tmp.c
-	$(CC) $(CFLAGS) -o $(BUILD_DIR)/$*.tmp.s $(BUILD_DIR)/$*.tmp.c
+	$(CC) $(CFLAGS) -o $(BUILD_DIR)/$*.tmp.i $(BUILD_DIR)/$*.tmp.c
+	$(POSTPROCESS) $(BUILD_DIR)/$*.tmp.i > $(BUILD_DIR)/$*.tmp.s
 	$(N64AS) $(N64ASFLAGS) -o $@ $(BUILD_DIR)/$*.tmp.s
-# 	$(N64AS) $(ASFLAGS) -o $@ $(BUILD_DIR)/$*.tmp.s
+# 	$(AS) $(ASFLAGS) -o $@ $(BUILD_DIR)/$*.tmp.s
 
 
 $(BUILD_DIR)/%.ido.o: %.ido.c
 	$(info Compiling IDO file)
 	$(CC_CHECK) -nostdinc -MMD -MP -MT $@ -MF $(BUILD_DIR)/$*.d $<
 	python3 tools/asm_processor/build.py tools/ido7/cc -- mips-linux-gnu-as -mtune=vr4300 -march=vr4300 -mabi=32 -mips3 -Ibuild/us -- -c -Wab,-r4300_mul -non_shared -G0 -Xcpluscomm -Xfullwarn -signed -g -nostdinc -I include/libc -DTARGET_N64 -DF3DEX_GBI_2 -I include -I build/us -I build/us/include -I src -I . -mips2 -32 -o $@ $<
-# 	$(CC) $(IDO_CFLAGS) -o $@ $<
-
 
 $(BUILD_DIR)/%.szp: %.bin
 	tools/slienc $< $@

@@ -5,4 +5,5 @@ osStartThread = 0x800C1B30; // type:func
 evangelion_main = 0x800AD7B0; // type:func
 thread1_idle = 0x800AD814; // type:func
 thread3_main = 0x800A8A10; // type:func
+bzero = 0x800C04D0; // type:func
 gDisplayListHead = 0x80149F94; //type:data
