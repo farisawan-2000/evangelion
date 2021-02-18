@@ -270,9 +270,9 @@ void func_80097560(struct UnkStruct800FF2E4 *arg0) {
     temp_v0->unk0 = temp_v1;
     func_800C9A84(arg0);
 }
-#else
+#else 
 INCLUDE_ASM(s32, "code_1D90", func_80097560);
-#endif
+#endif 
 
 #ifdef MIPS_TO_C
 void func_800975AC(void (*arg0)(struct UnkStruct800FF2E4 *), u8 arg1) {

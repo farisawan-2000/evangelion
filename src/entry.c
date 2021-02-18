@@ -26,8 +26,9 @@ void thread1_idle(s32 arg0) {
     osStartThread(&D_80100760);
     func_800C1A60(&D_801005B0, 0);
     while (1) {
-	    if (D_8016D0E0 != NULL) {
-	        D_8016D0E0();
-	    }
-	}
+        if (D_8016D0E0 != NULL) {
+            D_8016D0E0();
+        }
+    }
 } 
+

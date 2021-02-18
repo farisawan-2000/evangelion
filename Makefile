@@ -30,11 +30,11 @@ ASFLAGS := -march=vr4300 -O3  -mtune=vr4300 -mips3 -Iinclude -I. -I$(BUILD_DIR)
 
 # CC = tools/n64_gcc2.7/cc1
 # CC = tools/n64_gcc2/cc1
-# CC = tools/sn_cc1/cc1
-CC = tools/gcc2_8/cc1
+CC = tools/sn_cc1/cc1
+# CC = tools/gcc2_8/cc1
 OPT_FLAGS := -O2
 TARGET_CFLAGS := -nostdinc -I include/libc -DTARGET_N64 -DF3DEX_GBI_2
-CFLAGS = $(OPT_FLAGS) -msplit-addresses -mgas -quiet -G 0 -mcpu=vr4300 -mfix4300 -mips3 -mfp32 -mgp32
+CFLAGS = $(OPT_FLAGS) -mgas -quiet -G 0 -mcpu=vr4300 -mfix4300 -mips3 -mfp32
 IDO_CFLAGS = $(TARGET_CFLAGS) -Wab,-r4300_mul -non_shared -G0 -Xcpluscomm -Xfullwarn -signed -O2 -Iinclude -I. -Isrc/
 
 LD = mips-linux-gnu-ld
@@ -60,6 +60,7 @@ default: all
 
 $(BUILD_DIR)/src/code_13610.o: OPT_FLAGS = -O2
 $(BUILD_DIR)/src/entry.o: OPT_FLAGS = -O0
+$(BUILD_DIR)/src/code_1D90.o: CC = tools/n64_gcc2.7/cc1
 
 $(BUILD_DIR)/%.o: %.s $(SZP_FILES)
 	$(N64AS) $(N64ASFLAGS) -o $@ $<

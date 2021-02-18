@@ -10,7 +10,7 @@ void func_800B27E0(s32 arg0, s32 arg1) {
 void func_800BCB90(s32, f32, u32 *, u32, s32);
 void func_800B282C(s32 arg0) {
     func_800BCB90(0, 0.0f, &D_80102BB0, 1, arg0);
-}
+} 
 
 s32 func_800B285C(void) {
     return D_80102BB4 - D_80102BB0;
