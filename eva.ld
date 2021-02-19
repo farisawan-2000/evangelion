@@ -196,12 +196,249 @@ SECTIONS
         BUILD_DIR/src/code_350B0.o(.text);
         BUILD_DIR/src/code_350C0.o(.text);
         BUILD_DIR/src/code_350D0.o(.text);
+        BUILD_DIR/asm/bin_354B0.o(.data);
     }
     END_SEG(main)
     _mainSegNoloadStart = 0x800FF2E0;
 
+    BEGIN_SEG(code_ovl1, 0x80025C00) {
+        BUILD_DIR/asm/ovl1/code_00069EE0.o(.text);
+        BUILD_DIR/asm/ovl1/code_0006A040.o(.text);
+        BUILD_DIR/asm/ovl1/code_0006AE40.o(.text);
+        BUILD_DIR/asm/ovl1/code_0006B090.o(.text);
+        BUILD_DIR/asm/ovl1/code_0006B2C0.o(.text);
+        BUILD_DIR/asm/ovl1/code_0006C980.o(.text);
+        BUILD_DIR/asm/ovl1/code_0006D2F0.o(.text);
+        BUILD_DIR/asm/ovl1/code_0006EE50.o(.text);
+        BUILD_DIR/asm/ovl1/code_000702A0.o(.text);
+        BUILD_DIR/asm/ovl1/code_00071530.o(.text);
+        BUILD_DIR/asm/ovl1/code_00072CE0.o(.text);
+    }
+    END_SEG(code_ovl1)
+    
+    BEGIN_SEG(data_72D80, 0x72D80) {
+        BUILD_DIR/asm/ovl1/data.o(.data);
+    }
+    END_SEG(data_72D80)
+    
+    BEGIN_SEG(code_ovl2, 0x80025C00) {
+        BUILD_DIR/asm/ovl2/code_00074BB0.o(.text);
+        BUILD_DIR/asm/ovl2/code_00074D60.o(.text);
+        BUILD_DIR/asm/ovl2/code_00076E50.o(.text);
+        BUILD_DIR/asm/ovl2/code_00078AC0.o(.text);
+        BUILD_DIR/asm/ovl2/code_00079D50.o(.text);
+        BUILD_DIR/asm/ovl2/code_0007BF80.o(.text);
+        BUILD_DIR/asm/ovl2/code_0007C6C0.o(.text);
+        BUILD_DIR/asm/ovl2/code_0007EFE0.o(.text);
+        BUILD_DIR/asm/ovl2/code_00080050.o(.text);
+        BUILD_DIR/asm/ovl2/code_00081610.o(.text);
+        BUILD_DIR/asm/ovl2/code_00085AF0.o(.text);
+        BUILD_DIR/asm/ovl2/code_00086C20.o(.text);
+        BUILD_DIR/asm/ovl2/code_00087F70.o(.text);
+        BUILD_DIR/asm/ovl2/code_000891F0.o(.text);
+        BUILD_DIR/asm/ovl2/code_00089D20.o(.text);
+        BUILD_DIR/asm/ovl2/code_0008B2A0.o(.text);
+        BUILD_DIR/asm/ovl2/code_0008C710.o(.text);
+        BUILD_DIR/asm/ovl2/code_0008D490.o(.text);
+        BUILD_DIR/asm/ovl2/code_0008E3C0.o(.text);
+        BUILD_DIR/asm/ovl2/code_0008F3B0.o(.text);
+        BUILD_DIR/asm/ovl2/code_00090840.o(.text);
+        BUILD_DIR/asm/ovl2/code_000B7A10.o(.text);
+    }
+    END_SEG(code_ovl2)
+    
+    BEGIN_SEG(data_B8B20, 0xB8B20) {
+        BUILD_DIR/asm/ovl2/data.o(.data);
+    }
+    END_SEG(data_B8B20)
+    
+    BEGIN_SEG(code_ovl3, 0x80025C00) {
+        BUILD_DIR/asm/ovl3/code_000CF110.o(.text);
+        BUILD_DIR/asm/ovl3/code_000D15C0.o(.text);
+        BUILD_DIR/asm/ovl3/code_000D1770.o(.text);
+        BUILD_DIR/asm/ovl3/code_000D22D0.o(.text);
+        BUILD_DIR/asm/ovl3/code_000D3210.o(.text);
+        BUILD_DIR/asm/ovl3/code_000D57D0.o(.text);
+        BUILD_DIR/asm/ovl3/code_000D6940.o(.text);
+        BUILD_DIR/asm/ovl3/code_000DA750.o(.text);
+        BUILD_DIR/asm/ovl3/code_000DAD10.o(.text);
+        BUILD_DIR/asm/ovl3/code_000DF470.o(.text);
+        BUILD_DIR/asm/ovl3/code_000E1BE0.o(.text);
+        BUILD_DIR/asm/ovl3/code_000E22D0.o(.text);
+        BUILD_DIR/asm/ovl3/code_000E4600.o(.text);
+        BUILD_DIR/asm/ovl3/code_000E92F0.o(.text);
+        BUILD_DIR/asm/ovl3/code_000EAC00.o(.text);
+        BUILD_DIR/asm/ovl3/code_000ECA30.o(.text);
+        BUILD_DIR/asm/ovl3/code_000F3E10.o(.text);
+        BUILD_DIR/asm/ovl3/code_000F6680.o(.text);
+        BUILD_DIR/asm/ovl3/code_000F7730.o(.text);
+        BUILD_DIR/asm/ovl3/code_000F9170.o(.text);
+        BUILD_DIR/asm/ovl3/code_000FE9A0.o(.text);
+        BUILD_DIR/asm/ovl3/code_00103E10.o(.text);
+        BUILD_DIR/asm/ovl3/code_00104FB0.o(.text);
+        BUILD_DIR/asm/ovl3/code_0010A7A0.o(.text);
+        BUILD_DIR/asm/ovl3/code_0010DC10.o(.text);
+    }
+    END_SEG(code_ovl3)
+    
+    BEGIN_SEG(data_110570, 0x110570) {
+        BUILD_DIR/asm/ovl3/data.o(.data);
+    }
+    END_SEG(data_110570)
+    
+    BEGIN_SEG(code_ovl4, 0x80025C00) {
+        BUILD_DIR/asm/ovl4/code_113B10.o(.text);
+        BUILD_DIR/asm/ovl4/code_113CB0.o(.text);
+        BUILD_DIR/asm/ovl4/code_116DD0.o(.text);
+    }
+    END_SEG(code_ovl4)
+    
+    BEGIN_SEG(data_1173C0, 0x1173C0) {
+        BUILD_DIR/asm/ovl4/data.o(.data);
+    }
+    END_SEG(data_1173C0)
+    
+    BEGIN_SEG(code_ovl5, 0x80025C00) {
+        BUILD_DIR/asm/ovl5/code_117A00.o(.text);
+        BUILD_DIR/asm/ovl5/code_117BB0.o(.text);
+        BUILD_DIR/asm/ovl5/code_118480.o(.text);
+        BUILD_DIR/asm/ovl5/code_1187E0.o(.text);
+        BUILD_DIR/asm/ovl5/code_118DA0.o(.text);
+        BUILD_DIR/asm/ovl5/code_119720.o(.text);
+        BUILD_DIR/asm/ovl5/code_11A510.o(.text);
+        BUILD_DIR/asm/ovl5/code_11B0A0.o(.text);
+        BUILD_DIR/asm/ovl5/code_11BC10.o(.text);
+        BUILD_DIR/asm/ovl5/code_11C4F0.o(.text);
+        BUILD_DIR/asm/ovl5/code_11C910.o(.text);
+        BUILD_DIR/asm/ovl5/code_11CF60.o(.text);
+        BUILD_DIR/asm/ovl5/code_11D1B0.o(.text);
+        BUILD_DIR/asm/ovl5/code_120B90.o(.text);
+        BUILD_DIR/asm/ovl5/code_1263F0.o(.text);
+        BUILD_DIR/asm/ovl5/code_126830.o(.text);
+        BUILD_DIR/asm/ovl5/code_126F70.o(.text);
+        BUILD_DIR/asm/ovl5/code_127420.o(.text);
+        BUILD_DIR/asm/ovl5/code_127850.o(.text);
+        BUILD_DIR/asm/ovl5/code_127C80.o(.text);
+        BUILD_DIR/asm/ovl5/code_128070.o(.text);
+        BUILD_DIR/asm/ovl5/code_128830.o(.text);
+        BUILD_DIR/asm/ovl5/code_1289D0.o(.text);
+        BUILD_DIR/asm/ovl5/code_12A470.o(.text);
+        BUILD_DIR/asm/ovl5/code_12A650.o(.text);
+        BUILD_DIR/asm/ovl5/code_12A9A0.o(.text);
+        BUILD_DIR/asm/ovl5/code_12B400.o(.text);
+        BUILD_DIR/asm/ovl5/code_12C010.o(.text);
+        BUILD_DIR/asm/ovl5/code_12C3D0.o(.text);
+        BUILD_DIR/asm/ovl5/code_12C990.o(.text);
+        BUILD_DIR/asm/ovl5/code_12DD50.o(.text);
+        BUILD_DIR/asm/ovl5/code_12E7A0.o(.text);
+        BUILD_DIR/asm/ovl5/code_12F270.o(.text);
+        BUILD_DIR/asm/ovl5/code_12FE80.o(.text);
+        BUILD_DIR/asm/ovl5/code_130150.o(.text);
+        BUILD_DIR/asm/ovl5/code_1308F0.o(.text);
+        BUILD_DIR/asm/ovl5/code_131420.o(.text);
+        BUILD_DIR/asm/ovl5/code_131B70.o(.text);
+        BUILD_DIR/asm/ovl5/code_132120.o(.text);
+        BUILD_DIR/asm/ovl5/code_132690.o(.text);
+        BUILD_DIR/asm/ovl5/code_132F30.o(.text);
+        BUILD_DIR/asm/ovl5/code_1348B0.o(.text);
+        BUILD_DIR/asm/ovl5/code_134D30.o(.text);
+        BUILD_DIR/asm/ovl5/code_1354E0.o(.text);
+        BUILD_DIR/asm/ovl5/code_135A40.o(.text);
+        BUILD_DIR/asm/ovl5/code_136240.o(.text);
+        BUILD_DIR/asm/ovl5/code_136FC0.o(.text);
+        BUILD_DIR/asm/ovl5/code_137390.o(.text);
+        BUILD_DIR/asm/ovl5/code_137A00.o(.text);
+        BUILD_DIR/asm/ovl5/code_137F20.o(.text);
+        BUILD_DIR/asm/ovl5/code_1383B0.o(.text);
+        BUILD_DIR/asm/ovl5/code_1386B0.o(.text);
+        BUILD_DIR/asm/ovl5/code_1389A0.o(.text);
+        BUILD_DIR/asm/ovl5/code_138F90.o(.text);
+        BUILD_DIR/asm/ovl5/code_139260.o(.text);
+        BUILD_DIR/asm/ovl5/code_139C00.o(.text);
+        BUILD_DIR/asm/ovl5/code_139D90.o(.text);
+        BUILD_DIR/asm/ovl5/code_13A5C0.o(.text);
+        BUILD_DIR/asm/ovl5/code_13AED0.o(.text);
+        BUILD_DIR/asm/ovl5/code_13BD50.o(.text);
+        BUILD_DIR/asm/ovl5/code_13C4F0.o(.text);
+        BUILD_DIR/asm/ovl5/code_13CD10.o(.text);
+        BUILD_DIR/asm/ovl5/code_13F210.o(.text);
+        BUILD_DIR/asm/ovl5/code_140E50.o(.text);
+        BUILD_DIR/asm/ovl5/code_141130.o(.text);
+        BUILD_DIR/asm/ovl5/code_141600.o(.text);
+        BUILD_DIR/asm/ovl5/code_142B90.o(.text);
+        BUILD_DIR/asm/ovl5/code_142FB0.o(.text);
+        BUILD_DIR/asm/ovl5/code_143360.o(.text);
+    }
+    END_SEG(code_ovl5)
+    
+    BEGIN_SEG(data_1436F0, 0x1436F0) {
+        BUILD_DIR/asm/ovl5/data.o(.data);
+    }
+    END_SEG(data_1436F0)
+    
+    BEGIN_SEG(code_ovl6, 0x80025C00) {
+        BUILD_DIR/asm/ovl6/code_14F960.o(.text);
+        BUILD_DIR/asm/ovl6/code_14FD10.o(.text);
+        BUILD_DIR/asm/ovl6/code_14FD20.o(.text);
+        BUILD_DIR/asm/ovl6/code_1502F0.o(.text);
+        BUILD_DIR/asm/ovl6/code_1507F0.o(.text);
+        BUILD_DIR/asm/ovl6/code_151D70.o(.text);
+        BUILD_DIR/asm/ovl6/code_152B70.o(.text);
+        BUILD_DIR/asm/ovl6/code_153680.o(.text);
+        BUILD_DIR/asm/ovl6/code_162180.o(.text);
+        BUILD_DIR/asm/ovl6/code_162350.o(.text);
+        BUILD_DIR/asm/ovl6/code_1643F0.o(.text);
+        BUILD_DIR/asm/ovl6/code_164CD0.o(.text);
+        BUILD_DIR/asm/ovl6/code_164DF0.o(.text);
+        BUILD_DIR/asm/ovl6/code_165030.o(.text);
+        BUILD_DIR/asm/ovl6/code_165DD0.o(.text);
+        BUILD_DIR/asm/ovl6/code_166310.o(.text);
+        BUILD_DIR/asm/ovl6/code_1666E0.o(.text);
+        BUILD_DIR/asm/ovl6/code_167310.o(.text);
+        BUILD_DIR/asm/ovl6/code_167A70.o(.text);
+        BUILD_DIR/asm/ovl6/code_167CC0.o(.text);
+    }
+    END_SEG(code_ovl6)
+    
+    BEGIN_SEG(data_168230, 0x168230) {
+        BUILD_DIR/asm/ovl6/data.o(.data);
+    }
+    END_SEG(data_168230)
+    
+    BEGIN_SEG(code_ovl7, 0x80025C00) {
+        BUILD_DIR/asm/ovl7/code_175640.o(.text);
+        BUILD_DIR/asm/ovl7/code_175860.o(.text);
+        BUILD_DIR/asm/ovl7/code_179E00.o(.text);
+        BUILD_DIR/asm/ovl7/code_17AEF0.o(.text);
+        BUILD_DIR/asm/ovl7/code_17B260.o(.text);
+        BUILD_DIR/asm/ovl7/code_17C790.o(.text);
+        BUILD_DIR/asm/ovl7/code_17E370.o(.text);
+        BUILD_DIR/asm/ovl7/code_17E6D0.o(.text);
+        BUILD_DIR/asm/ovl7/code_17F6E0.o(.text);
+        BUILD_DIR/asm/ovl7/code_17FF50.o(.text);
+        BUILD_DIR/asm/ovl7/code_180240.o(.text);
+        BUILD_DIR/asm/ovl7/code_181C60.o(.text);
+        BUILD_DIR/asm/ovl7/code_182170.o(.text);
+        BUILD_DIR/asm/ovl7/code_1822F0.o(.text);
+        BUILD_DIR/asm/ovl7/code_183770.o(.text);
+        BUILD_DIR/asm/ovl7/code_189240.o(.text);
+        BUILD_DIR/asm/ovl7/code_18AA00.o(.text);
+        BUILD_DIR/asm/ovl7/code_18D430.o(.text);
+        BUILD_DIR/asm/ovl7/code_18D5A0.o(.text);
+        BUILD_DIR/asm/ovl7/code_18DEE0.o(.text);
+        BUILD_DIR/asm/ovl7/code_18E0D0.o(.text);
+        BUILD_DIR/asm/ovl7/code_18EE00.o(.text);
+        BUILD_DIR/asm/ovl7/code_18EF90.o(.text);
+        BUILD_DIR/asm/ovl7/code_190050.o(.text);
+    }
+    END_SEG(code_ovl7)
+    
+    BEGIN_SEG(data_1907E0, 0x1907E0) {
+        BUILD_DIR/asm/ovl7/data.o(.data);
+    }
+    END_SEG(data_1907E0)
+
     BEGIN_SEG(data, __romPos) {
-        BUILD_DIR/asm/bin_354B0.o(.data);
         BUILD_DIR/asm/yay0.o(.data);
         BUILD_DIR/asm/sound_data.o(.data);
     }

@@ -1,6 +1,6 @@
 TARGET = eva
 
-ASM_DIRS = asm asm/asm
+ASM_DIRS = asm asm/asm $(wildcard asm/ovl*)
 SRC_DIRS = src src/os
 BUILD_DIR = build
 
