@@ -39,11 +39,34 @@ def do_nothing():
 		for line in f:
 			print(line[:-1])
 
+def mfix4300():
+	with open(sys.argv[1]) as f:
+		for line in f:
+			if "mfhi" in line:
+				print(line[:-1])
+				print("\tnop")
+				print("\tnop")
+			else:
+				print(line[:-1])
+
+def force_jrra_nop():
+	with open(sys.argv[1]) as f:
+		for line in f:
+			if "j" in line and "$31" in line:
+				print("\t.set noreorder")
+				print(line[:-1])
+				print("\tnop")
+				print("\t.set reorder")
+			else:
+				print(line[:-1])
+
 func_dict = {
-	"code_1D3E0": do_nothing
+	# "code_1D3E0": do_nothing,
+	"code_13610": force_jrra_nop,
+	"code_1050": mfix4300
 }
 
-fname = sys.argv[1].split("/")[-1]
+fname = sys.argv[1].replace(".", " ").replace("/", " ").split()[-3]
 if fname in func_dict:
 	func_dict[fname]()
 else:

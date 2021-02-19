@@ -2,7 +2,7 @@
 
 INCLUDE_ASM(s32, "code_2ADB0", func_800C01B0);
 
-INCLUDE_ASM(s32, "code_2ADB0", func_800C04D0);
+INCLUDE_ASM(s32, "code_2ADB0", bzero);
 
 INCLUDE_ASM(s32, "code_2ADB0", func_800C0570);
 

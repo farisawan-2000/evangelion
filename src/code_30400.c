@@ -16,10 +16,10 @@ INCLUDE_ASM(s32, "code_30400", func_800C5DE0);
 
 INCLUDE_ASM(s32, "code_30400", func_800C635C);
 
-INCLUDE_ASM(s32, "code_30400", func_800C644C);
+INCLUDE_ASM(s32, "code_30400", __osEnqueueAndYield);
 
-INCLUDE_ASM(s32, "code_30400", func_800C6554);
+INCLUDE_ASM(s32, "code_30400", __osEnqueueThread);
 
-INCLUDE_ASM(s32, "code_30400", func_800C659C);
+INCLUDE_ASM(s32, "code_30400", __osPopThread);
 
-INCLUDE_ASM(s32, "code_30400", func_800C65AC);
+INCLUDE_ASM(s32, "code_30400", __osDispatchThread);

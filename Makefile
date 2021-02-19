@@ -1,7 +1,7 @@
 TARGET = eva
 
 ASM_DIRS = asm asm/asm
-SRC_DIRS = src
+SRC_DIRS = src src/os
 BUILD_DIR = build
 
 YAY0_DIR = bin/Yay0
@@ -34,7 +34,7 @@ CC = tools/sn_cc1/cc1
 # CC = tools/gcc2_8/cc1
 OPT_FLAGS := -O2
 TARGET_CFLAGS := -nostdinc -I include/libc -DTARGET_N64 -DF3DEX_GBI_2
-CFLAGS = $(OPT_FLAGS) -mgas -quiet -G 0 -mcpu=vr4300 -mfix4300 -mips3 -mfp32
+CFLAGS = $(OPT_FLAGS) -mgas -quiet -G 0 -mcpu=vr4300 -mfix4300 -mips3 -mfp32 -mgp32
 IDO_CFLAGS = $(TARGET_CFLAGS) -Wab,-r4300_mul -non_shared -G0 -Xcpluscomm -Xfullwarn -signed -O2 -Iinclude -I. -Isrc/
 
 LD = mips-linux-gnu-ld

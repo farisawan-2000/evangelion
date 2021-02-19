@@ -1,9 +1,16 @@
 #include "common.h"
 
 void func_800A8D78(void);
+void func_800A8B34(void);
+extern u32 *D_801001D8, *D_801001F0;
+extern u32 D_800D4960;
 
-#ifdef MIPS_TO_C
+// the loop...
+#ifdef NON_MATCHING
 void thread3_main(void) {
+    u32 *ta1, *ta2;
+    s32 i;
+
     func_800B6230(&func_800A8D78);
     func_800B6A30();
     func_800A9140();
@@ -16,24 +23,24 @@ void thread3_main(void) {
     func_800A97FC();
     func_800A9848();
     func_800A9898(0);
-    for (phi_a1 = 0; phi_a1 < 5, phi_a1++) {
-        D_801001D8[i] = 0;
-        D_801001F0[i] = 0;
+    ta2 = &D_801001F0;
+    ta1 = &D_801001D8;
+    for (i = 0; i < 5; i++) {
+        *ta1++ = 0;
+        *ta2++ = 0;
     }
-    func_800A8DAC(temp_a0, temp_a1);
+    func_800A8DAC();
     func_800B6AC0(1, 0);
     func_800B6AC0(2, 0);
     func_800B6AC0(3, 0);
     func_800B6A60();
     func_800B67E0(&func_800A8B34);
-    if (D_800D4960 == 0) {
-        while (0 == 0);
-    }
+    while (D_800D4960 == 0);
     while (1) {
         func_800B6A30();
         func_800A9140();
     }
-}
+} 
 #else
 INCLUDE_ASM(s32, "code_13610", thread3_main);
 #endif
@@ -129,6 +136,8 @@ INCLUDE_ASM(s32, "code_13610", func_800A8B34);
 INCLUDE_ASM(s32, "code_13610", func_800A8D78);
 #endif
 
+extern Gfx *gDisplayListHead, *D_80100208, *D_80100200, *D_801001E8;
+extern Gfx D_8014A150;
 #ifdef MIPS_TO_C
 void func_800A8DAC(void) {
     s32 temp_a1;
@@ -137,15 +146,16 @@ void func_800A8DAC(void) {
     gDisplayListHead = &D_8014A150;
     func_8009C06C();
     func_8009C1C0();
-    temp_v1 = gDisplayListHead;
-    gDisplayListHead = temp_v1 + 8;
-    temp_a1 = temp_v1 + 0x10;
-    temp_v1->unk0 = 0xE9000000;
-    gDisplayListHead = temp_a1;
-    temp_v1->unk4 = 0;
-    temp_v1->unk8 = 0xDF000000;
-    temp_v1->unkC = 0;
-    func_800B666C(&D_8014A150, ((temp_a1 - &D_8014A150) >> 3) * 8, 0, 0);
+    // gDPFullSync(gDisplayListHead++);
+    // gSPEndDisplayList(gDisplayListHead++);
+    {
+        Gfx *_g = gDisplayListHead++;
+        _g[0].words.w0 = 0xE9000000;
+        _g[0].words.w1 = 0;
+        _g[1].words.w0 = 0xDF000000;
+        _g[1].words.w1 = 0;
+    };
+    func_800B666C(&D_8014A150, ((gDisplayListHead - &D_8014A150) >> 3) << 3, 0, 0);
 }
 #else
 INCLUDE_ASM(s32, "code_13610", func_800A8DAC);
@@ -229,7 +239,6 @@ INCLUDE_ASM(s32, "code_13610", func_800A8F14);
 #endif
 
 
-extern Gfx *gDisplayListHead, *D_80100208, *D_80100200, *D_801001E8;
 #ifdef MIPS_TO_C
 void func_800A9010(void) {
 	Gfx *temp;
@@ -276,14 +285,10 @@ INCLUDE_ASM(s32, "code_13610", func_800A9010);
 INCLUDE_ASM(s32, "code_13610", func_800A9098);
 #endif
 
-#ifdef MIPS_TO_C
 void func_800A9140(void) {
-    func_800C04D0(0x802D4000, 0x96000);
-    func_800C04D0(0x8036A000, 0x96000);
+    bzero(0x802D4000, 0x96000);
+    bzero(0x8036A000, 0x96000);
 }
-#else
-INCLUDE_ASM(s32, "code_13610", func_800A9140);
-#endif
 
 #ifdef MIPS_TO_C
 s32 func_800A9180(void) {
@@ -395,29 +400,17 @@ INCLUDE_ASM(s32, "code_13610", func_800A9258);
 INCLUDE_ASM(s32, "code_13610", func_800A9330);
 #endif
 
-#ifdef MIPS_TO_C
 void func_800A93AC(void) {
 
 }
-#else
-INCLUDE_ASM(s32, "code_13610", func_800A93AC);
-#endif
 
-#ifdef MIPS_TO_C
 void func_800A93B4(void) {
 
 }
-#else
-INCLUDE_ASM(s32, "code_13610", func_800A93B4);
-#endif
 
-#ifdef MIPS_TO_C
 void func_800A93BC(void) {
 
 }
-#else
-INCLUDE_ASM(s32, "code_13610", func_800A93BC);
-#endif
 
 #ifdef MIPS_TO_C
 s16 func_800A93C4(void) {
@@ -607,8 +600,8 @@ INCLUDE_ASM(s32, "code_13610", func_800A9804);
 #endif
 
 #ifdef MIPS_TO_C
-void func_800A980C(s32 arg0, s32 arg1, s32 arg2, s32 arg3, u8 arg4, u8 arg5) {
-    func_8009C404(arg0 & 0xFF, arg1 & 0xFF, arg2 & 0xFF, arg3 & 0xFF, arg4, arg5);
+void func_800A980C(u8 arg0, u8 arg1, u8 arg2, u8 arg3, u8 arg4, u8 arg5) {
+    func_8009C404(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 #else
 INCLUDE_ASM(s32, "code_13610", func_800A980C);
@@ -968,7 +961,7 @@ INCLUDE_ASM(s32, "code_13610", func_800A9FA4);
 #endif
 
 #ifdef MIPS_TO_C
-?32 func_800AA0D0(void) {
+void func_800AA0D0(void) {
     f32 temp_f10;
     f32 temp_f12;
     f32 temp_f2_5;
@@ -1081,7 +1074,6 @@ INCLUDE_ASM(s32, "code_13610", func_800A9FA4);
     temp_v1->unk8 = 0xDE000000;
     temp_v1->unk0 = 0xDA380003;
     temp_v1->unkC = 0xD4E60;
-    return 0xD4E60;
 }
 #else
 INCLUDE_ASM(s32, "code_13610", func_800AA0D0);

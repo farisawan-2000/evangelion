@@ -135,7 +135,8 @@ SECTIONS
         BUILD_DIR/src/code_2C480.o(.text);
         BUILD_DIR/src/code_2C570.o(.text);
         BUILD_DIR/src/code_2C660.o(.text);
-        BUILD_DIR/src/code_2C730.o(.text);
+        
+        BUILD_DIR/src/os/startthread.o(.text);
         BUILD_DIR/src/code_2C850.o(.text);
         BUILD_DIR/src/code_2C910.o(.text);
         BUILD_DIR/src/code_2C950.o(.text);

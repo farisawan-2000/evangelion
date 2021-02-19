@@ -25,7 +25,7 @@ segments:
     start: 0x1000
     vram: 0x80096400
     subsections:
-    - [0x1000, hasm, code_1000]
+    - [0x1000, hasm, entry]
     - [0x1050, c, code_1050]
     - [0x1D90, c, code_1D90]
     - [0x2270, c, code_2270]
@@ -48,7 +48,7 @@ segments:
     - [0x162C0, c, code_162C0]
     - [0x17D80, c, code_17D80]
     - [0x17E80, c, code_17E80]
-    - [0x183B0, c, entry]
+    - [0x183B0, c, main]
     - [0x184F0, c, code_184F0]
     - [0x18770, c, code_18770]
     - [0x187A0, c, code_187A0]
@@ -131,7 +131,7 @@ segments:
     - [0x2C480, c, code_2C480]
     - [0x2C570, c, code_2C570]
     - [0x2C660, c, code_2C660]
-    - [0x2C730, c, code_2C730]
+    - [0x2C730, c, os/startthread]
     - [0x2C850, c, code_2C850]
     - [0x2C910, c, code_2C910]
     - [0x2C950, c, code_2C950]

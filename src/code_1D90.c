@@ -129,8 +129,8 @@ void func_80097310(u8 arg0) {
 
     // temp_a0 = arg0 & 0xFF;
     D_800FF2E4[arg0 * 8] = D_800FF320[arg0 * 8];
-    temp_v0 = D_800FF2E0[arg0 * 8];
-    D_800FF2E0[temp_a0 * 8] = 0;
+    temp_v0 = _mainSegNoloadStart[arg0 * 8];
+    _mainSegNoloadStart[temp_a0 * 8] = 0;
     D_800FF320[temp_a0 * 8] = temp_v0;
     D_800FF324[temp_a0 * 8] = 0;
     D_800FF360[temp_a0] = 0;
