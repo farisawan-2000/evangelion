@@ -2,6 +2,7 @@ baserom.eva.z64
 asm/nonmatchings/code_*/*.s
 bin/*
 build/*
+expected/*
 .splat_cache
 asm/.splat_cache
 undefined_syms_auto.txt
