@@ -212,11 +212,11 @@ segments:
     - [0x000702A0, asm, ovl1/code_000702A0]
     - [0x00071530, asm, ovl1/code_00071530]
     - [0x00072CE0, asm, ovl1/code_00072CE0]
-    # - [0x72d80, data, ovl1/data]
+    - [0x72d80, data, ovl1/ovl1]
 
-  - name: code_00069EE0_data
-    type: bin
-    start: 0x72d80
+  # - name: code_00069EE0_data
+  #   type: bin
+  #   start: 0x72d80
     
   - name: ovl2
     type: code

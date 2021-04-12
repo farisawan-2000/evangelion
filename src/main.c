@@ -29,3 +29,4 @@ void thread1_idle(s32 arg0) {
         }
     }
 } 
+

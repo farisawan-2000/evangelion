@@ -1,6 +1,6 @@
 TARGET = eva
 
-ASM_DIRS = asm asm/asm $(wildcard asm/ovl*) $(wildcard src/ovl*)
+ASM_DIRS = asm asm/asm $(wildcard asm/ovl*) $(wildcard src/ovl*) $(wildcard asm/data/ovl*)
 SRC_DIRS = src src/os
 BUILD_DIR = build
 
@@ -35,8 +35,8 @@ STRIP := mips-linux-gnu-strip
 CC = tools/kmc_wrapper/gcc
 KMC_AS := tools/kmc_wrapper/as
 OPT_FLAGS := -O2
+KMC_CFLAGS = $(OPT_FLAGS) -c -G0 -mgp32 -mfp32 -mips3
 TARGET_CFLAGS := -nostdinc -I include/libc -DTARGET_N64 -DF3DEX_GBI_2
-KMC_CFLAGS := $(OPT_FLAGS) -c -G0 -mgp32 -mfp32 -mips3
 KMC_ASFLAGS := -c -mips3 -O2
 CFLAGS = $(KMC_CFLAGS)
 IDO_CFLAGS = $(TARGET_CFLAGS) -Wab,-r4300_mul -non_shared -G0 -Xcpluscomm -Xfullwarn -signed -O2 -Iinclude -I. -Isrc/
@@ -66,10 +66,7 @@ default: all
 
 $(GLOBAL_ASM_O_FILES): CC = $(PYTHON) asm-processor/build.py tools/kmc_wrapper/gcc -- $(AS) $(ASFLAGS) --
 
-$(BUILD_DIR)/src/code_13610.o: OPT_FLAGS = -O2
 $(BUILD_DIR)/src/main.o: OPT_FLAGS = -O0
-$(BUILD_DIR)/src/os/startthread.o: ASM_OPT_FLAGS = -O1
-$(BUILD_DIR)/src/ovl1/code_00072CE0.o: OPT_FLAGS = -O2
 
 $(BUILD_DIR)/%.o: %.s $(SZP_FILES)
 	$(N64AS) $(N64ASFLAGS) -o $@ $<
@@ -78,7 +75,7 @@ $(BUILD_DIR)/%.i : %.c | $(SRC_BUILD_DIRS)
 	$(CPP) $(CPPFLAGS) $< -o $@
 
 $(BUILD_DIR)/%.o : $(BUILD_DIR)/%.i | $(SRC_BUILD_DIRS)
-	$(CC) $(KMC_CFLAGS) $(OPTFLAGS) -o $@ $<
+	$(CC) $(KMC_CFLAGS) $(OPT_FLAGS) -o $@ $<
 	$(STRIP) $@ -N $(<:.i=.c)
 
 $(BUILD_DIR)/%.szp: %.bin

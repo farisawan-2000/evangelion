@@ -216,10 +216,10 @@ SECTIONS
     }
     END_SEG(code_ovl1)
     
-    /*BEGIN_SEG(data_72D80, 0x72D80) {
-        BUILD_DIR/asm/ovl1/data.o(.data);
+    BEGIN_SEG(data_72D80, 0x8002EAA0) {
+        BUILD_DIR/asm/data/ovl1/ovl1.data.o(.data);
     }
-    END_SEG(data_72D80)*/
+    END_SEG(data_72D80)
     
     BEGIN_SEG(code_ovl2, 0x80025C00) {
         BUILD_DIR/asm/ovl2/code_00074BB0.o(.text);

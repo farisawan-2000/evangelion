@@ -128,8 +128,8 @@ glabel func_80026F38_6B218
 /* 6B23C 80026F5C 2405000D */  addiu      $a1, $zero, 0xd
 /* 6B240 80026F60 0C02DAE0 */  jal        func_800B6B80
 /* 6B244 80026F64 24060004 */   addiu     $a2, $zero, 4
-/* 6B248 80026F68 3C058003 */  lui        $a1, %hi(D_8002FC70)
-/* 6B24C 80026F6C 24A5FC70 */  addiu      $a1, $a1, %lo(D_8002FC70)
+/* 6B248 80026F68 3C058003 */  lui        $a1, %hi(D_8002FC70_73F50)
+/* 6B24C 80026F6C 24A5FC70 */  addiu      $a1, $a1, %lo(D_8002FC70_73F50)
 /* 6B250 80026F70 0C02DA9C */  jal        func_800B6A70
 /* 6B254 80026F74 00002021 */   addu      $a0, $zero, $zero
 /* 6B258 80026F78 3C118015 */  lui        $s1, %hi(D_8014CF92)
