@@ -1,3 +1,9 @@
 [submodule "splat"]
 	path = splat
 	url = https://github.com/ethteck/splat/
+[submodule "asm-processor"]
+	path = asm-processor
+	url = https://github.com/simonlindholm/asm-processor/
+[submodule "tools/kmc_wrapper"]
+	path = tools/kmc_wrapper
+	url = https://github.com/Mr-Wiseguy/kmc-gcc-wrapper/
