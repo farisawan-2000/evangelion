@@ -18,16 +18,29 @@ import sys
 def manual_addr_split():
 	with open(sys.argv[1]) as f:
 		for line in f:
-			if "la" in line and "glabel" not in line:
+			if "la" in line and "glabel" not in line and ".set" not in line:
 				tok = line.replace(",", " ").split()
 				# print(tok)
 				print("\tlui %s, %%hi(%s)" % (tok[1], tok[2]))
 				print("\taddiu %s, %s, %%lo(%s)" % (tok[1], tok[1], tok[2]))
 				continue
+			# l_toks = ["lw", "lh", "lb"]
+			# found_match = False
+			# for i in l_toks:
+			if "lhu" in line and "glabel" not in line and "(" not in line:
+				tok = line.replace(",", " ").split()
+				print("\tlui %s, %%hi(%s)" % (tok[1], tok[2]))
+				print("\tlhu %s, %%lo(%s)(%s)" % (tok[1], tok[2], tok[1]))
+				continue
 			if "sw" in line and "glabel" not in line and "(" not in line:
 				tok = line.replace(",", " ").split()
 				print("\tlui $at, %%hi(%s)" % (tok[2]))
 				print("\tsw %s, %%lo(%s)($at)" % (tok[1], tok[2]))
+				continue
+			if "sb" in line and "glabel" not in line and "(" not in line:
+				tok = line.replace(",", " ").split()
+				print("\tlui $at, %%hi(%s)" % (tok[2]))
+				print("\tsb %s, %%lo(%s)($at)" % (tok[1], tok[2]))
 				continue
 			else:
 				print(line[:-1])

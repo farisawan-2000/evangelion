@@ -2,7 +2,7 @@ name: Evangelion (Japanese)
 basename: evangelion
 options:
   find_file_boundaries: True
-  compiler: "GCC"
+  compiler: "IDO"
   ld_o_replace_extension: True
   do_c_func_detection: False
   symbol_addrs_path: tools/symbol_addrs.txt
@@ -159,7 +159,7 @@ segments:
     - [0x2FC90, c, code_2FC90]
     - [0x2FE80, c, code_2FE80]
     - [0x300F0, c, code_300F0]
-    - [0x30400, c, code_30400]
+    - [0x30400, hasm, code_30400] # __osException
     - [0x31340, c, code_31340]
     - [0x313D0, c, code_313D0]
     - [0x31460, c, code_31460]
@@ -212,6 +212,7 @@ segments:
     - [0x000702A0, asm, ovl1/code_000702A0]
     - [0x00071530, asm, ovl1/code_00071530]
     - [0x00072CE0, asm, ovl1/code_00072CE0]
+    # - [0x72d80, data, ovl1/data]
 
   - name: code_00069EE0_data
     type: bin

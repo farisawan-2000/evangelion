@@ -52,7 +52,7 @@ SECTIONS
         BUILD_DIR/src/code_162C0.o(.text);
         BUILD_DIR/src/code_17D80.o(.text);
         BUILD_DIR/src/code_17E80.o(.text);
-        BUILD_DIR/src/entry.o(.text);
+        BUILD_DIR/src/main.o(.text);
         BUILD_DIR/src/code_184F0.o(.text);
         BUILD_DIR/src/code_18770.o(.text);
         BUILD_DIR/src/code_187A0.o(.text);
@@ -164,7 +164,7 @@ SECTIONS
         BUILD_DIR/src/code_2FC90.o(.text);
         BUILD_DIR/src/code_2FE80.o(.text);
         BUILD_DIR/src/code_300F0.o(.text);
-        BUILD_DIR/src/code_30400.o(.text);
+        BUILD_DIR/asm/code_30400.o(.text);
         BUILD_DIR/src/code_31340.o(.text);
         BUILD_DIR/src/code_313D0.o(.text);
         BUILD_DIR/src/code_31460.o(.text);
@@ -216,10 +216,10 @@ SECTIONS
     }
     END_SEG(code_ovl1)
     
-    BEGIN_SEG(data_72D80, 0x72D80) {
+    /*BEGIN_SEG(data_72D80, 0x72D80) {
         BUILD_DIR/asm/ovl1/data.o(.data);
     }
-    END_SEG(data_72D80)
+    END_SEG(data_72D80)*/
     
     BEGIN_SEG(code_ovl2, 0x80025C00) {
         BUILD_DIR/asm/ovl2/code_00074BB0.o(.text);

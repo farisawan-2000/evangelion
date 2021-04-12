@@ -1,25 +1,25 @@
 #include "common.h"
 
-INCLUDE_ASM(s32, "code_21F80", func_800B7380);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_21F80/func_800B7380.s")
 
-INCLUDE_ASM(s32, "code_21F80", func_800B73C0);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_21F80/func_800B73C0.s")
 
-INCLUDE_ASM(s32, "code_21F80", func_800B7420);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_21F80/func_800B7420.s")
 
-INCLUDE_ASM(s32, "code_21F80", func_800B7440);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_21F80/func_800B7440.s")
 
-INCLUDE_ASM(s32, "code_21F80", func_800B7460);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_21F80/func_800B7460.s")
 
-INCLUDE_ASM(s32, "code_21F80", func_800B74B0);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_21F80/func_800B74B0.s")
 
-INCLUDE_ASM(s32, "code_21F80", func_800B74D8);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_21F80/func_800B74D8.s")
 
-INCLUDE_ASM(s32, "code_21F80", func_800B7518);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_21F80/func_800B7518.s")
 
-INCLUDE_ASM(s32, "code_21F80", func_800B75D0);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_21F80/func_800B75D0.s")
 
-INCLUDE_ASM(s32, "code_21F80", func_800B7610);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_21F80/func_800B7610.s")
 
-INCLUDE_ASM(s32, "code_21F80", func_800B763C);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_21F80/func_800B763C.s")
 
-INCLUDE_ASM(s32, "code_21F80", func_800B7668);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_21F80/func_800B7668.s")

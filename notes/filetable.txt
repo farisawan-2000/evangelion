@@ -1,0 +1,4 @@
+yay0 block referenced directly in game
+
+-file size table at like 3FD90 (but starts 4 indices in at 3FD9C???)
+   - never referenced in game??? how?

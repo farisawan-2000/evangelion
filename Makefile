@@ -1,10 +1,13 @@
 TARGET = eva
 
-ASM_DIRS = asm asm/asm $(wildcard asm/ovl*)
+ASM_DIRS = asm asm/asm $(wildcard asm/ovl*) $(wildcard src/ovl*)
 SRC_DIRS = src src/os
 BUILD_DIR = build
 
 YAY0_DIR = bin/Yay0
+
+GLOBAL_ASM_C_FILES != grep -rl 'GLOBAL_ASM(' $(wildcard src/*/*.c)
+GLOBAL_ASM_O_FILES = $(foreach file,$(GLOBAL_ASM_C_FILES),$(BUILD_DIR)/$(file:.c=.o))
 
 ASM_FILES = $(foreach dir,$(ASM_DIRS),$(wildcard $(dir)/*.s))
 SRC_FILES = $(foreach dir,$(SRC_DIRS),$(wildcard $(dir)/*.c))
@@ -12,7 +15,9 @@ TMP_SRC_FILES = $(foreach dir,$(SRC_DIRS),$(wildcard $(BUILD_DIR)/*.tmp.c))
 O_FILES = $(foreach file,$(ASM_FILES),$(BUILD_DIR)/$(file:.s=.o)) \
 		  $(foreach file,$(SRC_FILES),$(BUILD_DIR)/$(file:.c=.o))
 
-GLOBAL_ASM_C_FILES != grep -rl 'GLOBAL_ASM(' $(wildcard src/*/*.c)
+I_FILES = $(foreach file,$(SRC_FILES),$(BUILD_DIR)/$(file:.c=.i))
+
+GLOBAL_ASM_C_FILES != grep -rl 'GLOBAL_ASM(' $(wildcard src/*.c) $(wildcard src/*/*.c)
 GLOBAL_ASM_O_FILES = $(foreach file,$(GLOBAL_ASM_C_FILES),$(BUILD_DIR)/$(file:.c=.o))
 
 YAY0_FILES = $(foreach dir,$(YAY0_DIR),$(wildcard $(dir)/*.bin))
@@ -23,18 +28,17 @@ DUMMY != mkdir -p $(ALL_DIRS)
 
 N64AS = tools/n64_gcc2/mips-nintendo-nu64-as
 N64ASFLAGS := -EB -mcpu=vr4300 -mips3 -Ibuild/ -I.
-# N64AS := tools/qemu_ido_as/usr/bin/as
-# N64ASFLAGS := -v -Wab,-r4300_mul -non_shared -G 0 -mips2 -Ibuild/ -I. -O1
 AS = mips-linux-gnu-as
-ASFLAGS := -march=vr4300 -O3  -mtune=vr4300 -mips3 -Iinclude -I. -I$(BUILD_DIR)
+ASFLAGS := -march=vr4300 -mtune=vr4300 -mabi=32 -mips3 -Iinclude -I. -I$(BUILD_DIR)
 
-# CC = tools/n64_gcc2.7/cc1
-# CC = tools/n64_gcc2/cc1
-CC = tools/sn_cc1/cc1
-# CC = tools/gcc2_8/cc1
+STRIP := mips-linux-gnu-strip
+CC = tools/kmc_wrapper/gcc
+KMC_AS := tools/kmc_wrapper/as
 OPT_FLAGS := -O2
 TARGET_CFLAGS := -nostdinc -I include/libc -DTARGET_N64 -DF3DEX_GBI_2
-CFLAGS = $(OPT_FLAGS) -mgas -quiet -G 0 -mcpu=vr4300 -mfix4300 -mips3 -mfp32 -mgp32
+KMC_CFLAGS := $(OPT_FLAGS) -c -G0 -mgp32 -mfp32 -mips3
+KMC_ASFLAGS := -c -mips3 -O2
+CFLAGS = $(KMC_CFLAGS)
 IDO_CFLAGS = $(TARGET_CFLAGS) -Wab,-r4300_mul -non_shared -G0 -Xcpluscomm -Xfullwarn -signed -O2 -Iinclude -I. -Isrc/
 
 LD = mips-linux-gnu-ld
@@ -52,33 +56,30 @@ OBJCOPY := mips-linux-gnu-objcopy
 OBJCOPY_FLAGS = --pad-to=0x2000000 --gap-fill=0xFF
 
 DUMMY != make -C tools
+DUMMY != make -C tools/kmc_wrapper
 
 PYTHON := python3
 POSTPROCESS = $(PYTHON) tools/postprocess_asm.py
 
+
 default: all
 
+$(GLOBAL_ASM_O_FILES): CC = $(PYTHON) asm-processor/build.py tools/kmc_wrapper/gcc -- $(AS) $(ASFLAGS) --
+
 $(BUILD_DIR)/src/code_13610.o: OPT_FLAGS = -O2
-$(BUILD_DIR)/src/entry.o: OPT_FLAGS = -O0
-$(BUILD_DIR)/src/code_1D90.o: CC = tools/n64_gcc2.7/cc1
+$(BUILD_DIR)/src/main.o: OPT_FLAGS = -O0
+$(BUILD_DIR)/src/os/startthread.o: ASM_OPT_FLAGS = -O1
+$(BUILD_DIR)/src/ovl1/code_00072CE0.o: OPT_FLAGS = -O2
 
 $(BUILD_DIR)/%.o: %.s $(SZP_FILES)
 	$(N64AS) $(N64ASFLAGS) -o $@ $<
-# 	$(AS) $(ASFLAGS) -o $@ $<
 
-$(BUILD_DIR)/%.o: %.c
-	@$(CC_CHECK) -MMD -MP -MT $@ -MF $(BUILD_DIR)/$*.d $<
-	$(CPP) $(CPPFLAGS) -nostdinc $< -o $(BUILD_DIR)/$*.tmp.c
-	$(CC) $(CFLAGS) -o $(BUILD_DIR)/$*.tmp.i $(BUILD_DIR)/$*.tmp.c
-	$(POSTPROCESS) $(BUILD_DIR)/$*.tmp.i > $(BUILD_DIR)/$*.tmp.s
-	$(N64AS) $(N64ASFLAGS) -o $@ $(BUILD_DIR)/$*.tmp.s
-# 	$(AS) $(ASFLAGS) -o $@ $(BUILD_DIR)/$*.tmp.s
+$(BUILD_DIR)/%.i : %.c | $(SRC_BUILD_DIRS)
+	$(CPP) $(CPPFLAGS) $< -o $@
 
-
-$(BUILD_DIR)/%.ido.o: %.ido.c
-	$(info Compiling IDO file)
-	$(CC_CHECK) -nostdinc -MMD -MP -MT $@ -MF $(BUILD_DIR)/$*.d $<
-	python3 tools/asm_processor/build.py tools/ido7/cc -- mips-linux-gnu-as -mtune=vr4300 -march=vr4300 -mabi=32 -mips3 -Ibuild/us -- -c -Wab,-r4300_mul -non_shared -G0 -Xcpluscomm -Xfullwarn -signed -g -nostdinc -I include/libc -DTARGET_N64 -DF3DEX_GBI_2 -I include -I build/us -I build/us/include -I src -I . -mips2 -32 -o $@ $<
+$(BUILD_DIR)/%.o : $(BUILD_DIR)/%.i | $(SRC_BUILD_DIRS)
+	$(CC) $(KMC_CFLAGS) $(OPTFLAGS) -o $@ $<
+	$(STRIP) $@ -N $(<:.i=.c)
 
 $(BUILD_DIR)/%.szp: %.bin
 	tools/slienc $< $@
@@ -87,7 +88,7 @@ $(BUILD_DIR)/$(LD_SCRIPT): $(LD_SCRIPT)
 	$(CPP) $(VERSION_CFLAGS) -Umips -MMD -MP -MT $@ -MF $@.d -o $@ $< \
 	-DBUILD_DIR=$(BUILD_DIR)
 
-$(BUILD_DIR)/$(TARGET).elf: $(BUILD_DIR)/$(LD_SCRIPT) $(O_FILES)
+$(BUILD_DIR)/$(TARGET).elf: $(BUILD_DIR)/$(LD_SCRIPT) $(O_FILES) $(I_FILES)
 	$(LD) $(LDFLAGS) -o $@ -Map $(BUILD_DIR)/$(TARGET).map
 
 # final z64 updates checksum
@@ -100,12 +101,6 @@ all: $(BUILD_DIR)/$(TARGET).z64
 
 clean:
 	rm -rf $(BUILD_DIR)
-
-IRIX_ROOT := tools/qemu_ido7/
-# GLOBAL_ASM_COMPILER := qemu-irix -L $(IRIX_ROOT) $(IRIX_ROOT)usr/bin/cc
-# GLOBAL_ASM_COMPILER := ./tools/n64_gcc2/cc1
-GLOBAL_ASM_COMPILER := ./tools/ido7/cc
-$(GLOBAL_ASM_O_FILES): CC := $(PYTHON) tools/asm_processor/build.py $(GLOBAL_ASM_COMPILER) -- $(AS) $(ASFLAGS) --
 
 .PHONY: all clean default diff test distclean
 

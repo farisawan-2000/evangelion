@@ -1,25 +1,25 @@
 #include "common.h"
 
-INCLUDE_ASM(s32, "code_8C50", func_8009E050);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_8C50/func_8009E050.s")
 
-INCLUDE_ASM(s32, "code_8C50", func_8009E200);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_8C50/func_8009E200.s")
 
-INCLUDE_ASM(s32, "code_8C50", func_8009E2AC);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_8C50/func_8009E2AC.s")
 
-INCLUDE_ASM(s32, "code_8C50", func_8009E4AC);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_8C50/func_8009E4AC.s")
 
-INCLUDE_ASM(s32, "code_8C50", func_8009E570);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_8C50/func_8009E570.s")
 
-INCLUDE_ASM(s32, "code_8C50", func_8009E588);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_8C50/func_8009E588.s")
 
-INCLUDE_ASM(s32, "code_8C50", func_8009E668);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_8C50/func_8009E668.s")
 
-INCLUDE_ASM(s32, "code_8C50", func_8009EA4C);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_8C50/func_8009EA4C.s")
 
-INCLUDE_ASM(s32, "code_8C50", func_8009EAEC);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_8C50/func_8009EAEC.s")
 
-INCLUDE_ASM(s32, "code_8C50", func_8009EBD4);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_8C50/func_8009EBD4.s")
 
-INCLUDE_ASM(s32, "code_8C50", func_8009EBE8);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_8C50/func_8009EBE8.s")
 
-INCLUDE_ASM(s32, "code_8C50", func_8009EC24);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_8C50/func_8009EC24.s")

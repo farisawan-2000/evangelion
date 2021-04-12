@@ -1,5 +1,5 @@
 #include "common.h"
 
-INCLUDE_ASM(s32, "code_31340", __osDisableInt);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_31340/__osDisableInt.s")
 
-INCLUDE_ASM(s32, "code_31340", __osRestoreInt);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_31340/__osRestoreInt.s")

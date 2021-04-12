@@ -1,7 +1,7 @@
 #include "common.h"
 
-INCLUDE_ASM(s32, "code_20470", func_800B5870);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_20470/func_800B5870.s")
 
-INCLUDE_ASM(s32, "code_20470", func_800B58C0);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_20470/func_800B58C0.s")
 
-INCLUDE_ASM(s32, "code_20470", func_800B5910);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_20470/func_800B5910.s")

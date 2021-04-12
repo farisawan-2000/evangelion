@@ -1,15 +1,15 @@
 #include "common.h"
 
-INCLUDE_ASM(s32, "code_32A70", func_800C7E70);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_32A70/func_800C7E70.s")
 
-INCLUDE_ASM(s32, "code_32A70", func_800C7E80);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_32A70/func_800C7E80.s")
 
-INCLUDE_ASM(s32, "code_32A70", func_800C82E0);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_32A70/func_800C82E0.s")
 
-INCLUDE_ASM(s32, "code_32A70", func_800C8438);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_32A70/func_800C8438.s")
 
-INCLUDE_ASM(s32, "code_32A70", func_800C85A0);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_32A70/func_800C85A0.s")
 
-INCLUDE_ASM(s32, "code_32A70", func_800C871C);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_32A70/func_800C871C.s")
 
-INCLUDE_ASM(s32, "code_32A70", func_800C87C0);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_32A70/func_800C87C0.s")

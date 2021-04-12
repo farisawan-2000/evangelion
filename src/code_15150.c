@@ -1,33 +1,33 @@
 #include "common.h"
 
-INCLUDE_ASM(s32, "code_15150", func_800AA550);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_15150/func_800AA550.s")
 
-INCLUDE_ASM(s32, "code_15150", func_800AA5A8);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_15150/func_800AA5A8.s")
 
-INCLUDE_ASM(s32, "code_15150", func_800AA628);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_15150/func_800AA628.s")
 
-INCLUDE_ASM(s32, "code_15150", func_800AA710);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_15150/func_800AA710.s")
 
-INCLUDE_ASM(s32, "code_15150", func_800AA7F8);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_15150/func_800AA7F8.s")
 
-INCLUDE_ASM(s32, "code_15150", func_800AA924);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_15150/func_800AA924.s")
 
-INCLUDE_ASM(s32, "code_15150", func_800AAA88);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_15150/func_800AAA88.s")
 
-INCLUDE_ASM(s32, "code_15150", func_800AACAC);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_15150/func_800AACAC.s")
 
-INCLUDE_ASM(s32, "code_15150", func_800AADC8);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_15150/func_800AADC8.s")
 
-INCLUDE_ASM(s32, "code_15150", func_800AAFE0);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_15150/func_800AAFE0.s")
 
-INCLUDE_ASM(s32, "code_15150", func_800AB074);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_15150/func_800AB074.s")
 
-INCLUDE_ASM(s32, "code_15150", func_800AB158);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_15150/func_800AB158.s")
 
-INCLUDE_ASM(s32, "code_15150", func_800AB24C);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_15150/func_800AB24C.s")
 
-INCLUDE_ASM(s32, "code_15150", func_800AB468);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_15150/func_800AB468.s")
 
-INCLUDE_ASM(s32, "code_15150", func_800AB538);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_15150/func_800AB538.s")
 
-INCLUDE_ASM(s32, "code_15150", func_800AB5F0);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_15150/func_800AB5F0.s")

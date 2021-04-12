@@ -1,11 +1,11 @@
 #include "common.h"
 
-INCLUDE_ASM(s32, "code_33480", func_800C8880);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_33480/func_800C8880.s")
 
-INCLUDE_ASM(s32, "code_33480", func_800C8AD0);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_33480/func_800C8AD0.s")
 
-INCLUDE_ASM(s32, "code_33480", func_800C8F1C);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_33480/func_800C8F1C.s")
 
-INCLUDE_ASM(s32, "code_33480", func_800C8FB4);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_33480/func_800C8FB4.s")
 
-INCLUDE_ASM(s32, "code_33480", func_800C9560);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_33480/func_800C9560.s")

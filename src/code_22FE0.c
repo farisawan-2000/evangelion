@@ -1,19 +1,19 @@
 #include "common.h"
 
-INCLUDE_ASM(s32, "code_22FE0", func_800B83E0);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_22FE0/func_800B83E0.s")
 
-INCLUDE_ASM(s32, "code_22FE0", func_800B84B4);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_22FE0/func_800B84B4.s")
 
-INCLUDE_ASM(s32, "code_22FE0", func_800B84D4);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_22FE0/func_800B84D4.s")
 
-INCLUDE_ASM(s32, "code_22FE0", func_800B84FC);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_22FE0/func_800B84FC.s")
 
-INCLUDE_ASM(s32, "code_22FE0", func_800B8524);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_22FE0/func_800B8524.s")
 
-INCLUDE_ASM(s32, "code_22FE0", func_800B85AC);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_22FE0/func_800B85AC.s")
 
-INCLUDE_ASM(s32, "code_22FE0", func_800B85FC);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_22FE0/func_800B85FC.s")
 
-INCLUDE_ASM(s32, "code_22FE0", func_800B8688);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_22FE0/func_800B8688.s")
 
-INCLUDE_ASM(s32, "code_22FE0", func_800B86A8);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_22FE0/func_800B86A8.s")

@@ -1,4 +1,3 @@
-
 glabel thread1_idle
 /* 18414 800AD814 27BDFFD8 */  addiu      $sp, $sp, -0x28
 /* 18418 800AD818 AFBF0020 */  sw         $ra, 0x20($sp)

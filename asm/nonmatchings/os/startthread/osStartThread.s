@@ -1,4 +1,3 @@
-
 glabel osStartThread
 /* 2C730 800C1B30 27BDFFE0 */  addiu      $sp, $sp, -0x20
 /* 2C734 800C1B34 AFB00010 */  sw         $s0, 0x10($sp)

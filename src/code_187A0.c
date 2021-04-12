@@ -1,3 +1,3 @@
 #include "common.h"
 
-INCLUDE_ASM(s32, "code_187A0", func_800ADBA0);
+#pragma GLOBAL_ASM("asm/nonmatchings/code_187A0/func_800ADBA0.s")

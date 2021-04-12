@@ -1,4 +1,3 @@
-
 glabel evangelion_main
 /* 183B0 800AD7B0 27BDFFE0 */  addiu      $sp, $sp, -0x20
 /* 183B4 800AD7B4 AFBF001C */  sw         $ra, 0x1c($sp)
