@@ -15,3 +15,6 @@ __osRunningThread = 0x800F69C0; // type:data
 __osRunQueue = 0x800F69B8; // type:data
 __osDisableInt = 0x800C6740; // type:func
 __osRestoreInt = 0x800C67B0; // type:func
+__osActiveQueue = 0x800F69BC; // type:func
+yay0_001BB280 = 0x1BB280; // type:data
+rom_addr_001A1880 = 0x1A1880; // type:data

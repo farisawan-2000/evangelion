@@ -11,8 +11,8 @@ glabel func_800386D0_E1BE0
 /* E1BE4 800386D4 AFB600F0 */  sw         $s6, 0xf0($sp)
 /* E1BE8 800386D8 0080B021 */  addu       $s6, $a0, $zero
 /* E1BEC 800386DC 27A70020 */  addiu      $a3, $sp, 0x20
-/* E1BF0 800386E0 3C068007 */  lui        $a2, %hi(D_80069E60)
-/* E1BF4 800386E4 24C69E60 */  addiu      $a2, $a2, %lo(D_80069E60)
+/* E1BF0 800386E0 3C068007 */  lui        $a2, %hi(D_80069E60_113370)
+/* E1BF4 800386E4 24C69E60 */  addiu      $a2, $a2, %lo(D_80069E60_113370)
 /* E1BF8 800386E8 24C800B0 */  addiu      $t0, $a2, 0xb0
 /* E1BFC 800386EC AFBF00F4 */  sw         $ra, 0xf4($sp)
 /* E1C00 800386F0 AFB500EC */  sw         $s5, 0xec($sp)
@@ -43,8 +43,8 @@ glabel func_800386D0_E1BE0
 /* E1C60 80038750 240540C9 */  addiu      $a1, $zero, 0x40c9
 /* E1C64 80038754 240640CC */  addiu      $a2, $zero, 0x40cc
 /* E1C68 80038758 24070017 */  addiu      $a3, $zero, 0x17
-/* E1C6C 8003875C 3C028007 */  lui        $v0, %hi(D_80068D40)
-/* E1C70 80038760 24428D40 */  addiu      $v0, $v0, %lo(D_80068D40)
+/* E1C6C 8003875C 3C028007 */  lui        $v0, %hi(D_80068D40_112250)
+/* E1C70 80038760 24428D40 */  addiu      $v0, $v0, %lo(D_80068D40_112250)
 /* E1C74 80038764 AFA20018 */  sw         $v0, 0x18($sp)
 /* E1C78 80038768 2402FFFC */  addiu      $v0, $zero, -4
 /* E1C7C 8003876C A3A2001C */  sb         $v0, 0x1c($sp)
@@ -257,9 +257,9 @@ glabel func_800386D0_E1BE0
 /* E1FB0 80038AA0 0C028D89 */  jal        func_800A3624
 /* E1FB4 80038AA4 24060040 */   addiu     $a2, $zero, 0x40
 /* E1FB8 80038AA8 00129040 */  sll        $s2, $s2, 1
-/* E1FBC 80038AAC 3C048007 */  lui        $a0, %hi(D_80068EA4)
+/* E1FBC 80038AAC 3C048007 */  lui        $a0, %hi(D_80068EA4_1123B4)
 /* E1FC0 80038AB0 00922021 */  addu       $a0, $a0, $s2
-/* E1FC4 80038AB4 94848EA4 */  lhu        $a0, %lo(D_80068EA4)($a0)
+/* E1FC4 80038AB4 94848EA4 */  lhu        $a0, %lo(D_80068EA4_1123B4)($a0)
 /* E1FC8 80038AB8 24050006 */  addiu      $a1, $zero, 6
 /* E1FCC 80038ABC 0C00D925 */  jal        func_80036494_DF9A4
 /* E1FD0 80038AC0 240640D9 */   addiu     $a2, $zero, 0x40d9

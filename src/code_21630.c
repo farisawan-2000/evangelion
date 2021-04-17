@@ -1,3 +1,7 @@
 #include "common.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_21630/func_800B6A30.s")
+extern s32 D_80149FC8;
+void func_800B6A30(void) {
+    D_80149FC8 = 0;
+    func_800C2C60(1);
+}

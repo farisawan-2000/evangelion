@@ -69,8 +69,8 @@ glabel func_8003F3C0_18EE00
 /* 18EEE0 8003F4A0 27BD0020 */   addiu     $sp, $sp, 0x20
 
 glabel func_8003F4A4_18EEE4
-/* 18EEE4 8003F4A4 3C028005 */  lui        $v0, %hi(D_8004FB4C)
-/* 18EEE8 8003F4A8 9042FB4C */  lbu        $v0, %lo(D_8004FB4C)($v0)
+/* 18EEE4 8003F4A4 3C028005 */  lui        $v0, %hi(D_8004FB4C_19F58C)
+/* 18EEE8 8003F4A8 9042FB4C */  lbu        $v0, %lo(D_8004FB4C_19F58C)($v0)
 /* 18EEEC 8003F4AC 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 18EEF0 8003F4B0 10400019 */  beqz       $v0, .L8003F518
 /* 18EEF4 8003F4B4 AFBF0010 */   sw        $ra, 0x10($sp)
@@ -86,12 +86,12 @@ glabel func_8003F4A4_18EEE4
 /* 18EF1C 8003F4DC 24020001 */  addiu      $v0, $zero, 1
 /* 18EF20 8003F4E0 3C018005 */  lui        $at, %hi(D_80052006)
 /* 18EF24 8003F4E4 A0222006 */  sb         $v0, %lo(D_80052006)($at)
-/* 18EF28 8003F4E8 3C028005 */  lui        $v0, %hi(D_8004FB1C)
-/* 18EF2C 8003F4EC 2442FB1C */  addiu      $v0, $v0, %lo(D_8004FB1C)
+/* 18EF28 8003F4E8 3C028005 */  lui        $v0, %hi(D_8004FB1C_19F55C)
+/* 18EF2C 8003F4EC 2442FB1C */  addiu      $v0, $v0, %lo(D_8004FB1C_19F55C)
 /* 18EF30 8003F4F0 00002821 */  addu       $a1, $zero, $zero
 /* 18EF34 8003F4F4 2406012C */  addiu      $a2, $zero, 0x12c
-/* 18EF38 8003F4F8 3C018005 */  lui        $at, %hi(D_8004FB4C)
-/* 18EF3C 8003F4FC A020FB4C */  sb         $zero, %lo(D_8004FB4C)($at)
+/* 18EF38 8003F4F8 3C018005 */  lui        $at, %hi(D_8004FB4C_19F58C)
+/* 18EF3C 8003F4FC A020FB4C */  sb         $zero, %lo(D_8004FB4C_19F58C)($at)
 /* 18EF40 8003F500 3C018005 */  lui        $at, %hi(D_80052060)
 /* 18EF44 8003F504 A0202060 */  sb         $zero, %lo(D_80052060)($at)
 /* 18EF48 8003F508 3C018005 */  lui        $at, %hi(D_80052000)
@@ -105,8 +105,8 @@ glabel func_8003F4A4_18EEE4
 /* 18EF64 8003F524 14620005 */  bne        $v1, $v0, .L8003F53C
 /* 18EF68 8003F528 00001021 */   addu      $v0, $zero, $zero
 /* 18EF6C 8003F52C 24020001 */  addiu      $v0, $zero, 1
-/* 18EF70 8003F530 3C018005 */  lui        $at, %hi(D_8004FB4C)
-/* 18EF74 8003F534 A022FB4C */  sb         $v0, %lo(D_8004FB4C)($at)
+/* 18EF70 8003F530 3C018005 */  lui        $at, %hi(D_8004FB4C_19F58C)
+/* 18EF74 8003F534 A022FB4C */  sb         $v0, %lo(D_8004FB4C_19F58C)($at)
 /* 18EF78 8003F538 24020001 */  addiu      $v0, $zero, 1
 .L8003F53C:
 /* 18EF7C 8003F53C 8FBF0010 */  lw         $ra, 0x10($sp)

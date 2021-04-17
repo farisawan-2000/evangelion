@@ -28,5 +28,5 @@ void thread1_idle(s32 arg0) {
             D_8016D0E0();
         }
     }
-} 
+}
 

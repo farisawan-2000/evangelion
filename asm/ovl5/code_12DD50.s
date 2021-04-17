@@ -7,8 +7,8 @@
 .section .text, "ax"
 
 glabel func_8003BF50_12DD50
-/* 12DD50 8003BF50 3C028005 */  lui        $v0, %hi(D_80051EA0)
-/* 12DD54 8003BF54 90421EA0 */  lbu        $v0, %lo(D_80051EA0)($v0)
+/* 12DD50 8003BF50 3C028005 */  lui        $v0, %hi(D_80051EA0_143CA0)
+/* 12DD54 8003BF54 90421EA0 */  lbu        $v0, %lo(D_80051EA0_143CA0)($v0)
 /* 12DD58 8003BF58 27BDFFE0 */  addiu      $sp, $sp, -0x20
 /* 12DD5C 8003BF5C AFB00018 */  sw         $s0, 0x18($sp)
 /* 12DD60 8003BF60 00808021 */  addu       $s0, $a0, $zero
@@ -74,26 +74,26 @@ glabel func_8003BF50_12DD50
 /* 12DE50 8003C050 24050007 */   addiu     $a1, $zero, 7
 /* 12DE54 8003C054 3C014200 */  lui        $at, 0x4200
 /* 12DE58 8003C058 44810000 */  mtc1       $at, $f0
-/* 12DE5C 8003C05C 3C018005 */  lui        $at, %hi(D_80051EA0)
-/* 12DE60 8003C060 A0201EA0 */  sb         $zero, %lo(D_80051EA0)($at)
+/* 12DE5C 8003C05C 3C018005 */  lui        $at, %hi(D_80051EA0_143CA0)
+/* 12DE60 8003C060 A0201EA0 */  sb         $zero, %lo(D_80051EA0_143CA0)($at)
 /* 12DE64 8003C064 3C018008 */  lui        $at, %hi(D_80080758)
 /* 12DE68 8003C068 E4200758 */  swc1       $f0, %lo(D_80080758)($at)
 .L8003C06C:
 /* 12DE6C 8003C06C 16000003 */  bnez       $s0, .L8003C07C
 /* 12DE70 8003C070 24020001 */   addiu     $v0, $zero, 1
-/* 12DE74 8003C074 3C018005 */  lui        $at, %hi(D_80051EA4)
-/* 12DE78 8003C078 AC221EA4 */  sw         $v0, %lo(D_80051EA4)($at)
+/* 12DE74 8003C074 3C018005 */  lui        $at, %hi(D_80051EA4_143CA4)
+/* 12DE78 8003C078 AC221EA4 */  sw         $v0, %lo(D_80051EA4_143CA4)($at)
 .L8003C07C:
-/* 12DE7C 8003C07C 3C028005 */  lui        $v0, %hi(D_80051EA4)
-/* 12DE80 8003C080 8C421EA4 */  lw         $v0, %lo(D_80051EA4)($v0)
+/* 12DE7C 8003C07C 3C028005 */  lui        $v0, %hi(D_80051EA4_143CA4)
+/* 12DE80 8003C080 8C421EA4 */  lw         $v0, %lo(D_80051EA4_143CA4)($v0)
 /* 12DE84 8003C084 1440000C */  bnez       $v0, .L8003C0B8
 /* 12DE88 8003C088 00000000 */   nop
 /* 12DE8C 8003C08C 3C048006 */  lui        $a0, %hi(D_8005DE20)
 /* 12DE90 8003C090 0C00F0A1 */  jal        func_8003C284_12E084
 /* 12DE94 8003C094 8C84DE20 */   lw        $a0, %lo(D_8005DE20)($a0)
-/* 12DE98 8003C098 3C018005 */  lui        $at, %hi(D_80051EA4)
+/* 12DE98 8003C098 3C018005 */  lui        $at, %hi(D_80051EA4_143CA4)
 /* 12DE9C 8003C09C 0C009767 */  jal        func_80025D9C_117B9C
-/* 12DEA0 8003C0A0 AC221EA4 */   sw        $v0, %lo(D_80051EA4)($at)
+/* 12DEA0 8003C0A0 AC221EA4 */   sw        $v0, %lo(D_80051EA4_143CA4)($at)
 /* 12DEA4 8003C0A4 3C048008 */  lui        $a0, %hi(D_80080750)
 /* 12DEA8 8003C0A8 0C00A1B0 */  jal        func_800286C0_11A4C0
 /* 12DEAC 8003C0AC 24840750 */   addiu     $a0, $a0, %lo(D_80080750)
@@ -108,10 +108,10 @@ glabel func_8003BF50_12DD50
 /* 12DECC 8003C0CC 2484DE20 */   addiu     $a0, $a0, %lo(D_8005DE20)
 /* 12DED0 8003C0D0 24020001 */  addiu      $v0, $zero, 1
 /* 12DED4 8003C0D4 24030001 */  addiu      $v1, $zero, 1
-/* 12DED8 8003C0D8 3C018005 */  lui        $at, %hi(D_80051EA4)
-/* 12DEDC 8003C0DC AC201EA4 */  sw         $zero, %lo(D_80051EA4)($at)
-/* 12DEE0 8003C0E0 3C018005 */  lui        $at, %hi(D_80051EA0)
-/* 12DEE4 8003C0E4 A0231EA0 */  sb         $v1, %lo(D_80051EA0)($at)
+/* 12DED8 8003C0D8 3C018005 */  lui        $at, %hi(D_80051EA4_143CA4)
+/* 12DEDC 8003C0DC AC201EA4 */  sw         $zero, %lo(D_80051EA4_143CA4)($at)
+/* 12DEE0 8003C0E0 3C018005 */  lui        $at, %hi(D_80051EA0_143CA0)
+/* 12DEE4 8003C0E4 A0231EA0 */  sb         $v1, %lo(D_80051EA0_143CA0)($at)
 .L8003C0E8:
 /* 12DEE8 8003C0E8 8FBF001C */  lw         $ra, 0x1c($sp)
 /* 12DEEC 8003C0EC 8FB00018 */  lw         $s0, 0x18($sp)
@@ -178,8 +178,8 @@ glabel func_8003C0F8_12DEF8
 /* 12DFD8 8003C1D8 C420A064 */  lwc1       $f0, %lo(D_8014A064)($at)
 /* 12DFDC 8003C1DC C6020034 */  lwc1       $f2, 0x34($s0)
 /* 12DFE0 8003C1E0 46020001 */  sub.s      $f0, $f0, $f2
-/* 12DFE4 8003C1E4 3C018006 */  lui        $at, %hi(D_8005C530)
-/* 12DFE8 8003C1E8 D424C530 */  ldc1       $f4, %lo(D_8005C530)($at)
+/* 12DFE4 8003C1E4 3C018006 */  lui        $at, %hi(D_8005C530_14E330)
+/* 12DFE8 8003C1E8 D424C530 */  ldc1       $f4, %lo(D_8005C530_14E330)($at)
 /* 12DFEC 8003C1EC 46000021 */  cvt.d.s    $f0, $f0
 /* 12DFF0 8003C1F0 46200005 */  abs.d      $f0, $f0
 /* 12DFF4 8003C1F4 46240003 */  div.d      $f0, $f0, $f4
@@ -357,8 +357,8 @@ glabel func_8003C43C_12E23C
 /* 12E27C 8003C47C 27BD0018 */   addiu     $sp, $sp, 0x18
 
 glabel func_8003C480_12E280
-/* 12E280 8003C480 3C028005 */  lui        $v0, %hi(D_80051EB0)
-/* 12E284 8003C484 90421EB0 */  lbu        $v0, %lo(D_80051EB0)($v0)
+/* 12E280 8003C480 3C028005 */  lui        $v0, %hi(D_80051EB0_143CB0)
+/* 12E284 8003C484 90421EB0 */  lbu        $v0, %lo(D_80051EB0_143CB0)($v0)
 /* 12E288 8003C488 27BDFFE0 */  addiu      $sp, $sp, -0x20
 /* 12E28C 8003C48C AFB00018 */  sw         $s0, 0x18($sp)
 /* 12E290 8003C490 00808021 */  addu       $s0, $a0, $zero
@@ -422,24 +422,24 @@ glabel func_8003C480_12E280
 /* 12E378 8003C578 AC22DE30 */  sw         $v0, %lo(D_8005DE30)($at)
 /* 12E37C 8003C57C 0C00A157 */  jal        func_8002855C_11A35C
 /* 12E380 8003C580 24050005 */   addiu     $a1, $zero, 5
-/* 12E384 8003C584 3C018005 */  lui        $at, %hi(D_80051EB0)
-/* 12E388 8003C588 A0201EB0 */  sb         $zero, %lo(D_80051EB0)($at)
+/* 12E384 8003C584 3C018005 */  lui        $at, %hi(D_80051EB0_143CB0)
+/* 12E388 8003C588 A0201EB0 */  sb         $zero, %lo(D_80051EB0_143CB0)($at)
 .L8003C58C:
 /* 12E38C 8003C58C 16000003 */  bnez       $s0, .L8003C59C
 /* 12E390 8003C590 24020001 */   addiu     $v0, $zero, 1
-/* 12E394 8003C594 3C018005 */  lui        $at, %hi(D_80051EB4)
-/* 12E398 8003C598 AC221EB4 */  sw         $v0, %lo(D_80051EB4)($at)
+/* 12E394 8003C594 3C018005 */  lui        $at, %hi(D_80051EB4_143CB4)
+/* 12E398 8003C598 AC221EB4 */  sw         $v0, %lo(D_80051EB4_143CB4)($at)
 .L8003C59C:
-/* 12E39C 8003C59C 3C028005 */  lui        $v0, %hi(D_80051EB4)
-/* 12E3A0 8003C5A0 8C421EB4 */  lw         $v0, %lo(D_80051EB4)($v0)
+/* 12E39C 8003C59C 3C028005 */  lui        $v0, %hi(D_80051EB4_143CB4)
+/* 12E3A0 8003C5A0 8C421EB4 */  lw         $v0, %lo(D_80051EB4_143CB4)($v0)
 /* 12E3A4 8003C5A4 1440000C */  bnez       $v0, .L8003C5D8
 /* 12E3A8 8003C5A8 00000000 */   nop
 /* 12E3AC 8003C5AC 3C048006 */  lui        $a0, %hi(D_8005DE30)
 /* 12E3B0 8003C5B0 0C00F1E6 */  jal        func_8003C798_12E598
 /* 12E3B4 8003C5B4 8C84DE30 */   lw        $a0, %lo(D_8005DE30)($a0)
-/* 12E3B8 8003C5B8 3C018005 */  lui        $at, %hi(D_80051EB4)
+/* 12E3B8 8003C5B8 3C018005 */  lui        $at, %hi(D_80051EB4_143CB4)
 /* 12E3BC 8003C5BC 0C009767 */  jal        func_80025D9C_117B9C
-/* 12E3C0 8003C5C0 AC221EB4 */   sw        $v0, %lo(D_80051EB4)($at)
+/* 12E3C0 8003C5C0 AC221EB4 */   sw        $v0, %lo(D_80051EB4_143CB4)($at)
 /* 12E3C4 8003C5C4 3C048008 */  lui        $a0, %hi(D_80080750)
 /* 12E3C8 8003C5C8 0C00A1B0 */  jal        func_800286C0_11A4C0
 /* 12E3CC 8003C5CC 24840750 */   addiu     $a0, $a0, %lo(D_80080750)
@@ -454,10 +454,10 @@ glabel func_8003C480_12E280
 /* 12E3EC 8003C5EC 2484DE30 */   addiu     $a0, $a0, %lo(D_8005DE30)
 /* 12E3F0 8003C5F0 24020001 */  addiu      $v0, $zero, 1
 /* 12E3F4 8003C5F4 24030001 */  addiu      $v1, $zero, 1
-/* 12E3F8 8003C5F8 3C018005 */  lui        $at, %hi(D_80051EB4)
-/* 12E3FC 8003C5FC AC201EB4 */  sw         $zero, %lo(D_80051EB4)($at)
-/* 12E400 8003C600 3C018005 */  lui        $at, %hi(D_80051EB0)
-/* 12E404 8003C604 A0231EB0 */  sb         $v1, %lo(D_80051EB0)($at)
+/* 12E3F8 8003C5F8 3C018005 */  lui        $at, %hi(D_80051EB4_143CB4)
+/* 12E3FC 8003C5FC AC201EB4 */  sw         $zero, %lo(D_80051EB4_143CB4)($at)
+/* 12E400 8003C600 3C018005 */  lui        $at, %hi(D_80051EB0_143CB0)
+/* 12E404 8003C604 A0231EB0 */  sb         $v1, %lo(D_80051EB0_143CB0)($at)
 .L8003C608:
 /* 12E408 8003C608 8FBF001C */  lw         $ra, 0x1c($sp)
 /* 12E40C 8003C60C 8FB00018 */  lw         $s0, 0x18($sp)
@@ -521,8 +521,8 @@ glabel func_8003C618_12E418
 /* 12E4EC 8003C6EC C420A064 */  lwc1       $f0, %lo(D_8014A064)($at)
 /* 12E4F0 8003C6F0 C6020034 */  lwc1       $f2, 0x34($s0)
 /* 12E4F4 8003C6F4 46020001 */  sub.s      $f0, $f0, $f2
-/* 12E4F8 8003C6F8 3C018006 */  lui        $at, %hi(D_8005C540)
-/* 12E4FC 8003C6FC D424C540 */  ldc1       $f4, %lo(D_8005C540)($at)
+/* 12E4F8 8003C6F8 3C018006 */  lui        $at, %hi(D_8005C540_14E340)
+/* 12E4FC 8003C6FC D424C540 */  ldc1       $f4, %lo(D_8005C540_14E340)($at)
 /* 12E500 8003C700 46000021 */  cvt.d.s    $f0, $f0
 /* 12E504 8003C704 46200005 */  abs.d      $f0, $f0
 /* 12E508 8003C708 46240003 */  div.d      $f0, $f0, $f4

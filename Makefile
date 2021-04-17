@@ -1,6 +1,6 @@
 TARGET = eva
 
-ASM_DIRS = asm asm/asm $(wildcard asm/ovl*) $(wildcard src/ovl*) $(wildcard asm/data/ovl*)
+ASM_DIRS = asm asm/asm asm/os $(wildcard asm/ovl*) $(wildcard src/ovl*) $(wildcard asm/data/ovl*)
 SRC_DIRS = src src/os
 BUILD_DIR = build
 
@@ -35,7 +35,7 @@ STRIP := mips-linux-gnu-strip
 CC = tools/kmc_wrapper/gcc
 KMC_AS := tools/kmc_wrapper/as
 OPT_FLAGS := -O2
-KMC_CFLAGS = $(OPT_FLAGS) -c -G0 -mgp32 -mfp32 -mips3
+KMC_CFLAGS = $(OPT_FLAGS) -c -G0 -mgp32 -mfp32 -mips3 -mno-abicalls -mno-split-addresses
 TARGET_CFLAGS := -nostdinc -I include/libc -DTARGET_N64 -DF3DEX_GBI_2
 KMC_ASFLAGS := -c -mips3 -O2
 CFLAGS = $(KMC_CFLAGS)
@@ -48,7 +48,7 @@ LDFLAGS := --no-check-sections -m elf32btsmip -mips3 --accept-unknown-input-arch
 CPP := mips-linux-gnu-cpp -P -Wno-trigraphs
 CPPFLAGS := -Iinclude/ -Iinclude/libc -I. -DTARGET_N64 -ffreestanding -D _LANGUAGE_C -D_FINALROM -DF3DEX_GBI_2 -D_MIPS_SZLONG=32
 
-CC_CHECK := gcc -fsyntax-only -fsigned-char -m32 $(CPPFLAGS) -std=gnu90 -Wall -Wextra -Wno-format-security -Wno-main -DNON_MATCHING -DAVOID_UB
+CC_CHECK := gcc -fsyntax-only -fsigned-char -m32 $(CPPFLAGS) -std=gnu90 -Wall -Wextra -Wno-unknown-pragmas -Wno-format-security -Wno-main -DNON_MATCHING -DAVOID_UB
 
 N64CRC := tools/n64crc
 
@@ -67,15 +67,19 @@ default: all
 $(GLOBAL_ASM_O_FILES): CC = $(PYTHON) asm-processor/build.py tools/kmc_wrapper/gcc -- $(AS) $(ASFLAGS) --
 
 $(BUILD_DIR)/src/main.o: OPT_FLAGS = -O0
+$(BUILD_DIR)/src/code_2C570.o: OPT_FLAGS = -O1
+$(BUILD_DIR)/src/code_17E80.o: OPT_FLAGS = -O1
+$(BUILD_DIR)/src/code_13610.o: OPT_FLAGS = -O2
 
 $(BUILD_DIR)/%.o: %.s $(SZP_FILES)
 	$(N64AS) $(N64ASFLAGS) -o $@ $<
 
 $(BUILD_DIR)/%.i : %.c | $(SRC_BUILD_DIRS)
+	@$(CC_CHECK) -MMD -MP -MT $@ -MF $(BUILD_DIR)/$*.d $<
 	$(CPP) $(CPPFLAGS) $< -o $@
 
 $(BUILD_DIR)/%.o : $(BUILD_DIR)/%.i | $(SRC_BUILD_DIRS)
-	$(CC) $(KMC_CFLAGS) $(OPT_FLAGS) -o $@ $<
+	$(CC) $(KMC_CFLAGS) -o $@ $<
 	$(STRIP) $@ -N $(<:.i=.c)
 
 $(BUILD_DIR)/%.szp: %.bin
@@ -98,6 +102,12 @@ all: $(BUILD_DIR)/$(TARGET).z64
 
 clean:
 	rm -rf $(BUILD_DIR)
+
+test:
+	~/Downloads/mupen64plus/mupen64plus-gui $(BUILD_DIR)/$(TARGET).z64
+
+hexedit:
+	wine ~/.wine/drive_c/Program\ Files/HxD/HxD.exe baserom.eva.z64
 
 .PHONY: all clean default diff test distclean
 

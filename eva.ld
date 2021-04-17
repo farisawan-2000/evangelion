@@ -20,6 +20,7 @@ OUTPUT_ARCH (mips)
 
 SECTIONS
 {
+    rom_addr_001A1880 = 0x1A1880;
     __romPos = 0x0;
     BEGIN_SEG(boot, 0xA4000000) {
         BUILD_DIR/asm/header.o(.header);
@@ -84,6 +85,7 @@ SECTIONS
         BUILD_DIR/src/code_21520.o(.text);
         BUILD_DIR/src/code_21630.o(.text);
         BUILD_DIR/src/code_21660.o(.text);
+        BUILD_DIR/src/code_216C0.o(.text);
         BUILD_DIR/src/code_21700.o(.text);
         BUILD_DIR/src/code_21740.o(.text);
         BUILD_DIR/src/code_21780.o(.text);
@@ -164,7 +166,8 @@ SECTIONS
         BUILD_DIR/src/code_2FC90.o(.text);
         BUILD_DIR/src/code_2FE80.o(.text);
         BUILD_DIR/src/code_300F0.o(.text);
-        BUILD_DIR/asm/code_30400.o(.text);
+        BUILD_DIR/src/code_30400.o(.text);
+        BUILD_DIR/asm/os/__osException.o(.text);
         BUILD_DIR/src/code_31340.o(.text);
         BUILD_DIR/src/code_313D0.o(.text);
         BUILD_DIR/src/code_31460.o(.text);
@@ -216,10 +219,10 @@ SECTIONS
     }
     END_SEG(code_ovl1)
     
-    BEGIN_SEG(data_72D80, 0x8002EAA0) {
+    BEGIN_SEG(ovl1_data, _code_ovl1SegmentEnd) {
         BUILD_DIR/asm/data/ovl1/ovl1.data.o(.data);
     }
-    END_SEG(data_72D80)
+    END_SEG(ovl1_data)
     
     BEGIN_SEG(code_ovl2, 0x80025C00) {
         BUILD_DIR/asm/ovl2/code_00074BB0.o(.text);
@@ -247,10 +250,10 @@ SECTIONS
     }
     END_SEG(code_ovl2)
     
-    BEGIN_SEG(data_B8B20, 0xB8B20) {
-        BUILD_DIR/asm/ovl2/data.o(.data);
+    BEGIN_SEG(ovl2_data, _code_ovl2SegmentEnd) {
+        BUILD_DIR/asm/data/ovl2/ovl2.data.o(.data);
     }
-    END_SEG(data_B8B20)
+    END_SEG(ovl2_data)
     
     BEGIN_SEG(code_ovl3, 0x80025C00) {
         BUILD_DIR/asm/ovl3/code_000CF110.o(.text);
@@ -280,11 +283,10 @@ SECTIONS
         BUILD_DIR/asm/ovl3/code_0010DC10.o(.text);
     }
     END_SEG(code_ovl3)
-    
-    BEGIN_SEG(data_110570, 0x110570) {
-        BUILD_DIR/asm/ovl3/data.o(.data);
+    BEGIN_SEG(ovl3_data, _code_ovl3SegmentEnd) {
+        BUILD_DIR/asm/data/ovl3/ovl3.data.o(.data);
     }
-    END_SEG(data_110570)
+    END_SEG(ovl3_data)
     
     BEGIN_SEG(code_ovl4, 0x80025C00) {
         BUILD_DIR/asm/ovl4/code_113B10.o(.text);
@@ -292,11 +294,10 @@ SECTIONS
         BUILD_DIR/asm/ovl4/code_116DD0.o(.text);
     }
     END_SEG(code_ovl4)
-    
-    BEGIN_SEG(data_1173C0, 0x1173C0) {
-        BUILD_DIR/asm/ovl4/data.o(.data);
+    BEGIN_SEG(ovl4_data, _code_ovl4SegmentEnd) {
+        BUILD_DIR/asm/data/ovl4/ovl4.data.o(.data);
     }
-    END_SEG(data_1173C0)
+    END_SEG(ovl4_data)
     
     BEGIN_SEG(code_ovl5, 0x80025C00) {
         BUILD_DIR/asm/ovl5/code_117A00.o(.text);
@@ -370,13 +371,12 @@ SECTIONS
         BUILD_DIR/asm/ovl5/code_143360.o(.text);
     }
     END_SEG(code_ovl5)
-    
-    BEGIN_SEG(data_1436F0, 0x1436F0) {
-        BUILD_DIR/asm/ovl5/data.o(.data);
+    BEGIN_SEG(ovl5_data, _code_ovl5SegmentEnd) {
+        BUILD_DIR/asm/data/ovl5/ovl5.data.o(.data);
     }
-    END_SEG(data_1436F0)
+    END_SEG(ovl5_data)
     
-    BEGIN_SEG(code_ovl6, 0x80025C00) {
+    BEGIN_SEG(ovl6, 0x80025C00) {
         BUILD_DIR/asm/ovl6/code_14F960.o(.text);
         BUILD_DIR/asm/ovl6/code_14FD10.o(.text);
         BUILD_DIR/asm/ovl6/code_14FD20.o(.text);
@@ -398,14 +398,13 @@ SECTIONS
         BUILD_DIR/asm/ovl6/code_167A70.o(.text);
         BUILD_DIR/asm/ovl6/code_167CC0.o(.text);
     }
-    END_SEG(code_ovl6)
-    
-    BEGIN_SEG(data_168230, 0x168230) {
-        BUILD_DIR/asm/ovl6/data.o(.data);
+    END_SEG(ovl6)
+    BEGIN_SEG(ovl6_data, _ovl6SegmentEnd) {
+        BUILD_DIR/asm/data/ovl6/ovl6.data.o(.data);
     }
-    END_SEG(data_168230)
+    END_SEG(ovl6_data)
     
-    BEGIN_SEG(code_ovl7, 0x80025C00) {
+    BEGIN_SEG(ovl7, 0x80025C00) {
         BUILD_DIR/asm/ovl7/code_175640.o(.text);
         BUILD_DIR/asm/ovl7/code_175860.o(.text);
         BUILD_DIR/asm/ovl7/code_179E00.o(.text);
@@ -431,12 +430,20 @@ SECTIONS
         BUILD_DIR/asm/ovl7/code_18EF90.o(.text);
         BUILD_DIR/asm/ovl7/code_190050.o(.text);
     }
-    END_SEG(code_ovl7)
-    
-    BEGIN_SEG(data_1907E0, 0x1907E0) {
-        BUILD_DIR/asm/ovl7/data.o(.data);
+    END_SEG(ovl7)
+    BEGIN_SEG(ovl7_data, _ovl7SegmentEnd) {
+        BUILD_DIR/asm/data/ovl7/ovl7.data.o(.data);
     }
-    END_SEG(data_1907E0)
+    END_SEG(ovl7_data)
+
+    BEGIN_SEG(ovl8, 0x8038F800) {
+        BUILD_DIR/asm/ovl8/code_1A1880.o(.text);
+    }
+    END_SEG(ovl8)
+    BEGIN_SEG(ovl8_data, _ovl8SegmentEnd) {
+        BUILD_DIR/asm/data/ovl8/ovl8.data.o(.data);
+    }
+    END_SEG(ovl8_data)
 
     BEGIN_SEG(data, __romPos) {
         BUILD_DIR/asm/yay0.o(.data);

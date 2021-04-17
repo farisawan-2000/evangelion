@@ -80,6 +80,7 @@ segments:
     - [0x21520, c, code_21520]
     - [0x21630, c, code_21630]
     - [0x21660, c, code_21660]
+    - [0x216C0, c, code_216C0]
     - [0x21700, c, code_21700]
     - [0x21740, c, code_21740]
     - [0x21780, c, code_21780]
@@ -159,7 +160,8 @@ segments:
     - [0x2FC90, c, code_2FC90]
     - [0x2FE80, c, code_2FE80]
     - [0x300F0, c, code_300F0]
-    - [0x30400, hasm, code_30400] # __osException
+    - [0x30400, c, code_30400]
+    - [0x309D0, hasm, os/__osException]
     - [0x31340, c, code_31340]
     - [0x313D0, c, code_313D0]
     - [0x31460, c, code_31460]
@@ -246,10 +248,7 @@ segments:
     - [0x0008F3B0, asm, ovl2/code_0008F3B0]
     - [0x00090840, asm, ovl2/code_00090840]
     - [0x000B7A10, asm, ovl2/code_000B7A10]
-
-  - name: code_00074BB0_data
-    type: bin
-    start: 0xb8b20
+    - [0xb8b20, data, ovl2/ovl2]
     
   - name: ovl3
     type: code
@@ -282,10 +281,7 @@ segments:
     - [0x104FB0, asm, ovl3/code_00104FB0]
     - [0x10A7A0, asm, ovl3/code_0010A7A0]
     - [0x10DC10, asm, ovl3/code_0010DC10]
-
-  - name: code_000CF110_data
-    type: bin
-    start: 0x110570
+    - [0x110570, data, ovl3/ovl3]
     
   - name: ovl4
     type: code
@@ -296,10 +292,7 @@ segments:
     - [0x00113B10, asm, ovl4/code_113B10]
     - [0x113CB0, asm, ovl4/code_113CB0]
     - [0x116DD0, asm, ovl4/code_116DD0]
-
-  - name: code_00113B10_data
-    type: bin
-    start: 0x1173c0
+    - [0x1173c0, data, ovl4/ovl4]
     
   - name: ovl5
     type: code
@@ -376,10 +369,7 @@ segments:
     - [0x142B90, asm, ovl5/code_142B90]
     - [0x142FB0, asm, ovl5/code_142FB0]
     - [0x143360, asm, ovl5/code_143360]
-
-  - name: code_00117A00_data
-    type: bin
-    start: 0x1436f0
+    - [0x1436f0, data, ovl5/ovl5]
     
   - name: ovl6
     type: code
@@ -407,10 +397,7 @@ segments:
     - [0x167310, asm, ovl6/code_167310]
     - [0x167A70, asm, ovl6/code_167A70]
     - [0x167CC0, asm, ovl6/code_167CC0]
-
-  - name: code_0014F960_data
-    type: bin
-    start: 0x168230
+    - [0x168230, data, ovl6/ovl6]
     
   - name: ovl7
     type: code
@@ -442,11 +429,16 @@ segments:
     - [0x18EE00, asm, ovl7/code_18EE00]
     - [0x18EF90, asm, ovl7/code_18EF90]
     - [0x190050, asm, ovl7/code_190050]
+    - [0x1907e0, data, ovl7/ovl7]
 
-  - name: code_00175640_data
-    type: bin
-    start: 0x1907e0
-    
+  - name: ovl8
+    type: code
+    overlay: yes
+    start: 0x001A1880
+    vram: 0x8038F800
+    subsections:
+    - [0x1A1880, asm, ovl8/code_1A1880]
+    - [0x1B06B0, data, ovl8/ovl8]
 
   - [0x001BB280, Yay0]
   - [0x001BB2A0, Yay0]
