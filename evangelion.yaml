@@ -196,9 +196,7 @@ segments:
     - [0x350B0, c, code_350B0]
     - [0x350C0, c, code_350C0]
     - [0x350D0, c, code_350D0]
-
-  - type: bin
-    start: 0x354B0
+    - [0x354B0, data]
 
   - name: ovl1
     type: code
