@@ -11,3 +11,7 @@ evangelion.ld
 tools/slienc
 tools/n64crc
 tools/_gfxdis
+
+*.z64
+*.n64
+assets/*
