@@ -197,6 +197,7 @@ segments:
     - [0x350C0, c, code_350C0]
     - [0x350D0, c, code_350D0]
     - [0x354B0, data]
+    - [0x3ECD0, data]
 
   - name: ovl1
     type: code
