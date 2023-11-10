@@ -1,6 +1,7 @@
 .include "macro.inc"
 
 .section .text, "ax"
+.set noreorder
 
 glabel entry_point
 /* 1000 80096400 3C088010 */  lui        $t0, %hi(_mainSegNoloadStart)

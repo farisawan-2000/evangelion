@@ -31,6 +31,7 @@ segments:
     type: code
     start: 0x1000
     vram: 0x80096400
+    exclusive_ram_id: 0x80096400
     subsegments:
     - [0x1000, hasm, entry]
     - [0x1050, c, code_1050]
@@ -426,7 +427,7 @@ segments:
     symbol_name_format : $VRAM_ovl8
     start: 0x001A1880
     vram: 0x8038F800
-    # exclusive_ram_id: 0x8038F800
+    exclusive_ram_id: 0x8038F800
     subsegments:
     - [0x1A1880, asm, ovl8/code_1A1880]
     - [0x1B06B0, data, ovl8/ovl8]

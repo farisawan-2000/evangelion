@@ -78,7 +78,7 @@ if version is None:
 if args.make:
     check_call(["make", "-j4", "VERSION=" + version, "COMPARE=0"])
 
-baseimg = f"baserom.eva.z64"
+baseimg = f"evangelion.z64"
 basemap = f"eva.map"
 
 myimg = f"build/eva.z64"
