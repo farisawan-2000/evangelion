@@ -146,7 +146,7 @@ glabel func_8002EAA0_ovl7
 /* 17E550 8002EB10 AFA20010 */  sw         $v0, 0x10($sp)
 /* 17E554 8002EB14 2402000B */  addiu      $v0, $zero, 0xB
 /* 17E558 8002EB18 AFA20014 */  sw         $v0, 0x14($sp)
-/* 17E55C 8002EB1C 0C0E5BE4 */  jal        func_80396F90_ovl8
+/* 17E55C 8002EB1C 0C0E5BE4 */  jal        func_80396F90
 /* 17E560 8002EB20 AFA00018 */   sw        $zero, 0x18($sp)
 .L8002EB24_ovl7:
 /* 17E564 8002EB24 3C028005 */  lui        $v0, %hi(D_80052038)

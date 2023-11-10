@@ -30,8 +30,8 @@ glabel D_800C5DE0
 /* 30A0C 800C5E0C AF400018 */  sw         $zero, 0x18($k0) # handwritten instruction
 /* 30A10 800C5E10 40086800 */  mfc0       $t0, $13 # handwritten instruction
 /* 30A14 800C5E14 03404021 */  addu       $t0, $k0, $zero
-/* 30A18 800C5E18 3C1A800F */  lui        $k0, %hi(D_800F69C0) # handwritten instruction
-/* 30A1C 800C5E1C 8F5A69C0 */  lw         $k0, %lo(D_800F69C0)($k0) # handwritten instruction
+/* 30A18 800C5E18 3C1A800F */  lui        $k0, %hi(__osRunningThread) # handwritten instruction
+/* 30A1C 800C5E1C 8F5A69C0 */  lw         $k0, %lo(__osRunningThread)($k0) # handwritten instruction
 /* 30A20 800C5E20 DD090020 */  ld         $t1, 0x20($t0)
 /* 30A24 800C5E24 FF490020 */  sd         $t1, 0x20($k0) # handwritten instruction
 /* 30A28 800C5E28 DD090118 */  ld         $t1, 0x118($t0)
@@ -327,8 +327,8 @@ glabel .L800C621C
 /* 30E58 800C6258 24040070 */   addiu     $a0, $zero, 0x70
 /* 30E5C 800C625C 2401EFFF */  addiu      $at, $zero, -0x1001
 /* 30E60 800C6260 02018024 */  and        $s0, $s0, $at
-/* 30E64 800C6264 3C0A800F */  lui        $t2, %hi(D_800F69B8)
-/* 30E68 800C6268 8D4A69B8 */  lw         $t2, %lo(D_800F69B8)($t2)
+/* 30E64 800C6264 3C0A800F */  lui        $t2, %hi(__osRunQueue)
+/* 30E68 800C6268 8D4A69B8 */  lw         $t2, %lo(__osRunQueue)($t2)
 /* 30E6C 800C626C 8D5B0118 */  lw         $k1, 0x118($t2) # handwritten instruction
 /* 30E70 800C6270 2401EFFF */  addiu      $at, $zero, -0x1001
 /* 30E74 800C6274 0361D824 */  and        $k1, $k1, $at
@@ -363,24 +363,24 @@ glabel .L800C62A4
 /* 30EDC 800C62DC 00000000 */   nop
 glabel .L800C62E0
 /* 30EE0 800C62E0 8F490004 */  lw         $t1, 0x4($k0) # handwritten instruction
-/* 30EE4 800C62E4 3C0A800F */  lui        $t2, %hi(D_800F69B8)
-/* 30EE8 800C62E8 8D4A69B8 */  lw         $t2, %lo(D_800F69B8)($t2)
+/* 30EE4 800C62E4 3C0A800F */  lui        $t2, %hi(__osRunQueue)
+/* 30EE8 800C62E8 8D4A69B8 */  lw         $t2, %lo(__osRunQueue)($t2)
 /* 30EEC 800C62EC 8D4B0004 */  lw         $t3, 0x4($t2)
 /* 30EF0 800C62F0 012B082A */  slt        $at, $t1, $t3
 /* 30EF4 800C62F4 10200007 */  beqz       $at, .L800C6314
 /* 30EF8 800C62F8 00000000 */   nop
 /* 30EFC 800C62FC 03402821 */  addu       $a1, $k0, $zero
-/* 30F00 800C6300 3C04800F */  lui        $a0, %hi(D_800F69B8)
-/* 30F04 800C6304 0C031955 */  jal        func_800C6554
-/* 30F08 800C6308 248469B8 */   addiu     $a0, $a0, %lo(D_800F69B8)
-/* 30F0C 800C630C 0803196B */  j          func_800C65AC
+/* 30F00 800C6300 3C04800F */  lui        $a0, %hi(__osRunQueue)
+/* 30F04 800C6304 0C031955 */  jal        __osEnqueueThread
+/* 30F08 800C6308 248469B8 */   addiu     $a0, $a0, %lo(__osRunQueue)
+/* 30F0C 800C630C 0803196B */  j          __osDispatchThread
 /* 30F10 800C6310 00000000 */   nop
 .L800C6314:
-/* 30F14 800C6314 3C09800F */  lui        $t1, %hi(D_800F69B8)
-/* 30F18 800C6318 252969B8 */  addiu      $t1, $t1, %lo(D_800F69B8)
+/* 30F14 800C6314 3C09800F */  lui        $t1, %hi(__osRunQueue)
+/* 30F18 800C6318 252969B8 */  addiu      $t1, $t1, %lo(__osRunQueue)
 /* 30F1C 800C631C 8D2A0000 */  lw         $t2, 0x0($t1)
 /* 30F20 800C6320 AF4A0000 */  sw         $t2, 0x0($k0) # handwritten instruction
-/* 30F24 800C6324 0803196B */  j          func_800C65AC
+/* 30F24 800C6324 0803196B */  j          __osDispatchThread
 /* 30F28 800C6328 AD3A0000 */   sw        $k0, 0x0($t1) # handwritten instruction
 .L800C632C:
 /* 30F2C 800C632C 3C01800F */  lui        $at, %hi(D_800F69C4)
@@ -393,7 +393,7 @@ glabel .L800C62E0
 /* 30F48 800C6348 AF4A0124 */  sw         $t2, 0x124($k0) # handwritten instruction
 /* 30F4C 800C634C 0C0318D7 */  jal        func_800C635C
 /* 30F50 800C6350 24040060 */   addiu     $a0, $zero, 0x60
-/* 30F54 800C6354 0803196B */  j          func_800C65AC
+/* 30F54 800C6354 0803196B */  j          __osDispatchThread
 /* 30F58 800C6358 00000000 */   nop
 glabel func_800C635C
 /* 30F5C 800C635C 03E09021 */  addu       $s2, $ra, $zero
@@ -436,13 +436,13 @@ glabel func_800C635C
 /* 30FE8 800C63E8 8D4B0000 */  lw         $t3, 0x0($t2)
 /* 30FEC 800C63EC 11600008 */  beqz       $t3, .L800C6410
 /* 30FF0 800C63F0 00000000 */   nop
-/* 30FF4 800C63F4 0C031967 */  jal        func_800C659C
+/* 30FF4 800C63F4 0C031967 */  jal        __osPopThread
 /* 30FF8 800C63F8 01202021 */   addu      $a0, $t1, $zero
 /* 30FFC 800C63FC 00405021 */  addu       $t2, $v0, $zero
 /* 31000 800C6400 01402821 */  addu       $a1, $t2, $zero
-/* 31004 800C6404 3C04800F */  lui        $a0, %hi(D_800F69B8)
-/* 31008 800C6408 0C031955 */  jal        func_800C6554
-/* 3100C 800C640C 248469B8 */   addiu     $a0, $a0, %lo(D_800F69B8)
+/* 31004 800C6404 3C04800F */  lui        $a0, %hi(__osRunQueue)
+/* 31008 800C6408 0C031955 */  jal        __osEnqueueThread
+/* 3100C 800C640C 248469B8 */   addiu     $a0, $a0, %lo(__osRunQueue)
 .L800C6410:
 /* 31010 800C6410 02400008 */  jr         $s2
 /* 31014 800C6414 00000000 */   nop
@@ -463,9 +463,9 @@ glabel func_800C635C
 .size func_800C5DD0, . - func_800C5DD0
 
 # Handwritten function
-glabel func_800C644C
-/* 3104C 800C644C 3C05800F */  lui        $a1, %hi(D_800F69C0)
-/* 31050 800C6450 8CA569C0 */  lw         $a1, %lo(D_800F69C0)($a1)
+glabel __osEnqueueAndYield
+/* 3104C 800C644C 3C05800F */  lui        $a1, %hi(__osRunningThread)
+/* 31050 800C6450 8CA569C0 */  lw         $a1, %lo(__osRunningThread)($a1)
 /* 31054 800C6454 40086000 */  mfc0       $t0, $12 # handwritten instruction
 /* 31058 800C6458 35080002 */  ori        $t0, $t0, 0x2
 /* 3105C 800C645C ACA80118 */  sw         $t0, 0x118($a1)
@@ -529,14 +529,14 @@ glabel func_800C644C
 .L800C653C:
 /* 3113C 800C653C 10800003 */  beqz       $a0, .L800C654C
 /* 31140 800C6540 ACBB0128 */   sw        $k1, 0x128($a1) # handwritten instruction
-/* 31144 800C6544 0C031955 */  jal        func_800C6554
+/* 31144 800C6544 0C031955 */  jal        __osEnqueueThread
 /* 31148 800C6548 00000000 */   nop
 .L800C654C:
-/* 3114C 800C654C 0803196B */  j          func_800C65AC
+/* 3114C 800C654C 0803196B */  j          __osDispatchThread
 /* 31150 800C6550 00000000 */   nop
-.size func_800C644C, . - func_800C644C
+.size __osEnqueueAndYield, . - __osEnqueueAndYield
 
-glabel func_800C6554
+glabel __osEnqueueThread
 /* 31154 800C6554 0080C821 */  addu       $t9, $a0, $zero
 /* 31158 800C6558 8C980000 */  lw         $t8, 0x0($a0)
 /* 3115C 800C655C 8CAF0004 */  lw         $t7, 0x4($a1)
@@ -557,22 +557,22 @@ glabel func_800C6554
 /* 31190 800C6590 AF250000 */  sw         $a1, 0x0($t9)
 /* 31194 800C6594 03E00008 */  jr         $ra
 /* 31198 800C6598 ACA40008 */   sw        $a0, 0x8($a1)
-.size func_800C6554, . - func_800C6554
+.size __osEnqueueThread, . - __osEnqueueThread
 
-glabel func_800C659C
+glabel __osPopThread
 /* 3119C 800C659C 8C820000 */  lw         $v0, 0x0($a0)
 /* 311A0 800C65A0 8C590000 */  lw         $t9, 0x0($v0)
 /* 311A4 800C65A4 03E00008 */  jr         $ra
 /* 311A8 800C65A8 AC990000 */   sw        $t9, 0x0($a0)
-.size func_800C659C, . - func_800C659C
+.size __osPopThread, . - __osPopThread
 
 # Handwritten function
-glabel func_800C65AC
-/* 311AC 800C65AC 3C04800F */  lui        $a0, %hi(D_800F69B8)
-/* 311B0 800C65B0 0C031967 */  jal        func_800C659C
-/* 311B4 800C65B4 248469B8 */   addiu     $a0, $a0, %lo(D_800F69B8)
-/* 311B8 800C65B8 3C01800F */  lui        $at, %hi(D_800F69C0)
-/* 311BC 800C65BC AC2269C0 */  sw         $v0, %lo(D_800F69C0)($at)
+glabel __osDispatchThread
+/* 311AC 800C65AC 3C04800F */  lui        $a0, %hi(__osRunQueue)
+/* 311B0 800C65B0 0C031967 */  jal        __osPopThread
+/* 311B4 800C65B4 248469B8 */   addiu     $a0, $a0, %lo(__osRunQueue)
+/* 311B8 800C65B8 3C01800F */  lui        $at, %hi(__osRunningThread)
+/* 311BC 800C65BC AC2269C0 */  sw         $v0, %lo(__osRunningThread)($at)
 /* 311C0 800C65C0 24080004 */  addiu      $t0, $zero, 0x4
 /* 311C4 800C65C4 A4480010 */  sh         $t0, 0x10($v0)
 /* 311C8 800C65C8 0040D021 */  addu       $k0, $v0, $zero
@@ -671,4 +671,4 @@ glabel D_800C6728
 /* 31334 800C6734 00000000 */  nop
 /* 31338 800C6738 00000000 */  nop
 /* 3133C 800C673C 00000000 */  nop
-.size func_800C65AC, . - func_800C65AC
+.size __osDispatchThread, . - __osDispatchThread

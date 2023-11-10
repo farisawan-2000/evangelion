@@ -36,8 +36,8 @@ glabel .L800386A0_ovl5
 /* 12A4C8 800386C8 3C018017 */  lui        $at, %hi(D_801765B8)
 /* 12A4CC 800386CC 0C009BCC */  jal        func_80026F30_ovl5
 /* 12A4D0 800386D0 AC2265B8 */   sw        $v0, %lo(D_801765B8)($at)
-/* 12A4D4 800386D4 3C048039 */  lui        $a0, %hi(func_80396B60_ovl8)
-/* 12A4D8 800386D8 24846B60 */  addiu      $a0, $a0, %lo(func_80396B60_ovl8)
+/* 12A4D4 800386D4 3C048039 */  lui        $a0, %hi(D_80396B60)
+/* 12A4D8 800386D8 24846B60 */  addiu      $a0, $a0, %lo(D_80396B60)
 /* 12A4DC 800386DC 00002821 */  addu       $a1, $zero, $zero
 /* 12A4E0 800386E0 24020001 */  addiu      $v0, $zero, 0x1
 /* 12A4E4 800386E4 24060064 */  addiu      $a2, $zero, 0x64

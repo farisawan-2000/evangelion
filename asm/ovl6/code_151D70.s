@@ -958,7 +958,7 @@ glabel .L80028B8C_ovl6
 /* 152B30 80028DD0 AFA20010 */  sw         $v0, 0x10($sp)
 /* 152B34 80028DD4 24020005 */  addiu      $v0, $zero, 0x5
 /* 152B38 80028DD8 AFA20014 */  sw         $v0, 0x14($sp)
-/* 152B3C 80028DDC 0C0E5BE4 */  jal        func_80396F90_ovl8
+/* 152B3C 80028DDC 0C0E5BE4 */  jal        func_80396F90
 /* 152B40 80028DE0 AFA00018 */   sw        $zero, 0x18($sp)
 .L80028DE4_ovl6:
 /* 152B44 80028DE4 2402FFFF */  addiu      $v0, $zero, -0x1

@@ -1408,7 +1408,7 @@ glabel func_8003AC0C_ovl7
 /* 18A6A8 8003AC68 AFA20010 */  sw         $v0, 0x10($sp)
 /* 18A6AC 8003AC6C 24020005 */  addiu      $v0, $zero, 0x5
 /* 18A6B0 8003AC70 AFA20014 */  sw         $v0, 0x14($sp)
-/* 18A6B4 8003AC74 0C0E5BE4 */  jal        func_80396F90_ovl8
+/* 18A6B4 8003AC74 0C0E5BE4 */  jal        func_80396F90
 /* 18A6B8 8003AC78 AFA00018 */   sw        $zero, 0x18($sp)
 .L8003AC7C_ovl7:
 /* 18A6BC 8003AC7C 3C038005 */  lui        $v1, %hi(D_80052038)

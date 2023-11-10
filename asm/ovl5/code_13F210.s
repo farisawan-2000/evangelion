@@ -1576,7 +1576,7 @@ glabel func_8004EA98_ovl5
 /* 140950 8004EB50 AFA20010 */  sw         $v0, 0x10($sp)
 /* 140954 8004EB54 AFA00014 */  sw         $zero, 0x14($sp)
 .L8004EB58_ovl5:
-/* 140958 8004EB58 0C0E5BE4 */  jal        func_80396F90_ovl8
+/* 140958 8004EB58 0C0E5BE4 */  jal        func_80396F90
 /* 14095C 8004EB5C AFA00018 */   sw        $zero, 0x18($sp)
 /* 140960 8004EB60 00008821 */  addu       $s1, $zero, $zero
 .L8004EB64_ovl5:

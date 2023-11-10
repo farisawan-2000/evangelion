@@ -2299,7 +2299,7 @@ glabel func_800278C0_ovl4
 /* 115E6C 80027F5C AFA20018 */  sw         $v0, 0x18($sp)
 /* 115E70 80027F60 24020001 */  addiu      $v0, $zero, 0x1
 /* 115E74 80027F64 AFA00014 */  sw         $zero, 0x14($sp)
-/* 115E78 80027F68 0C0E6035 */  jal        func_803980D4_ovl8
+/* 115E78 80027F68 0C0E6035 */  jal        func_803980D4
 /* 115E7C 80027F6C AFA2001C */   sw        $v0, 0x1C($sp)
 /* 115E80 80027F70 3C028015 */  lui        $v0, %hi(D_8014CF92)
 /* 115E84 80027F74 9442CF92 */  lhu        $v0, %lo(D_8014CF92)($v0)
