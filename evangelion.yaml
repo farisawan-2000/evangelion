@@ -31,7 +31,6 @@ segments:
     type: code
     start: 0x1000
     vram: 0x80096400
-    # exclusive_ram_id: 0x80096400
     subsegments:
     - [0x1000, hasm, entry]
     - [0x1050, c, code_1050]

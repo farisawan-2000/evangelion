@@ -4,8 +4,8 @@
 ## How to build
  - Get WSL or Linux (64 bit)
  - Get `build-essential` and `binutils-mips-linux-gnu`
- - Get your copy of Evangelion 64 and name it `baserom.eva.z64`)
- - Run `./start.sh` to get the asm and Yay0 blocks
+ - Get your copy of Evangelion 64 and name it `evangelion.z64`)
+ - Run `make setup` to get the asm and Yay0 blocks, and build tools
  - Run `make` to start building
 
 ## Contributing + Terminology

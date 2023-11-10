@@ -78,9 +78,6 @@ $(BUILD_DIR)/src/code_2C570.o: OPT_FLAGS = -O1
 $(BUILD_DIR)/src/code_17E80.o: OPT_FLAGS = -O1
 $(BUILD_DIR)/src/code_13610.o: OPT_FLAGS = -O2
 
-$(CC):
-	+make -C tools -f kmc.mk
-
 $(BUILD_DIR)/%.o: %.s $(SZP_FILES)
 	$(AS) $(ASFLAGS) -o $@ $<
 
@@ -127,6 +124,7 @@ hexedit:
 
 setup:
 	./splat/split.py evangelion.yaml
+	+make -C tools -f kmc.mk
 
 .PHONY: all clean default diff test distclean
 
