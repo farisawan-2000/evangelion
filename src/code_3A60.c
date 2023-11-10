@@ -1,52 +1,52 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_80098E60);
+INCLUDE_ASM(const s32, "code_3A60", func_80098E60);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_80098FB8);
+INCLUDE_ASM(const s32, "code_3A60", func_80098FB8);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_800990E8);
+INCLUDE_ASM(const s32, "code_3A60", func_800990E8);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_80099110);
+INCLUDE_ASM(const s32, "code_3A60", func_80099110);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_80099124);
+INCLUDE_ASM(const s32, "code_3A60", func_80099124);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_80099174);
+INCLUDE_ASM(const s32, "code_3A60", func_80099174);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_80099238);
+INCLUDE_ASM(const s32, "code_3A60", func_80099238);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_8009930C);
+INCLUDE_ASM(const s32, "code_3A60", func_8009930C);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_800994A0);
+INCLUDE_ASM(const s32, "code_3A60", func_800994A0);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_8009953C);
+INCLUDE_ASM(const s32, "code_3A60", func_8009953C);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_8009961C);
+INCLUDE_ASM(const s32, "code_3A60", func_8009961C);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_80099B58);
+INCLUDE_ASM(const s32, "code_3A60", func_80099B58);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_8009A0B0);
+INCLUDE_ASM(const s32, "code_3A60", func_8009A0B0);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_8009A148);
+INCLUDE_ASM(const s32, "code_3A60", func_8009A148);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_8009A4C4);
+INCLUDE_ASM(const s32, "code_3A60", func_8009A4C4);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_8009A588);
+INCLUDE_ASM(const s32, "code_3A60", func_8009A588);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_8009A6A0);
+INCLUDE_ASM(const s32, "code_3A60", func_8009A6A0);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_8009A7E0);
+INCLUDE_ASM(const s32, "code_3A60", func_8009A7E0);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_8009A9E8);
+INCLUDE_ASM(const s32, "code_3A60", func_8009A9E8);
 
 void func_8009AC4C(void) {
 }
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_8009AC54);
+INCLUDE_ASM(const s32, "code_3A60", func_8009AC54);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_8009ACD4);
+INCLUDE_ASM(const s32, "code_3A60", func_8009ACD4);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_8009AD18);
+INCLUDE_ASM(const s32, "code_3A60", func_8009AD18);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_8009AD6C);
+INCLUDE_ASM(const s32, "code_3A60", func_8009AD6C);
 
-INCLUDE_ASM("asm/nonmatchings/code_3A60", func_8009ADC0);
+INCLUDE_ASM(const s32, "code_3A60", func_8009ADC0);

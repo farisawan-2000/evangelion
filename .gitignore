@@ -1,6 +1,6 @@
 asm-differ/__pycache__/*
 baserom.eva.z64
-asm/nonmatchings/code_*/*.s
+#asm/nonmatchings/code_*/*.s
 bin/*
 build/*
 expected/*
