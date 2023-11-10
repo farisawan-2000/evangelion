@@ -1,6 +1,8 @@
 #ifndef _MACROS_H_
 #define _MACROS_H_
 
+#include "include_asm.h"
+
 // #ifndef SPLAT
 // #ifndef INCLUDE_ASM
 // #define INCLUDE_ASM(TYPE, FOLDER, NAME, ARGS...) \
@@ -10,9 +12,9 @@
 // #else
 // #define INCLUDE_ASM(TYPE, FOLDER, NAME, ARGS...)
 // #endif
-#if !defined(__sgi) || defined(__CTX__)
-#define GLOBAL_ASM(...)
-#endif
+// #if !defined(__sgi) || defined(__CTX__)
+// #define GLOBAL_ASM(...)
+// #endif
 
 // #if !defined(__sgi)
 // 	#if (!defined(SPLAT) && !defined(__CTX__))
@@ -30,7 +32,7 @@
 
 #define GLOBAL_ASM(...)
 
-#define INCLUDE_ASM(TYPE, FOLDER, NAME, ARGS...) GLOBAL_ASM("asm/nonmatchings/" FOLDER "/##NAME##.s")
+// #define INCLUDE_ASM(TYPE, FOLDER, NAME, ARGS...) GLOBAL_ASM("asm/nonmatchings/" FOLDER "/##NAME##.s")
 
 #define ALIGN16(val) (((val) + 0xF) & ~0xF)
 

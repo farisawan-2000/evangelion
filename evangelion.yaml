@@ -16,6 +16,8 @@ options:
   symbol_addrs_path: tools/symbol_addrs.txt
   extensions_path: tools/splat_ext
   ld_script_path: evangelion.ld
+  asm_inc_header: ""
+  use_legacy_include_asm: False
 segments:
   - [0x0, header]
   - name: boot
@@ -207,18 +209,9 @@ segments:
     overlay: yes
     start: 0x00069EE0
     vram: 0x80025C00
+    exclusive_ram_id: 0x80025C00
     subsegments:
     - [0x00069EE0, asm, ovl1/code_00069EE0]
-    - [0x0006A040, asm, ovl1/code_0006A040]
-    - [0x0006AE40, asm, ovl1/code_0006AE40]
-    - [0x0006B090, asm, ovl1/code_0006B090]
-    - [0x0006B2C0, asm, ovl1/code_0006B2C0]
-    - [0x0006C980, asm, ovl1/code_0006C980]
-    - [0x0006D2F0, asm, ovl1/code_0006D2F0]
-    - [0x0006EE50, asm, ovl1/code_0006EE50]
-    - [0x000702A0, asm, ovl1/code_000702A0]
-    - [0x00071530, asm, ovl1/code_00071530]
-    - [0x00072CE0, asm, ovl1/code_00072CE0]
     - [0x72d80, data, ovl1/ovl1]
 
   # - name: code_00069EE0_data
@@ -231,29 +224,9 @@ segments:
     overlay: yes
     start: 0x00074BB0
     vram: 0x80025C00
+    exclusive_ram_id: 0x80025C00
     subsegments:
     - [0x00074BB0, asm, ovl2/code_00074BB0]
-    - [0x00074D60, asm, ovl2/code_00074D60]
-    - [0x00076E50, asm, ovl2/code_00076E50]
-    - [0x00078AC0, asm, ovl2/code_00078AC0]
-    - [0x00079D50, asm, ovl2/code_00079D50]
-    - [0x0007BF80, asm, ovl2/code_0007BF80]
-    - [0x0007C6C0, asm, ovl2/code_0007C6C0]
-    - [0x0007EFE0, asm, ovl2/code_0007EFE0]
-    - [0x00080050, asm, ovl2/code_00080050]
-    - [0x00081610, asm, ovl2/code_00081610]
-    - [0x00085AF0, asm, ovl2/code_00085AF0]
-    - [0x00086C20, asm, ovl2/code_00086C20]
-    - [0x00087F70, asm, ovl2/code_00087F70]
-    - [0x000891F0, asm, ovl2/code_000891F0]
-    - [0x00089D20, asm, ovl2/code_00089D20]
-    - [0x0008B2A0, asm, ovl2/code_0008B2A0]
-    - [0x0008C710, asm, ovl2/code_0008C710]
-    - [0x0008D490, asm, ovl2/code_0008D490]
-    - [0x0008E3C0, asm, ovl2/code_0008E3C0]
-    - [0x0008F3B0, asm, ovl2/code_0008F3B0]
-    - [0x00090840, asm, ovl2/code_00090840]
-    - [0x000B7A10, asm, ovl2/code_000B7A10]
     - [0xb8b20, data, ovl2/ovl2]
     
   - name: ovl3
@@ -262,6 +235,7 @@ segments:
     overlay: yes
     start: 0x000CF110
     vram: 0x80025C00
+    exclusive_ram_id: 0x80025C00
     subsegments:
     - [0x000CF110, asm, ovl3/code_000CF110]
     - [0xD15C0, asm, ovl3/code_000D15C0]
@@ -296,6 +270,7 @@ segments:
     overlay: yes
     start: 0x00113B10
     vram: 0x80025C00
+    exclusive_ram_id: 0x80025C00
     subsegments:
     - [0x00113B10, asm, ovl4/code_113B10]
     - [0x113CB0, asm, ovl4/code_113CB0]
@@ -308,6 +283,7 @@ segments:
     overlay: yes
     start: 0x00117A00
     vram: 0x80025C00
+    exclusive_ram_id: 0x80025C00
     subsegments:
     - [0x117A00, asm, ovl5/code_117A00]
     - [0x117BB0, asm, ovl5/code_117BB0]
@@ -386,6 +362,7 @@ segments:
     overlay: yes
     start: 0x0014F960
     vram: 0x80025C00
+    exclusive_ram_id: 0x80025C00
     subsegments:
     - [0x14F960, asm, ovl6/code_14F960]
     - [0x14FD10, asm, ovl6/code_14FD10]
@@ -415,6 +392,7 @@ segments:
     overlay: yes
     start: 0x00175640
     vram: 0x80025C00
+    exclusive_ram_id: 0x80025C00
     subsegments:
     - [0x175640, asm, ovl7/code_175640]
     - [0x175860, asm, ovl7/code_175860]
@@ -448,6 +426,7 @@ segments:
     symbol_name_format : $VRAM_ovl8
     start: 0x001A1880
     vram: 0x8038F800
+    # exclusive_ram_id: 0x8038F800
     subsegments:
     - [0x1A1880, asm, ovl8/code_1A1880]
     - [0x1B06B0, data, ovl8/ovl8]

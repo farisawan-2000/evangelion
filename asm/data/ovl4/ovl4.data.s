@@ -8,158 +8,117 @@ glabel D_800294B0_ovl4
 /* 1173C0 800294B0 */ .word 0x800298DC
 .size D_800294B0_ovl4, . - D_800294B0_ovl4
 
-glabel .L800294B4_ovl4
+glabel D_800294B4_ovl4
 /* 1173C4 800294B4 */ .word func_8009E040
-/* 1173C8 800294B8 */ .word func_80025DA0_ovl4
-.size .L800294B4_ovl4, . - .L800294B4_ovl4
+/* 1173C8 800294B8 */ .word func_80025DA0
+.size D_800294B4_ovl4, . - D_800294B4_ovl4
 
-glabel .L800294BC_ovl4
+glabel D_800294BC_ovl4
 /* 1173CC 800294BC */ .word 0x800298D0
-.size .L800294BC_ovl4, . - .L800294BC_ovl4
+.size D_800294BC_ovl4, . - D_800294BC_ovl4
 
-glabel .L800294C0_ovl7
+glabel D_800294C0_ovl4
 /* 1173D0 800294C0 */ .word func_8009E040
-/* 1173D4 800294C4 */ .word func_80026420_ovl7
-/* 1173D8 800294C8 */ .word func_800298C4_ovl6
-.size .L800294C0_ovl7, . - .L800294C0_ovl7
+/* 1173D4 800294C4 */ .word func_80026420
+/* 1173D8 800294C8 */ .word func_800298C4
+.size D_800294C0_ovl4, . - D_800294C0_ovl4
 
-glabel func_800294CC_ovl4
+glabel D_800294CC_ovl4
 /* 1173DC 800294CC */ .word func_8009E040
-/* 1173E0 800294D0 */ .word func_80025F98_ovl4
-.size func_800294CC_ovl4, . - func_800294CC_ovl4
+/* 1173E0 800294D0 */ .word func_80025F98
+.size D_800294CC_ovl4, . - D_800294CC_ovl4
 
-glabel .L800294D4_ovl4
+glabel D_800294D4_ovl4
 /* 1173E4 800294D4 */ .word 0x800298B8
 
 glabel .L800294D8_ovl5
 /* 1173E8 800294D8 */ .word func_8009E040
-/* 1173EC 800294DC */ .word func_80026490_ovl4
+/* 1173EC 800294DC */ .word func_80026490
 /* 1173F0 800294E0 */ .word 0x800298AC
 /* 1173F4 800294E4 */ .word func_8009E040
-/* 1173F8 800294E8 */ .word func_800266F8_ovl4
+/* 1173F8 800294E8 */ .word func_800266F8
 /* 1173FC 800294EC */ .word 0x800298A0
 /* 117400 800294F0 */ .word func_8009E040
-/* 117404 800294F4 */ .word func_80026BA4_ovl4
-.size .L800294D4_ovl4, . - .L800294D4_ovl4
+/* 117404 800294F4 */ .word func_80026BA4
+.size D_800294D4_ovl4, . - D_800294D4_ovl4
 
-glabel .L800294F8_ovl4
+glabel D_800294F8_ovl4
 /* 117408 800294F8 */ .word func_80029894_ovl6
 /* 11740C 800294FC */ .word func_8009E040
 
 glabel .L80029500_ovl6
-/* 117410 80029500 */ .word func_8002722C_ovl4
-.size .L800294F8_ovl4, . - .L800294F8_ovl4
+/* 117410 80029500 */ .word func_8002722C
+.size D_800294F8_ovl4, . - D_800294F8_ovl4
 
-glabel .L80029504_ovl5
+glabel D_80029504_ovl4
 /* 117414 80029504 */ .word 0x80029888
-.size .L80029504_ovl5, . - .L80029504_ovl5
+.size D_80029504_ovl4, . - D_80029504_ovl4
 
-glabel func_80029508_ovl4
+glabel D_80029508_ovl4
 /* 117418 80029508 */ .word func_8009E040
-/* 11741C 8002950C */ .word func_800278C0_ovl5
+/* 11741C 8002950C */ .word func_800278C0
 /* 117420 80029510 */ .word 0x8002987C
 
 glabel .L80029514_ovl7
 /* 117424 80029514 */ .word func_8009E040
-/* 117428 80029518 */ .word func_80028020_ovl4
+/* 117428 80029518 */ .word func_80028020
 /* 11742C 8002951C */ .word 0x80029870
-.size func_80029508_ovl4, . - func_80029508_ovl4
+.size D_80029508_ovl4, . - D_80029508_ovl4
 
-glabel .L80029520_ovl4
+glabel D_80029520_ovl4
 /* 117430 80029520 */ .word func_8009E040
-/* 117434 80029524 */ .word func_80028410_ovl4
+/* 117434 80029524 */ .word func_80028410
 /* 117438 80029528 */ .word 0x80029864
 
 glabel .L8002952C_ovl5
 /* 11743C 8002952C */ .word func_8009E040
-/* 117440 80029530 */ .word func_800285FC_ovl4
+/* 117440 80029530 */ .word func_800285FC
 /* 117444 80029534 */ .word 0x80029858
 /* 117448 80029538 */ .word func_8009E040
-/* 11744C 8002953C */ .word func_800288A0_ovl4
+/* 11744C 8002953C */ .word func_800288A0
 /* 117450 80029540 */ .word 0x8002984C
 /* 117454 80029544 */ .word func_8009E040
-/* 117458 80029548 */ .word func_80028A2C_ovl4
-.size .L80029520_ovl4, . - .L80029520_ovl4
+/* 117458 80029548 */ .word .L80028A2C_ovl1
+.size D_80029520_ovl4, . - D_80029520_ovl4
 
-glabel .L8002954C_ovl4
+glabel D_8002954C_ovl4
 /* 11745C 8002954C */ .word 0x80029840
 /* 117460 80029550 */ .word func_8009E040
 
 glabel .L80029554_ovl5
-/* 117464 80029554 */ .word func_80028DB8_ovl4
-.size .L8002954C_ovl4, . - .L8002954C_ovl4
+/* 117464 80029554 */ .word func_80028DB8
+.size D_8002954C_ovl4, . - D_8002954C_ovl4
 
 glabel .L80029558_ovl4
 /* 117468 80029558 */ .word 0x800298E8
 /* 11746C 8002955C */ .word 0x0000000F
 /* 117470 80029560 */ .word 0x00000008
-/* 117474 80029564 */ .word D_800294B0_ovl4
+/* 117474 80029564 */ .word D_800294B0
 /* 117478 80029568 */ .word 0x0000000E
 
-glabel func_8002956C_ovl5
+glabel func_8002956C
 /* 11747C 8002956C */ .word 0x0000000E
 /* 117480 80029570 */ .word 0x0000000A
 /* 117484 80029574 */ .word 0x00000000
 /* 117488 80029578 */ .word 0x00000000
-.size .L80029558_ovl4, . - .L80029558_ovl4
-
-glabel D_8002957C_ovl4
 /* 11748C 8002957C */ .word 0x00000000
-.size D_8002957C_ovl4, . - D_8002957C_ovl4
-
-glabel D_80029580_ovl4
 /* 117490 80029580 */ .word 0x00000000
-.size D_80029580_ovl4, . - D_80029580_ovl4
+.size .L80029558_ovl4, . - .L80029558_ovl4
 
 glabel .L80029584_ovl4
 /* 117494 80029584 */ .word 0x00000000
-.size .L80029584_ovl4, . - .L80029584_ovl4
-
-glabel D_80029588_ovl4
 /* 117498 80029588 */ .word 0x00000000
-.size D_80029588_ovl4, . - D_80029588_ovl4
-
-glabel D_8002958C_ovl4
 /* 11749C 8002958C */ .word 0x00000000
-.size D_8002958C_ovl4, . - D_8002958C_ovl4
-
-glabel D_80029590_ovl4
 /* 1174A0 80029590 */ .word 0x00000000
-.size D_80029590_ovl4, . - D_80029590_ovl4
+.size .L80029584_ovl4, . - .L80029584_ovl4
 
 glabel .L80029594_ovl4
 /* 1174A4 80029594 */ .word D_1
-.size .L80029594_ovl4, . - .L80029594_ovl4
-
-glabel D_80029598_ovl4
 /* 1174A8 80029598 */ .word 0x01000000
-.size D_80029598_ovl4, . - D_80029598_ovl4
-
-glabel D_8002959C_ovl4
-/* 1174AC 8002959C */ .short 0x0000
-.size D_8002959C_ovl4, . - D_8002959C_ovl4
-
-glabel D_8002959E_ovl4
-/* 1174AE 8002959E */ .short 0x0064
-.size D_8002959E_ovl4, . - D_8002959E_ovl4
-
-glabel D_800295A0_ovl4
-/* 1174B0 800295A0 */ .short 0x0000
-.size D_800295A0_ovl4, . - D_800295A0_ovl4
-
-glabel D_800295A2_ovl4
-/* 1174B2 800295A2 */ .short 0x0064
-.size D_800295A2_ovl4, . - D_800295A2_ovl4
-
-glabel D_800295A4_ovl4
+/* 1174AC 8002959C */ .word 0x00000064
+/* 1174B0 800295A0 */ .word 0x00000064
 /* 1174B4 800295A4 */ .word D_1
-.size D_800295A4_ovl4, . - D_800295A4_ovl4
-
-glabel D_800295A8_ovl4
 /* 1174B8 800295A8 */ .word D_1
-.size D_800295A8_ovl4, . - D_800295A8_ovl4
-
-glabel D_800295AC_ovl4
 /* 1174BC 800295AC */ .word 0x80029978
 /* 1174C0 800295B0 */ .word D_8002B110
 /* 1174C4 800295B4 */ .word 0x00000000
@@ -168,20 +127,20 @@ glabel D_800295AC_ovl4
 /* 1174D0 800295C0 */ .word 0x00000000
 /* 1174D4 800295C4 */ .word 0x80029970
 /* 1174D8 800295C8 */ .word D_8002B114
-.size D_800295AC_ovl4, . - D_800295AC_ovl4
+.size .L80029594_ovl4, . - .L80029594_ovl4
 
-glabel .L800295CC_ovl6
+glabel D_800295CC_ovl4
 /* 1174DC 800295CC */ .word 0x00000000
-.size .L800295CC_ovl6, . - .L800295CC_ovl6
+.size D_800295CC_ovl4, . - D_800295CC_ovl4
 
-glabel .L800295D0_ovl4
+glabel D_800295D0_ovl4
 /* 1174E0 800295D0 */ .word 0xFFFFFF9C
 /* 1174E4 800295D4 */ .word 0x00000064
 /* 1174E8 800295D8 */ .word 0x00000000
-.size .L800295D0_ovl4, . - .L800295D0_ovl4
+.size D_800295D0_ovl4, . - D_800295D0_ovl4
 
-glabel .L800295DC_ovl4
-/* 1174EC 800295DC */ .word func_80029968_ovl6
+glabel D_800295DC_ovl4
+/* 1174EC 800295DC */ .word func_80029968
 
 glabel .L800295E0_ovl7
 /* 1174F0 800295E0 */ .word D_8002B118
@@ -194,22 +153,22 @@ glabel .L800295E0_ovl7
 /* 11750C 800295FC */ .word 0x00000000
 /* 117510 80029600 */ .word 0x00000000
 /* 117514 80029604 */ .word D_1
-.size .L800295DC_ovl4, . - .L800295DC_ovl4
+.size D_800295DC_ovl4, . - D_800295DC_ovl4
 
-glabel .L80029608_ovl6
+glabel D_80029608_ovl4
 /* 117518 80029608 */ .word 0x00000000
-.size .L80029608_ovl6, . - .L80029608_ovl6
+.size D_80029608_ovl4, . - D_80029608_ovl4
 
-glabel .L8002960C_ovl4
+glabel D_8002960C_ovl4
 /* 11751C 8002960C */ .word 0x80029958
 /* 117520 80029610 */ .word D_8002B120
 /* 117524 80029614 */ .word 0x00000000
 /* 117528 80029618 */ .word 0xFFFFFF9C
 /* 11752C 8002961C */ .word 0x00000064
 /* 117530 80029620 */ .word 0x00000000
-.size .L8002960C_ovl4, . - .L8002960C_ovl4
+.size D_8002960C_ovl4, . - D_8002960C_ovl4
 
-glabel .L80029624_ovl4
+glabel D_80029624_ovl4
 /* 117534 80029624 */ .word 0x80029950
 
 glabel .L80029628_ovl6
@@ -220,44 +179,35 @@ glabel .L8002962C_ovl6
 /* 117540 80029630 */ .word 0xFFFFFF9C
 /* 117544 80029634 */ .word 0x00000064
 /* 117548 80029638 */ .word 0x00000000
-.size .L80029624_ovl4, . - .L80029624_ovl4
+.size D_80029624_ovl4, . - D_80029624_ovl4
 
-glabel .L8002963C_ovl4
+glabel D_8002963C_ovl4
 /* 11754C 8002963C */ .word 0x80029948
 
 glabel func_80029640_ovl6
 /* 117550 80029640 */ .word D_8002B128
-.size .L8002963C_ovl4, . - .L8002963C_ovl4
+.size D_8002963C_ovl4, . - D_8002963C_ovl4
 
-glabel .L80029644_ovl4
+glabel D_80029644_ovl4
 /* 117554 80029644 */ .word 0x00000000
 /* 117558 80029648 */ .word 0xFFFFFF9C
 /* 11755C 8002964C */ .word 0x00000064
 /* 117560 80029650 */ .word 0x00000000
-.size .L80029644_ovl4, . - .L80029644_ovl4
-
-glabel D_80029654_ovl4
 /* 117564 80029654 */ .word 0x80029980
 /* 117568 80029658 */ .word 0x00000002
 /* 11756C 8002965C */ .word 0x00000004
-/* 117570 80029660 */ .word D_800295AC_ovl4
+/* 117570 80029660 */ .word 0x800295AC
 /* 117574 80029664 */ .word 0x00000007
 /* 117578 80029668 */ .word 0x00000007
 /* 11757C 8002966C */ .word 0x00000005
 /* 117580 80029670 */ .word 0x00000004
 /* 117584 80029674 */ .word 0x00000000
 /* 117588 80029678 */ .word 0x00000000
-.size D_80029654_ovl4, . - D_80029654_ovl4
-
-glabel D_8002967C_ovl4
 /* 11758C 8002967C */ .word 0x01010000
-.size D_8002967C_ovl4, . - D_8002967C_ovl4
-
-glabel D_80029680_ovl4
 /* 117590 80029680 */ .word 0x000A000A
-.size D_80029680_ovl4, . - D_80029680_ovl4
+.size D_80029644_ovl4, . - D_80029644_ovl4
 
-glabel .L80029684_ovl4
+glabel D_80029684_ovl4
 /* 117594 80029684 */ .word 0x00000000
 
 glabel .L80029688_ovl7
@@ -266,17 +216,17 @@ glabel .L80029688_ovl7
 /* 1175A0 80029690 */ .word 0xFFF6000A
 /* 1175A4 80029694 */ .word 0x00000000
 
-glabel func_80029698_ovl7
+glabel func_80029698
 /* 1175A8 80029698 */ .word 0x00000000
-.size .L80029684_ovl4, . - .L80029684_ovl4
+.size D_80029684_ovl4, . - D_80029684_ovl4
 
-glabel func_8002969C_ovl4
+glabel D_8002969C_ovl4
 /* 1175AC 8002969C */ .word 0xFFFFFFFF
 /* 1175B0 800296A0 */ .word 0x000AFFF6
 /* 1175B4 800296A4 */ .word 0x00000000
-.size func_8002969C_ovl4, . - func_8002969C_ovl4
+.size D_8002969C_ovl4, . - D_8002969C_ovl4
 
-glabel .L800296A8_ovl4
+glabel D_800296A8_ovl4
 /* 1175B8 800296A8 */ .word 0x00000000
 /* 1175BC 800296AC */ .word 0xFFFFFFFF
 /* 1175C0 800296B0 */ .word 0xFFF6FFF6
@@ -284,186 +234,89 @@ glabel .L800296A8_ovl4
 /* 1175C8 800296B8 */ .word 0x00000000
 /* 1175CC 800296BC */ .word 0xFFFFFFFF
 /* 1175D0 800296C0 */ .word 0x01004008
-/* 1175D4 800296C4 */ .word D_80029680_ovl4
+/* 1175D4 800296C4 */ .word 0x80029680
 /* 1175D8 800296C8 */ .word 0x06000204
 /* 1175DC 800296CC */ .word 0x00020604
-.size .L800296A8_ovl4, . - .L800296A8_ovl4
+.size D_800296A8_ovl4, . - D_800296A8_ovl4
 
-glabel .L800296D0_ovl4
+glabel D_800296D0_ovl4
 /* 1175E0 800296D0 */ .word 0xDF000000
 /* 1175E4 800296D4 */ .word 0x00000000
-.size .L800296D0_ovl4, . - .L800296D0_ovl4
+.size D_800296D0_ovl4, . - D_800296D0_ovl4
 
 glabel .L800296D8_ovl4
 /* 1175E8 800296D8 */ .word 0x01010000
-.size .L800296D8_ovl4, . - .L800296D8_ovl4
-
-glabel D_800296DC_ovl4
 /* 1175EC 800296DC */ .word 0x00000000
-.size D_800296DC_ovl4, . - D_800296DC_ovl4
 
 glabel .L800296E0_ovl6
 /* 1175F0 800296E0 */ .word 0x00000000
-.size .L800296E0_ovl6, . - .L800296E0_ovl6
-
-glabel D_800296E4_ovl4
 /* 1175F4 800296E4 */ .word 0x00000000
-.size D_800296E4_ovl4, . - D_800296E4_ovl4
-
-glabel D_800296E8_ovl4
 /* 1175F8 800296E8 */ .word 0x00000000
-.size D_800296E8_ovl4, . - D_800296E8_ovl4
-
-glabel D_800296EC_ovl4
-/* 1175FC 800296EC */ .short 0x0000
-.size D_800296EC_ovl4, . - D_800296EC_ovl4
-
-glabel D_800296EE_ovl4
-/* 1175FE 800296EE */ .short 0x0000
-.size D_800296EE_ovl4, . - D_800296EE_ovl4
-
-glabel D_800296F0_ovl4
-/* 117600 800296F0 */ .short 0x0000
-.size D_800296F0_ovl4, . - D_800296F0_ovl4
-
-glabel D_800296F2_ovl4
-/* 117602 800296F2 */ .short 0x0003
-.size D_800296F2_ovl4, . - D_800296F2_ovl4
-
-glabel D_800296F4_ovl4
+/* 1175FC 800296EC */ .word 0x00000000
+/* 117600 800296F0 */ .word 0x00000003
 /* 117604 800296F4 */ .word D_1010101
-.size D_800296F4_ovl4, . - D_800296F4_ovl4
-
-glabel D_800296F8_ovl4
 /* 117608 800296F8 */ .word 0x01000000
-.size D_800296F8_ovl4, . - D_800296F8_ovl4
+/* 11760C 800296FC */ .word 0x0000004A
+/* 117610 80029700 */ .word 0x00000014
+/* 117614 80029704 */ .word 0x0000000A
+/* 117618 80029708 */ .word 0x00000014
+/* 11761C 8002970C */ .word 0x00000000
+.size .L800296D8_ovl4, . - .L800296D8_ovl4
 
-glabel D_800296FC_ovl4
-/* 11760C 800296FC */ .short 0x0000
-.size D_800296FC_ovl4, . - D_800296FC_ovl4
+glabel D_80029710_ovl4
+/* 117620 80029710 */ .word 0x00000080
+/* 117624 80029714 */ .word 0x00000000
+/* 117628 80029718 */ .word 0x00000000
+/* 11762C 8002971C */ .word 0x00000080
+.size D_80029710_ovl4, . - D_80029710_ovl4
 
-glabel D_800296FE_ovl4
-/* 11760E 800296FE */ .short 0x004A
-.size D_800296FE_ovl4, . - D_800296FE_ovl4
-
-glabel D_80029700_ovl4
-/* 117610 80029700 */ .short 0x0000
-.size D_80029700_ovl4, . - D_80029700_ovl4
-
-glabel D_80029702_ovl4
-/* 117612 80029702 */ .short 0x0014
-.size D_80029702_ovl4, . - D_80029702_ovl4
-
-glabel D_80029704_ovl4
-/* 117614 80029704 */ .short 0x0000
-.size D_80029704_ovl4, . - D_80029704_ovl4
-
-glabel D_80029706_ovl4
-/* 117616 80029706 */ .short 0x000A
-.size D_80029706_ovl4, . - D_80029706_ovl4
-
-glabel D_80029708_ovl4
-/* 117618 80029708 */ .short 0x0000
-.size D_80029708_ovl4, . - D_80029708_ovl4
-
-glabel D_8002970A_ovl4
-/* 11761A 8002970A */ .short 0x0014
-.size D_8002970A_ovl4, . - D_8002970A_ovl4
-
-glabel D_8002970C_ovl4
-/* 11761C 8002970C */ .short 0x0000
-.size D_8002970C_ovl4, . - D_8002970C_ovl4
-
-glabel D_8002970E_ovl4
-/* 11761E 8002970E */ .short 0x0000
-.size D_8002970E_ovl4, . - D_8002970E_ovl4
-
-glabel .L80029710_ovl4
-/* 117620 80029710 */ .short 0x0000
-.size .L80029710_ovl4, . - .L80029710_ovl4
-
-glabel D_80029712_ovl4
-/* 117622 80029712 */ .short 0x0080
-.size D_80029712_ovl4, . - D_80029712_ovl4
-
-glabel D_80029714_ovl4
-/* 117624 80029714 */ .short 0x0000
-.size D_80029714_ovl4, . - D_80029714_ovl4
-
-glabel D_80029716_ovl4
-/* 117626 80029716 */ .short 0x0000
-.size D_80029716_ovl4, . - D_80029716_ovl4
-
-glabel D_80029718_ovl4
-/* 117628 80029718 */ .short 0x0000
-.size D_80029718_ovl4, . - D_80029718_ovl4
-
-glabel D_8002971A_ovl4
-/* 11762A 8002971A */ .short 0x0000
-.size D_8002971A_ovl4, . - D_8002971A_ovl4
-
-glabel D_8002971C_ovl4
-/* 11762C 8002971C */ .short 0x0000
-.size D_8002971C_ovl4, . - D_8002971C_ovl4
-
-glabel D_8002971E_ovl4
-/* 11762E 8002971E */ .short 0x0080
-.size D_8002971E_ovl4, . - D_8002971E_ovl4
-
-glabel .L80029720_ovl5
-/* 117630 80029720 */ .short 0x0000
-.size .L80029720_ovl5, . - .L80029720_ovl5
-
-glabel D_80029722_ovl4
-/* 117632 80029722 */ .short 0x00FF
-.size D_80029722_ovl4, . - D_80029722_ovl4
-
-glabel D_80029724_ovl4
+glabel D_80029720_ovl4
+/* 117630 80029720 */ .word 0x000000FF
 /* 117634 80029724 */ .word 0x80029AB0
-/* 117638 80029728 */ .word D_800296FC_ovl4
-.size D_80029724_ovl4, . - D_80029724_ovl4
+/* 117638 80029728 */ .word 0x800296FC
+.size D_80029720_ovl4, . - D_80029720_ovl4
 
-glabel .L8002972C_ovl4
+glabel D_8002972C_ovl4
 /* 11763C 8002972C */ .word 0x00000000
-.size .L8002972C_ovl4, . - .L8002972C_ovl4
+.size D_8002972C_ovl4, . - D_8002972C_ovl4
 
-glabel .L80029730_ovl4
+glabel D_80029730_ovl4
 /* 117640 80029730 */ .word 0x00000000
 /* 117644 80029734 */ .word 0x000001F0
 /* 117648 80029738 */ .word 0x00000000
 /* 11764C 8002973C */ .word 0x80029AA4
-/* 117650 80029740 */ .word D_80029700_ovl4
+/* 117650 80029740 */ .word 0x80029700
 /* 117654 80029744 */ .word 0x00000000
 /* 117658 80029748 */ .word D_1
 /* 11765C 8002974C */ .word 0x000003E7
 
-glabel func_80029750_ovl5
+glabel func_80029750
 /* 117660 80029750 */ .word 0x00000000
 /* 117664 80029754 */ .word 0x80029A98
-/* 117668 80029758 */ .word D_80029704_ovl4
+/* 117668 80029758 */ .word 0x80029704
 /* 11766C 8002975C */ .word 0x00000000
 /* 117670 80029760 */ .word D_1
 /* 117674 80029764 */ .word 0x000003E7
-.size .L80029730_ovl4, . - .L80029730_ovl4
+.size D_80029730_ovl4, . - D_80029730_ovl4
 
-glabel .L80029768_ovl4
+glabel D_80029768_ovl4
 /* 117678 80029768 */ .word 0x00000000
 
 glabel .L8002976C_ovl6
 /* 11767C 8002976C */ .word 0x80029A8C
-.size .L80029768_ovl4, . - .L80029768_ovl4
+.size D_80029768_ovl4, . - D_80029768_ovl4
 
-glabel .L80029770_ovl4
-/* 117680 80029770 */ .word D_80029708_ovl4
+glabel D_80029770_ovl4
+/* 117680 80029770 */ .word 0x80029708
 /* 117684 80029774 */ .word 0x00000000
 /* 117688 80029778 */ .word D_1
 /* 11768C 8002977C */ .word 0x000003E7
 /* 117690 80029780 */ .word 0x00000000
-.size .L80029770_ovl4, . - .L80029770_ovl4
+.size D_80029770_ovl4, . - D_80029770_ovl4
 
-glabel .L80029784_ovl4
+glabel D_80029784_ovl4
 /* 117694 80029784 */ .word 0x80029A80
-/* 117698 80029788 */ .word D_8002970C_ovl4
+/* 117698 80029788 */ .word 0x8002970C
 /* 11769C 8002978C */ .word 0x00000000
 
 glabel .L80029790_ovl5
@@ -473,13 +326,13 @@ glabel .L80029790_ovl5
 glabel .L80029798_ovl6
 /* 1176A8 80029798 */ .word 0x00000000
 /* 1176AC 8002979C */ .word 0x80029A74
-.size .L80029784_ovl4, . - .L80029784_ovl4
+.size D_80029784_ovl4, . - D_80029784_ovl4
 
-glabel .L800297A0_ovl5
+glabel D_800297A0_ovl4
 /* 1176B0 800297A0 */ .word 0x80029710
-.size .L800297A0_ovl5, . - .L800297A0_ovl5
+.size D_800297A0_ovl4, . - D_800297A0_ovl4
 
-glabel .L800297A4_ovl4
+glabel D_800297A4_ovl4
 /* 1176B4 800297A4 */ .word 0x00000000
 /* 1176B8 800297A8 */ .word 0x00000000
 /* 1176BC 800297AC */ .word 0x000000FF
@@ -487,81 +340,75 @@ glabel .L800297A4_ovl4
 glabel .L800297B0_ovl5
 /* 1176C0 800297B0 */ .word 0x00000000
 /* 1176C4 800297B4 */ .word 0x80029A68
-/* 1176C8 800297B8 */ .word D_80029714_ovl4
+/* 1176C8 800297B8 */ .word 0x80029714
 /* 1176CC 800297BC */ .word 0x00000000
-.size .L800297A4_ovl4, . - .L800297A4_ovl4
+.size D_800297A4_ovl4, . - D_800297A4_ovl4
 
-glabel .L800297C0_ovl4
+glabel D_800297C0_ovl4
 /* 1176D0 800297C0 */ .word 0x00000000
 /* 1176D4 800297C4 */ .word 0x000000FF
 /* 1176D8 800297C8 */ .word 0x00000000
 
 glabel .L800297CC_ovl5
 /* 1176DC 800297CC */ .word 0x80029A5C
-/* 1176E0 800297D0 */ .word D_80029718_ovl4
+/* 1176E0 800297D0 */ .word 0x80029718
 /* 1176E4 800297D4 */ .word 0x00000000
-.size .L800297C0_ovl4, . - .L800297C0_ovl4
+.size D_800297C0_ovl4, . - D_800297C0_ovl4
 
-glabel .L800297D8_ovl4
+glabel D_800297D8_ovl4
 /* 1176E8 800297D8 */ .word 0x00000000
 /* 1176EC 800297DC */ .word 0x000000FF
 /* 1176F0 800297E0 */ .word 0x00000000
 /* 1176F4 800297E4 */ .word 0x80029A50
-/* 1176F8 800297E8 */ .word D_8002971C_ovl4
+/* 1176F8 800297E8 */ .word 0x8002971C
 /* 1176FC 800297EC */ .word 0x00000000
 /* 117700 800297F0 */ .word 0x00000000
 /* 117704 800297F4 */ .word 0x000000FF
 /* 117708 800297F8 */ .word 0x00000000
-/* 11770C 800297FC */ .word D_80029A44_ovl4
-.size .L800297D8_ovl4, . - .L800297D8_ovl4
+/* 11770C 800297FC */ .word 0x80029A44
+.size D_800297D8_ovl4, . - D_800297D8_ovl4
 
-glabel .L80029800_ovl4
+glabel D_80029800_ovl4
 /* 117710 80029800 */ .word 0x80029720
-.size .L80029800_ovl4, . - .L80029800_ovl4
+.size D_80029800_ovl4, . - D_80029800_ovl4
 
-glabel .L80029804_ovl4
+glabel D_80029804_ovl4
 /* 117714 80029804 */ .word 0x00000000
 /* 117718 80029808 */ .word 0x00000000
 /* 11771C 8002980C */ .word 0x000000FF
 /* 117720 80029810 */ .word 0x00000000
-.size .L80029804_ovl4, . - .L80029804_ovl4
-
-glabel D_80029814_ovl4
 /* 117724 80029814 */ .word 0x80029980
 /* 117728 80029818 */ .word 0x00000002
 
 glabel .L8002981C_ovl7
 /* 11772C 8002981C */ .word 0x00000004
-.size D_80029814_ovl4, . - D_80029814_ovl4
+.size D_80029804_ovl4, . - D_80029804_ovl4
 
-glabel .L80029820_ovl5
-/* 117730 80029820 */ .word D_80029724_ovl4
+glabel D_80029820_ovl4
+/* 117730 80029820 */ .word 0x80029724
 /* 117734 80029824 */ .word 0x0000000A
-.size .L80029820_ovl5, . - .L80029820_ovl5
+.size D_80029820_ovl4, . - D_80029820_ovl4
 
-glabel .L80029828_ovl4
+glabel D_80029828_ovl4
 /* 117738 80029828 */ .word 0x0000000A
 /* 11773C 8002982C */ .word 0x00000008
 /* 117740 80029830 */ .word 0x00000004
 /* 117744 80029834 */ .word 0x00000000
 /* 117748 80029838 */ .word 0x00000000
-.size .L80029828_ovl4, . - .L80029828_ovl4
-
-glabel D_8002983C_ovl4
 /* 11774C 8002983C */ .word 0x01000000
-.size D_8002983C_ovl4, . - D_8002983C_ovl4
+.size D_80029828_ovl4, . - D_80029828_ovl4
 
-glabel .L80029840_ovl4
+glabel D_80029840_ovl4
 /* 117750 80029840 */ .word 0x536E6443
 /* 117754 80029844 */ .word 0x6F6E7420
 /* 117758 80029848 */ .word 0x00000000
-.size .L80029840_ovl4, . - .L80029840_ovl4
+.size D_80029840_ovl4, . - D_80029840_ovl4
 
-glabel .L8002984C_ovl4
+glabel D_8002984C_ovl4
 /* 11775C 8002984C */ .word 0x54657853
-.size .L8002984C_ovl4, . - .L8002984C_ovl4
+.size D_8002984C_ovl4, . - D_8002984C_ovl4
 
-glabel .L80029850_ovl4
+glabel D_80029850_ovl4
 /* 117760 80029850 */ .word 0x63726C6C
 
 glabel .L80029854_ovl6
@@ -576,23 +423,23 @@ glabel .L80029864_ovl6
 glabel .L80029868_ovl6
 /* 117778 80029868 */ .word 0x20202020
 /* 11777C 8002986C */ .word 0x00000000
-.size .L80029850_ovl4, . - .L80029850_ovl4
+.size D_80029850_ovl4, . - D_80029850_ovl4
 
-glabel .L80029870_ovl4
+glabel D_80029870_ovl4
 /* 117780 80029870 */ .word 0x42656174
 /* 117784 80029874 */ .word 0x20202020
 
-glabel func_80029878_ovl6
+glabel func_80029878
 /* 117788 80029878 */ .word 0x00000000
 /* 11778C 8002987C */ .word 0x426F6D62
-.size .L80029870_ovl4, . - .L80029870_ovl4
+.size D_80029870_ovl4, . - D_80029870_ovl4
 
-glabel .L80029880_ovl4
+glabel D_80029880_ovl4
 /* 117790 80029880 */ .word 0x20202020
 /* 117794 80029884 */ .word 0x00000000
-.size .L80029880_ovl4, . - .L80029880_ovl4
+.size D_80029880_ovl4, . - D_80029880_ovl4
 
-glabel .L80029888_ovl4
+glabel D_80029888_ovl4
 /* 117798 80029888 */ .word 0x4D747820
 /* 11779C 8002988C */ .word 0x20202020
 /* 1177A0 80029890 */ .word 0x00000000
@@ -602,35 +449,35 @@ glabel func_80029894_ovl6
 /* 1177A8 80029898 */ .word 0x6C202020
 /* 1177AC 8002989C */ .word 0x00000000
 /* 1177B0 800298A0 */ .word 0x43686169
-.size .L80029888_ovl4, . - .L80029888_ovl4
+.size D_80029888_ovl4, . - D_80029888_ovl4
 
-glabel .L800298A4_ovl4
+glabel D_800298A4_ovl4
 /* 1177B4 800298A4 */ .word 0x6E202020
 /* 1177B8 800298A8 */ .word 0x00000000
 /* 1177BC 800298AC */ .word 0x52617374
 /* 1177C0 800298B0 */ .word 0x65722020
-.size .L800298A4_ovl4, . - .L800298A4_ovl4
+.size D_800298A4_ovl4, . - D_800298A4_ovl4
 
-glabel .L800298B4_ovl4
+glabel D_800298B4_ovl4
 /* 1177C4 800298B4 */ .word 0x00000000
 /* 1177C8 800298B8 */ .word 0x4C696E65
 /* 1177CC 800298BC */ .word 0x20202020
 
-glabel func_800298C0_ovl5
+glabel func_800298C0
 /* 1177D0 800298C0 */ .word 0x00000000
 
-glabel func_800298C4_ovl6
+glabel func_800298C4
 /* 1177D4 800298C4 */ .word 0x4F424A45
-.size .L800298B4_ovl4, . - .L800298B4_ovl4
+.size D_800298B4_ovl4, . - D_800298B4_ovl4
 
-glabel func_800298C8_ovl4
+glabel D_800298C8_ovl4
 /* 1177D8 800298C8 */ .word 0x43542020
 /* 1177DC 800298CC */ .word 0x00000000
 /* 1177E0 800298D0 */ .word 0x534F5254
 /* 1177E4 800298D4 */ .word 0x20202020
-.size func_800298C8_ovl4, . - func_800298C8_ovl4
+.size D_800298C8_ovl4, . - D_800298C8_ovl4
 
-glabel .L800298D8_ovl4
+glabel D_800298D8_ovl4
 /* 1177E8 800298D8 */ .word 0x00000000
 /* 1177EC 800298DC */ .word 0x494D4147
 
@@ -641,38 +488,28 @@ glabel func_800298E0_ovl6
 /* 1177FC 800298EC */ .word 0x54455354
 /* 117800 800298F0 */ .word 0x00000000
 /* 117804 800298F4 */ .word 0x00000000
-.size .L800298D8_ovl4, . - .L800298D8_ovl4
-
-glabel jtbl_800298F8_ovl4
-/* 117808 800298F8 */ .word .L80025C30_ovl1
-/* 11780C 800298FC */ .word .L80025C5C_ovl3
-/* 117810 80029900 */ .word .L80025CA8_ovl3
+/* 117808 800298F8 */ .word 0x80025C30
+/* 11780C 800298FC */ .word 0x80025C5C
+/* 117810 80029900 */ .word 0x80025CA8
 
 glabel .L80029904_ovl5
-/* 117814 80029904 */ .word .L80025D14_ovl6
-/* 117818 80029908 */ .word .L80025D38_ovl3
-.size jtbl_800298F8_ovl4, . - jtbl_800298F8_ovl4
+/* 117814 80029904 */ .word 0x80025D14
+/* 117818 80029908 */ .word 0x80025D38
+.size D_800298D8_ovl4, . - D_800298D8_ovl4
 
-glabel .L8002990C_ovl4
+glabel D_8002990C_ovl4
 /* 11781C 8002990C */ .word 0x00000000
-.size .L8002990C_ovl4, . - .L8002990C_ovl4
-
-glabel D_80029910_ovl4
 /* 117820 80029910 */ .word 0x494D475F
-.size D_80029910_ovl4, . - D_80029910_ovl4
+.size D_8002990C_ovl4, . - D_8002990C_ovl4
 
-glabel .L80029914_ovl4
+glabel D_80029914_ovl4
 /* 117824 80029914 */ .word 0x4E4F3A25
 /* 117828 80029918 */ .word 0x33640000
-.size .L80029914_ovl4, . - .L80029914_ovl4
-
-glabel func_8002991C_ovl6
 /* 11782C 8002991C */ .word 0x25366400
-.size func_8002991C_ovl6, . - func_8002991C_ovl6
 
-glabel func_80029920_ovl6
+glabel func_80029920
 /* 117830 80029920 */ .word 0x25336400
-.size func_80029920_ovl6, . - func_80029920_ovl6
+.size D_80029914_ovl4, . - D_80029914_ovl4
 
 glabel .L80029924_ovl4
 /* 117834 80029924 */ .word 0x583D2533
@@ -694,16 +531,16 @@ glabel .L80029934_ovl7
 /* 117864 80029954 */ .word 0x3A000000
 .size .L80029924_ovl4, . - .L80029924_ovl4
 
-glabel .L80029958_ovl4
+glabel D_80029958_ovl4
 /* 117868 80029958 */ .word 0x53504432
 /* 11786C 8002995C */ .word 0x3A000000
-.size .L80029958_ovl4, . - .L80029958_ovl4
+.size D_80029958_ovl4, . - D_80029958_ovl4
 
-glabel .L80029960_ovl4
+glabel D_80029960_ovl4
 /* 117870 80029960 */ .word 0x44574E20
 /* 117874 80029964 */ .word 0x3A000000
 
-glabel func_80029968_ovl6
+glabel func_80029968
 /* 117878 80029968 */ .word 0x48525A20
 
 glabel .L8002996C_ovl7
@@ -713,158 +550,119 @@ glabel .L8002996C_ovl7
 /* 117888 80029978 */ .word 0x53504420
 /* 11788C 8002997C */ .word 0x3A000000
 /* 117890 80029980 */ .word 0x00000000
-.size .L80029960_ovl4, . - .L80029960_ovl4
 
 glabel .L80029984_ovl5
 /* 117894 80029984 */ .word 0x25313064
-.size .L80029984_ovl5, . - .L80029984_ovl5
+.size D_80029960_ovl4, . - D_80029960_ovl4
 
-glabel .L80029988_ovl4
+glabel D_80029988_ovl4
 /* 117898 80029988 */ .word 0x00000000
-.size .L80029988_ovl4, . - .L80029988_ovl4
+/* 11789C 8002998C */ .word 0x4D4F563A
 
-.align 2
-glabel D_8002998C_ovl4
-/* 11789C 8002998C */ .asciz "MOV:%4d"
-.align 2
-.size D_8002998C_ovl4, . - D_8002998C_ovl4
+glabel .L80029990_ovl6
+/* 1178A0 80029990 */ .word 0x25346400
+/* 1178A4 80029994 */ .word 0x41474C3A
+/* 1178A8 80029998 */ .word 0x25346400
+.size D_80029988_ovl4, . - D_80029988_ovl4
 
-.align 2
-glabel D_80029994_ovl4
-/* 1178A4 80029994 */ .asciz "AGL:%4d"
-.align 2
-.size D_80029994_ovl4, . - D_80029994_ovl4
-
-glabel .L8002999C_ovl5
+glabel D_8002999C_ovl4
 /* 1178AC 8002999C */ .word 0x00000000
-.size .L8002999C_ovl5, . - .L8002999C_ovl5
+.size D_8002999C_ovl4, . - D_8002999C_ovl4
 
 glabel .L800299A0_ovl4
 /* 1178B0 800299A0 */ .word 0x3F91DF46
 
 glabel .L800299A4_ovl7
 /* 1178B4 800299A4 */ .word 0xA2529D39
+/* 1178B8 800299A8 */ .word 0x404CA5DC
 .size .L800299A0_ovl4, . - .L800299A0_ovl4
 
-glabel D_800299A8_ovl4
-/* 1178B8 800299A8 */ .word 0x404CA5DC
-.size D_800299A8_ovl4, . - D_800299A8_ovl4
-
-glabel .L800299AC_ovl4
+glabel D_800299AC_ovl4
 /* 1178BC 800299AC */ .word 0x1A63C1F8
-.size .L800299AC_ovl4, . - .L800299AC_ovl4
 
 glabel .L800299B0_ovl6
 /* 1178C0 800299B0 */ .word 0x3F91DF46
 /* 1178C4 800299B4 */ .word 0xA2529D39
-.size .L800299B0_ovl6, . - .L800299B0_ovl6
+.size D_800299AC_ovl4, . - D_800299AC_ovl4
 
 glabel .L800299B8_ovl4
 /* 1178C8 800299B8 */ .word 0x404CA5DC
 
 glabel .L800299BC_ovl5
 /* 1178CC 800299BC */ .word 0x1A63C1F8
-.size .L800299B8_ovl4, . - .L800299B8_ovl4
-
-glabel D_800299C0_ovl4
 /* 1178D0 800299C0 */ .word 0x3F91DF46
 
 glabel .L800299C4_ovl6
 /* 1178D4 800299C4 */ .word 0xA2529D39
-.size D_800299C0_ovl4, . - D_800299C0_ovl4
-
-glabel D_800299C8_ovl4
-/* 1178D8 800299C8 404CA5DC1A63C1F8 */ .double 57.2957795130823229
-.size D_800299C8_ovl4, . - D_800299C8_ovl4
-
-glabel D_800299D0_ovl4
-/* 1178E0 800299D0 3F91DF46A2529D39 */ .double 0.0174532925199432955
-.size D_800299D0_ovl4, . - D_800299D0_ovl4
+/* 1178D8 800299C8 */ .word 0x404CA5DC
+/* 1178DC 800299CC */ .word 0x1A63C1F8
+/* 1178E0 800299D0 */ .word 0x3F91DF46
+/* 1178E4 800299D4 */ .word 0xA2529D39
 
 glabel .L800299D8_ovl6
 /* 1178E8 800299D8 */ .word 0x404CA5DC
 /* 1178EC 800299DC */ .word 0x1A63C1F8
-.size .L800299D8_ovl6, . - .L800299D8_ovl6
+/* 1178F0 800299E0 */ .word 0x2535642C
+/* 1178F4 800299E4 */ .word 0x2535642C
+/* 1178F8 800299E8 */ .word 0x25356400
+.size .L800299B8_ovl4, . - .L800299B8_ovl4
 
-.align 2
-glabel D_800299E0_ovl4
-/* 1178F0 800299E0 */ .asciz "%5d,%5d,%5d"
-.align 2
-.size D_800299E0_ovl4, . - D_800299E0_ovl4
-
-glabel .L800299EC_ovl6
+glabel .L800299EC_ovl4
 /* 1178FC 800299EC */ .word 0x53434C3A
 /* 117900 800299F0 */ .word 0x25336400
-.size .L800299EC_ovl6, . - .L800299EC_ovl6
-
-glabel D_800299F4_ovl4
 /* 117904 800299F4 */ .word 0x4449463A
-.size D_800299F4_ovl4, . - D_800299F4_ovl4
+.size .L800299EC_ovl4, . - .L800299EC_ovl4
 
-glabel .L800299F8_ovl4
+glabel D_800299F8_ovl4
 /* 117908 800299F8 */ .word 0x2533642F
 /* 11790C 800299FC */ .word 0x5350443A
 
 glabel .L80029A00_ovl6
 /* 117910 80029A00 */ .word 0x25336400
-.size .L800299F8_ovl4, . - .L800299F8_ovl4
-
-.align 2
-glabel D_80029A04_ovl4
-/* 117914 80029A04 */ .asciz " "
-.align 2
-.size D_80029A04_ovl4, . - D_80029A04_ovl4
+/* 117914 80029A04 */ .word 0x20000000
 
 glabel .L80029A08_ovl7
 /* 117918 80029A08 */ .word 0x2532643A
 /* 11791C 80029A0C */ .word 0x00000000
-.size .L80029A08_ovl7, . - .L80029A08_ovl7
+.size D_800299F8_ovl4, . - D_800299F8_ovl4
 
-glabel .L80029A10_ovl7
+glabel .L80029A10_ovl4
 /* 117920 80029A10 */ .word 0x4F000000
-.size .L80029A10_ovl7, . - .L80029A10_ovl7
+/* 117924 80029A14 */ .word 0x4C45563A
+/* 117928 80029A18 */ .word 0x25642F44
 
-.align 2
-glabel D_80029A14_ovl4
-/* 117924 80029A14 */ .asciz "LEV:%d/DAT:%2d/RET:%5.2f"
-.align 2
-.size D_80029A14_ovl4, . - D_80029A14_ovl4
+glabel .L80029A1C_ovl5
+/* 11792C 80029A1C */ .word 0x41543A25
+/* 117930 80029A20 */ .word 0x32642F52
+/* 117934 80029A24 */ .word 0x45543A25
+/* 117938 80029A28 */ .word 0x352E3266
+/* 11793C 80029A2C */ .word 0x00000000
+/* 117940 80029A30 */ .word 0x62673030
+/* 117944 80029A34 */ .word 0x00000000
+.size .L80029A10_ovl4, . - .L80029A10_ovl4
 
-.align 2
-glabel D_80029A30_ovl4
-/* 117940 80029A30 */ .asciz "bg00"
-.align 2
-.size D_80029A30_ovl4, . - D_80029A30_ovl4
-
-glabel .L80029A38_ovl6
+glabel .L80029A38_ovl4
 /* 117948 80029A38 */ .word 0x25345800
-.size .L80029A38_ovl6, . - .L80029A38_ovl6
-
-.align 2
-glabel D_80029A3C_ovl4
-/* 11794C 80029A3C */ .asciz "/%4X"
-.align 2
-.size D_80029A3C_ovl4, . - D_80029A3C_ovl4
-
-glabel D_80029A44_ovl4
+/* 11794C 80029A3C */ .word 0x2F253458
+/* 117950 80029A40 */ .word 0x00000000
 /* 117954 80029A44 */ .word 0x4F555420
 
 glabel .L80029A48_ovl5
 /* 117958 80029A48 */ .word 0x50414E3A
-.size D_80029A44_ovl4, . - D_80029A44_ovl4
+.size .L80029A38_ovl4, . - .L80029A38_ovl4
 
-glabel .L80029A4C_ovl4
+glabel D_80029A4C_ovl4
 /* 11795C 80029A4C */ .word 0x00000000
-.size .L80029A4C_ovl4, . - .L80029A4C_ovl4
+.size D_80029A4C_ovl4, . - D_80029A4C_ovl4
 
-glabel .L80029A50_ovl4
+glabel D_80029A50_ovl4
 /* 117960 80029A50 */ .word 0x504C5920
 /* 117964 80029A54 */ .word 0x50414E3A
 /* 117968 80029A58 */ .word 0x00000000
 /* 11796C 80029A5C */ .word 0x494E2020
-.size .L80029A50_ovl4, . - .L80029A50_ovl4
+.size D_80029A50_ovl4, . - D_80029A50_ovl4
 
-glabel .L80029A60_ovl4
+glabel D_80029A60_ovl4
 /* 117970 80029A60 */ .word 0x50414E3A
 /* 117974 80029A64 */ .word 0x00000000
 
@@ -875,15 +673,15 @@ glabel .L80029A68_ovl7
 glabel .L80029A70_ovl5
 /* 117980 80029A70 */ .word 0x00000000
 /* 117984 80029A74 */ .word 0x504C5920
-.size .L80029A60_ovl4, . - .L80029A60_ovl4
+.size D_80029A60_ovl4, . - D_80029A60_ovl4
 
-glabel .L80029A78_ovl4
+glabel D_80029A78_ovl4
 /* 117988 80029A78 */ .word 0x564F4C3A
 /* 11798C 80029A7C */ .word 0x00000000
 /* 117990 80029A80 */ .word 0x494E2020
-.size .L80029A78_ovl4, . - .L80029A78_ovl4
+.size D_80029A78_ovl4, . - D_80029A78_ovl4
 
-glabel .L80029A84_ovl4
+glabel D_80029A84_ovl4
 /* 117994 80029A84 */ .word 0x564F4C3A
 
 glabel .L80029A88_ovl7
@@ -892,66 +690,55 @@ glabel .L80029A88_ovl7
 
 glabel .L80029A90_ovl5
 /* 1179A0 80029A90 */ .word 0x54494D3A
-.size .L80029A84_ovl4, . - .L80029A84_ovl4
+.size D_80029A84_ovl4, . - D_80029A84_ovl4
 
-glabel .L80029A94_ovl4
+glabel D_80029A94_ovl4
 /* 1179A4 80029A94 */ .word 0x00000000
 /* 1179A8 80029A98 */ .word 0x504C5920
 /* 1179AC 80029A9C */ .word 0x54494D3A
 /* 1179B0 80029AA0 */ .word 0x00000000
 /* 1179B4 80029AA4 */ .word 0x494E2020
 
-glabel func_80029AA8_ovl5
+glabel func_80029AA8
 /* 1179B8 80029AA8 */ .word 0x54494D3A
 /* 1179BC 80029AAC */ .word 0x00000000
 /* 1179C0 80029AB0 */ .word 0x534E4420
 
 glabel .L80029AB4_ovl6
 /* 1179C4 80029AB4 */ .word 0x434F443A
-.size .L80029A94_ovl4, . - .L80029A94_ovl4
+.size D_80029A94_ovl4, . - D_80029A94_ovl4
 
-glabel .L80029AB8_ovl4
+glabel D_80029AB8_ovl4
 /* 1179C8 80029AB8 */ .word 0x00000000
-.size .L80029AB8_ovl4, . - .L80029AB8_ovl4
+.size D_80029AB8_ovl4, . - D_80029AB8_ovl4
 
-glabel .L80029ABC_ovl4
+glabel D_80029ABC_ovl4
 /* 1179CC 80029ABC */ .word 0x00000000
-.size .L80029ABC_ovl4, . - .L80029ABC_ovl4
-
-glabel D_80029AC0_ovl4
 /* 1179D0 80029AC0 */ .word 0x3F91DF46
-.size D_80029AC0_ovl4, . - D_80029AC0_ovl4
+.size D_80029ABC_ovl4, . - D_80029ABC_ovl4
 
-glabel .L80029AC4_ovl4
+glabel D_80029AC4_ovl4
 /* 1179D4 80029AC4 */ .word 0xA2529D39
-.size .L80029AC4_ovl4, . - .L80029AC4_ovl4
-
-glabel D_80029AC8_ovl4
 /* 1179D8 80029AC8 */ .word 0x4D4F563A
-.size D_80029AC8_ovl4, . - D_80029AC8_ovl4
+.size D_80029AC4_ovl4, . - D_80029AC4_ovl4
 
-glabel .L80029ACC_ovl4
+glabel D_80029ACC_ovl4
 /* 1179DC 80029ACC */ .word 0x25346400
-.size .L80029ACC_ovl4, . - .L80029ACC_ovl4
-
-.align 2
-glabel D_80029AD0_ovl4
-/* 1179E0 80029AD0 */ .asciz "AGL:%4d"
-.align 2
-.size D_80029AD0_ovl4, . - D_80029AD0_ovl4
+/* 1179E0 80029AD0 */ .word 0x41474C3A
+/* 1179E4 80029AD4 */ .word 0x25346400
 
 glabel .L80029AD8_ovl6
 /* 1179E8 80029AD8 */ .word 0x404CA5DC
 /* 1179EC 80029ADC */ .word 0x1A63C1F8
-.size .L80029AD8_ovl6, . - .L80029AD8_ovl6
+.size D_80029ACC_ovl4, . - D_80029ACC_ovl4
 
 glabel .L80029AE0_ovl4
 /* 1179F0 80029AE0 */ .word 0x3F91DF46
 .size .L80029AE0_ovl4, . - .L80029AE0_ovl4
 
-glabel .L80029AE4_ovl4
+glabel D_80029AE4_ovl4
 /* 1179F4 80029AE4 */ .word 0xA2529D39
-.size .L80029AE4_ovl4, . - .L80029AE4_ovl4
+.size D_80029AE4_ovl4, . - D_80029AE4_ovl4
 
 glabel .L80029AE8_ovl4
 /* 1179F8 80029AE8 */ .word 0x404CA5DC

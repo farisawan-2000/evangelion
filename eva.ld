@@ -20,7 +20,7 @@ OUTPUT_ARCH (mips)
 
 SECTIONS
 {
-    rom_addr_001A1880 = 0x1A1880;
+    
     __romPos = 0x0;
     BEGIN_SEG(boot, 0xA4000000) {
         BUILD_DIR/asm/header.o(.header);
