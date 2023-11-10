@@ -56,7 +56,7 @@ LDFLAGS := --no-check-sections -mips3 --accept-unknown-input-arch -T $(BUILD_DIR
 # -m elf32btsmip
 
 CPP := $(CROSS)cpp -P -Wno-trigraphs
-CPPFLAGS := -Iinclude/ -Iinclude/libc -I. -DTARGET_N64 -ffreestanding -D _LANGUAGE_C -D_FINALROM -DF3DEX_GBI_2 -D_MIPS_SZLONG=32
+CPPFLAGS := -Iinclude/ -nostdinc -Iinclude/libc -I. -DTARGET_N64 -ffreestanding -D _LANGUAGE_C -D_FINALROM -DF3DEX_GBI_2 -D_MIPS_SZLONG=32
 
 CC_CHECK := gcc -fsyntax-only -fsigned-char -m32 $(CPPFLAGS) -std=gnu90 -Wall -Wextra -Wno-unknown-pragmas -Wno-format-security -Wno-main -DNON_MATCHING -DAVOID_UB
 
