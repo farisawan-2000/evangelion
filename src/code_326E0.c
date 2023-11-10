@@ -1,5 +1,5 @@
 #include "common.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_326E0/func_800C7AE0.s")
+INCLUDE_ASM(const s32, "code_326E0", func_800C7AE0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_326E0/func_800C7B4C.s")
+INCLUDE_ASM(const s32, "code_326E0", func_800C7B4C);

@@ -1,51 +1,52 @@
 #include "common.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_80098E60.s")
+INCLUDE_ASM(const s32, "code_3A60", func_80098E60);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_80098FB8.s")
+INCLUDE_ASM(const s32, "code_3A60", func_80098FB8);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_800990E8.s")
+INCLUDE_ASM(const s32, "code_3A60", func_800990E8);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_80099110.s")
+INCLUDE_ASM(const s32, "code_3A60", func_80099110);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_80099124.s")
+INCLUDE_ASM(const s32, "code_3A60", func_80099124);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_80099174.s")
+INCLUDE_ASM(const s32, "code_3A60", func_80099174);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_80099238.s")
+INCLUDE_ASM(const s32, "code_3A60", func_80099238);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_8009930C.s")
+INCLUDE_ASM(const s32, "code_3A60", func_8009930C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_800994A0.s")
+INCLUDE_ASM(const s32, "code_3A60", func_800994A0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_8009953C.s")
+INCLUDE_ASM(const s32, "code_3A60", func_8009953C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_8009961C.s")
+INCLUDE_ASM(const s32, "code_3A60", func_8009961C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_80099B58.s")
+INCLUDE_ASM(const s32, "code_3A60", func_80099B58);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_8009A0B0.s")
+INCLUDE_ASM(const s32, "code_3A60", func_8009A0B0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_8009A148.s")
+INCLUDE_ASM(const s32, "code_3A60", func_8009A148);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_8009A4C4.s")
+INCLUDE_ASM(const s32, "code_3A60", func_8009A4C4);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_8009A588.s")
+INCLUDE_ASM(const s32, "code_3A60", func_8009A588);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_8009A6A0.s")
+INCLUDE_ASM(const s32, "code_3A60", func_8009A6A0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_8009A7E0.s")
+INCLUDE_ASM(const s32, "code_3A60", func_8009A7E0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_8009A9E8.s")
+INCLUDE_ASM(const s32, "code_3A60", func_8009A9E8);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_8009AC4C.s")
+void func_8009AC4C(void) {
+}
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_8009AC54.s")
+INCLUDE_ASM(const s32, "code_3A60", func_8009AC54);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_8009ACD4.s")
+INCLUDE_ASM(const s32, "code_3A60", func_8009ACD4);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_8009AD18.s")
+INCLUDE_ASM(const s32, "code_3A60", func_8009AD18);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_8009AD6C.s")
+INCLUDE_ASM(const s32, "code_3A60", func_8009AD6C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_3A60/func_8009ADC0.s")
+INCLUDE_ASM(const s32, "code_3A60", func_8009ADC0);

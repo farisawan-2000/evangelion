@@ -1,43 +1,43 @@
 #include "common.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009AE40.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009AE40);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009B048.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009B048);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009B268.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009B268);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009B43C.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009B43C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009B538.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009B538);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009B584.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009B584);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009B5C0.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009B5C0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009B654.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009B654);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009B6C4.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009B6C4);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009B6EC.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009B6EC);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009B710.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009B710);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009B754.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009B754);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009B830.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009B830);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009B918.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009B918);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009B938.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009B938);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009B974.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009B974);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009B998.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009B998);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009B9D4.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009B9D4);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009BA10.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009BA10);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009BAE0.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009BAE0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_5A40/func_8009BB08.s")
+INCLUDE_ASM(const s32, "code_5A40", func_8009BB08);

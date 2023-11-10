@@ -1,7 +1,7 @@
 #include "common.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_D270/func_800A2670.s")
+INCLUDE_ASM(const s32, "code_D270", func_800A2670);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_D270/func_800A271C.s")
+INCLUDE_ASM(const s32, "code_D270", func_800A271C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_D270/func_800A2740.s")
+INCLUDE_ASM(const s32, "code_D270", func_800A2740);

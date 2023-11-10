@@ -1,13 +1,13 @@
 #include "common.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_162C0/func_800AB6C0.s")
+INCLUDE_ASM(const s32, "code_162C0", func_800AB6C0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_162C0/func_800AB7CC.s")
+INCLUDE_ASM(const s32, "code_162C0", func_800AB7CC);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_162C0/func_800AB7DC.s")
+INCLUDE_ASM(const s32, "code_162C0", func_800AB7DC);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_162C0/func_800AB834.s")
+INCLUDE_ASM(const s32, "code_162C0", func_800AB834);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_162C0/func_800AB8A4.s")
+INCLUDE_ASM(const s32, "code_162C0", func_800AB8A4);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_162C0/func_800AB8D4.s")
+INCLUDE_ASM(const s32, "code_162C0", func_800AB8D4);

@@ -1,23 +1,23 @@
 #include "common.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_22900/func_800B7D00.s")
+INCLUDE_ASM(const s32, "code_22900", func_800B7D00);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_22900/func_800B7DC0.s")
+INCLUDE_ASM(const s32, "code_22900", func_800B7DC0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_22900/func_800B7DE0.s")
+INCLUDE_ASM(const s32, "code_22900", func_800B7DE0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_22900/func_800B7E00.s")
+INCLUDE_ASM(const s32, "code_22900", func_800B7E00);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_22900/func_800B7E20.s")
+INCLUDE_ASM(const s32, "code_22900", func_800B7E20);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_22900/func_800B7E40.s")
+INCLUDE_ASM(const s32, "code_22900", func_800B7E40);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_22900/func_800B7E6C.s")
+INCLUDE_ASM(const s32, "code_22900", func_800B7E6C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_22900/func_800B7E98.s")
+INCLUDE_ASM(const s32, "code_22900", func_800B7E98);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_22900/func_800B7EB8.s")
+INCLUDE_ASM(const s32, "code_22900", func_800B7EB8);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_22900/func_800B7ED8.s")
+INCLUDE_ASM(const s32, "code_22900", func_800B7ED8);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_22900/func_800B7F08.s")
+INCLUDE_ASM(const s32, "code_22900", func_800B7F08);

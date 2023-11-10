@@ -1,41 +1,41 @@
 #include "common.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009C970.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009C970);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009CA18.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009CA18);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009CBC0.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009CBC0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009CDEC.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009CDEC);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009CF48.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009CF48);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009CFD0.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009CFD0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009D078.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009D078);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009D110.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009D110);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009D120.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009D120);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009D278.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009D278);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009D2F8.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009D2F8);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009D454.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009D454);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009D5AC.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009D5AC);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009D72C.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009D72C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009D99C.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009D99C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009DCA4.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009DCA4);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009DCB0.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009DCB0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009DCBC.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009DCBC);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009DD48.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009DD48);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_7570/func_8009E040.s")
+INCLUDE_ASM(const s32, "code_7570", func_8009E040);

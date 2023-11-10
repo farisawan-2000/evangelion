@@ -1,3 +1,3 @@
 #include "common.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_2E880/func_800C3C80.s")
+INCLUDE_ASM(const s32, "code_2E880", func_800C3C80);

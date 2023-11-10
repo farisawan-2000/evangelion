@@ -1,17 +1,17 @@
 #include "common.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_1D3E0/func_800B27E0.s")
+INCLUDE_ASM(const s32, "code_1D3E0", func_800B27E0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_1D3E0/func_800B282C.s")
+INCLUDE_ASM(const s32, "code_1D3E0", func_800B282C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_1D3E0/func_800B285C.s")
+INCLUDE_ASM(const s32, "code_1D3E0", func_800B285C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_1D3E0/func_800B2874.s")
+INCLUDE_ASM(const s32, "code_1D3E0", func_800B2874);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_1D3E0/func_800B2880.s")
+INCLUDE_ASM(const s32, "code_1D3E0", func_800B2880);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_1D3E0/func_800B28AC.s")
+INCLUDE_ASM(const s32, "code_1D3E0", func_800B28AC);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_1D3E0/func_800B2924.s")
+INCLUDE_ASM(const s32, "code_1D3E0", func_800B2920);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_1D3E0/func_800B29C4.s")
+INCLUDE_ASM(const s32, "code_1D3E0", func_800B29C4);

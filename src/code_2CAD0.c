@@ -1,9 +1,9 @@
 #include "common.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_2CAD0/func_800C1ED0.s")
+INCLUDE_ASM(const s32, "code_2CAD0", func_800C1ED0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_2CAD0/func_800C1F24.s")
+INCLUDE_ASM(const s32, "code_2CAD0", func_800C1F24);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_2CAD0/func_800C2060.s")
+INCLUDE_ASM(const s32, "code_2CAD0", func_800C2060);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_2CAD0/func_800C20C0.s")
+INCLUDE_ASM(const s32, "code_2CAD0", func_800C20C0);

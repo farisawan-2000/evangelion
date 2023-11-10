@@ -1,19 +1,19 @@
 #include "common.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_2F50/func_80098350.s")
+INCLUDE_ASM(const s32, "code_2F50", func_80098350);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_2F50/func_8009838C.s")
+INCLUDE_ASM(const s32, "code_2F50", func_8009838C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_2F50/func_800983DC.s")
+INCLUDE_ASM(const s32, "code_2F50", func_800983DC);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_2F50/func_8009849C.s")
+INCLUDE_ASM(const s32, "code_2F50", func_8009849C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_2F50/func_80098570.s")
+INCLUDE_ASM(const s32, "code_2F50", func_80098570);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_2F50/func_8009861C.s")
+INCLUDE_ASM(const s32, "code_2F50", func_8009861C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_2F50/func_800986D0.s")
+INCLUDE_ASM(const s32, "code_2F50", func_800986D0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_2F50/func_80098AC8.s")
+INCLUDE_ASM(const s32, "code_2F50", func_80098AC8);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_2F50/func_80098BF8.s")
+INCLUDE_ASM(const s32, "code_2F50", func_80098BF8);

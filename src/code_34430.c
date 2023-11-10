@@ -1,21 +1,21 @@
 #include "common.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_34430/func_800C9830.s")
+INCLUDE_ASM(const s32, "code_34430", func_800C9830);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_34430/func_800C9870.s")
+INCLUDE_ASM(const s32, "code_34430", func_800C9870);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_34430/func_800C98B0.s")
+INCLUDE_ASM(const s32, "code_34430", func_800C98B0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_34430/func_800C998C.s")
+INCLUDE_ASM(const s32, "code_34430", func_800C998C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_34430/func_800C99C8.s")
+INCLUDE_ASM(const s32, "code_34430", func_800C99C8);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_34430/func_800C9A84.s")
+INCLUDE_ASM(const s32, "code_34430", func_800C9A84);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_34430/func_800C9AB8.s")
+INCLUDE_ASM(const s32, "code_34430", func_800C9AB8);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_34430/func_800C9C18.s")
+INCLUDE_ASM(const s32, "code_34430", func_800C9C18);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_34430/func_800C9C9C.s")
+INCLUDE_ASM(const s32, "code_34430", func_800C9C9C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_34430/func_800C9EA0.s")
+INCLUDE_ASM(const s32, "code_34430", func_800C9EA0);

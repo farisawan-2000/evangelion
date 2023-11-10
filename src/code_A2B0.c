@@ -1,75 +1,75 @@
 #include "common.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_8009F6B0.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_8009F6B0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_8009FA60.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_8009FA60);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_8009FC28.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_8009FC28);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_8009FCC8.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_8009FCC8);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_8009FD78.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_8009FD78);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_8009FD9C.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_8009FD9C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_8009FDDC.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_8009FDDC);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A057C.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A057C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A09A0.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A09A0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A0AF4.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A0AF4);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A0DC0.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A0DC0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A10A4.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A10A4);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A12F8.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A12F8);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A1370.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A1370);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A13FC.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A13FC);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A1424.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A1424);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A1444.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A1444);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A14E4.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A14E4);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A1504.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A1504);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A15A4.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A15A4);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A15C8.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A15C8);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A1670.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A1670);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A1690.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A1690);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A1730.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A1730);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A1750.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A1750);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A17F0.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A17F0);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A1828.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A1828);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A18D4.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A18D4);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A1934.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A1934);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A1A74.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A1A74);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A1A90.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A1A90);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A1B3C.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A1B3C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A1C0C.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A1C0C);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A1C80.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A1C80);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A1D10.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A1D10);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A1DA4.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A1DA4);
 
-#pragma GLOBAL_ASM("asm/nonmatchings/code_A2B0/func_800A1ED0.s")
+INCLUDE_ASM(const s32, "code_A2B0", func_800A1ED0);
