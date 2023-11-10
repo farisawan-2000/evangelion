@@ -66,7 +66,6 @@ OBJCOPY := $(CROSS)objcopy
 OBJCOPY_FLAGS = --pad-to=0x2000000 --gap-fill=0xFF
 
 DUMMY != make -C tools
-DUMMY != make -C tools/kmc_wrapper
 
 PYTHON := python3
 POSTPROCESS = $(PYTHON) tools/postprocess_asm.py
