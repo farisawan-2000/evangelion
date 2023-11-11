@@ -1,0 +1,2 @@
+rom:0x1AF3D0 symbol:func_8002B17C_ovl2 reloc:MIPS_26
+rom:0x1AF410 symbol:func_8002B17C_ovl2 reloc:MIPS_26

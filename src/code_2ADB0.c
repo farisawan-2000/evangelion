@@ -1,3 +1,3 @@
 #include "common.h"
 
-INCLUDE_ASM(const s32, "code_2ADB0", func_800C01B0);
+INCLUDE_ASM("asm/nonmatchings/code_2ADB0", func_800C01B0);

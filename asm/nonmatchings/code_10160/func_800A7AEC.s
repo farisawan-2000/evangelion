@@ -8,8 +8,8 @@ glabel func_800A7AEC
 /* 12704 800A7B04 AFB40030 */  sw         $s4, 0x30($sp)
 /* 12708 800A7B08 0260A021 */  addu       $s4, $s3, $zero
 /* 1270C 800A7B0C AFA40014 */  sw         $a0, 0x14($sp)
-/* 12710 800A7B10 3C04001C */  lui        $a0, %hi(yay0_001BB280)
-/* 12714 800A7B14 2484B280 */  addiu      $a0, $a0, %lo(yay0_001BB280)
+/* 12710 800A7B10 3C04001C */  lui        $a0, %hi(yay0_001BB280_ROM_START)
+/* 12714 800A7B14 2484B280 */  addiu      $a0, $a0, %lo(yay0_001BB280_ROM_START)
 /* 12718 800A7B18 AFB50034 */  sw         $s5, 0x34($sp)
 /* 1271C 800A7B1C 00A0A821 */  addu       $s5, $a1, $zero
 /* 12720 800A7B20 AFB7003C */  sw         $s7, 0x3C($sp)

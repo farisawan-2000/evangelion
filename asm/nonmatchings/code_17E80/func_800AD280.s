@@ -9,8 +9,8 @@ glabel func_800AD280
 /* 17E9C 800AD29C 3C15001A */  lui        $s5, %hi(rom_addr_001A1880)
 /* 17EA0 800AD2A0 26B51880 */  addiu      $s5, $s5, %lo(rom_addr_001A1880)
 /* 17EA4 800AD2A4 AFB20018 */  sw         $s2, 0x18($sp)
-/* 17EA8 800AD2A8 3C12001C */  lui        $s2, %hi(yay0_001BB280)
-/* 17EAC 800AD2AC 2652B280 */  addiu      $s2, $s2, %lo(yay0_001BB280)
+/* 17EA8 800AD2A8 3C12001C */  lui        $s2, %hi(yay0_001BB280_ROM_START)
+/* 17EAC 800AD2AC 2652B280 */  addiu      $s2, $s2, %lo(yay0_001BB280_ROM_START)
 /* 17EB0 800AD2B0 02559023 */  subu       $s2, $s2, $s5
 /* 17EB4 800AD2B4 AFB3001C */  sw         $s3, 0x1C($sp)
 /* 17EB8 800AD2B8 3C13803A */  lui        $s3, %hi(D_8039E630)

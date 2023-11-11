@@ -15,9 +15,12 @@ options:
   do_c_func_detection: True
   symbol_addrs_path: tools/symbol_addrs.txt
   extensions_path: tools/splat_ext
+  reloc_addrs_path: reloc_addrs.txt
   ld_script_path: evangelion.ld
   asm_inc_header: ""
-  use_legacy_include_asm: True
+  use_legacy_include_asm: False
+  subalign: 16
+  segment_end_before_align: True
 segments:
   - [0x0, header]
   - name: boot

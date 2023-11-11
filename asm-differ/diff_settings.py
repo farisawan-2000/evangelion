@@ -1,5 +1,5 @@
 def apply(config, args):
-    config["baseimg"] = "baserom.eva.z64"
+    config["baseimg"] = "evangelion.z64"
     config["myimg"] = "build/eva.z64"
     config["mapfile"] = "build/eva.map"
     config["source_directories"] = ["."]
