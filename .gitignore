@@ -13,6 +13,7 @@ tools/slienc
 tools/n64crc
 tools/_gfxdis
 tools/gcc_kmc
+tools/splat_ext/__pycache__/*
 
 *.z64
 *.n64
