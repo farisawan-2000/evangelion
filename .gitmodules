@@ -8,5 +8,5 @@
 	path = tools/kmc_wrapper
 	url = https://github.com/Mr-Wiseguy/kmc-gcc-wrapper/
 [submodule "tools/rgb2c"]
-	path = tools/rgb2c
+	path = tools/moden_rgb2c
 	url = https://github.com/someone2639/modern_rgb2c
