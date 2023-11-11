@@ -10,7 +10,8 @@ BUILD_DIR = build
 
 YAY0_DIR = assets/yay0
 BIN_DIR = assets
-dummy != mkdir -p $(YAY0_DIR)
+ASSETS_DIRS = assets/Font assets/Images assets/Palettes assets/BLOCK04 assets/BLOCK05 assets/Objects assets/BLOCK07 assets/BLOCK08 assets/Sound
+dummy != mkdir -p $(ASSETS_DIRS)
 
 GLOBAL_ASM_C_FILES != grep -rl 'INCLUDE_ASM(' $(wildcard src/*/*.c)
 GLOBAL_ASM_O_FILES = $(foreach file,$(GLOBAL_ASM_C_FILES),$(BUILD_DIR)/$(file:.c=.o))
@@ -31,7 +32,7 @@ BIN_FILES = $(foreach dir,$(BIN_DIR),$(wildcard $(dir)/*.bin))
 SZP_FILES = $(foreach file,$(YAY0_FILES),$(BUILD_DIR)/$(file:.bin=.o)) \
 			$(foreach file,$(BIN_FILES),$(BUILD_DIR)/$(file:.bin=.o))
 
-ALL_DIRS = $(BUILD_DIR) $(addprefix $(BUILD_DIR)/,$(ASM_DIRS) $(SRC_DIRS) $(YAY0_DIR))
+ALL_DIRS = $(BUILD_DIR) $(addprefix $(BUILD_DIR)/,$(ASM_DIRS) $(SRC_DIRS) $(ASSETS_DIRS))
 DUMMY != mkdir -p $(ALL_DIRS)
 
 N64AS = tools/n64_gcc2/mips-nintendo-nu64-as
