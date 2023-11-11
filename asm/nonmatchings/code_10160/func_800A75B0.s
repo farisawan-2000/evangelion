@@ -2,8 +2,8 @@ glabel func_800A75B0
 /* 121B0 800A75B0 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 121B4 800A75B4 AFB00010 */  sw         $s0, 0x10($sp)
 /* 121B8 800A75B8 00808021 */  addu       $s0, $a0, $zero
-/* 121BC 800A75BC 3C04001C */  lui        $a0, %hi(yay0_001BB280_ROM_START)
-/* 121C0 800A75C0 2484B280 */  addiu      $a0, $a0, %lo(yay0_001BB280_ROM_START)
+/* 121BC 800A75BC 3C04001C */  lui        $a0, %hi(D_1BB280)
+/* 121C0 800A75C0 2484B280 */  addiu      $a0, $a0, %lo(D_1BB280)
 /* 121C4 800A75C4 00053400 */  sll        $a2, $a1, 16
 /* 121C8 800A75C8 00063403 */  sra        $a2, $a2, 16
 /* 121CC 800A75CC 3C05800D */  lui        $a1, %hi(D_800D5190)
