@@ -23,13 +23,13 @@ glabel func_800BFB28
 /* 2A77C 800BFB7C 0C02FF68 */  jal        func_800BFDA0
 /* 2A780 800BFB80 4600A306 */   mov.s     $f12, $f20
 /* 2A784 800BFB84 4600A306 */  mov.s      $f12, $f20
-/* 2A788 800BFB88 0C02F784 */  jal        func_800BDE10
+/* 2A788 800BFB88 0C02F784 */  jal        cosf
 /* 2A78C 800BFB8C 46000786 */   mov.s     $f30, $f0
 /* 2A790 800BFB90 4600B306 */  mov.s      $f12, $f22
 /* 2A794 800BFB94 0C02FF68 */  jal        func_800BFDA0
 /* 2A798 800BFB98 46000706 */   mov.s     $f28, $f0
 /* 2A79C 800BFB9C 4600B306 */  mov.s      $f12, $f22
-/* 2A7A0 800BFBA0 0C02F784 */  jal        func_800BDE10
+/* 2A7A0 800BFBA0 0C02F784 */  jal        cosf
 /* 2A7A4 800BFBA4 46000686 */   mov.s     $f26, $f0
 /* 2A7A8 800BFBA8 44906000 */  mtc1       $s0, $f12
 /* 2A7AC 800BFBAC 00000000 */  nop
@@ -37,11 +37,11 @@ glabel func_800BFB28
 /* 2A7B4 800BFBB4 46000606 */   mov.s     $f24, $f0
 /* 2A7B8 800BFBB8 44906000 */  mtc1       $s0, $f12
 /* 2A7BC 800BFBBC 00000000 */  nop
-/* 2A7C0 800BFBC0 0C02F784 */  jal        func_800BDE10
+/* 2A7C0 800BFBC0 0C02F784 */  jal        cosf
 /* 2A7C4 800BFBC4 46000506 */   mov.s     $f20, $f0
 /* 2A7C8 800BFBC8 27B00010 */  addiu      $s0, $sp, 0x10
 /* 2A7CC 800BFBCC 02002021 */  addu       $a0, $s0, $zero
-/* 2A7D0 800BFBD0 0C02FA9C */  jal        func_800BEA70
+/* 2A7D0 800BFBD0 0C02FA9C */  jal        guMtxIdentF
 /* 2A7D4 800BFBD4 46000586 */   mov.s     $f22, $f0
 /* 2A7D8 800BFBD8 00000000 */  nop
 /* 2A7DC 800BFBDC 4616C402 */  mul.s      $f16, $f24, $f22
@@ -85,7 +85,7 @@ glabel func_800BFB28
 /* 2A874 800BFC74 E7A60020 */  swc1       $f6, 0x20($sp)
 /* 2A878 800BFC78 E7A20024 */  swc1       $f2, 0x24($sp)
 /* 2A87C 800BFC7C E7A40030 */  swc1       $f4, 0x30($sp)
-/* 2A880 800BFC80 0C02FA4C */  jal        func_800BE930
+/* 2A880 800BFC80 0C02FA4C */  jal        guMtxF2L
 /* 2A884 800BFC84 E7A00034 */   swc1      $f0, 0x34($sp)
 /* 2A888 800BFC88 8FBF0060 */  lw         $ra, 0x60($sp)
 /* 2A88C 800BFC8C 8FB1005C */  lw         $s1, 0x5C($sp)

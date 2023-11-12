@@ -8,7 +8,7 @@ glabel func_800BFCC0
 /* 2A8D8 800BFCD8 F7B80028 */  sdc1       $f24, 0x28($sp)
 /* 2A8DC 800BFCDC 4487C000 */  mtc1       $a3, $f24
 /* 2A8E0 800BFCE0 AFBF0014 */  sw         $ra, 0x14($sp)
-/* 2A8E4 800BFCE4 0C02FA9C */  jal        func_800BEA70
+/* 2A8E4 800BFCE4 0C02FA9C */  jal        guMtxIdentF
 /* 2A8E8 800BFCE8 00808021 */   addu      $s0, $a0, $zero
 /* 2A8EC 800BFCEC 3C013F80 */  lui        $at, (0x3F800000 >> 16)
 /* 2A8F0 800BFCF0 44810000 */  mtc1       $at, $f0

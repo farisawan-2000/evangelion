@@ -251,7 +251,7 @@ glabel func_800AA0D0
 /* 150B4 800AA4B4 24840560 */  addiu      $a0, $a0, %lo(D_80100560)
 /* 150B8 800AA4B8 3C01800D */  lui        $at, %hi(D_800D4DF4)
 /* 150BC 800AA4BC A4254DF4 */  sh         $a1, %lo(D_800D4DF4)($at)
-/* 150C0 800AA4C0 0C02FAB0 */  jal        func_800BEAC0
+/* 150C0 800AA4C0 0C02FAB0 */  jal        guMtxIdent
 /* 150C4 800AA4C4 00000000 */   nop
 /* 150C8 800AA4C8 3C038015 */  lui        $v1, %hi(gDisplayListHead)
 /* 150CC 800AA4CC 8C639F94 */  lw         $v1, %lo(gDisplayListHead)($v1)

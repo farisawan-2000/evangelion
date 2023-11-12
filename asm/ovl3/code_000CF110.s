@@ -2335,7 +2335,7 @@ glabel .L800272E8_ovl3
 /* D12D0 80027DC0 4405A000 */  mfc1       $a1, $f20
 /* D12D4 80027DC4 4407A000 */  mfc1       $a3, $f20
 /* D12D8 80027DC8 00000000 */  nop
-/* D12DC 80027DCC 0C02FD0E */  jal        func_800BF438
+/* D12DC 80027DCC 0C02FD0E */  jal        guPosition
 /* D12E0 80027DD0 24840098 */   addiu     $a0, $a0, 0x98
 /* D12E4 80027DD4 3C028015 */  lui        $v0, %hi(gDisplayListHead)
 /* D12E8 80027DD8 8C429F94 */  lw         $v0, %lo(gDisplayListHead)($v0)

@@ -20,7 +20,7 @@ glabel func_800A0DC0
 /* BA08 800A0E08 AC203DBC */  sw         $zero, %lo(D_800D3DBC)($at)
 /* BA0C 800A0E0C 3C048010 */  lui        $a0, %hi(D_800FF870)
 /* BA10 800A0E10 2484F870 */  addiu      $a0, $a0, %lo(D_800FF870)
-/* BA14 800A0E14 0C02FA9C */  jal        func_800BEA70
+/* BA14 800A0E14 0C02FA9C */  jal        guMtxIdentF
 /* BA18 800A0E18 00000000 */   nop
 .L800A0E1C:
 /* BA1C 800A0E1C 8E450008 */  lw         $a1, 0x8($s2)
@@ -107,7 +107,7 @@ glabel func_800A0DC0
 .L800A0F54:
 /* BB54 800A0F54 02002821 */  addu       $a1, $s0, $zero
 .L800A0F58:
-/* BB58 800A0F58 0C02FA72 */  jal        func_800BE9C8
+/* BB58 800A0F58 0C02FA72 */  jal        guMtxL2F
 /* BB5C 800A0F5C 00000000 */   nop
 /* BB60 800A0F60 3C05800D */  lui        $a1, %hi(D_800D3DBC)
 /* BB64 800A0F64 8CA53DBC */  lw         $a1, %lo(D_800D3DBC)($a1)
@@ -116,11 +116,11 @@ glabel func_800A0DC0
 /* BB70 800A0F70 2442F870 */  addiu      $v0, $v0, %lo(D_800FF870)
 /* BB74 800A0F74 00052980 */  sll        $a1, $a1, 6
 /* BB78 800A0F78 00A22821 */  addu       $a1, $a1, $v0
-/* BB7C 800A0F7C 0C02F9A8 */  jal        func_800BE6A0
+/* BB7C 800A0F7C 0C02F9A8 */  jal        guMtxCatF
 /* BB80 800A0F80 00A03021 */   addu      $a2, $a1, $zero
 /* BB84 800A0F84 12A0000C */  beqz       $s5, .L800A0FB8
 /* BB88 800A0F88 27A40010 */   addiu     $a0, $sp, 0x10
-/* BB8C 800A0F8C 0C02FA72 */  jal        func_800BE9C8
+/* BB8C 800A0F8C 0C02FA72 */  jal        guMtxL2F
 /* BB90 800A0F90 26250060 */   addiu     $a1, $s1, 0x60
 /* BB94 800A0F94 3C05800D */  lui        $a1, %hi(D_800D3DBC)
 /* BB98 800A0F98 8CA53DBC */  lw         $a1, %lo(D_800D3DBC)($a1)
@@ -129,7 +129,7 @@ glabel func_800A0DC0
 /* BBA4 800A0FA4 2442F870 */  addiu      $v0, $v0, %lo(D_800FF870)
 /* BBA8 800A0FA8 00052980 */  sll        $a1, $a1, 6
 /* BBAC 800A0FAC 00A22821 */  addu       $a1, $a1, $v0
-/* BBB0 800A0FB0 0C02F9A8 */  jal        func_800BE6A0
+/* BBB0 800A0FB0 0C02F9A8 */  jal        guMtxCatF
 /* BBB4 800A0FB4 00A03021 */   addu      $a2, $a1, $zero
 .L800A0FB8:
 /* BBB8 800A0FB8 00161400 */  sll        $v0, $s6, 16

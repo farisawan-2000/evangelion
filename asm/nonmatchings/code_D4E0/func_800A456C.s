@@ -12,7 +12,7 @@ glabel func_800A456C
 /* F194 800A4594 00000000 */  nop
 /* F198 800A4598 4487B000 */  mtc1       $a3, $f22
 /* F19C 800A459C 00000000 */  nop
-/* F1A0 800A45A0 0C02F7D8 */  jal        func_800BDF60
+/* F1A0 800A45A0 0C02F7D8 */  jal        coss
 /* F1A4 800A45A4 02002021 */   addu      $a0, $s0, $zero
 /* F1A8 800A45A8 00021400 */  sll        $v0, $v0, 16
 /* F1AC 800A45AC 00028BC3 */  sra        $s1, $v0, 15

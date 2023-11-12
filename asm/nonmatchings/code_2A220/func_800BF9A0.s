@@ -22,22 +22,22 @@ glabel func_800BF9A0
 /* 2A5F0 800BF9F0 4600A306 */   mov.s     $f12, $f20
 /* 2A5F4 800BF9F4 44110000 */  mfc1       $s1, $f0
 /* 2A5F8 800BF9F8 00000000 */  nop
-/* 2A5FC 800BF9FC 0C02F784 */  jal        func_800BDE10
+/* 2A5FC 800BF9FC 0C02F784 */  jal        cosf
 /* 2A600 800BFA00 4600A306 */   mov.s     $f12, $f20
 /* 2A604 800BFA04 46000786 */  mov.s      $f30, $f0
 /* 2A608 800BFA08 0C02FF68 */  jal        func_800BFDA0
 /* 2A60C 800BFA0C 4600B306 */   mov.s     $f12, $f22
 /* 2A610 800BFA10 4600B306 */  mov.s      $f12, $f22
-/* 2A614 800BFA14 0C02F784 */  jal        func_800BDE10
+/* 2A614 800BFA14 0C02F784 */  jal        cosf
 /* 2A618 800BFA18 46000706 */   mov.s     $f28, $f0
 /* 2A61C 800BFA1C 46000686 */  mov.s      $f26, $f0
 /* 2A620 800BFA20 0C02FF68 */  jal        func_800BFDA0
 /* 2A624 800BFA24 4600C306 */   mov.s     $f12, $f24
 /* 2A628 800BFA28 4600C306 */  mov.s      $f12, $f24
-/* 2A62C 800BFA2C 0C02F784 */  jal        func_800BDE10
+/* 2A62C 800BFA2C 0C02F784 */  jal        cosf
 /* 2A630 800BFA30 46000506 */   mov.s     $f20, $f0
 /* 2A634 800BFA34 46000586 */  mov.s      $f22, $f0
-/* 2A638 800BFA38 0C02FA9C */  jal        func_800BEA70
+/* 2A638 800BFA38 0C02FA9C */  jal        guMtxIdentF
 /* 2A63C 800BFA3C 02002021 */   addu      $a0, $s0, $zero
 /* 2A640 800BFA40 00000000 */  nop
 /* 2A644 800BFA44 4616D402 */  mul.s      $f16, $f26, $f22

@@ -376,7 +376,7 @@ glabel func_80031704_ovl3
 /* DAC78 80031768 8E060060 */  lw         $a2, 0x60($s0)
 /* DAC7C 8003176C 8E070064 */  lw         $a3, 0x64($s0)
 /* DAC80 80031770 26110010 */  addiu      $s1, $s0, 0x10
-/* DAC84 80031774 0C02FD0E */  jal        func_800BF438
+/* DAC84 80031774 0C02FD0E */  jal        guPosition
 /* DAC88 80031778 02202021 */   addu      $a0, $s1, $zero
 /* DAC8C 8003177C 3C028015 */  lui        $v0, %hi(gDisplayListHead)
 /* DAC90 80031780 8C429F94 */  lw         $v0, %lo(gDisplayListHead)($v0)

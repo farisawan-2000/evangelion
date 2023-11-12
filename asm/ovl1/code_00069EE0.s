@@ -6830,7 +6830,7 @@ glabel func_8002B8D4_ovl1
 /* 700F4 8002BE14 8E260024 */  lw         $a2, 0x24($s1)
 /* 700F8 8002BE18 8E270028 */  lw         $a3, 0x28($s1)
 /* 700FC 8002BE1C 26300040 */  addiu      $s0, $s1, 0x40
-/* 70100 8002BE20 0C02FD0E */  jal        func_800BF438
+/* 70100 8002BE20 0C02FD0E */  jal        guPosition
 /* 70104 8002BE24 02002021 */   addu      $a0, $s0, $zero
 /* 70108 8002BE28 3C028015 */  lui        $v0, %hi(gDisplayListHead)
 /* 7010C 8002BE2C 8C429F94 */  lw         $v0, %lo(gDisplayListHead)($v0)
@@ -8823,7 +8823,7 @@ glabel .L8002DA58_ovl1
 /* 71D60 8002DA80 AFA50014 */  sw         $a1, 0x14($sp)
 /* 71D64 8002DA84 AFA50018 */  sw         $a1, 0x18($sp)
 /* 71D68 8002DA88 AFA5001C */  sw         $a1, 0x1C($sp)
-/* 71D6C 8002DA8C 0C02FD0E */  jal        func_800BF438
+/* 71D6C 8002DA8C 0C02FD0E */  jal        guPosition
 /* 71D70 8002DA90 E7A20010 */   swc1      $f2, 0x10($sp)
 /* 71D74 8002DA94 3C048039 */  lui        $a0, %hi(D_80397230)
 /* 71D78 8002DA98 24847230 */  addiu      $a0, $a0, %lo(D_80397230)
@@ -8868,7 +8868,7 @@ glabel .L8002DAF4_ovl1
 /* 71DFC 8002DB1C AFA50014 */  sw         $a1, 0x14($sp)
 /* 71E00 8002DB20 AFA50018 */  sw         $a1, 0x18($sp)
 /* 71E04 8002DB24 AFA5001C */  sw         $a1, 0x1C($sp)
-/* 71E08 8002DB28 0C02FD0E */  jal        func_800BF438
+/* 71E08 8002DB28 0C02FD0E */  jal        guPosition
 /* 71E0C 8002DB2C E7A00010 */   swc1      $f0, 0x10($sp)
 /* 71E10 8002DB30 3C04803A */  lui        $a0, %hi(D_8039B330)
 /* 71E14 8002DB34 2484B330 */  addiu      $a0, $a0, %lo(D_8039B330)

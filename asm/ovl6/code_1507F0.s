@@ -1225,7 +1225,7 @@ glabel func_80027B68_ovl6
 /* 151980 80027C20 3C018004 */  lui        $at, %hi(D_800411EC_ovl6)
 /* 151984 80027C24 AC2211EC */  sw         $v0, %lo(D_800411EC_ovl6)($at)
 /* 151988 80027C28 E7A20010 */  swc1       $f2, 0x10($sp)
-/* 15198C 80027C2C 0C02FD0E */  jal        func_800BF438
+/* 15198C 80027C2C 0C02FD0E */  jal        guPosition
 /* 151990 80027C30 E7A40018 */   swc1      $f4, 0x18($sp)
 /* 151994 80027C34 3C028015 */  lui        $v0, %hi(gDisplayListHead)
 /* 151998 80027C38 8C429F94 */  lw         $v0, %lo(gDisplayListHead)($v0)
@@ -1283,7 +1283,7 @@ glabel func_80027B68_ovl6
 /* 151A64 80027D04 E7A00018 */  swc1       $f0, 0x18($sp)
 /* 151A68 80027D08 E7A20010 */  swc1       $f2, 0x10($sp)
 /* 151A6C 80027D0C E7A40014 */  swc1       $f4, 0x14($sp)
-/* 151A70 80027D10 0C02FB64 */  jal        func_800BED90
+/* 151A70 80027D10 0C02FB64 */  jal        guOrtho
 /* 151A74 80027D14 E7A6001C */   swc1      $f6, 0x1C($sp)
 /* 151A78 80027D18 3C018004 */  lui        $at, %hi(D_800411EC_ovl6)
 /* 151A7C 80027D1C C42011EC */  lwc1       $f0, %lo(D_800411EC_ovl6)($at)
@@ -1305,7 +1305,7 @@ glabel func_80027B68_ovl6
 /* 151ABC 80027D5C E7B4001C */  swc1       $f20, 0x1C($sp)
 /* 151AC0 80027D60 E7BA0010 */  swc1       $f26, 0x10($sp)
 /* 151AC4 80027D64 E7A20014 */  swc1       $f2, 0x14($sp)
-/* 151AC8 80027D68 0C02FD0E */  jal        func_800BF438
+/* 151AC8 80027D68 0C02FD0E */  jal        guPosition
 /* 151ACC 80027D6C E7A00018 */   swc1      $f0, 0x18($sp)
 /* 151AD0 80027D70 3C018004 */  lui        $at, %hi(D_800411EC_ovl6)
 /* 151AD4 80027D74 C42011EC */  lwc1       $f0, %lo(D_800411EC_ovl6)($at)
@@ -1325,7 +1325,7 @@ glabel func_80027B68_ovl6
 /* 151B0C 80027DAC E7BA0010 */  swc1       $f26, 0x10($sp)
 /* 151B10 80027DB0 AFA7001C */  sw         $a3, 0x1C($sp)
 /* 151B14 80027DB4 E7A20014 */  swc1       $f2, 0x14($sp)
-/* 151B18 80027DB8 0C02FD0E */  jal        func_800BF438
+/* 151B18 80027DB8 0C02FD0E */  jal        guPosition
 /* 151B1C 80027DBC E7A00018 */   swc1      $f0, 0x18($sp)
 /* 151B20 80027DC0 3C038015 */  lui        $v1, %hi(gDisplayListHead)
 /* 151B24 80027DC4 8C639F94 */  lw         $v1, %lo(gDisplayListHead)($v1)

@@ -2578,7 +2578,7 @@ glabel func_8003B0F0_ovl3
 /* E6BFC 8003D6EC 00000000 */  nop
 /* E6C00 8003D6F0 46806321 */  cvt.d.w    $f12, $f12
 /* E6C04 8003D6F4 46206302 */  mul.d      $f12, $f12, $f0
-/* E6C08 8003D6F8 0C02F784 */  jal        func_800BDE10
+/* E6C08 8003D6F8 0C02F784 */  jal        cosf
 /* E6C0C 8003D6FC 46206320 */   cvt.s.d   $f12, $f12
 /* E6C10 8003D700 3C014180 */  lui        $at, (0x41800000 >> 16)
 /* E6C14 8003D704 44811000 */  mtc1       $at, $f2

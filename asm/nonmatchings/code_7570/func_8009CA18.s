@@ -69,7 +69,7 @@ glabel func_8009CA18
 /* 7720 8009CB20 44060000 */  mfc1       $a2, $f0
 /* 7724 8009CB24 00000000 */  nop
 /* 7728 8009CB28 27A50020 */  addiu      $a1, $sp, 0x20
-/* 772C 8009CB2C 0C02FC24 */  jal        func_800BF090
+/* 772C 8009CB2C 0C02FC24 */  jal        guPerspective
 /* 7730 8009CB30 E7A20018 */   swc1      $f2, 0x18($sp)
 /* 7734 8009CB34 3C05DA38 */  lui        $a1, (0xDA380007 >> 16)
 /* 7738 8009CB38 34A50007 */  ori        $a1, $a1, (0xDA380007 & 0xFFFF)

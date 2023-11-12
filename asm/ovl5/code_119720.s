@@ -201,7 +201,7 @@ glabel func_80027A8C_ovl5
 /* 1199D4 80027BD4 AFB60010 */  sw         $s6, 0x10($sp)
 /* 1199D8 80027BD8 E7BA0018 */  swc1       $f26, 0x18($sp)
 /* 1199DC 80027BDC E7B8001C */  swc1       $f24, 0x1C($sp)
-/* 1199E0 80027BE0 0C02FD0E */  jal        func_800BF438
+/* 1199E0 80027BE0 0C02FD0E */  jal        guPosition
 /* 1199E4 80027BE4 E7A00014 */   swc1      $f0, 0x14($sp)
 /* 1199E8 80027BE8 3C028015 */  lui        $v0, %hi(gDisplayListHead)
 /* 1199EC 80027BEC 8C429F94 */  lw         $v0, %lo(gDisplayListHead)($v0)
@@ -272,7 +272,7 @@ glabel func_80027A8C_ovl5
 /* 119AE8 80027CE8 AFB60010 */  sw         $s6, 0x10($sp)
 /* 119AEC 80027CEC E7BA0018 */  swc1       $f26, 0x18($sp)
 /* 119AF0 80027CF0 E7B8001C */  swc1       $f24, 0x1C($sp)
-/* 119AF4 80027CF4 0C02FD0E */  jal        func_800BF438
+/* 119AF4 80027CF4 0C02FD0E */  jal        guPosition
 /* 119AF8 80027CF8 E7A00014 */   swc1      $f0, 0x14($sp)
 /* 119AFC 80027CFC 3C028015 */  lui        $v0, %hi(gDisplayListHead)
 /* 119B00 80027D00 8C429F94 */  lw         $v0, %lo(gDisplayListHead)($v0)

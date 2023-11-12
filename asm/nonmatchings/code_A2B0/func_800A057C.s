@@ -106,7 +106,7 @@ glabel func_800A057C
 /* B310 800A0710 8C660010 */  lw         $a2, 0x10($v1)
 /* B314 800A0714 8C670014 */  lw         $a3, 0x14($v1)
 /* B318 800A0718 26510060 */  addiu      $s1, $s2, 0x60
-/* B31C 800A071C 0C02FD0E */  jal        func_800BF438
+/* B31C 800A071C 0C02FD0E */  jal        guPosition
 /* B320 800A0720 02202021 */   addu      $a0, $s1, $zero
 /* B324 800A0724 3C048015 */  lui        $a0, %hi(gDisplayListHead)
 /* B328 800A0728 8C849F94 */  lw         $a0, %lo(gDisplayListHead)($a0)

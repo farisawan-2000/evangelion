@@ -1136,7 +1136,7 @@ glabel func_800338A0_ovl7
 /* 183320 800338E0 8E26000C */  lw         $a2, 0xC($s1)
 /* 183324 800338E4 8E270010 */  lw         $a3, 0x10($s1)
 /* 183328 800338E8 26300028 */  addiu      $s0, $s1, 0x28
-/* 18332C 800338EC 0C02FD0E */  jal        func_800BF438
+/* 18332C 800338EC 0C02FD0E */  jal        guPosition
 /* 183330 800338F0 02002021 */   addu      $a0, $s0, $zero
 /* 183334 800338F4 3C028015 */  lui        $v0, %hi(gDisplayListHead)
 /* 183338 800338F8 8C429F94 */  lw         $v0, %lo(gDisplayListHead)($v0)
@@ -1202,7 +1202,7 @@ glabel func_800338A0_ovl7
 /* 183414 800339D4 8C450028 */  lw         $a1, 0x28($v0)
 /* 183418 800339D8 27A40020 */  addiu      $a0, $sp, 0x20
 /* 18341C 800339DC 00803021 */  addu       $a2, $a0, $zero
-/* 183420 800339E0 0C02FA0C */  jal        func_800BE830
+/* 183420 800339E0 0C02FA0C */  jal        guMtxCatL
 /* 183424 800339E4 24A50028 */   addiu     $a1, $a1, 0x28
 /* 183428 800339E8 3C028005 */  lui        $v0, %hi(D_80052000)
 /* 18342C 800339EC 8C422000 */  lw         $v0, %lo(D_80052000)($v0)

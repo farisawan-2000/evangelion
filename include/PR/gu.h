@@ -25,6 +25,8 @@ void guMtxIdent(Mtx *m);
 void guMtxIdentF(float mf[4][4]);
 void guMtxL2F(float mf[4][4], Mtx *m);
 void guNormalize(float *, float *, float *);
+void guAlign(Mtx *m, float a, float x, float y, float z);
+void guRotateRPY(Mtx *m, float r, float p, float y);
 
 /* Used only in Fast3DEX2 */
 void guLookAtReflect (Mtx *m, LookAt *l, float xEye, float yEye, float zEye,

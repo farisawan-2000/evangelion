@@ -50,7 +50,7 @@ glabel func_8009FDDC
 /* AA9C 8009FE9C E4263BE8 */  swc1       $f6, %lo(D_800D3BE8)($at)
 /* AAA0 8009FEA0 3C01800D */  lui        $at, %hi(D_800D3BEC)
 /* AAA4 8009FEA4 E4283BEC */  swc1       $f8, %lo(D_800D3BEC)($at)
-/* AAA8 8009FEA8 0C02FD88 */  jal        func_800BF620
+/* AAA8 8009FEA8 0C02FD88 */  jal        guPosLight
 /* AAAC 8009FEAC E7A20010 */   swc1      $f2, 0x10($sp)
 /* AAB0 8009FEB0 3C04DC08 */  lui        $a0, (0xDC08060A >> 16)
 /* AAB4 8009FEB4 3484060A */  ori        $a0, $a0, (0xDC08060A & 0xFFFF)
