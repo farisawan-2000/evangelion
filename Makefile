@@ -56,7 +56,7 @@ CC = VR4300MUL=OFF COMPILER_PATH=tools/gcc_kmc/linux/2.7.2/ tools/gcc_kmc/linux/
 KMC_AS := tools/gcc_kmc/linux/2.7.2/as
 OPT_FLAGS := -O2
 # -mno-split-addresses
-KMC_CFLAGS = $(OPT_FLAGS) -c -G0 -mgp32 -mfp32 -mips3 -mno-abicalls -Wa,--vr4300mul-off
+KMC_CFLAGS = $(OPT_FLAGS) -c -G0 -mgp32 -mfp32 -mips3 -mno-abicalls -Wa,--vr4300mul-off -g2
 
 TARGET_CFLAGS := -nostdinc -I include/libc -DTARGET_N64 -DF3DEX_GBI_2
 KMC_ASFLAGS := -c -mips3 -O2
