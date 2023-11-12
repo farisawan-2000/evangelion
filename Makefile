@@ -129,8 +129,9 @@ $(BUILD_DIR)/$(TARGET).z64: $(BUILD_DIR)/$(TARGET).elf $(SZP_FILES)
 	$(OBJCOPY) $< $@ -O binary $(OBJCOPY_FLAGS)
 	$(N64CRC) $@
 
+# 	@sha1sum -c evangelion.sha1
 all: $(BUILD_DIR)/$(TARGET).z64
-	@sha1sum -c evangelion.sha1
+	@sha1sum -c eva.unaligned.sha1
 
 clean:
 	rm -rf $(BUILD_DIR)
