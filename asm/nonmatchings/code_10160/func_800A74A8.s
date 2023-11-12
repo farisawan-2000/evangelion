@@ -15,9 +15,9 @@ glabel func_800A74A8
 /* 120D8 800A74D8 0440000A */  bltz       $v0, .L800A7504
 /* 120DC 800A74DC 00002821 */   addu      $a1, $zero, $zero
 .L800A74E0:
-/* 120E0 800A74E0 3C01800D */  lui        $at, %hi(D_800D3EB0)
+/* 120E0 800A74E0 3C01800D */  lui        $at, %hi(gEncodingTable)
 /* 120E4 800A74E4 00220821 */  addu       $at, $at, $v0
-/* 120E8 800A74E8 90223EB0 */  lbu        $v0, %lo(D_800D3EB0)($at)
+/* 120E8 800A74E8 90223EB0 */  lbu        $v0, %lo(gEncodingTable)($at)
 /* 120EC 800A74EC 24C60002 */  addiu      $a2, $a2, 0x2
 /* 120F0 800A74F0 84C30000 */  lh         $v1, 0x0($a2)
 /* 120F4 800A74F4 00A22821 */  addu       $a1, $a1, $v0

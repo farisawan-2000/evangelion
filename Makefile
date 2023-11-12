@@ -10,7 +10,10 @@ BUILD_DIR = build
 
 YAY0_DIR = assets/yay0
 BIN_DIR = assets
-ASSETS_DIRS = assets/Font assets/Images assets/Palettes assets/BLOCK04 assets/BLOCK05 assets/Objects assets/BLOCK07 assets/BLOCK08 assets/Sound
+FONT_DIR = assets/Font
+IMAGE_DIR = assets/Images
+PALETTE_DIR = assets/Palettes
+ASSETS_DIRS = $(FONT_DIR) $(IMAGE_DIR) $(PALETTE_DIR) assets/BLOCK04 assets/BLOCK05 assets/Objects assets/BLOCK07 assets/BLOCK08 assets/Sound
 dummy != mkdir -p $(ASSETS_DIRS)
 
 GLOBAL_ASM_C_FILES != grep -rl 'INCLUDE_ASM(' $(wildcard src/*/*.c)
@@ -29,8 +32,17 @@ GLOBAL_ASM_O_FILES = $(foreach file,$(GLOBAL_ASM_C_FILES),$(BUILD_DIR)/$(file:.c
 
 YAY0_FILES = $(foreach dir,$(YAY0_DIR),$(wildcard $(dir)/*.bin))
 BIN_FILES = $(foreach dir,$(BIN_DIR),$(wildcard $(dir)/*.bin))
+FONT_FILES_I4 = $(foreach dir,$(FONT_DIR),$(wildcard $(dir)/*.png))
+BIN_FILES = $(foreach dir,$(ASSETS_DIRS),$(wildcard $(dir)/*.bin))
+BIN_OBJS1 = $(foreach file,$(BIN_FILES),$(wildcard $(file:.bin=.o)))
+BIN_OBJS = $(foreach file,$(BIN_OBJS1),$(BUILD_DIR)/$(wildcard $(file:.yay0.bin=.o)))
+
+IMAGE_OBJS1 = $(foreach file,$(FONT_FILES_I4),$(BUILD_DIR)/$(file:.yay0.png=.o))
+IMAGE_OBJS = $(foreach file,$(IMAGE_OBJS1),$(file:.png=.o))
+
 SZP_FILES = $(foreach file,$(YAY0_FILES),$(BUILD_DIR)/$(file:.bin=.o)) \
-			$(foreach file,$(BIN_FILES),$(BUILD_DIR)/$(file:.bin=.o))
+			$(foreach file,$(BIN_FILES),$(BUILD_DIR)/$(file:.bin=.o)) \
+			$(IMAGE_OBJS) $(BIN_OBJS)
 
 ALL_DIRS = $(BUILD_DIR) $(addprefix $(BUILD_DIR)/,$(ASM_DIRS) $(SRC_DIRS) $(ASSETS_DIRS))
 DUMMY != mkdir -p $(ALL_DIRS)
@@ -92,11 +104,17 @@ $(BUILD_DIR)/%.o : $(BUILD_DIR)/%.i | $(SRC_BUILD_DIRS)
 
 $(BUILD_DIR)/%.o: %.bin
 	$(LD) -r -b binary -o $@ $<
-
 $(BUILD_DIR)/assets/yay0/%.o: assets/yay0/%.bin # override
 	tools/slienc $< $@.i
 	$(LD) -r -b binary -o $@ $@.i
 
+$(BUILD_DIR)/%.i4.o: %.i4.png
+	$(RGB2C) -G i4 -o RAW $< > $(@:.o=.bin)
+	$(LD) -r -b binary -o $@ $(@:.o=.bin)
+
+$(BUILD_DIR)/%.i4.o: %.i4.yay0.png # override
+	tools/slienc $< $(@:.o=.i)
+	$(LD) -r -b binary -o $@ $(@:.o=.i)
 
 $(BUILD_DIR)/$(LD_SCRIPT): $(LD_SCRIPT)
 	$(CPP) $(VERSION_CFLAGS) -Umips -MMD -MP -MT $@ -MF $@.d -o $@ $< \

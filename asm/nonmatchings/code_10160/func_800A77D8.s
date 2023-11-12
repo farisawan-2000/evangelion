@@ -128,9 +128,9 @@ glabel func_800A77D8
 /* 125A0 800A79A0 0440000A */  bltz       $v0, .L800A79CC
 /* 125A4 800A79A4 00002021 */   addu      $a0, $zero, $zero
 .L800A79A8:
-/* 125A8 800A79A8 3C01800D */  lui        $at, %hi(D_800D3EB0)
+/* 125A8 800A79A8 3C01800D */  lui        $at, %hi(gEncodingTable)
 /* 125AC 800A79AC 00220821 */  addu       $at, $at, $v0
-/* 125B0 800A79B0 90223EB0 */  lbu        $v0, %lo(D_800D3EB0)($at)
+/* 125B0 800A79B0 90223EB0 */  lbu        $v0, %lo(gEncodingTable)($at)
 /* 125B4 800A79B4 24A50002 */  addiu      $a1, $a1, 0x2
 /* 125B8 800A79B8 84A30000 */  lh         $v1, 0x0($a1)
 /* 125BC 800A79BC 00822021 */  addu       $a0, $a0, $v0
@@ -149,9 +149,9 @@ glabel func_800A77D8
 /* 125E8 800A79E8 0440000A */  bltz       $v0, .L800A7A14
 /* 125EC 800A79EC 00003021 */   addu      $a2, $zero, $zero
 .L800A79F0:
-/* 125F0 800A79F0 3C01800D */  lui        $at, %hi(D_800D3EB0)
+/* 125F0 800A79F0 3C01800D */  lui        $at, %hi(gEncodingTable)
 /* 125F4 800A79F4 00220821 */  addu       $at, $at, $v0
-/* 125F8 800A79F8 90223EB0 */  lbu        $v0, %lo(D_800D3EB0)($at)
+/* 125F8 800A79F8 90223EB0 */  lbu        $v0, %lo(gEncodingTable)($at)
 /* 125FC 800A79FC 24840002 */  addiu      $a0, $a0, 0x2
 /* 12600 800A7A00 84830000 */  lh         $v1, 0x0($a0)
 /* 12604 800A7A04 00C23021 */  addu       $a2, $a2, $v0

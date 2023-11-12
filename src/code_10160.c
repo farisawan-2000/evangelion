@@ -70,6 +70,23 @@ INCLUDE_ASM("asm/nonmatchings/code_10160", func_800A7354);
 
 INCLUDE_ASM("asm/nonmatchings/code_10160", func_800A73F4);
 
+// s32 func_800A7464(s16 *arg0, s8 arg1) {
+//     s32 temp_a2;
+//     s32 var_a2;
+//     s32 var_v1;
+
+//     var_v1 = *arg0 - 0x10;
+//     var_a2 = 0;
+//     if (var_v1 >= 0) {
+//         do {
+//             arg0 ++;
+//             temp_a2 = var_a2 + gEncodingTable[var_v1];
+//             var_v1 = *arg0 - 0x10;
+//             var_a2 = temp_a2 + arg1;
+//         } while (var_v1 >= 0);
+//     }
+//     return var_a2;
+// }
 INCLUDE_ASM("asm/nonmatchings/code_10160", func_800A7464);
 
 INCLUDE_ASM("asm/nonmatchings/code_10160", func_800A74A8);

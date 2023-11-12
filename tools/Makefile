@@ -8,7 +8,7 @@ n64crc_CFLAGS := -O2 # faster compile time
 slienc_SOURCES := slienc.c
 slienc_CFLAGS := -O2 # faster compile time
 
-rgb2c_SOURCES := rgb2c/rgb2c.c rgb2c/readtex2.c rgb2c/loadblock_widthpad.c rgb2c/ci_texconv.c rgb2c/lodepng.c
+rgb2c_SOURCES := modern_rgb2c/rgb2c.c modern_rgb2c/readtex2.c modern_rgb2c/loadblock_widthpad.c modern_rgb2c/ci_texconv.c modern_rgb2c/lodepng.c
 rgb2c_CFLAGS := -g -Wall -Wextra -pedantic -frounding-math -fsignaling-nans -fsingle-precision-constant
 
 default: all

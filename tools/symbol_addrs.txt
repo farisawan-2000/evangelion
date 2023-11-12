@@ -16,3 +16,4 @@ __osRunQueue = 0x800F69B8; // type:OSThread*
 __osDisableInt = 0x800C6740; // type:func
 __osRestoreInt = 0x800C67B0; // type:func
 __osActiveQueue = 0x800F69BC; // type:func
+gEncodingTable = 0x800D3EB0; // type:u8
