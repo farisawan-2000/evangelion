@@ -29,6 +29,8 @@ I_FILES = $(foreach file,$(SRC_FILES),$(BUILD_DIR)/$(file:.c=.i))
 
 GLOBAL_ASM_C_FILES != grep -rl 'INCLUDE_ASM(' $(wildcard src/*.c) $(wildcard src/*/*.c)
 GLOBAL_ASM_O_FILES = $(foreach file,$(GLOBAL_ASM_C_FILES),$(BUILD_DIR)/$(file:.c=.o))
+G2_C_FILES != grep -rl 'c_flag_g2' $(wildcard src/*.c)
+G2_O_FILES = $(foreach file,$(G2_C_FILES),$(BUILD_DIR)/$(file:.c=.o))
 
 YAY0_FILES = $(foreach dir,$(YAY0_DIR),$(wildcard $(dir)/*.bin))
 FONT_FILES_I4 = $(foreach dir,$(FONT_DIR),$(wildcard $(dir)/*.png))
@@ -56,7 +58,7 @@ CC = VR4300MUL=OFF COMPILER_PATH=tools/gcc_kmc/linux/2.7.2/ tools/gcc_kmc/linux/
 KMC_AS := tools/gcc_kmc/linux/2.7.2/as
 OPT_FLAGS := -O2
 # -mno-split-addresses
-KMC_CFLAGS = $(OPT_FLAGS) -c -G0 -mgp32 -mfp32 -mips3 -mno-abicalls -Wa,--vr4300mul-off -g2
+KMC_CFLAGS = $(OPT_FLAGS) -c -G0 -mgp32 -mfp32 -mips3 -mno-abicalls -Wa,--vr4300mul-off
 
 TARGET_CFLAGS := -nostdinc -I include/libc -DTARGET_N64 -DF3DEX_GBI_2
 KMC_ASFLAGS := -c -mips3 -O2
@@ -84,6 +86,8 @@ PYTHON := python3
 POSTPROCESS = $(PYTHON) tools/postprocess_asm.py
 
 # $(GLOBAL_ASM_O_FILES): CC = $(PYTHON) asm-processor/build.py tools/kmc_wrapper/gcc -- $(AS) $(ASFLAGS) --
+
+$(G2_O_FILES): KMC_CFLAGS += -g2
 
 $(BUILD_DIR)/src/main.o: OPT_FLAGS = -O0
 $(BUILD_DIR)/src/code_2C570.o: OPT_FLAGS = -O1
@@ -128,7 +132,7 @@ $(BUILD_DIR)/$(TARGET).z64: $(BUILD_DIR)/$(TARGET).elf $(SZP_FILES)
 	$(OBJCOPY) $< $@ -O binary $(OBJCOPY_FLAGS)
 	$(N64CRC) $@
 
-# 	@sha1sum -c evangelion.sha1
+# @sha1sum -c evangelion.sha1
 all: $(BUILD_DIR)/$(TARGET).z64
 	@sha1sum -c eva.unaligned.sha1
 	@echo [NOTE] Using checksum for unaligned assets. Game will not boot unless shiftable.

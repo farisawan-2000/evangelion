@@ -200,7 +200,7 @@ segments:
     - [0x34360, c, code_34360]
     - [0x343A0, c, code_343A0]
     - [0x343F0, c, code_343F0]
-    - [0x34430, c, code_34430]
+    - [0x34430, c, code_34430] # IDO
     - [0x34B80, c, code_34B80]
     - [0x34E10, c, code_34E10]
     - [0x350B0, c, code_350B0]

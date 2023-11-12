@@ -1,3 +1,4 @@
+// c_flag_g2
 #include "common.h"
 
 s32 func_8009798C(s32);
