@@ -13,7 +13,7 @@ BIN_DIR = assets
 FONT_DIR = assets/Font
 IMAGE_DIR = assets/Images
 PALETTE_DIR = assets/Palettes
-ASSETS_DIRS = $(FONT_DIR) $(IMAGE_DIR) $(PALETTE_DIR) assets/BLOCK04 assets/BLOCK05 assets/Objects assets/BLOCK07 assets/BLOCK08 assets/Sound
+ASSETS_DIRS = $(BIN_DIR) $(FONT_DIR) $(IMAGE_DIR) $(PALETTE_DIR) assets/BLOCK04 assets/BLOCK05 assets/Objects assets/BLOCK07 assets/BLOCK08 assets/Sound
 dummy != mkdir -p $(ASSETS_DIRS)
 
 GLOBAL_ASM_C_FILES != grep -rl 'INCLUDE_ASM(' $(wildcard src/*/*.c)
@@ -31,7 +31,6 @@ GLOBAL_ASM_C_FILES != grep -rl 'INCLUDE_ASM(' $(wildcard src/*.c) $(wildcard src
 GLOBAL_ASM_O_FILES = $(foreach file,$(GLOBAL_ASM_C_FILES),$(BUILD_DIR)/$(file:.c=.o))
 
 YAY0_FILES = $(foreach dir,$(YAY0_DIR),$(wildcard $(dir)/*.bin))
-BIN_FILES = $(foreach dir,$(BIN_DIR),$(wildcard $(dir)/*.bin))
 FONT_FILES_I4 = $(foreach dir,$(FONT_DIR),$(wildcard $(dir)/*.png))
 BIN_FILES = $(foreach dir,$(ASSETS_DIRS),$(wildcard $(dir)/*.bin))
 BIN_OBJS1 = $(foreach file,$(BIN_FILES),$(wildcard $(file:.bin=.o)))

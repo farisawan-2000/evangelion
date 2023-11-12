@@ -33,6 +33,7 @@ segments:
   - name: main
     type: code
     start: 0x1000
+    end: 0x69EE0
     vram: 0x80096400
     subsegments:
     - [0x1000, hasm, entry]
