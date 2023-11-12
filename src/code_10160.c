@@ -1,7 +1,7 @@
 #include "common.h"
 
 extern u8 gCharWidthTable[];
-extern u8 *D_1BB280;
+extern u8 *Font_000_i4_yay0_ROM_START;
 extern u8 *D_800D5190;
 
 INCLUDE_ASM("asm/nonmatchings/code_10160", func_800A5560);
@@ -99,7 +99,7 @@ void func_800A75B0(u8* arg0, s16 arg1) {
     s32 i;
     u32 j;
 
-    temp_a0 = func_80099238(&D_1BB280, &D_800D5190, arg1 - 16, 0);
+    temp_a0 = func_80099238(&Font_000_i4_yay0_ROM_START, &D_800D5190, arg1 - 16, 0);
     for (i = 0; i < 24; i++) {
         for (j = 0; (s32)j < 12; j++) {
             *arg0++ = *(temp_a0 + ((i * 12) + j));
