@@ -132,6 +132,7 @@ $(BUILD_DIR)/$(TARGET).z64: $(BUILD_DIR)/$(TARGET).elf $(SZP_FILES)
 # 	@sha1sum -c evangelion.sha1
 all: $(BUILD_DIR)/$(TARGET).z64
 	@sha1sum -c eva.unaligned.sha1
+	@echo [NOTE] Using checksum for unaligned assets. Game will not boot unless shiftable.
 
 clean:
 	rm -rf $(BUILD_DIR)
