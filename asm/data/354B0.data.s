@@ -9842,7 +9842,7 @@ glabel D_800D3E70
 /* 3EAAC 800D3EAC */ .word 0x808080FF
 .size D_800D3E70, . - D_800D3E70
 
-glabel gEncodingTable
+glabel gCharWidthTable
 /* 3EAB0 800D3EB0 */ .byte 0x0C
 /* 3EAB1 800D3EB1 */ .byte 0x0A
 /* 3EAB2 800D3EB2 */ .byte 0x0A
@@ -10387,4 +10387,4 @@ glabel gEncodingTable
 /* 3ECCD 800D40CD */ .byte 0x00
 /* 3ECCE 800D40CE */ .byte 0x00
 /* 3ECCF 800D40CF */ .byte 0x00
-.size gEncodingTable, . - gEncodingTable
+.size gCharWidthTable, . - gCharWidthTable

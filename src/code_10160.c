@@ -1,6 +1,6 @@
 #include "common.h"
 
-extern u8 gEncodingTable[];
+extern u8 gCharWidthTable[];
 
 INCLUDE_ASM("asm/nonmatchings/code_10160", func_800A5560);
 
@@ -80,7 +80,7 @@ s32 func_800A7464(s16* arg0, s8 arg1) {
     var_a2 = 0;
     for (var_v1 = *arg0 - 0x10; var_v1 >= 0; var_v1 = *arg0 - 0x10) {
         arg0++;
-        var_a2 += gEncodingTable[var_v1];
+        var_a2 += gCharWidthTable[var_v1];
         var_a2 += arg1;
     }
     

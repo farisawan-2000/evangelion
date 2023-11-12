@@ -47,9 +47,9 @@ glabel func_800A7AEC
 /* 12798 800A7B98 08029EF9 */  j          .L800A7BE4
 /* 1279C 800A7B9C 2412000C */   addiu     $s2, $zero, 0xC
 .L800A7BA0:
-/* 127A0 800A7BA0 3C11800D */  lui        $s1, %hi(gEncodingTable)
+/* 127A0 800A7BA0 3C11800D */  lui        $s1, %hi(gCharWidthTable)
 /* 127A4 800A7BA4 02308821 */  addu       $s1, $s1, $s0
-/* 127A8 800A7BA8 92313EB0 */  lbu        $s1, %lo(gEncodingTable)($s1)
+/* 127A8 800A7BA8 92313EB0 */  lbu        $s1, %lo(gCharWidthTable)($s1)
 /* 127AC 800A7BAC 00111042 */  srl        $v0, $s1, 1
 /* 127B0 800A7BB0 02229023 */  subu       $s2, $s1, $v0
 /* 127B4 800A7BB4 24020018 */  addiu      $v0, $zero, 0x18
@@ -60,9 +60,9 @@ glabel func_800A7AEC
 /* 127C8 800A7BC8 08029EF9 */  j          .L800A7BE4
 /* 127CC 800A7BCC 0262A021 */   addu      $s4, $s3, $v0
 .L800A7BD0:
-/* 127D0 800A7BD0 3C11800D */  lui        $s1, %hi(gEncodingTable)
+/* 127D0 800A7BD0 3C11800D */  lui        $s1, %hi(gCharWidthTable)
 /* 127D4 800A7BD4 02308821 */  addu       $s1, $s1, $s0
-/* 127D8 800A7BD8 92313EB0 */  lbu        $s1, %lo(gEncodingTable)($s1)
+/* 127D8 800A7BD8 92313EB0 */  lbu        $s1, %lo(gCharWidthTable)($s1)
 /* 127DC 800A7BDC 00111042 */  srl        $v0, $s1, 1
 /* 127E0 800A7BE0 02229023 */  subu       $s2, $s1, $v0
 .L800A7BE4:

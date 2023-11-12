@@ -3121,9 +3121,9 @@ glabel func_80028770_ovl1
 /* 6CB84 800288A4 0C0292D4 */  jal        func_800A4B50
 /* 6CB88 800288A8 24060400 */   addiu     $a2, $zero, 0x400
 /* 6CB8C 800288AC 86220086 */  lh         $v0, 0x86($s1)
-/* 6CB90 800288B0 3C01800D */  lui        $at, %hi(gEncodingTable)
+/* 6CB90 800288B0 3C01800D */  lui        $at, %hi(gCharWidthTable)
 /* 6CB94 800288B4 00220821 */  addu       $at, $at, $v0
-/* 6CB98 800288B8 90223EB0 */  lbu        $v0, %lo(gEncodingTable)($at)
+/* 6CB98 800288B8 90223EB0 */  lbu        $v0, %lo(gCharWidthTable)($at)
 /* 6CB9C 800288BC AE2200B0 */  sw         $v0, 0xB0($s1)
 /* 6CBA0 800288C0 8FBF0020 */  lw         $ra, 0x20($sp)
 /* 6CBA4 800288C4 8FB1001C */  lw         $s1, 0x1C($sp)
@@ -3151,9 +3151,9 @@ glabel func_800288D4_ovl1
 /* 6CBF0 80028910 AE0200A0 */   sw        $v0, 0xA0($s0)
 /* 6CBF4 80028914 86030086 */  lh         $v1, 0x86($s0)
 /* 6CBF8 80028918 AE0200AC */  sw         $v0, 0xAC($s0)
-/* 6CBFC 8002891C 3C02800D */  lui        $v0, %hi(gEncodingTable)
+/* 6CBFC 8002891C 3C02800D */  lui        $v0, %hi(gCharWidthTable)
 /* 6CC00 80028920 00431021 */  addu       $v0, $v0, $v1
-/* 6CC04 80028924 90423EB0 */  lbu        $v0, %lo(gEncodingTable)($v0)
+/* 6CC04 80028924 90423EB0 */  lbu        $v0, %lo(gCharWidthTable)($v0)
 /* 6CC08 80028928 02002021 */  addu       $a0, $s0, $zero
 /* 6CC0C 8002892C 0C00A1DC */  jal        func_80028770_ovl1
 /* 6CC10 80028930 AE0200B0 */   sw        $v0, 0xB0($s0)
@@ -3340,10 +3340,10 @@ glabel func_800289A0_ovl1
 .L80028BAC_ovl1:
 /* 6CE8C 80028BAC 86230086 */  lh         $v1, 0x86($s1)
 /* 6CE90 80028BB0 8E2200B0 */  lw         $v0, 0xB0($s1)
-/* 6CE94 80028BB4 3C01800D */  lui        $at, %hi(gEncodingTable)
+/* 6CE94 80028BB4 3C01800D */  lui        $at, %hi(gCharWidthTable)
 /* 6CE98 80028BB8 00230821 */  addu       $at, $at, $v1
 /* 6CE9C 80028BBC 0800A331 */  j          .L80028CC4_ovl1
-/* 6CEA0 80028BC0 A0223EB0 */   sb        $v0, %lo(gEncodingTable)($at)
+/* 6CEA0 80028BC0 A0223EB0 */   sb        $v0, %lo(gCharWidthTable)($at)
 .L80028BC4_ovl1:
 /* 6CEA4 80028BC4 10400019 */  beqz       $v0, .L80028C2C_ovl1
 /* 6CEA8 80028BC8 00000000 */   nop
