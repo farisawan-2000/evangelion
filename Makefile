@@ -76,9 +76,10 @@ CPPFLAGS := -Iinclude/ -nostdinc -Iinclude/libc -I. -DTARGET_N64 -ffreestanding 
 CC_CHECK := gcc -fsyntax-only -fsigned-char -m32 $(CPPFLAGS) -std=gnu90 -Wall -Wextra -Wno-unknown-pragmas -Wno-format-security -Wno-main -DNON_MATCHING -DAVOID_UB
 
 N64CRC := tools/n64crc
+RGB2C := tools/rgb2c
 
 OBJCOPY := $(CROSS)objcopy
-OBJCOPY_FLAGS = --pad-to=0x2000000 --gap-fill=0xFF
+OBJCOPY_FLAGS = --pad-to=0x2000000 --gap-fill=0x00
 
 DUMMY != make -C tools
 
@@ -107,7 +108,7 @@ $(BUILD_DIR)/%.o : $(BUILD_DIR)/%.i | $(SRC_BUILD_DIRS)
 
 $(BUILD_DIR)/%.o: %.bin
 	$(LD) -r -b binary -o $@ $<
-$(BUILD_DIR)/assets/yay0/%.o: assets/yay0/%.bin # override
+$(BUILD_DIR)/%.yay0.o: %.yay0.bin # override
 	tools/slienc $< $@.i
 	$(LD) -r -b binary -o $@ $@.i
 
@@ -116,7 +117,8 @@ $(BUILD_DIR)/%.i4.o: %.i4.png
 	$(LD) -r -b binary -o $@ $(@:.o=.bin)
 
 $(BUILD_DIR)/%.i4.o: %.i4.yay0.png # override
-	tools/slienc $< $(@:.o=.i)
+	$(RGB2C) -G i4 -o RAW $< > $(@:.o=.bin)
+	tools/slienc $(@:.o=.bin) $(@:.o=.i)
 	$(LD) -r -b binary -o $@ $(@:.o=.i)
 
 $(BUILD_DIR)/$(LD_SCRIPT): $(LD_SCRIPT)
@@ -132,10 +134,8 @@ $(BUILD_DIR)/$(TARGET).z64: $(BUILD_DIR)/$(TARGET).elf $(SZP_FILES)
 	$(OBJCOPY) $< $@ -O binary $(OBJCOPY_FLAGS)
 	$(N64CRC) $@
 
-# @sha1sum -c evangelion.sha1
 all: $(BUILD_DIR)/$(TARGET).z64
-	@sha1sum -c eva.unaligned.sha1
-	@echo [NOTE] Using checksum for unaligned assets. Game will not boot unless shiftable.
+	@sha1sum -c evangelion.sha1
 
 clean:
 	rm -rf $(BUILD_DIR)
