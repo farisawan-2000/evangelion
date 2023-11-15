@@ -43794,7 +43794,7 @@ glabel D_800F1846
 /* 5EA17 800F3E17 */ .byte 0x00
 .size D_800F1846, . - D_800F1846
 
-glabel D_800F3E18
+glabel gtexDebugFont1
 /* 5EA18 800F3E18 */ .word 0x00000000
 /* 5EA1C 800F3E1C */ .word 0x00000000
 /* 5EA20 800F3E20 */ .word 0x00000000
@@ -44767,9 +44767,9 @@ glabel D_800F3E18
 /* 5F93C 800F4D3C */ .word 0x00000000
 /* 5F940 800F4D40 */ .word 0x00000000
 /* 5F944 800F4D44 */ .word 0x00000000
-.size D_800F3E18, . - D_800F3E18
+.size gtexDebugFont1, . - gtexDebugFont1
 
-glabel D_800F4D48
+glabel gtexDebugFont2
 /* 5F948 800F4D48 */ .word 0xFFFFFFFF
 /* 5F94C 800F4D4C */ .word 0xFFFFFFFF
 /* 5F950 800F4D50 */ .word 0xFFFFFFFF
@@ -45742,7 +45742,7 @@ glabel D_800F4D48
 /* 6086C 800F5C6C */ .word 0xFFFFFFFF
 /* 60870 800F5C70 */ .word 0xFFFFFFFF
 /* 60874 800F5C74 */ .word 0xFFFFFFFF
-.size D_800F4D48, . - D_800F4D48
+.size gtexDebugFont2, . - gtexDebugFont2
 
 glabel D_800F5C78
 /* 60878 800F5C78 */ .word 0x00000000

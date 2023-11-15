@@ -53,13 +53,13 @@ glabel func_800B6DC0
 /* 21A84 800B6E84 144000AE */  bnez       $v0, .L800B7140
 /* 21A88 800B6E88 00000000 */   nop
 .L800B6E8C:
-/* 21A8C 800B6E8C 3C06800F */  lui        $a2, %hi(D_800F3E18)
-/* 21A90 800B6E90 24C63E18 */  addiu      $a2, $a2, %lo(D_800F3E18)
+/* 21A8C 800B6E8C 3C06800F */  lui        $a2, %hi(gtexDebugFont1)
+/* 21A90 800B6E90 24C63E18 */  addiu      $a2, $a2, %lo(gtexDebugFont1)
 /* 21A94 800B6E94 30620002 */  andi       $v0, $v1, 0x2
 /* 21A98 800B6E98 10400003 */  beqz       $v0, .L800B6EA8
 /* 21A9C 800B6E9C 00000000 */   nop
-/* 21AA0 800B6EA0 3C06800F */  lui        $a2, %hi(D_800F4D48)
-/* 21AA4 800B6EA4 24C64D48 */  addiu      $a2, $a2, %lo(D_800F4D48)
+/* 21AA0 800B6EA0 3C06800F */  lui        $a2, %hi(gtexDebugFont2)
+/* 21AA4 800B6EA4 24C64D48 */  addiu      $a2, $a2, %lo(gtexDebugFont2)
 .L800B6EA8:
 /* 21AA8 800B6EA8 11E60030 */  beq        $t7, $a2, .L800B6F6C
 /* 21AAC 800B6EAC 3C04077D */   lui       $a0, (0x77DF0E4 >> 16)
