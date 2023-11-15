@@ -47,3 +47,5 @@ perspective_text_0328 = 0x800BF208; // type:func
 guPositionF = 0x800BF260; // type:func
 guPosition = 0x800BF438; // type:func
 guPosLight = 0x800BF620; // type:func
+gtexDebugFont1 = 0x800F3E18; // type:u8
+gtexDebugFont2 = 0x800F4D48; // type:u8
