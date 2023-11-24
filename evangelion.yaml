@@ -35,6 +35,7 @@ segments:
     start: 0x1000
     end: 0x69EE0
     vram: 0x80096400
+    bss_size: 0x77300
     subsegments:
     - [0x1000, hasm, entry]
     - [0x1050, c, code_1050]
@@ -208,6 +209,7 @@ segments:
     - [0x350D0, c, code_350D0]
     - [0x354B0, data]
     - [0x3ECD0, data]
+    - {type: bss, vram: 0x800FF2E0, name: mainseg}
 
   - name: ovl1
     symbol_name_format : $VRAM_ovl1
@@ -216,9 +218,11 @@ segments:
     start: 0x00069EE0
     vram: 0x80025C00
     exclusive_ram_id: 0x80025C00
+    bss_size: 0x370
     subsegments:
     - [0x00069EE0, asm, ovl1/code_00069EE0]
     - [0x72d80, data, ovl1/ovl1]
+    - {type: bss, vram: 0x800308D0, name: ovl1/ovl1}
 
   # - name: code_00069EE0_data
   #   type: bin
@@ -231,9 +235,11 @@ segments:
     start: 0x00074BB0
     vram: 0x80025C00
     exclusive_ram_id: 0x80025C00
+    bss_size: 0x4c70
     subsegments:
     - [0x00074BB0, asm, ovl2/code_00074BB0]
     - [0xb8b20, data, ovl2/ovl2]
+    - {type: bss, vram: 0x80080160, name: ovl2/ovl2}
     
   - name: ovl3
     symbol_name_format : $VRAM_ovl3
@@ -242,6 +248,7 @@ segments:
     start: 0x000CF110
     vram: 0x80025C00
     exclusive_ram_id: 0x80025C00
+    bss_size: 0x1fa0
     subsegments:
     - [0x000CF110, asm, ovl3/code_000CF110]
     - [0xD15C0, asm, ovl3/code_000D15C0]
@@ -269,6 +276,7 @@ segments:
     - [0x10A7A0, asm, ovl3/code_0010A7A0]
     - [0x10DC10, asm, ovl3/code_0010DC10]
     - [0x110570, data, ovl3/ovl3]
+    - {type: bss, vram: 0x8006A600, name: ovl3/ovl3}
     
   - name: ovl4
     type: code
@@ -277,11 +285,13 @@ segments:
     start: 0x00113B10
     vram: 0x80025C00
     exclusive_ram_id: 0x80025C00
+    bss_size: 0x27d0
     subsegments:
     - [0x00113B10, asm, ovl4/code_113B10]
     - [0x113CB0, asm, ovl4/code_113CB0]
     - [0x116DD0, asm, ovl4/code_116DD0]
     - [0x1173c0, data, ovl4/ovl4]
+    - {type: bss, vram: 0x80029AF0, name: ovl4/ovl4}
     
   - name: ovl5
     type: code
@@ -290,6 +300,7 @@ segments:
     start: 0x00117A00
     vram: 0x80025C00
     exclusive_ram_id: 0x80025C00
+    bss_size: 0x6f0
     subsegments:
     - [0x117A00, asm, ovl5/code_117A00]
     - [0x117BB0, asm, ovl5/code_117BB0]
@@ -361,6 +372,7 @@ segments:
     - [0x142FB0, asm, ovl5/code_142FB0]
     - [0x143360, asm, ovl5/code_143360]
     - [0x1436f0, data, ovl5/ovl5]
+    - {type: bss, vram: 0x8005DB60, name: ovl5/ovl5}
     
   - name: ovl6
     type: code
@@ -369,6 +381,7 @@ segments:
     start: 0x0014F960
     vram: 0x80025C00
     exclusive_ram_id: 0x80025C00
+    bss_size: 0xc60
     subsegments:
     - [0x14F960, asm, ovl6/code_14F960]
     - [0x14FD10, asm, ovl6/code_14FD10]
@@ -391,6 +404,7 @@ segments:
     - [0x167A70, asm, ovl6/code_167A70]
     - [0x167CC0, asm, ovl6/code_167CC0]
     - [0x168230, data, ovl6/ovl6]
+    - {type: bss, vram: 0x8004B8E0, name: ovl6/ovl6}
     
   - name: ovl7
     type: code
@@ -399,6 +413,7 @@ segments:
     start: 0x00175640
     vram: 0x80025C00
     exclusive_ram_id: 0x80025C00
+    bss_size: 0x410
     subsegments:
     - [0x175640, asm, ovl7/code_175640]
     - [0x175860, asm, ovl7/code_175860]
@@ -425,6 +440,7 @@ segments:
     - [0x18EF90, asm, ovl7/code_18EF90]
     - [0x190050, asm, ovl7/code_190050]
     - [0x1907e0, data, ovl7/ovl7]
+    - {type: bss, vram: 0x80051E40, name: ovl7/ovl7}
 
   - name: ovl8
     type: code

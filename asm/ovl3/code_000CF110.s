@@ -26,10 +26,10 @@ glabel .L80025C30_ovl3
 /* CF140 80025C30 0C02A5AF */  jal        func_800A96BC
 /* CF144 80025C34 24040001 */   addiu     $a0, $zero, 0x1
 /* CF148 80025C38 24020001 */  addiu      $v0, $zero, 0x1
-/* CF14C 80025C3C 3C018007 */  lui        $at, %hi(D_8006A600)
-/* CF150 80025C40 AC20A600 */  sw         $zero, %lo(D_8006A600)($at)
-/* CF154 80025C44 3C018007 */  lui        $at, %hi(D_8006A604)
-/* CF158 80025C48 AC20A604 */  sw         $zero, %lo(D_8006A604)($at)
+/* CF14C 80025C3C 3C018007 */  lui        $at, %hi(D_8006A600_ovl3)
+/* CF150 80025C40 AC20A600 */  sw         $zero, %lo(D_8006A600_ovl3)($at)
+/* CF154 80025C44 3C018007 */  lui        $at, %hi(D_8006A604_ovl3)
+/* CF158 80025C48 AC20A604 */  sw         $zero, %lo(D_8006A604_ovl3)($at)
 /* CF15C 80025C4C 3C018006 */  lui        $at, %hi(D_800671E0_ovl3)
 /* CF160 80025C50 A02271E0 */  sb         $v0, %lo(D_800671E0_ovl3)($at)
 /* CF164 80025C54 08009755 */  j          .L80025D54_ovl3
@@ -40,15 +40,15 @@ glabel .L80025C5C_ovl3
 /* CF174 80025C64 3C048006 */  lui        $a0, %hi(D_800671BC_ovl3)
 /* CF178 80025C68 0C027448 */  jal        func_8009D120
 /* CF17C 80025C6C 248471BC */   addiu     $a0, $a0, %lo(D_800671BC_ovl3)
-/* CF180 80025C70 3C018007 */  lui        $at, %hi(D_8006A604)
-/* CF184 80025C74 AC22A604 */  sw         $v0, %lo(D_8006A604)($at)
+/* CF180 80025C70 3C018007 */  lui        $at, %hi(D_8006A604_ovl3)
+/* CF184 80025C74 AC22A604 */  sw         $v0, %lo(D_8006A604_ovl3)($at)
 /* CF188 80025C78 10400036 */  beqz       $v0, .L80025D54_ovl3
 /* CF18C 80025C7C 00001021 */   addu      $v0, $zero, $zero
 /* CF190 80025C80 0C02A5C1 */  jal        func_800A9704
 /* CF194 80025C84 24040001 */   addiu     $a0, $zero, 0x1
 /* CF198 80025C88 24020001 */  addiu      $v0, $zero, 0x1
-/* CF19C 80025C8C 3C018007 */  lui        $at, %hi(D_8006A600)
-/* CF1A0 80025C90 AC22A600 */  sw         $v0, %lo(D_8006A600)($at)
+/* CF19C 80025C8C 3C018007 */  lui        $at, %hi(D_8006A600_ovl3)
+/* CF1A0 80025C90 AC22A600 */  sw         $v0, %lo(D_8006A600_ovl3)($at)
 /* CF1A4 80025C94 24020002 */  addiu      $v0, $zero, 0x2
 /* CF1A8 80025C98 3C018006 */  lui        $at, %hi(D_800671E0_ovl3)
 /* CF1AC 80025C9C A02271E0 */  sb         $v0, %lo(D_800671E0_ovl3)($at)
@@ -59,17 +59,17 @@ glabel .L80025CA8_ovl3
 /* CF1BC 80025CAC 248471BC */  addiu      $a0, $a0, %lo(D_800671BC_ovl3)
 /* CF1C0 80025CB0 0C0274BE */  jal        func_8009D2F8
 /* CF1C4 80025CB4 24050001 */   addiu     $a1, $zero, 0x1
-/* CF1C8 80025CB8 3C028007 */  lui        $v0, %hi(D_8006A600)
-/* CF1CC 80025CBC 8C42A600 */  lw         $v0, %lo(D_8006A600)($v0)
+/* CF1C8 80025CB8 3C028007 */  lui        $v0, %hi(D_8006A600_ovl3)
+/* CF1CC 80025CBC 8C42A600 */  lw         $v0, %lo(D_8006A600_ovl3)($v0)
 /* CF1D0 80025CC0 2442FFFF */  addiu      $v0, $v0, -0x1
-/* CF1D4 80025CC4 3C018007 */  lui        $at, %hi(D_8006A600)
-/* CF1D8 80025CC8 AC22A600 */  sw         $v0, %lo(D_8006A600)($at)
+/* CF1D4 80025CC4 3C018007 */  lui        $at, %hi(D_8006A600_ovl3)
+/* CF1D8 80025CC8 AC22A600 */  sw         $v0, %lo(D_8006A600_ovl3)($at)
 /* CF1DC 80025CCC 14400021 */  bnez       $v0, .L80025D54_ovl3
 /* CF1E0 80025CD0 00001021 */   addu      $v0, $zero, $zero
 /* CF1E4 80025CD4 0C02DB14 */  jal        func_800B6C50
 /* CF1E8 80025CD8 00002021 */   addu      $a0, $zero, $zero
-/* CF1EC 80025CDC 3C038007 */  lui        $v1, %hi(D_8006A604)
-/* CF1F0 80025CE0 8C63A604 */  lw         $v1, %lo(D_8006A604)($v1)
+/* CF1EC 80025CDC 3C038007 */  lui        $v1, %hi(D_8006A604_ovl3)
+/* CF1F0 80025CE0 8C63A604 */  lw         $v1, %lo(D_8006A604_ovl3)($v1)
 /* CF1F4 80025CE4 2402FFFF */  addiu      $v0, $zero, -0x1
 /* CF1F8 80025CE8 14620006 */  bne        $v1, $v0, .L80025D04_ovl3
 /* CF1FC 80025CEC 24020003 */   addiu     $v0, $zero, 0x3
@@ -84,8 +84,8 @@ glabel .L80025CA8_ovl3
 /* CF21C 80025D0C 08009755 */  j          .L80025D54_ovl3
 /* CF220 80025D10 00001021 */   addu      $v0, $zero, $zero
 glabel .L80025D14_ovl3
-/* CF224 80025D14 3C028007 */  lui        $v0, %hi(D_8006A604)
-/* CF228 80025D18 8C42A604 */  lw         $v0, %lo(D_8006A604)($v0)
+/* CF224 80025D14 3C028007 */  lui        $v0, %hi(D_8006A604_ovl3)
+/* CF228 80025D18 8C42A604 */  lw         $v0, %lo(D_8006A604_ovl3)($v0)
 /* CF22C 80025D1C 0040F809 */  jalr       $v0
 /* CF230 80025D20 00000000 */   nop
 /* CF234 80025D24 1040000B */  beqz       $v0, .L80025D54_ovl3

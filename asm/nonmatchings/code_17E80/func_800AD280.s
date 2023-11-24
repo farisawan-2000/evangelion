@@ -29,7 +29,7 @@ glabel func_800AD280
 /* 17EEC 800AD2EC 0C02F4F0 */  jal        func_800BD3C0
 /* 17EF0 800AD2F0 02348823 */   subu      $s1, $s1, $s4
 /* 17EF4 800AD2F4 02602021 */  addu       $a0, $s3, $zero
-/* 17EF8 800AD2F8 0C02F4C4 */  jal        func_800BD310
+/* 17EF8 800AD2F8 0C02F4C4 */  jal        osInvalDCache
 /* 17EFC 800AD2FC 02002821 */   addu      $a1, $s0, $zero
 /* 17F00 800AD300 02A02021 */  addu       $a0, $s5, $zero
 /* 17F04 800AD304 3C058039 */  lui        $a1, %hi(D_8038F800)

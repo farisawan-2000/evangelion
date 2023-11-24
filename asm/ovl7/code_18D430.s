@@ -25,10 +25,10 @@ glabel func_8003D9F0_ovl7
 /* 18D460 8003DA20 90639E28 */  lbu        $v1, %lo(D_80149E28)($v1)
 /* 18D464 8003DA24 3C018005 */  lui        $at, %hi(D_8004D9C0_ovl7)
 /* 18D468 8003DA28 A020D9C0 */  sb         $zero, %lo(D_8004D9C0_ovl7)($at)
-/* 18D46C 8003DA2C 3C018005 */  lui        $at, %hi(D_80052060)
-/* 18D470 8003DA30 A0202060 */  sb         $zero, %lo(D_80052060)($at)
-/* 18D474 8003DA34 3C018005 */  lui        $at, %hi(D_80052062)
-/* 18D478 8003DA38 A0202062 */  sb         $zero, %lo(D_80052062)($at)
+/* 18D46C 8003DA2C 3C018005 */  lui        $at, %hi(D_80052060_ovl7)
+/* 18D470 8003DA30 A0202060 */  sb         $zero, %lo(D_80052060_ovl7)($at)
+/* 18D474 8003DA34 3C018005 */  lui        $at, %hi(D_80052062_ovl7)
+/* 18D478 8003DA38 A0202062 */  sb         $zero, %lo(D_80052062_ovl7)($at)
 /* 18D47C 8003DA3C 10700013 */  beq        $v1, $s0, .L8003DA8C_ovl7
 /* 18D480 8003DA40 28620002 */   slti      $v0, $v1, 0x2
 /* 18D484 8003DA44 50400005 */  beql       $v0, $zero, .L8003DA5C_ovl7
@@ -70,12 +70,12 @@ glabel func_8003D9F0_ovl7
 /* 18D504 8003DAC4 3C028005 */  lui        $v0, %hi(D_8004F7DC_ovl7)
 /* 18D508 8003DAC8 2442F7DC */  addiu      $v0, $v0, %lo(D_8004F7DC_ovl7)
 .L8003DACC_ovl7:
-/* 18D50C 8003DACC 3C018005 */  lui        $at, %hi(D_80052000)
-/* 18D510 8003DAD0 AC222000 */  sw         $v0, %lo(D_80052000)($at)
+/* 18D50C 8003DACC 3C018005 */  lui        $at, %hi(D_80052000_ovl7)
+/* 18D510 8003DAD0 AC222000 */  sw         $v0, %lo(D_80052000_ovl7)($at)
 /* 18D514 8003DAD4 2402FFFF */  addiu      $v0, $zero, -0x1
 .L8003DAD8_ovl7:
-/* 18D518 8003DAD8 3C018005 */  lui        $at, %hi(D_80052061)
-/* 18D51C 8003DADC A0222061 */  sb         $v0, %lo(D_80052061)($at)
+/* 18D518 8003DAD8 3C018005 */  lui        $at, %hi(D_80052061_ovl7)
+/* 18D51C 8003DADC A0222061 */  sb         $v0, %lo(D_80052061_ovl7)($at)
 /* 18D520 8003DAE0 3C048004 */  lui        $a0, %hi(func_8003E454_ovl7)
 /* 18D524 8003DAE4 2484E454 */  addiu      $a0, $a0, %lo(func_8003E454_ovl7)
 /* 18D528 8003DAE8 00002821 */  addu       $a1, $zero, $zero
@@ -89,13 +89,13 @@ glabel func_8003D9F0_ovl7
 /* 18D548 8003DB08 0C025D06 */  jal        func_80097418
 /* 18D54C 8003DB0C 00003821 */   addu      $a3, $zero, $zero
 .L8003DB10_ovl7:
-/* 18D550 8003DB10 3C038005 */  lui        $v1, %hi(D_80052060)
-/* 18D554 8003DB14 90632060 */  lbu        $v1, %lo(D_80052060)($v1)
+/* 18D550 8003DB10 3C038005 */  lui        $v1, %hi(D_80052060_ovl7)
+/* 18D554 8003DB14 90632060 */  lbu        $v1, %lo(D_80052060_ovl7)($v1)
 /* 18D558 8003DB18 24020001 */  addiu      $v0, $zero, 0x1
 /* 18D55C 8003DB1C 14620009 */  bne        $v1, $v0, .L8003DB44_ovl7
 /* 18D560 8003DB20 00001021 */   addu      $v0, $zero, $zero
-/* 18D564 8003DB24 3C028005 */  lui        $v0, %hi(D_80052062)
-/* 18D568 8003DB28 90422062 */  lbu        $v0, %lo(D_80052062)($v0)
+/* 18D564 8003DB24 3C028005 */  lui        $v0, %hi(D_80052062_ovl7)
+/* 18D568 8003DB28 90422062 */  lbu        $v0, %lo(D_80052062_ovl7)($v0)
 /* 18D56C 8003DB2C 54430005 */  bnel       $v0, $v1, .L8003DB44_ovl7
 /* 18D570 8003DB30 00001021 */   addu      $v0, $zero, $zero
 /* 18D574 8003DB34 24020001 */  addiu      $v0, $zero, 0x1

@@ -73,7 +73,18 @@ INCLUDE_ASM("asm/nonmatchings/code_10160", func_800A730C);
 
 INCLUDE_ASM("asm/nonmatchings/code_10160", func_800A7354);
 
-INCLUDE_ASM("asm/nonmatchings/code_10160", func_800A73F4);
+s32 func_800A73F4(s16* str, s8 spaceWidth) {
+    int numLines = 1;
+
+    while (*str != 0) {
+        u16 glyph = (u16) *str;
+        int isNewLine = (s16) glyph == 1;
+        
+        numLines += isNewLine;
+        str++;
+    }
+    return (numLines * 24) + (spaceWidth * (numLines - 1));
+}
 
 // arg0 is encoded string?
 // arg1 is space width?
