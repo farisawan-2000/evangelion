@@ -18,8 +18,8 @@ glabel func_800A9898
 /* 144D4 800A98D4 94224C2C */  lhu        $v0, %lo(D_800D4C2C)($at)
 /* 144D8 800A98D8 3C12803E */  lui        $s2, %hi(D_803DAA00)
 /* 144DC 800A98DC 2652AA00 */  addiu      $s2, $s2, %lo(D_803DAA00)
-/* 144E0 800A98E0 3C05001E */  lui        $a1, %hi(D_1D9000)
-/* 144E4 800A98E4 24A59000 */  addiu      $a1, $a1, %lo(D_1D9000)
+/* 144E0 800A98E0 3C05001E */  lui        $a1, %hi(Image_ROM_START)
+/* 144E4 800A98E4 24A59000 */  addiu      $a1, $a1, %lo(Image_ROM_START)
 /* 144E8 800A98E8 00021080 */  sll        $v0, $v0, 2
 /* 144EC 800A98EC 3C07800E */  lui        $a3, %hi(D_800E2080)
 /* 144F0 800A98F0 00E23821 */  addu       $a3, $a3, $v0
@@ -34,8 +34,8 @@ glabel func_800A9898
 /* 14514 800A9914 3C10803E */  lui        $s0, %hi(D_803DA800)
 /* 14518 800A9918 2610A800 */  addiu      $s0, $s0, %lo(D_803DA800)
 /* 1451C 800A991C 02002021 */  addu       $a0, $s0, $zero
-/* 14520 800A9920 3C050061 */  lui        $a1, %hi(D_60CB80)
-/* 14524 800A9924 24A5CB80 */  addiu      $a1, $a1, %lo(D_60CB80)
+/* 14520 800A9920 3C050061 */  lui        $a1, %hi(Palettes_ROM_START)
+/* 14524 800A9924 24A5CB80 */  addiu      $a1, $a1, %lo(Palettes_ROM_START)
 /* 14528 800A9928 3C06800E */  lui        $a2, %hi(D_800DD820)
 /* 1452C 800A992C 24C6D820 */  addiu      $a2, $a2, %lo(D_800DD820)
 /* 14530 800A9930 0C0264C3 */  jal        func_8009930C

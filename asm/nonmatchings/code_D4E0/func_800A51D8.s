@@ -69,8 +69,8 @@ glabel func_800A51D8
 /* FED4 800A52D4 00000000 */   nop
 /* FED8 800A52D8 AFA2005C */  sw         $v0, 0x5C($sp)
 .L800A52DC:
-/* FEDC 800A52DC 3C04001E */  lui        $a0, %hi(D_1D9000)
-/* FEE0 800A52E0 24849000 */  addiu      $a0, $a0, %lo(D_1D9000)
+/* FEDC 800A52DC 3C04001E */  lui        $a0, %hi(Image_ROM_START)
+/* FEE0 800A52E0 24849000 */  addiu      $a0, $a0, %lo(Image_ROM_START)
 /* FEE4 800A52E4 3C05800D */  lui        $a1, %hi(D_800D6AD0)
 /* FEE8 800A52E8 24A56AD0 */  addiu      $a1, $a1, %lo(D_800D6AD0)
 /* FEEC 800A52EC 02203021 */  addu       $a2, $s1, $zero

@@ -42,50 +42,50 @@ glabel func_8009AE40
 /* 5AE0 8009AEE0 AC22F3B8 */  sw         $v0, %lo(D_800FF3B8)($at)
 /* 5AE4 8009AEE4 0C02CA0B */  jal        func_800B282C
 /* 5AE8 8009AEE8 24042800 */   addiu     $a0, $zero, 0x2800
-/* 5AEC 8009AEEC 3C0400EC */  lui        $a0, %hi(D_EC08E0)
-/* 5AF0 8009AEF0 248408E0 */  addiu      $a0, $a0, %lo(D_EC08E0)
+/* 5AEC 8009AEEC 3C0400EC */  lui        $a0, %hi(Sound_effects_ptr_ROM_START)
+/* 5AF0 8009AEF0 248408E0 */  addiu      $a0, $a0, %lo(Sound_effects_ptr_ROM_START)
 /* 5AF4 8009AEF4 3C058010 */  lui        $a1, %hi(D_800FF3B0)
 /* 5AF8 8009AEF8 8CA5F3B0 */  lw         $a1, %lo(D_800FF3B0)($a1)
-/* 5AFC 8009AEFC 3C0600ED */  lui        $a2, %hi(D_EC9060)
-/* 5B00 8009AF00 24C69060 */  addiu      $a2, $a2, %lo(D_EC9060)
+/* 5AFC 8009AEFC 3C0600ED */  lui        $a2, %hi(Sound_effects_wbk_ROM_START)
+/* 5B00 8009AF00 24C69060 */  addiu      $a2, $a2, %lo(Sound_effects_wbk_ROM_START)
 /* 5B04 8009AF04 3C018010 */  lui        $at, %hi(D_800FF3BC)
 /* 5B08 8009AF08 AC22F3BC */  sw         $v0, %lo(D_800FF3BC)($at)
 /* 5B0C 8009AF0C 0C02DB40 */  jal        func_800B6D00
 /* 5B10 8009AF10 00C43023 */   subu      $a2, $a2, $a0
-/* 5B14 8009AF14 3C04011E */  lui        $a0, %hi(D_11D89E0)
-/* 5B18 8009AF18 248489E0 */  addiu      $a0, $a0, %lo(D_11D89E0)
+/* 5B14 8009AF14 3C04011E */  lui        $a0, %hi(Sound_voice_ptr_ROM_START)
+/* 5B18 8009AF18 248489E0 */  addiu      $a0, $a0, %lo(Sound_voice_ptr_ROM_START)
 /* 5B1C 8009AF1C 3C058010 */  lui        $a1, %hi(D_800FF3B4)
 /* 5B20 8009AF20 8CA5F3B4 */  lw         $a1, %lo(D_800FF3B4)($a1)
-/* 5B24 8009AF24 3C06011E */  lui        $a2, %hi(D_11E54C0)
-/* 5B28 8009AF28 24C654C0 */  addiu      $a2, $a2, %lo(D_11E54C0)
+/* 5B24 8009AF24 3C06011E */  lui        $a2, %hi(Sound_voice_wbk_ROM_START)
+/* 5B28 8009AF28 24C654C0 */  addiu      $a2, $a2, %lo(Sound_voice_wbk_ROM_START)
 /* 5B2C 8009AF2C 0C02DB40 */  jal        func_800B6D00
 /* 5B30 8009AF30 00C43023 */   subu      $a2, $a2, $a0
-/* 5B34 8009AF34 3C04011D */  lui        $a0, %hi(D_11D7500)
-/* 5B38 8009AF38 24847500 */  addiu      $a0, $a0, %lo(D_11D7500)
+/* 5B34 8009AF34 3C04011D */  lui        $a0, %hi(Sound_effects_tbl_ROM_START)
+/* 5B38 8009AF38 24847500 */  addiu      $a0, $a0, %lo(Sound_effects_tbl_ROM_START)
 /* 5B3C 8009AF3C 3C058010 */  lui        $a1, %hi(D_800FF3B8)
 /* 5B40 8009AF40 8CA5F3B8 */  lw         $a1, %lo(D_800FF3B8)($a1)
-/* 5B44 8009AF44 3C06011E */  lui        $a2, %hi(D_11D89E0)
-/* 5B48 8009AF48 24C689E0 */  addiu      $a2, $a2, %lo(D_11D89E0)
+/* 5B44 8009AF44 3C06011E */  lui        $a2, %hi(Sound_voice_ptr_ROM_START)
+/* 5B48 8009AF48 24C689E0 */  addiu      $a2, $a2, %lo(Sound_voice_ptr_ROM_START)
 /* 5B4C 8009AF4C 0C02DB40 */  jal        func_800B6D00
 /* 5B50 8009AF50 00C43023 */   subu      $a2, $a2, $a0
-/* 5B54 8009AF54 3C040168 */  lui        $a0, %hi(D_1687B20)
-/* 5B58 8009AF58 24847B20 */  addiu      $a0, $a0, %lo(D_1687B20)
+/* 5B54 8009AF54 3C040168 */  lui        $a0, %hi(Sound_voice_tbl_ROM_START)
+/* 5B58 8009AF58 24847B20 */  addiu      $a0, $a0, %lo(Sound_voice_tbl_ROM_START)
 /* 5B5C 8009AF5C 3C058010 */  lui        $a1, %hi(D_800FF3BC)
 /* 5B60 8009AF60 8CA5F3BC */  lw         $a1, %lo(D_800FF3BC)($a1)
-/* 5B64 8009AF64 3C060169 */  lui        $a2, %hi(D_1689D50)
-/* 5B68 8009AF68 24C69D50 */  addiu      $a2, $a2, %lo(D_1689D50)
+/* 5B64 8009AF64 3C060169 */  lui        $a2, %hi(Sound_sndfnt1_ptr_ROM_START)
+/* 5B68 8009AF68 24C69D50 */  addiu      $a2, $a2, %lo(Sound_sndfnt1_ptr_ROM_START)
 /* 5B6C 8009AF6C 0C02DB40 */  jal        func_800B6D00
 /* 5B70 8009AF70 00C43023 */   subu      $a2, $a2, $a0
 /* 5B74 8009AF74 3C048010 */  lui        $a0, %hi(D_800FF3B0)
 /* 5B78 8009AF78 8C84F3B0 */  lw         $a0, %lo(D_800FF3B0)($a0)
-/* 5B7C 8009AF7C 3C0500ED */  lui        $a1, %hi(D_EC9060)
-/* 5B80 8009AF80 24A59060 */  addiu      $a1, $a1, %lo(D_EC9060)
+/* 5B7C 8009AF7C 3C0500ED */  lui        $a1, %hi(Sound_effects_wbk_ROM_START)
+/* 5B80 8009AF80 24A59060 */  addiu      $a1, $a1, %lo(Sound_effects_wbk_ROM_START)
 /* 5B84 8009AF84 0C02BAC1 */  jal        func_800AEB04
 /* 5B88 8009AF88 00000000 */   nop
 /* 5B8C 8009AF8C 3C048010 */  lui        $a0, %hi(D_800FF3B4)
 /* 5B90 8009AF90 8C84F3B4 */  lw         $a0, %lo(D_800FF3B4)($a0)
-/* 5B94 8009AF94 3C05011E */  lui        $a1, %hi(D_11E54C0)
-/* 5B98 8009AF98 24A554C0 */  addiu      $a1, $a1, %lo(D_11E54C0)
+/* 5B94 8009AF94 3C05011E */  lui        $a1, %hi(Sound_voice_wbk_ROM_START)
+/* 5B98 8009AF98 24A554C0 */  addiu      $a1, $a1, %lo(Sound_voice_wbk_ROM_START)
 /* 5B9C 8009AF9C 0C02BAC1 */  jal        func_800AEB04
 /* 5BA0 8009AFA0 00000000 */   nop
 /* 5BA4 8009AFA4 3C048010 */  lui        $a0, %hi(D_800FF3B8)

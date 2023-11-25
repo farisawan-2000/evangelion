@@ -811,8 +811,8 @@ glabel func_80026954_ovl7
 /* 1763D0 80026990 00408821 */   addu      $s1, $v0, $zero
 /* 1763D4 80026994 00409821 */  addu       $s3, $v0, $zero
 /* 1763D8 80026998 92220005 */  lbu        $v0, 0x5($s1)
-/* 1763DC 8002699C 3C04001E */  lui        $a0, %hi(D_1D9000)
-/* 1763E0 800269A0 24849000 */  addiu      $a0, $a0, %lo(D_1D9000)
+/* 1763DC 8002699C 3C04001E */  lui        $a0, %hi(Image_ROM_START)
+/* 1763E0 800269A0 24849000 */  addiu      $a0, $a0, %lo(Image_ROM_START)
 /* 1763E4 800269A4 3C05800D */  lui        $a1, %hi(D_800D6AD0)
 /* 1763E8 800269A8 24A56AD0 */  addiu      $a1, $a1, %lo(D_800D6AD0)
 /* 1763EC 800269AC 3210FFFF */  andi       $s0, $s0, 0xFFFF
@@ -1428,8 +1428,8 @@ glabel func_800270A4_ovl7
 /* 176C9C 8002725C 0C0285D4 */  jal        func_800A1750
 /* 176CA0 80027260 00408821 */   addu      $s1, $v0, $zero
 /* 176CA4 80027264 0040A021 */  addu       $s4, $v0, $zero
-/* 176CA8 80027268 3C04001E */  lui        $a0, %hi(D_1D9000)
-/* 176CAC 8002726C 24849000 */  addiu      $a0, $a0, %lo(D_1D9000)
+/* 176CA8 80027268 3C04001E */  lui        $a0, %hi(Image_ROM_START)
+/* 176CAC 8002726C 24849000 */  addiu      $a0, $a0, %lo(Image_ROM_START)
 /* 176CB0 80027270 3C05800D */  lui        $a1, %hi(D_800D6AD0)
 /* 176CB4 80027274 24A56AD0 */  addiu      $a1, $a1, %lo(D_800D6AD0)
 /* 176CB8 80027278 92220005 */  lbu        $v0, 0x5($s1)

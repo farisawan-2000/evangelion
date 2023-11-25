@@ -2,8 +2,8 @@ glabel func_800A1C0C
 /* C80C 800A1C0C 27BDFFE0 */  addiu      $sp, $sp, -0x20
 /* C810 800A1C10 AFB10014 */  sw         $s1, 0x14($sp)
 /* C814 800A1C14 00808821 */  addu       $s1, $a0, $zero
-/* C818 800A1C18 3C0400EC */  lui        $a0, %hi(D_EBF700)
-/* C81C 800A1C1C 2484F700 */  addiu      $a0, $a0, %lo(D_EBF700)
+/* C818 800A1C18 3C0400EC */  lui        $a0, %hi(BLOCK08_ROM_START)
+/* C81C 800A1C1C 2484F700 */  addiu      $a0, $a0, %lo(BLOCK08_ROM_START)
 /* C820 800A1C20 00053400 */  sll        $a2, $a1, 16
 /* C824 800A1C24 3C05800F */  lui        $a1, %hi(D_800F1000)
 /* C828 800A1C28 24A51000 */  addiu      $a1, $a1, %lo(D_800F1000)

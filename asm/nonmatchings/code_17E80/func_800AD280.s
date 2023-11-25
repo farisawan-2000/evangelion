@@ -6,11 +6,11 @@ glabel func_800AD280
 /* 17E90 800AD290 24A5E630 */  addiu      $a1, $a1, %lo(D_8039E630)
 /* 17E94 800AD294 00A42823 */  subu       $a1, $a1, $a0
 /* 17E98 800AD298 AFB50024 */  sw         $s5, 0x24($sp)
-/* 17E9C 800AD29C 3C15001A */  lui        $s5, %hi(D_1A1880)
-/* 17EA0 800AD2A0 26B51880 */  addiu      $s5, $s5, %lo(D_1A1880)
+/* 17E9C 800AD29C 3C15001A */  lui        $s5, %hi(ovl8_ROM_START)
+/* 17EA0 800AD2A0 26B51880 */  addiu      $s5, $s5, %lo(ovl8_ROM_START)
 /* 17EA4 800AD2A4 AFB20018 */  sw         $s2, 0x18($sp)
-/* 17EA8 800AD2A8 3C12001C */  lui        $s2, %hi(D_1BB280)
-/* 17EAC 800AD2AC 2652B280 */  addiu      $s2, $s2, %lo(D_1BB280)
+/* 17EA8 800AD2A8 3C12001C */  lui        $s2, %hi(Font_ROM_START)
+/* 17EAC 800AD2AC 2652B280 */  addiu      $s2, $s2, %lo(Font_ROM_START)
 /* 17EB0 800AD2B0 02559023 */  subu       $s2, $s2, $s5
 /* 17EB4 800AD2B4 AFB3001C */  sw         $s3, 0x1C($sp)
 /* 17EB8 800AD2B8 3C13803A */  lui        $s3, %hi(D_8039E630)
@@ -29,7 +29,7 @@ glabel func_800AD280
 /* 17EEC 800AD2EC 0C02F4F0 */  jal        func_800BD3C0
 /* 17EF0 800AD2F0 02348823 */   subu      $s1, $s1, $s4
 /* 17EF4 800AD2F4 02602021 */  addu       $a0, $s3, $zero
-/* 17EF8 800AD2F8 0C02F4C4 */  jal        func_800BD310
+/* 17EF8 800AD2F8 0C02F4C4 */  jal        osInvalDCache
 /* 17EFC 800AD2FC 02002821 */   addu      $a1, $s0, $zero
 /* 17F00 800AD300 02A02021 */  addu       $a0, $s5, $zero
 /* 17F04 800AD304 3C058039 */  lui        $a1, %hi(D_8038F800)

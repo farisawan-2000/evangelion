@@ -20,8 +20,8 @@ glabel func_8009F6B0
 /* A2F8 8009F6F8 BBA20013 */  swr        $v0, 0x13($sp)
 /* A2FC 8009F6FC A7A30014 */  sh         $v1, 0x14($sp)
 /* A300 8009F700 00048400 */  sll        $s0, $a0, 16
-/* A304 8009F704 3C0400D4 */  lui        $a0, %hi(D_D46ED0)
-/* A308 8009F708 24846ED0 */  addiu      $a0, $a0, %lo(D_D46ED0)
+/* A304 8009F704 3C0400D4 */  lui        $a0, %hi(Objects_ROM_START)
+/* A308 8009F708 24846ED0 */  addiu      $a0, $a0, %lo(Objects_ROM_START)
 /* A30C 8009F70C 3C05800F */  lui        $a1, %hi(D_800EF140)
 /* A310 8009F710 24A5F140 */  addiu      $a1, $a1, %lo(D_800EF140)
 /* A314 8009F714 00C09821 */  addu       $s3, $a2, $zero
@@ -32,8 +32,8 @@ glabel func_8009F6B0
 /* A328 8009F728 02403821 */   addu      $a3, $s2, $zero
 /* A32C 8009F72C 3C04801B */  lui        $a0, (0x801BE000 >> 16)
 /* A330 8009F730 3484E000 */  ori        $a0, $a0, (0x801BE000 & 0xFFFF)
-/* A334 8009F734 3C0500EA */  lui        $a1, %hi(D_E99380)
-/* A338 8009F738 24A59380 */  addiu      $a1, $a1, %lo(D_E99380)
+/* A334 8009F734 3C0500EA */  lui        $a1, %hi(BLOCK07_ROM_START)
+/* A338 8009F738 24A59380 */  addiu      $a1, $a1, %lo(BLOCK07_ROM_START)
 /* A33C 8009F73C 3C06800F */  lui        $a2, %hi(D_800F00A0)
 /* A340 8009F740 24C600A0 */  addiu      $a2, $a2, %lo(D_800F00A0)
 /* A344 8009F744 02003821 */  addu       $a3, $s0, $zero

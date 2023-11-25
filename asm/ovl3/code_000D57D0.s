@@ -176,8 +176,8 @@ glabel func_8002C31C_ovl3
 /* D5A40 8002C530 34420400 */  ori        $v0, $v0, 0x400
 /* D5A44 8002C534 A462001E */  sh         $v0, 0x1E($v1)
 .L8002C538_ovl3:
-/* D5A48 8002C538 3C04001E */  lui        $a0, %hi(D_1D9000)
-/* D5A4C 8002C53C 24849000 */  addiu      $a0, $a0, %lo(D_1D9000)
+/* D5A48 8002C538 3C04001E */  lui        $a0, %hi(Image_ROM_START)
+/* D5A4C 8002C53C 24849000 */  addiu      $a0, $a0, %lo(Image_ROM_START)
 /* D5A50 8002C540 3C05800D */  lui        $a1, %hi(D_800D6AD0)
 /* D5A54 8002C544 24A56AD0 */  addiu      $a1, $a1, %lo(D_800D6AD0)
 /* D5A58 8002C548 26060586 */  addiu      $a2, $s0, 0x586

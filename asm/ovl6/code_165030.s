@@ -97,8 +97,8 @@ glabel func_8003B2D0_ovl6
 /* 16516C 8003B40C 02609021 */  addu       $s2, $s3, $zero
 /* 165170 8003B410 00008821 */  addu       $s1, $zero, $zero
 .L8003B414_ovl6:
-/* 165174 8003B414 3C04001E */  lui        $a0, %hi(D_1D9000)
-/* 165178 8003B418 24849000 */  addiu      $a0, $a0, %lo(D_1D9000)
+/* 165174 8003B414 3C04001E */  lui        $a0, %hi(Image_ROM_START)
+/* 165178 8003B418 24849000 */  addiu      $a0, $a0, %lo(Image_ROM_START)
 /* 16517C 8003B41C 3C05800D */  lui        $a1, %hi(D_800D6AD0)
 /* 165180 8003B420 24A56AD0 */  addiu      $a1, $a1, %lo(D_800D6AD0)
 /* 165184 8003B424 3C06800E */  lui        $a2, %hi(D_800E4250)

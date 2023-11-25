@@ -3357,6 +3357,13 @@ segments:
     - [0x0060CB78, bin]
   # PALETTE FILES
   # INFORMATION OBTAINED FROM MIDWAYDEC, BY ZOINKITY
+  - name: Palettes
+    type: code
+    folder: Palettes
+    overlay: yes
+    start: 0x0060CB80
+    subalign: 8
+    subsegments:
     - [0x0060CB80, bin, Palettes/0000.pal]
     - [0x0060CBA0, bin, Palettes/0001.pal]
     - [0x0060CBC0, bin, Palettes/0002.pal]
@@ -7626,7 +7633,7 @@ segments:
   
   # BLOCK 08, CONTENTS UNKNOWN
   # INFORMATION OBTAINED FROM MIDWAYDEC, BY ZOINKITY
-  - name: BLOCK8
+  - name: BLOCK08
     type: code
     folder: BLOCK08
     overlay: yes

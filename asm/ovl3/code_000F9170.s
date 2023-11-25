@@ -5275,8 +5275,8 @@ glabel func_800540FC_ovl3
 /* FE20C 80054CFC 0C00DFE6 */  jal        func_80037F98_ovl3
 /* FE210 80054D00 A6B1007A */   sh        $s1, 0x7A($s5)
 /* FE214 80054D04 8EA20004 */  lw         $v0, 0x4($s5)
-/* FE218 80054D08 3C13001E */  lui        $s3, %hi(D_1D9000)
-/* FE21C 80054D0C 26739000 */  addiu      $s3, $s3, %lo(D_1D9000)
+/* FE218 80054D08 3C13001E */  lui        $s3, %hi(Image_ROM_START)
+/* FE21C 80054D0C 26739000 */  addiu      $s3, $s3, %lo(Image_ROM_START)
 /* FE220 80054D10 02602021 */  addu       $a0, $s3, $zero
 /* FE224 80054D14 A0540067 */  sb         $s4, 0x67($v0)
 /* FE228 80054D18 8EA30004 */  lw         $v1, 0x4($s5)
@@ -5609,8 +5609,8 @@ glabel func_800540FC_ovl3
 /* FE73C 8005522C 0C00DFE6 */  jal        func_80037F98_ovl3
 /* FE740 80055230 A6B0007A */   sh        $s0, 0x7A($s5)
 /* FE744 80055234 8EA20004 */  lw         $v0, 0x4($s5)
-/* FE748 80055238 3C14001E */  lui        $s4, %hi(D_1D9000)
-/* FE74C 8005523C 26949000 */  addiu      $s4, $s4, %lo(D_1D9000)
+/* FE748 80055238 3C14001E */  lui        $s4, %hi(Image_ROM_START)
+/* FE74C 8005523C 26949000 */  addiu      $s4, $s4, %lo(Image_ROM_START)
 /* FE750 80055240 02802021 */  addu       $a0, $s4, $zero
 /* FE754 80055244 A0530067 */  sb         $s3, 0x67($v0)
 /* FE758 80055248 8EA30004 */  lw         $v1, 0x4($s5)

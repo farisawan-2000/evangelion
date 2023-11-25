@@ -34,7 +34,7 @@ glabel func_8009930C
 /* 3F88 80099388 24101000 */  addiu      $s0, $zero, 0x1000
 .L8009938C:
 /* 3F8C 8009938C 02202021 */  addu       $a0, $s1, $zero
-/* 3F90 80099390 0C02F4C4 */  jal        func_800BD310
+/* 3F90 80099390 0C02F4C4 */  jal        osInvalDCache
 /* 3F94 80099394 02002821 */   addu      $a1, $s0, $zero
 /* 3F98 80099398 27A40020 */  addiu      $a0, $sp, 0x20
 /* 3F9C 8009939C 00002821 */  addu       $a1, $zero, $zero
@@ -75,7 +75,7 @@ glabel func_8009930C
 /* 4020 80099420 24101000 */  addiu      $s0, $zero, 0x1000
 .L80099424:
 /* 4024 80099424 02202021 */  addu       $a0, $s1, $zero
-/* 4028 80099428 0C02F4C4 */  jal        func_800BD310
+/* 4028 80099428 0C02F4C4 */  jal        osInvalDCache
 /* 402C 8009942C 02002821 */   addu      $a1, $s0, $zero
 /* 4030 80099430 27A40020 */  addiu      $a0, $sp, 0x20
 /* 4034 80099434 00002821 */  addu       $a1, $zero, $zero

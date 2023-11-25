@@ -51,3 +51,65 @@ osInvalDCache = 0x800BD310; // type:func
 // rcp.h and r4300.h
 UT_VEC = 0x80000000; // type:func
 
+// ovl rom addresses
+ovl1_ROM_START = 0x00069EE0;
+ovl2_ROM_START = 0x00074BB0;
+ovl3_ROM_START = 0x000CF110;
+ovl4_ROM_START = 0x00113B10;
+ovl5_ROM_START = 0x00117A00;
+ovl6_ROM_START = 0x0014F960;
+ovl7_ROM_START = 0x00175640;
+ovl8_ROM_START = 0x001A1880;
+
+// asset ROM addresses
+Font_ROM_START = 0x001BB280;
+Image_ROM_START = 0x001D9000;
+Palettes_ROM_START = 0x0060CB80;
+BLOCK04_ROM_START = 0x006256D0;
+BLOCK05_ROM_START = 0x007D6B00;
+Objects_ROM_START = 0x00D46ED0;
+BLOCK07_ROM_START = 0x00E99380;
+BLOCK08_ROM_START = 0x00EBF700;
+Sound_effects_ptr_ROM_START = 0xEC08E0;
+Sound_effects_wbk_ROM_START = 0xEC9060;
+Sound_effects_tbl_ROM_START = 0x11D7500;
+Sound_voice_ptr_ROM_START = 0x11D89E0;
+Sound_voice_wbk_ROM_START = 0x11E54C0;
+Sound_voice_tbl_ROM_START = 0x1687B20;
+Sound_sndfnt1_ptr_ROM_START = 0x1689D50;
+Sound_sndfnt1_wbk_ROM_START = 0x1692C50;
+Sound_sndfnt2_ptr_ROM_START = 0x1955CD0;
+Sound_sndfnt2_wbk_ROM_START = 0x195E4C0;
+Sound_soundbank_01_bfx_ROM_START = 0x1BD5660;
+Sound_soundbank_02_bfx_ROM_START = 0x1BD7670;
+Sound_soundbank_03_bfx_ROM_START = 0x1BE1790;
+Sound_soundbank_04_bfx_ROM_START = 0x1BE8A80;
+Sound_soundbank_05_bfx_ROM_START = 0x1BEB9C0;
+Sound_soundbank_06_bfx_ROM_START = 0x1BF2150;
+Sound_soundbank_07_bfx_ROM_START = 0x1BF2680;
+Sound_soundbank_08_bfx_ROM_START = 0x1BF3020;
+Sound_soundbank_09_bfx_ROM_START = 0x1BF39F0;
+Sound_soundbank_10_bfx_ROM_START = 0x1BF6F00;
+Sound_soundbank_11_bfx_ROM_START = 0x1BFAC30;
+Sound_soundbank_12_bfx_ROM_START = 0x1BFDCB0;
+Sound_soundbank_13_bfx_ROM_START = 0x1C05280;
+Sound_soundbank_14_bfx_ROM_START = 0x1C08AA0;
+Sound_soundbank_15_bfx_ROM_START = 0x1C0F350;
+Sound_soundbank_16_bfx_ROM_START = 0x1C10250;
+Sound_soundbank_17_bfx_ROM_START = 0x1C1A3B0;
+Sound_soundbank_18_bfx_ROM_START = 0x1C1A750;
+Sound_soundbank_19_bfx_ROM_START = 0x1C1FDD0;
+Sound_soundbank_20_bfx_ROM_START = 0x1C21530;
+Sound_soundbank_21_bfx_ROM_START = 0x1C255E0;
+Sound_soundbank_22_bfx_ROM_START = 0x1C29390;
+Sound_soundbank_23_bfx_ROM_START = 0x1C2BE60;
+Sound_soundbank_24_bfx_ROM_START = 0x1C2DE70;
+Sound_soundbank_24_bfx_ROM_END = 0x1C31B40;
+
+// ovl1_ROM_END = 0x00074BB0;
+// ovl2_ROM_END = 0x000CF110;
+// ovl3_ROM_END = 0x00113B10;
+// ovl4_ROM_END = 0x00117A00;
+// ovl5_ROM_END = 0x0014F960;
+// ovl6_ROM_END = 0x00175640;
+// ovl7_ROM_END = 0x001A1880;

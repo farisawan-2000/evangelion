@@ -1,8 +1,8 @@
 glabel func_8009EC40
 /* 9840 8009EC40 27BDFF98 */  addiu      $sp, $sp, -0x68
 /* 9844 8009EC44 AFA4001C */  sw         $a0, 0x1C($sp)
-/* 9848 8009EC48 3C04007D */  lui        $a0, %hi(D_7D6B00)
-/* 984C 8009EC4C 24846B00 */  addiu      $a0, $a0, %lo(D_7D6B00)
+/* 9848 8009EC48 3C04007D */  lui        $a0, %hi(BLOCK05_ROM_START)
+/* 984C 8009EC4C 24846B00 */  addiu      $a0, $a0, %lo(BLOCK05_ROM_START)
 /* 9850 8009EC50 AFB70054 */  sw         $s7, 0x54($sp)
 /* 9854 8009EC54 93B7007B */  lbu        $s7, 0x7B($sp)
 /* 9858 8009EC58 00051400 */  sll        $v0, $a1, 16

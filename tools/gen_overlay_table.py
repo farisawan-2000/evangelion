@@ -28,8 +28,8 @@ c = 1
 for i in range(len(fb))[:-8:40]:
     # slce = binascii.hexlify(fb[i:i+4]).decode('ascii').upper()
     # print(f"number {i}")
-    # print("\t", g(fb[i:i + 4]))
-    # print("\t", g(fb[i + 4:i + 8]))
+    print(f"ovl{c}_ROM_START = 0x{g(fb[i:i + 4])};")
+    print(f"ovl{c}_ROM_END = 0x{g(fb[i + 4:i + 8])};")
     # print("\t", g(fb[i + 8:i + 12]))
     # print("\t", g(fb[i + 12:i + 16]))
     # print("\t", g(fb[i + 12:i + 16]))
@@ -39,8 +39,8 @@ for i in range(len(fb))[:-8:40]:
     # print("\t", g(fb[i + 28:i + 32]))
     # print("\t", g(fb[i + 32:i + 36]))
     # print("\t", g(fb[i + 36:i + 40]))
-    print("bss_size:", str(hex(h(fb[i + 36:i + 40]) - h(fb[i + 32:i + 36]))))
-    print(f"- {{type: bss, vram: 0x{g(fb[i + 32:i + 36])}, name: ovl{c}/ovl{c}}}")
+    # print("bss_size:", str(hex(h(fb[i + 36:i + 40]) - h(fb[i + 32:i + 36]))))
+    # print(f"- {{type: bss, vram: 0x{g(fb[i + 32:i + 36])}, name: ovl{c}/ovl{c}}}")
     # print(binstr % (
     #   c,
     #   g(fb[i:i + 4]),

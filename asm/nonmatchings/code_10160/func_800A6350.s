@@ -3,8 +3,8 @@ glabel func_800A6350
 /* 10F54 800A6354 AFBF0010 */  sw         $ra, 0x10($sp)
 /* 10F58 800A6358 00043400 */  sll        $a2, $a0, 16
 /* 10F5C 800A635C 30A700FF */  andi       $a3, $a1, 0xFF
-/* 10F60 800A6360 3C040061 */  lui        $a0, %hi(D_60CB80)
-/* 10F64 800A6364 2484CB80 */  addiu      $a0, $a0, %lo(D_60CB80)
+/* 10F60 800A6360 3C040061 */  lui        $a0, %hi(Palettes_ROM_START)
+/* 10F64 800A6364 2484CB80 */  addiu      $a0, $a0, %lo(Palettes_ROM_START)
 /* 10F68 800A6368 3C05800E */  lui        $a1, %hi(D_800DD820)
 /* 10F6C 800A636C 24A5D820 */  addiu      $a1, $a1, %lo(D_800DD820)
 /* 10F70 800A6370 0C02648E */  jal        func_80099238

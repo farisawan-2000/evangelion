@@ -363,8 +363,8 @@ glabel func_800388B4_ovl6
 /* 162878 80038B18 00008821 */  addu       $s1, $zero, $zero
 /* 16287C 80038B1C 02609021 */  addu       $s2, $s3, $zero
 .L80038B20_ovl6:
-/* 162880 80038B20 3C04001E */  lui        $a0, %hi(D_1D9000)
-/* 162884 80038B24 24849000 */  addiu      $a0, $a0, %lo(D_1D9000)
+/* 162880 80038B20 3C04001E */  lui        $a0, %hi(Image_ROM_START)
+/* 162884 80038B24 24849000 */  addiu      $a0, $a0, %lo(Image_ROM_START)
 /* 162888 80038B28 3C05800D */  lui        $a1, %hi(D_800D6AD0)
 /* 16288C 80038B2C 24A56AD0 */  addiu      $a1, $a1, %lo(D_800D6AD0)
 /* 162890 80038B30 3C06800E */  lui        $a2, %hi(D_800E3ED4)
@@ -421,8 +421,8 @@ glabel func_800388B4_ovl6
 /* 162954 80038BF4 2A220004 */  slti       $v0, $s1, 0x4
 /* 162958 80038BF8 1440FFF9 */  bnez       $v0, .L80038BE0_ovl6
 /* 16295C 80038BFC 26100078 */   addiu     $s0, $s0, 0x78
-/* 162960 80038C00 3C10001E */  lui        $s0, %hi(D_1D9000)
-/* 162964 80038C04 26109000 */  addiu      $s0, $s0, %lo(D_1D9000)
+/* 162960 80038C00 3C10001E */  lui        $s0, %hi(Image_ROM_START)
+/* 162964 80038C04 26109000 */  addiu      $s0, $s0, %lo(Image_ROM_START)
 /* 162968 80038C08 02002021 */  addu       $a0, $s0, $zero
 /* 16296C 80038C0C 3C06800E */  lui        $a2, %hi(D_800E4178)
 /* 162970 80038C10 94C64178 */  lhu        $a2, %lo(D_800E4178)($a2)
