@@ -46,7 +46,7 @@ glabel func_800AB6C0
 /* 16370 800AB770 0C02F4F0 */  jal        func_800BD3C0
 /* 16374 800AB774 02358823 */   subu      $s1, $s1, $s5
 /* 16378 800AB778 02602021 */  addu       $a0, $s3, $zero
-/* 1637C 800AB77C 0C02F4C4 */  jal        osInvalDCache
+/* 1637C 800AB77C 0C02F4C4 */  jal        func_800BD310
 /* 16380 800AB780 02002821 */   addu      $a1, $s0, $zero
 /* 16384 800AB784 02C02021 */  addu       $a0, $s6, $zero
 /* 16388 800AB788 02802821 */  addu       $a1, $s4, $zero

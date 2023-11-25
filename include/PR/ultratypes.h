@@ -8,6 +8,7 @@
 #define TRUE 1
 #define FALSE 0
 
+#ifdef _LANGUAGE_C
 typedef signed char            s8;
 typedef unsigned char          u8;
 typedef signed short int       s16;
@@ -38,5 +39,7 @@ typedef s32 ptrdiff_t;
 #else
 #include <stddef.h>
 #endif
+
+#endif // _LANGUAGE_C
 
 #endif

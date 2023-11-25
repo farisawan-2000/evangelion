@@ -28,7 +28,7 @@ segments:
     start: 0x0040
     vram: 0xA4000040
     subsegments:
-    - [0x0040, asm, boot]
+    - [0x0040, hasm, ipl3]
     - [0x0B70, data, bootcode_font]
   - name: main
     type: code
@@ -209,6 +209,7 @@ segments:
     - [0x350D0, c, code_350D0]
     - [0x354B0, data]
     - [0x3ECD0, data]
+    - [0x69EE0]
     - {type: bss, vram: 0x800FF2E0, name: mainseg}
 
   - name: ovl1
@@ -222,6 +223,7 @@ segments:
     subsegments:
     - [0x00069EE0, asm, ovl1/code_00069EE0]
     - [0x72d80, data, ovl1/ovl1]
+    - [0x74BB0]
     - {type: bss, vram: 0x800308D0, name: ovl1/ovl1}
 
   # - name: code_00069EE0_data
@@ -239,6 +241,7 @@ segments:
     subsegments:
     - [0x00074BB0, asm, ovl2/code_00074BB0]
     - [0xb8b20, data, ovl2/ovl2]
+    - [0xCF110]
     - {type: bss, vram: 0x80080160, name: ovl2/ovl2}
     
   - name: ovl3
@@ -276,6 +279,7 @@ segments:
     - [0x10A7A0, asm, ovl3/code_0010A7A0]
     - [0x10DC10, asm, ovl3/code_0010DC10]
     - [0x110570, data, ovl3/ovl3]
+    - [0x113B10]
     - {type: bss, vram: 0x8006A600, name: ovl3/ovl3}
     
   - name: ovl4
@@ -291,6 +295,7 @@ segments:
     - [0x113CB0, asm, ovl4/code_113CB0]
     - [0x116DD0, asm, ovl4/code_116DD0]
     - [0x1173c0, data, ovl4/ovl4]
+    - [0x117A00]
     - {type: bss, vram: 0x80029AF0, name: ovl4/ovl4}
     
   - name: ovl5
@@ -372,6 +377,7 @@ segments:
     - [0x142FB0, asm, ovl5/code_142FB0]
     - [0x143360, asm, ovl5/code_143360]
     - [0x1436f0, data, ovl5/ovl5]
+    - [0x14F960]
     - {type: bss, vram: 0x8005DB60, name: ovl5/ovl5}
     
   - name: ovl6
@@ -404,6 +410,7 @@ segments:
     - [0x167A70, asm, ovl6/code_167A70]
     - [0x167CC0, asm, ovl6/code_167CC0]
     - [0x168230, data, ovl6/ovl6]
+    - [0x175640]
     - {type: bss, vram: 0x8004B8E0, name: ovl6/ovl6}
     
   - name: ovl7
@@ -440,6 +447,7 @@ segments:
     - [0x18EF90, asm, ovl7/code_18EF90]
     - [0x190050, asm, ovl7/code_190050]
     - [0x1907e0, data, ovl7/ovl7]
+    - [0x1A1880]
     - {type: bss, vram: 0x80051E40, name: ovl7/ovl7}
 
   - name: ovl8
@@ -449,9 +457,12 @@ segments:
     start: 0x001A1880
     vram: 0x8038F800
     exclusive_ram_id: 0x8038F800
+    bss_size: 0xACC0
     subsegments:
     - [0x1A1880, asm, ovl8/code_1A1880]
     - [0x1B06B0, data, ovl8/ovl8]
+    - [0x1BB280]
+    - {type: bss, vram: 0x803A9200, name: ovl8/ovl8}
 
   # FONT GRAPHICS
   # INFORMATION OBTAINED FROM MIDWAYDEC, BY ZOINKITY

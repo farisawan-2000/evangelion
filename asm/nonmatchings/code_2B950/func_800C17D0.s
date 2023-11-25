@@ -36,7 +36,7 @@ glabel func_800C17D0
 /* 2C448 800C1848 16000005 */  bnez       $s0, .L800C1860
 /* 2C44C 800C184C 00001021 */   addu      $v0, $zero, $zero
 /* 2C450 800C1850 02202021 */  addu       $a0, $s1, $zero
-/* 2C454 800C1854 0C02F4C4 */  jal        osInvalDCache
+/* 2C454 800C1854 0C02F4C4 */  jal        func_800BD310
 /* 2C458 800C1858 24050040 */   addiu     $a1, $zero, 0x40
 /* 2C45C 800C185C 00001021 */  addu       $v0, $zero, $zero
 .L800C1860:

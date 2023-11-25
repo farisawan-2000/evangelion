@@ -23,7 +23,7 @@ glabel func_80099174
 /* 3DC4 800991C4 24101000 */  addiu      $s0, $zero, 0x1000
 .L800991C8:
 /* 3DC8 800991C8 02202021 */  addu       $a0, $s1, $zero
-/* 3DCC 800991CC 0C02F4C4 */  jal        osInvalDCache
+/* 3DCC 800991CC 0C02F4C4 */  jal        func_800BD310
 /* 3DD0 800991D0 02002821 */   addu      $a1, $s0, $zero
 /* 3DD4 800991D4 27A40020 */  addiu      $a0, $sp, 0x20
 /* 3DD8 800991D8 00002821 */  addu       $a1, $zero, $zero

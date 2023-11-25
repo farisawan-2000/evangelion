@@ -16,7 +16,7 @@ glabel func_800B6D00
 /* 21938 800B6D38 02402021 */  addu       $a0, $s2, $zero
 /* 2193C 800B6D3C 02202821 */  addu       $a1, $s1, $zero
 /* 21940 800B6D40 A3A00012 */  sb         $zero, 0x12($sp)
-/* 21944 800B6D44 0C02F4C4 */  jal        osInvalDCache
+/* 21944 800B6D44 0C02F4C4 */  jal        func_800BD310
 /* 21948 800B6D48 AFB00014 */   sw        $s0, 0x14($sp)
 /* 2194C 800B6D4C 12200015 */  beqz       $s1, .L800B6DA4
 /* 21950 800B6D50 2E224001 */   sltiu     $v0, $s1, 0x4001

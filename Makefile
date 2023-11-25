@@ -97,7 +97,7 @@ $(BUILD_DIR)/src/code_17E80.o: OPT_FLAGS = -O1
 $(BUILD_DIR)/src/code_13610.o: OPT_FLAGS = -O2
 
 $(BUILD_DIR)/%.o: %.s $(SZP_FILES)
-	$(AS) $(ASFLAGS) -o $@ $<
+	$(CROSS)gcc -c -x assembler-with-cpp $(ASFLAGS) -o $@ $<
 
 $(BUILD_DIR)/%.i : %.c | $(SRC_BUILD_DIRS)
 	@$(CC_CHECK) -MMD -MP -MT $@ -MF $(BUILD_DIR)/$*.d $<
@@ -105,7 +105,7 @@ $(BUILD_DIR)/%.i : %.c | $(SRC_BUILD_DIRS)
 
 #$(STRIP) $@ -N $(<:.i=.c)
 $(BUILD_DIR)/%.o : $(BUILD_DIR)/%.i | $(SRC_BUILD_DIRS)
-	$(CC) $(KMC_CFLAGS) -I asm/nonmatchings/ -o $@ $<
+	$(CC) $(KMC_CFLAGS) -I. -I asm/nonmatchings/ -o $@ $<
 
 $(BUILD_DIR)/%.o: %.bin
 	$(LD) -r -b binary -o $@ $<
