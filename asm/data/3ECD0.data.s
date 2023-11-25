@@ -1377,9 +1377,9 @@ glabel D_800D4DF4
 /* 3FB4E 800D4F4E */ .short 0x0000
 .size D_800D4DF4, . - D_800D4DF4
 
-glabel D_800D4F50
+glabel gOverlayTable
 /* 3FB50 800D4F50 */ .word 0x00069EE0
-.size D_800D4F50, . - D_800D4F50
+.size gOverlayTable, . - gOverlayTable
 
 glabel D_800D4F54
 /* 3FB54 800D4F54 */ .word 0x00074BB0

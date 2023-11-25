@@ -13,9 +13,9 @@ glabel func_800AB6C0
 /* 162EC 800AB6EC AFB20018 */  sw         $s2, 0x18($sp)
 /* 162F0 800AB6F0 AFB10014 */  sw         $s1, 0x14($sp)
 /* 162F4 800AB6F4 AFB00010 */  sw         $s0, 0x10($sp)
-/* 162F8 800AB6F8 3C16800D */  lui        $s6, %hi(D_800D4F50)
+/* 162F8 800AB6F8 3C16800D */  lui        $s6, %hi(gOverlayTable)
 /* 162FC 800AB6FC 02C2B021 */  addu       $s6, $s6, $v0
-/* 16300 800AB700 8ED64F50 */  lw         $s6, %lo(D_800D4F50)($s6)
+/* 16300 800AB700 8ED64F50 */  lw         $s6, %lo(gOverlayTable)($s6)
 /* 16304 800AB704 3C04800D */  lui        $a0, %hi(D_800D4F60)
 /* 16308 800AB708 00822021 */  addu       $a0, $a0, $v0
 /* 1630C 800AB70C 8C844F60 */  lw         $a0, %lo(D_800D4F60)($a0)
