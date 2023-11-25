@@ -97,7 +97,8 @@ $(BUILD_DIR)/src/code_17E80.o: OPT_FLAGS = -O1
 $(BUILD_DIR)/src/code_13610.o: OPT_FLAGS = -O2
 
 $(BUILD_DIR)/%.o: %.s $(SZP_FILES)
-	$(CROSS)gcc -c -x assembler-with-cpp $(ASFLAGS) -o $@ $<
+	$(PYTHON) tools/str2hex.py $< > $(@:.o=.i)
+	$(CROSS)gcc -c -x assembler-with-cpp $(ASFLAGS) -o $@ $(@:.o=.i)
 
 $(BUILD_DIR)/%.i : %.c | $(SRC_BUILD_DIRS)
 	@$(CC_CHECK) -MMD -MP -MT $@ -MF $(BUILD_DIR)/$*.d $<
