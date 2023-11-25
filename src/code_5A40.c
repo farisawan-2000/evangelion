@@ -1,3 +1,4 @@
+// c_flag_g2
 #include "common.h"
 
 INCLUDE_ASM("asm/nonmatchings/code_5A40", func_8009AE40);
@@ -8,18 +9,20 @@ INCLUDE_ASM("asm/nonmatchings/code_5A40", func_8009B268);
 
 INCLUDE_ASM("asm/nonmatchings/code_5A40", func_8009B43C);
 
-INCLUDE_ASM("asm/nonmatchings/code_5A40", func_8009B538);
-// extern u32 *D_800D3A70[];
-// extern u32 *D_800D3A90[];
-// // extern ? D_800D3A94;
+typedef struct {
+    u8 *romStart;
+    u8 *romEnd;
+} BankTable;
+extern BankTable PointerBankTables[];
+extern BankTable WaveBankTables[];
 
-// void func_8009B538(s32 arg0) {
-//     func_800ADBA0(
-//         D_800D3A90[arg0 * 2],
-//         D_800D3A90[arg0 * 2 + 1] - D_800D3A90[arg0 * 2],
-//         D_800D3A70[arg0 * 2]
-//     );
-// }
+void func_8009B538(s32 arg0) {
+    func_800ADBA0(
+        PointerBankTables[arg0].romStart,
+        PointerBankTables[arg0].romEnd - PointerBankTables[arg0].romStart,
+        WaveBankTables[arg0].romStart
+    );
+}
 
 INCLUDE_ASM("asm/nonmatchings/code_5A40", func_8009B584);
 
