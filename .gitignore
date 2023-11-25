@@ -6,9 +6,7 @@ build/*
 expected/*
 .splat_cache
 asm/.splat_cache
-undefined_syms_auto.txt
-undefined_funcs_auto.txt
-evangelion.ld
+tools/__pycache__/*
 tools/slienc
 tools/n64crc
 tools/_gfxdis
