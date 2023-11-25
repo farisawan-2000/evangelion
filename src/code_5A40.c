@@ -9,6 +9,17 @@ INCLUDE_ASM("asm/nonmatchings/code_5A40", func_8009B268);
 INCLUDE_ASM("asm/nonmatchings/code_5A40", func_8009B43C);
 
 INCLUDE_ASM("asm/nonmatchings/code_5A40", func_8009B538);
+// extern u32 *D_800D3A70[];
+// extern u32 *D_800D3A90[];
+// // extern ? D_800D3A94;
+
+// void func_8009B538(s32 arg0) {
+//     func_800ADBA0(
+//         D_800D3A90[arg0 * 2],
+//         D_800D3A90[arg0 * 2 + 1] - D_800D3A90[arg0 * 2],
+//         D_800D3A70[arg0 * 2]
+//     );
+// }
 
 INCLUDE_ASM("asm/nonmatchings/code_5A40", func_8009B584);
 

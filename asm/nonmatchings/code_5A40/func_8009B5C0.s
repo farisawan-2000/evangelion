@@ -10,21 +10,21 @@ glabel func_8009B5C0
 /* 61E0 8009B5E0 00220821 */  addu       $at, $at, $v0
 /* 61E4 8009B5E4 94224134 */  lhu        $v0, %lo(D_800D4134)($at)
 /* 61E8 8009B5E8 000210C0 */  sll        $v0, $v0, 3
-/* 61EC 8009B5EC 3C04800D */  lui        $a0, %hi(D_800D3A90)
+/* 61EC 8009B5EC 3C04800D */  lui        $a0, %hi(PointerBankTables)
 /* 61F0 8009B5F0 00822021 */  addu       $a0, $a0, $v0
-/* 61F4 8009B5F4 8C843A90 */  lw         $a0, %lo(D_800D3A90)($a0)
+/* 61F4 8009B5F4 8C843A90 */  lw         $a0, %lo(PointerBankTables)($a0)
 /* 61F8 8009B5F8 3C05800D */  lui        $a1, %hi(D_800D3A94)
 /* 61FC 8009B5FC 00A22821 */  addu       $a1, $a1, $v0
 /* 6200 8009B600 8CA53A94 */  lw         $a1, %lo(D_800D3A94)($a1)
-/* 6204 8009B604 3C06800D */  lui        $a2, %hi(D_800D3A70)
+/* 6204 8009B604 3C06800D */  lui        $a2, %hi(WaveBankTables)
 /* 6208 8009B608 00C23021 */  addu       $a2, $a2, $v0
-/* 620C 8009B60C 8CC63A70 */  lw         $a2, %lo(D_800D3A70)($a2)
+/* 620C 8009B60C 8CC63A70 */  lw         $a2, %lo(WaveBankTables)($a2)
 /* 6210 8009B610 0C02B6E8 */  jal        func_800ADBA0
 /* 6214 8009B614 00A42823 */   subu      $a1, $a1, $a0
 /* 6218 8009B618 001010C0 */  sll        $v0, $s0, 3
-/* 621C 8009B61C 3C05800D */  lui        $a1, %hi(D_800D3AC0)
+/* 621C 8009B61C 3C05800D */  lui        $a1, %hi(SoundFXTables)
 /* 6220 8009B620 00A22821 */  addu       $a1, $a1, $v0
-/* 6224 8009B624 8CA53AC0 */  lw         $a1, %lo(D_800D3AC0)($a1)
+/* 6224 8009B624 8CA53AC0 */  lw         $a1, %lo(SoundFXTables)($a1)
 /* 6228 8009B628 3C06800D */  lui        $a2, %hi(D_800D3AC4)
 /* 622C 8009B62C 00C23021 */  addu       $a2, $a2, $v0
 /* 6230 8009B630 8CC63AC4 */  lw         $a2, %lo(D_800D3AC4)($a2)

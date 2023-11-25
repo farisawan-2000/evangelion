@@ -9407,87 +9407,87 @@ glabel D_800D3A68
 /* 3E66E 800D3A6E */ .short 0x0000
 .size D_800D3A68, . - D_800D3A68
 
-glabel D_800D3A70
+glabel WaveBankTables
 /* 3E670 800D3A70 */ .word Sound_effects_wbk_ROM_START
-/* 3E674 800D3A74 */ .word Sound_effects_tbl_ROM_START
+/* 3E674 800D3A74 */ .word Sound_effects_wbk_ROM_END
 /* 3E678 800D3A78 */ .word Sound_voice_wbk_ROM_START
-/* 3E67C 800D3A7C */ .word Sound_voice_tbl_ROM_START
-/* 3E680 800D3A80 */ .word 0x01692C50
-/* 3E684 800D3A84 */ .word 0x01955CD0
-/* 3E688 800D3A88 */ .word 0x0195E4C0
-/* 3E68C 800D3A8C */ .word 0x01BD5660
-.size D_800D3A70, . - D_800D3A70
+/* 3E67C 800D3A7C */ .word Sound_voice_wbk_ROM_END
+/* 3E680 800D3A80 */ .word Sound_sndfnt1_wbk_ROM_START
+/* 3E684 800D3A84 */ .word Sound_sndfnt1_wbk_ROM_END
+/* 3E688 800D3A88 */ .word Sound_sndfnt2_wbk_ROM_START
+/* 3E68C 800D3A8C */ .word Sound_sndfnt2_wbk_ROM_END
+.size WaveBankTables, . - WaveBankTables
 
-glabel D_800D3A90
+glabel PointerBankTables
 /* 3E690 800D3A90 */ .word Sound_effects_ptr_ROM_START
-.size D_800D3A90, . - D_800D3A90
+.size PointerBankTables, . - PointerBankTables
 
 glabel D_800D3A94
-/* 3E694 800D3A94 */ .word Sound_effects_wbk_ROM_START
+/* 3E694 800D3A94 */ .word Sound_effects_ptr_ROM_END
 /* 3E698 800D3A98 */ .word Sound_voice_ptr_ROM_START
-/* 3E69C 800D3A9C */ .word Sound_voice_wbk_ROM_START
+/* 3E69C 800D3A9C */ .word Sound_voice_ptr_ROM_END
 /* 3E6A0 800D3AA0 */ .word Sound_sndfnt1_ptr_ROM_START
-/* 3E6A4 800D3AA4 */ .word 0x01692C50
-/* 3E6A8 800D3AA8 */ .word 0x01955CD0
-/* 3E6AC 800D3AAC */ .word 0x0195E4C0
+/* 3E6A4 800D3AA4 */ .word Sound_sndfnt1_ptr_ROM_END
+/* 3E6A8 800D3AA8 */ .word Sound_sndfnt2_ptr_ROM_START
+/* 3E6AC 800D3AAC */ .word Sound_sndfnt2_ptr_ROM_END
 /* 3E6B0 800D3AB0 */ .word Sound_effects_tbl_ROM_START
-/* 3E6B4 800D3AB4 */ .word Sound_voice_ptr_ROM_START
+/* 3E6B4 800D3AB4 */ .word Sound_effects_tbl_ROM_END
 /* 3E6B8 800D3AB8 */ .word Sound_voice_tbl_ROM_START
-/* 3E6BC 800D3ABC */ .word Sound_sndfnt1_ptr_ROM_START
+/* 3E6BC 800D3ABC */ .word Sound_voice_tbl_ROM_END
 .size D_800D3A94, . - D_800D3A94
 
-glabel D_800D3AC0
-/* 3E6C0 800D3AC0 */ .word 0x01BD5660
-.size D_800D3AC0, . - D_800D3AC0
+glabel SoundFXTables
+/* 3E6C0 800D3AC0 */ .word Sound_soundbank_01_bfx_ROM_START
+.size SoundFXTables, . - SoundFXTables
 
 glabel D_800D3AC4
-/* 3E6C4 800D3AC4 */ .word 0x01BD7670
-/* 3E6C8 800D3AC8 */ .word 0x01BD7670
-/* 3E6CC 800D3ACC */ .word 0x01BE1790
-/* 3E6D0 800D3AD0 */ .word 0x01BE1790
-/* 3E6D4 800D3AD4 */ .word 0x01BE8A80
-/* 3E6D8 800D3AD8 */ .word 0x01BE8A80
-/* 3E6DC 800D3ADC */ .word 0x01BEB9C0
-/* 3E6E0 800D3AE0 */ .word 0x01BEB9C0
-/* 3E6E4 800D3AE4 */ .word 0x01BF2150
-/* 3E6E8 800D3AE8 */ .word 0x01BF2150
-/* 3E6EC 800D3AEC */ .word 0x01BF2680
-/* 3E6F0 800D3AF0 */ .word 0x01BF2680
-/* 3E6F4 800D3AF4 */ .word 0x01BF3020
-/* 3E6F8 800D3AF8 */ .word 0x01BF3020
-/* 3E6FC 800D3AFC */ .word 0x01BF39F0
-/* 3E700 800D3B00 */ .word 0x01BF39F0
-/* 3E704 800D3B04 */ .word 0x01BF6F00
-/* 3E708 800D3B08 */ .word 0x01BF6F00
-/* 3E70C 800D3B0C */ .word 0x01BFAC30
-/* 3E710 800D3B10 */ .word 0x01BFAC30
-/* 3E714 800D3B14 */ .word 0x01BFDCB0
-/* 3E718 800D3B18 */ .word 0x01BFDCB0
-/* 3E71C 800D3B1C */ .word 0x01C05280
-/* 3E720 800D3B20 */ .word 0x01C05280
-/* 3E724 800D3B24 */ .word 0x01C08AA0
-/* 3E728 800D3B28 */ .word 0x01C08AA0
-/* 3E72C 800D3B2C */ .word 0x01C0F350
-/* 3E730 800D3B30 */ .word 0x01C0F350
-/* 3E734 800D3B34 */ .word 0x01C10250
-/* 3E738 800D3B38 */ .word 0x01C10250
-/* 3E73C 800D3B3C */ .word 0x01C1A3B0
-/* 3E740 800D3B40 */ .word 0x01C1A3B0
-/* 3E744 800D3B44 */ .word 0x01C1A750
-/* 3E748 800D3B48 */ .word 0x01C1A750
-/* 3E74C 800D3B4C */ .word 0x01C1FDD0
-/* 3E750 800D3B50 */ .word 0x01C1FDD0
-/* 3E754 800D3B54 */ .word 0x01C21530
-/* 3E758 800D3B58 */ .word 0x01C21530
-/* 3E75C 800D3B5C */ .word 0x01C255E0
-/* 3E760 800D3B60 */ .word 0x01C255E0
-/* 3E764 800D3B64 */ .word 0x01C29390
-/* 3E768 800D3B68 */ .word 0x01C29390
-/* 3E76C 800D3B6C */ .word 0x01C2BE60
-/* 3E770 800D3B70 */ .word 0x01C2BE60
-/* 3E774 800D3B74 */ .word 0x01C2DE70
-/* 3E778 800D3B78 */ .word 0x01C2DE70
-/* 3E77C 800D3B7C */ .word 0x01C31B40
+/* 3E6C4 800D3AC4 */ .word Sound_soundbank_01_bfx_ROM_END
+/* 3E6C8 800D3AC8 */ .word Sound_soundbank_02_bfx_ROM_START
+/* 3E6CC 800D3ACC */ .word Sound_soundbank_02_bfx_ROM_END
+/* 3E6D0 800D3AD0 */ .word Sound_soundbank_03_bfx_ROM_START
+/* 3E6D4 800D3AD4 */ .word Sound_soundbank_03_bfx_ROM_END
+/* 3E6D8 800D3AD8 */ .word Sound_soundbank_04_bfx_ROM_START
+/* 3E6DC 800D3ADC */ .word Sound_soundbank_04_bfx_ROM_END
+/* 3E6E0 800D3AE0 */ .word Sound_soundbank_05_bfx_ROM_START
+/* 3E6E4 800D3AE4 */ .word Sound_soundbank_05_bfx_ROM_END
+/* 3E6E8 800D3AE8 */ .word Sound_soundbank_06_bfx_ROM_START
+/* 3E6EC 800D3AEC */ .word Sound_soundbank_06_bfx_ROM_END
+/* 3E6F0 800D3AF0 */ .word Sound_soundbank_07_bfx_ROM_START
+/* 3E6F4 800D3AF4 */ .word Sound_soundbank_07_bfx_ROM_END
+/* 3E6F8 800D3AF8 */ .word Sound_soundbank_08_bfx_ROM_START
+/* 3E6FC 800D3AFC */ .word Sound_soundbank_08_bfx_ROM_END
+/* 3E700 800D3B00 */ .word Sound_soundbank_09_bfx_ROM_START
+/* 3E704 800D3B04 */ .word Sound_soundbank_09_bfx_ROM_END
+/* 3E708 800D3B08 */ .word Sound_soundbank_10_bfx_ROM_START
+/* 3E70C 800D3B0C */ .word Sound_soundbank_10_bfx_ROM_END
+/* 3E710 800D3B10 */ .word Sound_soundbank_11_bfx_ROM_START
+/* 3E714 800D3B14 */ .word Sound_soundbank_11_bfx_ROM_END
+/* 3E718 800D3B18 */ .word Sound_soundbank_12_bfx_ROM_START
+/* 3E71C 800D3B1C */ .word Sound_soundbank_12_bfx_ROM_END
+/* 3E720 800D3B20 */ .word Sound_soundbank_13_bfx_ROM_START
+/* 3E724 800D3B24 */ .word Sound_soundbank_13_bfx_ROM_END
+/* 3E728 800D3B28 */ .word Sound_soundbank_14_bfx_ROM_START
+/* 3E72C 800D3B2C */ .word Sound_soundbank_14_bfx_ROM_END
+/* 3E730 800D3B30 */ .word Sound_soundbank_15_bfx_ROM_START
+/* 3E734 800D3B34 */ .word Sound_soundbank_15_bfx_ROM_END
+/* 3E738 800D3B38 */ .word Sound_soundbank_16_bfx_ROM_START
+/* 3E73C 800D3B3C */ .word Sound_soundbank_16_bfx_ROM_END
+/* 3E740 800D3B40 */ .word Sound_soundbank_17_bfx_ROM_START
+/* 3E744 800D3B44 */ .word Sound_soundbank_17_bfx_ROM_END
+/* 3E748 800D3B48 */ .word Sound_soundbank_18_bfx_ROM_START
+/* 3E74C 800D3B4C */ .word Sound_soundbank_18_bfx_ROM_END
+/* 3E750 800D3B50 */ .word Sound_soundbank_19_bfx_ROM_START
+/* 3E754 800D3B54 */ .word Sound_soundbank_19_bfx_ROM_END
+/* 3E758 800D3B58 */ .word Sound_soundbank_20_bfx_ROM_START
+/* 3E75C 800D3B5C */ .word Sound_soundbank_20_bfx_ROM_END
+/* 3E760 800D3B60 */ .word Sound_soundbank_21_bfx_ROM_START
+/* 3E764 800D3B64 */ .word Sound_soundbank_21_bfx_ROM_END
+/* 3E768 800D3B68 */ .word Sound_soundbank_22_bfx_ROM_START
+/* 3E76C 800D3B6C */ .word Sound_soundbank_22_bfx_ROM_END
+/* 3E770 800D3B70 */ .word Sound_soundbank_23_bfx_ROM_START
+/* 3E774 800D3B74 */ .word Sound_soundbank_23_bfx_ROM_END
+/* 3E778 800D3B78 */ .word Sound_soundbank_24_bfx_ROM_START
+/* 3E77C 800D3B7C */ .word Sound_soundbank_24_bfx_ROM_END
 .size D_800D3AC4, . - D_800D3AC4
 
 glabel D_800D3B80
