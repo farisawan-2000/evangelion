@@ -9420,9 +9420,6 @@ glabel WaveBankTables
 
 glabel PointerBankTables
 /* 3E690 800D3A90 */ .word Sound_effects_ptr_ROM_START
-.size PointerBankTables, . - PointerBankTables
-
-glabel D_800D3A94
 /* 3E694 800D3A94 */ .word Sound_effects_ptr_ROM_END
 /* 3E698 800D3A98 */ .word Sound_voice_ptr_ROM_START
 /* 3E69C 800D3A9C */ .word Sound_voice_ptr_ROM_END
@@ -9434,13 +9431,10 @@ glabel D_800D3A94
 /* 3E6B4 800D3AB4 */ .word Sound_effects_tbl_ROM_END
 /* 3E6B8 800D3AB8 */ .word Sound_voice_tbl_ROM_START
 /* 3E6BC 800D3ABC */ .word Sound_voice_tbl_ROM_END
-.size D_800D3A94, . - D_800D3A94
+.size PointerBankTables, . - PointerBankTables
 
 glabel SoundFXTables
 /* 3E6C0 800D3AC0 */ .word Sound_soundbank_01_bfx_ROM_START
-.size SoundFXTables, . - SoundFXTables
-
-glabel D_800D3AC4
 /* 3E6C4 800D3AC4 */ .word Sound_soundbank_01_bfx_ROM_END
 /* 3E6C8 800D3AC8 */ .word Sound_soundbank_02_bfx_ROM_START
 /* 3E6CC 800D3ACC */ .word Sound_soundbank_02_bfx_ROM_END
@@ -9488,7 +9482,7 @@ glabel D_800D3AC4
 /* 3E774 800D3B74 */ .word Sound_soundbank_23_bfx_ROM_END
 /* 3E778 800D3B78 */ .word Sound_soundbank_24_bfx_ROM_START
 /* 3E77C 800D3B7C */ .word Sound_soundbank_24_bfx_ROM_END
-.size D_800D3AC4, . - D_800D3AC4
+.size SoundFXTables, . - SoundFXTables
 
 glabel D_800D3B80
 /* 3E780 800D3B80 */ .word 0xFFFFFFFF
