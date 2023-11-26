@@ -30,6 +30,7 @@ typedef struct {
     u8 _02E;
     u8 unk2F;
 } UnkStruct80036494_1C_00;
+
 typedef struct {
     UnkStruct80036494_1C_00 *unk0;
     u32 _004;
@@ -40,12 +41,14 @@ typedef struct {
     u32 _018;
     u16 unk1C;
 } UnkStruct80036494_1C;
+
 typedef struct {
     u32 _000;
     u32 _004;
     u32 _008;
     UnkStruct80036494_1C *unkC;
 } UnkStruct80036494;
+
 UnkStruct80036494 *func_80036494_ovl3(u16, s32, s32);
 UnkStruct80036494 *func_80036304_ovl3(u16 arg0);
 
