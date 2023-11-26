@@ -267,7 +267,7 @@ segments:
     - [0xDA750, asm, ovl3/code_000DA750]
     - [0xDAD10, asm, ovl3/code_000DAD10]
     - [0xDF470, asm, ovl3/code_000DF470]
-    - [0xE1BE0, asm, ovl3/code_000E1BE0]
+    - [0xE1BE0, c, ovl3/code_000E1BE0]
     - [0xE22D0, asm, ovl3/code_000E22D0]
     - [0xE4600, asm, ovl3/code_000E4600]
     - [0xE92F0, asm, ovl3/code_000E92F0]

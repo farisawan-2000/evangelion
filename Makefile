@@ -5,7 +5,7 @@ TARGET = eva
 CROSS=mips-n64-
 
 ASM_DIRS = asm asm/data asm/asm asm/os $(wildcard asm/ovl*) $(wildcard src/ovl*) $(wildcard asm/data/ovl*)
-SRC_DIRS = src src/os
+SRC_DIRS = src src/os src/ovl3
 BUILD_DIR = build
 
 YAY0_DIR = assets/yay0

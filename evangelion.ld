@@ -513,7 +513,7 @@ SECTIONS
         build/asm/ovl3/code_000DA750.o(.text);
         build/asm/ovl3/code_000DAD10.o(.text);
         build/asm/ovl3/code_000DF470.o(.text);
-        build/asm/ovl3/code_000E1BE0.o(.text);
+        build/src/ovl3/code_000E1BE0.o(.text);
         build/asm/ovl3/code_000E22D0.o(.text);
         build/asm/ovl3/code_000E4600.o(.text);
         build/asm/ovl3/code_000E92F0.o(.text);
@@ -546,7 +546,7 @@ SECTIONS
         build/asm/ovl3/code_000DA750.o(.rodata);
         build/asm/ovl3/code_000DAD10.o(.rodata);
         build/asm/ovl3/code_000DF470.o(.rodata);
-        build/asm/ovl3/code_000E1BE0.o(.rodata);
+        build/src/ovl3/code_000E1BE0.o(.rodata);
         build/asm/ovl3/code_000E22D0.o(.rodata);
         build/asm/ovl3/code_000E4600.o(.rodata);
         build/asm/ovl3/code_000E92F0.o(.rodata);

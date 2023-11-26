@@ -18,14 +18,23 @@ for i, l in enumerate(fl):
         else:
             inData = True
     elif inData:
-        if len(lin.split(".word ")) < 2:
-            continue
-        twoglyphs = int(lin.split(".word ")[1], 16)
-        finalStr += evangelion_charmap[twoglyphs >> 16]
-        finalStr += evangelion_charmap[twoglyphs & 0xFFFF]
+        if ".word" in lin:
+            if len(lin.split(".word ")) < 2:
+                continue
+            twoglyphs = int(lin.split(".word ")[1], 16)
+            finalStr += evangelion_charmap[twoglyphs >> 16]
+            finalStr += evangelion_charmap[twoglyphs & 0xFFFF]
 
-        if twoglyphs >> 16 == 0 or twoglyphs & 0xFFFF == 0:
-            break
+            if twoglyphs >> 16 == 0 or twoglyphs & 0xFFFF == 0:
+                break
+        elif ".short" in lin:
+            if len(lin.split(".short ")) < 2:
+                continue
+            glyph = int(lin.split(".short ")[1], 16)
+            finalStr += evangelion_charmap[glyph]
+
+            if glyph == 0:
+                break
     else:
         continue
 
