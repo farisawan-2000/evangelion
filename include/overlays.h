@@ -3,6 +3,10 @@
         extern u8 *nm ## _VRAM_END; \
         extern u8 *nm ## _ROM_START; \
         extern u8 *nm ## _ROM_END; \
+        extern u8 *nm ## _TEXT_START; \
+        extern u8 *nm ## _TEXT_END; \
+        extern u8 *nm ## _DATA_START; \
+        extern u8 *nm ## _DATA_END; \
         extern u8 *nm ## _BSS_START; \
         extern u8 *nm ## _BSS_END;
 
@@ -20,4 +24,11 @@ typedef struct _Overlay {
 } Overlay; // size: 0x28
 extern Overlay gOverlayTable[]; // 800D4F50
 
+EXTERN_OVERLAY(ovl1);
+EXTERN_OVERLAY(ovl2);
+EXTERN_OVERLAY(ovl3);
+EXTERN_OVERLAY(ovl4);
+EXTERN_OVERLAY(ovl5);
+EXTERN_OVERLAY(ovl6);
+EXTERN_OVERLAY(ovl7);
 EXTERN_OVERLAY(ovl8);

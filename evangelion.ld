@@ -237,6 +237,10 @@ SECTIONS
         build/asm/data/3E7B0.data.o(.data);
         _3ECD0_data = .;
         build/asm/data/3ECD0.data.o(.data);
+        code_162C0 = .;
+        build/src/code_162C0.o(.data);
+        _3FD40_data = .;
+        build/asm/data/3FD40.data.o(.data);
         main_DATA_END = .;
         main_DATA_SIZE = ABSOLUTE(main_DATA_END - main_DATA_START);
         main_RODATA_START = .;

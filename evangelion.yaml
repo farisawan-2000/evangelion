@@ -211,6 +211,8 @@ segments:
     - [0x3E670, .data, code_5A40]
     - [0x3E7B0, data]
     - [0x3ECD0, data]
+    - [0x3FB50, .data, code_162C0]
+    - [0x3FD40, data]
     - [0x69EE0]
     - {type: bss, vram: 0x800FF2E0, name: mainseg}
 
