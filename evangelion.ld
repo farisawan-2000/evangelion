@@ -231,6 +231,10 @@ SECTIONS
         main_DATA_START = .;
         _354B0_data = .;
         build/asm/data/354B0.data.o(.data);
+        code_5A40 = .;
+        build/src/code_5A40.o(.data);
+        _3E7B0_data = .;
+        build/asm/data/3E7B0.data.o(.data);
         _3ECD0_data = .;
         build/asm/data/3ECD0.data.o(.data);
         main_DATA_END = .;
