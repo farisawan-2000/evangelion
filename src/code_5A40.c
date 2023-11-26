@@ -101,8 +101,6 @@ float D_800D3B9C = 256;
 u16 D_800D3BA0 = 0;
 u8 D_800D3BA2 = 0;
 
-
-
 INCLUDE_ASM("asm/nonmatchings/code_5A40", func_8009AE40);
 
 INCLUDE_ASM("asm/nonmatchings/code_5A40", func_8009B048);
@@ -140,7 +138,6 @@ void func_8009B5C0(u32 arg0) {
         func_800ADC30(0, sfxRomStart, SoundFXTables[arg0].romEnd - sfxRomStart);
     }
 }
-
 
 INCLUDE_ASM("asm/nonmatchings/code_5A40", func_8009B654);
 
