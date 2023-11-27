@@ -146,6 +146,9 @@ clean:
 test:
 	~/Downloads/mupen64plus/mupen64plus-gui $(BUILD_DIR)/$(TARGET).z64
 
+test2:
+	parallel-launcher $(BUILD_DIR)/$(TARGET).z64
+
 hexedit:
 	wine ~/.wine/drive_c/Program\ Files/HxD/HxD.exe baserom.eva.z64
 
