@@ -10,7 +10,7 @@
     &nm ## _TEXT_START, \
     &nm ## _TEXT_END, \
     &nm ## _DATA_START, \
-    &nm ## _DATA_END, \
+    &nm ## _RODATA_END, \
     &nm ## _BSS_START, \
     &nm ## _BSS_END, \
 }

@@ -249,6 +249,7 @@ segments:
     - {type: bss, vram: 0x80080160, name: ovl2/ovl2}
     
   - name: ovl3
+    folder: ovl3
     symbol_name_format : $VRAM_ovl3
     type: code
     overlay: yes
@@ -282,7 +283,11 @@ segments:
     - [0x104FB0, asm, ovl3/code_00104FB0]
     - [0x10A7A0, asm, ovl3/code_0010A7A0]
     - [0x10DC10, asm, ovl3/code_0010DC10]
-    - [0x110570, data, ovl3/ovl3]
+    - [0x110570, data, ovl3/data_110570]
+    - [0x112250, .data, ovl3/code_000E1BE0]
+    - [0x1123C0, data, ovl3/data_1123C0]
+    - [0x113370, .rodata, ovl3/code_000E1BE0]
+    - [0x113430, rodata, ovl3/data_113430]
     - [0x113B10]
     - {type: bss, vram: 0x8006A600, name: ovl3/ovl3}
     

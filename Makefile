@@ -96,13 +96,14 @@ $(BUILD_DIR)/src/code_2C570.o: OPT_FLAGS = -O1
 $(BUILD_DIR)/src/code_17E80.o: OPT_FLAGS = -O1
 $(BUILD_DIR)/src/code_13610.o: OPT_FLAGS = -O2
 
+# 	$(PYTHON) tools/str2hex.py $< > $(@:.o=.i)
 $(BUILD_DIR)/%.o: %.s $(SZP_FILES)
-	$(PYTHON) tools/str2hex.py $< > $(@:.o=.i)
-	$(CROSS)gcc -c -x assembler-with-cpp $(ASFLAGS) -o $@ $(@:.o=.i)
+	$(CROSS)gcc -c -x assembler-with-cpp $(ASFLAGS) -o $@ $<
 
+# 	@$(CC_CHECK) -MMD -MP -MT $@ -MF $(BUILD_DIR)/$*.d $(@:.i=.ii)
 $(BUILD_DIR)/%.i : %.c | $(SRC_BUILD_DIRS)
-	@$(CC_CHECK) -MMD -MP -MT $@ -MF $(BUILD_DIR)/$*.d $<
-	$(CPP) $(CPPFLAGS) $< -o $@
+	$(PYTHON) tools/str2hex.py $< > $(@:.i=.ii)
+	$(CPP) $(CPPFLAGS) $(@:.i=.ii) -o $@
 
 #$(STRIP) $@ -N $(<:.i=.c)
 $(BUILD_DIR)/%.o : $(BUILD_DIR)/%.i | $(SRC_BUILD_DIRS)

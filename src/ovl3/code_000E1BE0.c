@@ -1,7 +1,7 @@
 #include "common.h"
+#include "evangelion_types.h"
 
-extern u16 *D_80068D40_ovl3;  // EVA_STR("目    標 :")
-extern u16 D_80068EA4_ovl3[];
+// extern u16 *D_80068D40_ovl3;  // EVA_STR("目    標 :")
 extern u8 D_800D3BC0, D_800D3BC1, D_800D3BC2, D_800D3BC3, D_800D3BC4, D_800D3BC5, D_800D3BC6;
 extern f32 D_800D3BD8, D_800D3BDC, D_800D3BE0;
 
@@ -58,7 +58,56 @@ typedef struct {
     s16 *description;
 } MissionText;
 
-extern MissionText D_80069E60_ovl3[15];
+// TODO: figure out how to best represent these
+String mission4GoalText = R"(目    標 :)";
+
+String TEXT_SACHIEL = R"(第3使徒サキエル)";
+String TEXT_UNIT_01 = R"(初号機)";
+String TEXT_SACHIEL_DESCRIPTION = R"(NERV本部直上での
+使徒の殲滅。)";
+String TEXT_SHAMSHIEL = R"(第4使徒シャムシエル)";
+String TEXT_UNIT_01_2 = R"(初号機)";
+String TEXT_SHAMSHIEL_DESCRIPTION = R"(第3新東京市上での
+使徒の殲滅。)";
+String TEXT_RAMIEL = R"(第5使徒ラミエル)";
+String TEXT_UNIT_01_UNIT_00 = R"(初号機 ・ 零号機)";
+String TEXT_RAMIEL_DESCRIPTION = R"(ポジトロンライフルに
+よる、 長々距離からの
+直接攻撃。)";
+String TEXT_JET_ALONE = R"(ジェットアローン)";
+String TEXT_UNIT_01_3 = R"(初号機)";
+String TEXT_JA_DESCRIPTION = R"(葛城一尉をJA内に
+送り込み、 JAの活動が
+停止するまでJAを
+抑え込む)";
+
+const MissionText D_80069E60_ovl3[15] = {
+    {TEXT_SACHIEL, TEXT_UNIT_01, TEXT_SACHIEL_DESCRIPTION},
+    {TEXT_SHAMSHIEL, TEXT_UNIT_01_2, TEXT_SHAMSHIEL_DESCRIPTION},
+    {TEXT_RAMIEL, TEXT_UNIT_01_UNIT_00, TEXT_RAMIEL_DESCRIPTION},
+    {TEXT_JET_ALONE, TEXT_UNIT_01_3, TEXT_JA_DESCRIPTION},
+    {TEXT_SACHIEL, TEXT_UNIT_01, TEXT_SACHIEL_DESCRIPTION},
+    {TEXT_SACHIEL, TEXT_UNIT_01, TEXT_SACHIEL_DESCRIPTION},
+    {TEXT_SACHIEL, TEXT_UNIT_01, TEXT_SACHIEL_DESCRIPTION},
+    {TEXT_SACHIEL, TEXT_UNIT_01, TEXT_SACHIEL_DESCRIPTION},
+    {TEXT_SACHIEL, TEXT_UNIT_01, TEXT_SACHIEL_DESCRIPTION},
+    {TEXT_SACHIEL, TEXT_UNIT_01, TEXT_SACHIEL_DESCRIPTION},
+    {TEXT_SACHIEL, TEXT_UNIT_01, TEXT_SACHIEL_DESCRIPTION},
+    {TEXT_SACHIEL, TEXT_UNIT_01, TEXT_SACHIEL_DESCRIPTION},
+    {TEXT_SACHIEL, TEXT_UNIT_01, TEXT_SACHIEL_DESCRIPTION},
+    {TEXT_SACHIEL, TEXT_UNIT_01, TEXT_SACHIEL_DESCRIPTION},
+    {TEXT_SACHIEL, TEXT_UNIT_01, TEXT_SACHIEL_DESCRIPTION},
+    {NULL, NULL, NULL},
+};
+
+u16 D_80068EA4_ovl3[] = {
+    0x05CF,
+    0x05CF,
+    0x05D0,
+    0x0600,
+    0x066A,
+    0x0000,
+};
 
 void func_800386D0_ovl3(u8 mission) {
     FontParams parms;
@@ -69,7 +118,7 @@ void func_800386D0_ovl3(u8 mission) {
     memcpy(sp20, D_80069E60_ovl3, sizeof(D_80069E60_ovl3));
 
     if (mission == 4) {
-        parms.str = &D_80068D40_ovl3;
+        parms.str = &mission4GoalText;
         parms.p1 = -4;
         parms.p2 = 0;
         parms.p3 = 1;

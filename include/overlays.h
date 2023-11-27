@@ -7,6 +7,8 @@
         extern u8 *nm ## _TEXT_END; \
         extern u8 *nm ## _DATA_START; \
         extern u8 *nm ## _DATA_END; \
+        extern u8 *nm ## _RODATA_START; \
+        extern u8 *nm ## _RODATA_END; \
         extern u8 *nm ## _BSS_START; \
         extern u8 *nm ## _BSS_END;
 
