@@ -1,15 +1,15 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/code_29430", func_800BE830);
+INCLUDE_ASM("asm/nonmatchings/code_29430", guMtxCatL);
 
-INCLUDE_ASM("asm/nonmatchings/code_29430", func_800BE8A4);
+INCLUDE_ASM("asm/nonmatchings/code_29430", guMtxXFML);
 
-INCLUDE_ASM("asm/nonmatchings/code_29430", func_800BE930);
+INCLUDE_ASM("asm/nonmatchings/code_29430", guMtxF2L);
 
-INCLUDE_ASM("asm/nonmatchings/code_29430", func_800BE9C8);
+INCLUDE_ASM("asm/nonmatchings/code_29430", guMtxL2F);
 
-INCLUDE_ASM("asm/nonmatchings/code_29430", func_800BEA70);
+INCLUDE_ASM("asm/nonmatchings/code_29430", guMtxIdentF);
 
-INCLUDE_ASM("asm/nonmatchings/code_29430", func_800BEAC0);
+INCLUDE_ASM("asm/nonmatchings/code_29430", guMtxIdent);
 
-INCLUDE_ASM("asm/nonmatchings/code_29430", func_800BEBB0);
+INCLUDE_ASM("asm/nonmatchings/code_29430", guNormalize);

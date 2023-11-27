@@ -1,9 +1,13 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/code_29860", func_800BEC60);
+INCLUDE_ASM("asm/nonmatchings/code_29860", guOrthoF);
 
-INCLUDE_ASM("asm/nonmatchings/code_29860", func_800BED90);
+INCLUDE_ASM("asm/nonmatchings/code_29860", guOrtho);
 
-INCLUDE_ASM("asm/nonmatchings/code_29860", func_800BEEE0);
+INCLUDE_ASM("asm/nonmatchings/code_29860", guPerspectiveF);
 
-INCLUDE_ASM("asm/nonmatchings/code_29860", func_800BF090);
+INCLUDE_ASM("asm/nonmatchings/code_29860", perspective_text_0170);
+
+INCLUDE_ASM("asm/nonmatchings/code_29860", guPerspective);
+
+INCLUDE_ASM("asm/nonmatchings/code_29860", perspective_text_0328);
