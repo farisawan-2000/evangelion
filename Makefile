@@ -68,7 +68,6 @@ IDO_CFLAGS = $(TARGET_CFLAGS) -Wab,-r4300_mul -non_shared -G0 -Xcpluscomm -Xfull
 LD = $(CROSS)ld
 LD_SCRIPT = evangelion.ld
 USE_UNDEFINED_SYMS = -T undefined_syms_auto.txt -T undefined_funcs_auto.txt
-# -T $(BUILD_DIR)/symbol_addrs.txt
 LDFLAGS := --no-check-sections -mips3 --accept-unknown-input-arch -T $(LD_SCRIPT) $(USE_UNDEFINED_SYMS)
 # -m elf32btsmip
 
@@ -130,7 +129,6 @@ $(BUILD_DIR)/$(LD_SCRIPT): $(LD_SCRIPT)
 	-DBUILD_DIR=$(BUILD_DIR)
 
 $(BUILD_DIR)/$(TARGET).elf: $(BUILD_DIR)/$(LD_SCRIPT) $(O_FILES) $(I_FILES)
-	cpp -P tools/symbol_addrs.txt > $(BUILD_DIR)/symbol_addrs.txt
 	$(LD) $(LDFLAGS) -o $@ -Map $(BUILD_DIR)/$(TARGET).map
 
 # final z64 updates checksum
