@@ -533,6 +533,8 @@ SECTIONS
         ovl3_DATA_START = .;
         ovl3_data_110570_data = .;
         build/asm/data/ovl3/data_110570.data.o(.data);
+        ovl3_code_000DAD10_data = .;
+        build/asm/data/ovl3/code_000DAD10.data.o(.data);
         ovl3_code_000E1BE0 = .;
         build/src/ovl3/code_000E1BE0.o(.data);
         ovl3_data_1123C0_data = .;

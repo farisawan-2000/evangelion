@@ -1,7 +1,7 @@
 glabel func_800B6860
 /* 21460 800B6860 27BDFFE8 */  addiu      $sp, $sp, -0x18
 /* 21464 800B6864 AFBF0010 */  sw         $ra, 0x10($sp)
-/* 21468 800B6868 0C030A40 */  jal        func_800C2900
+/* 21468 800B6868 0C030A40 */  jal        osViSwapBuffer
 /* 2146C 800B686C 8C84000C */   lw        $a0, 0xC($a0)
 /* 21470 800B6870 8FBF0010 */  lw         $ra, 0x10($sp)
 /* 21474 800B6874 03E00008 */  jr         $ra

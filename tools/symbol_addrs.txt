@@ -49,6 +49,7 @@ guPosition = 0x800BF438; // type:func
 guPosLight = 0x800BF620; // type:func
 osInvalDCache = 0x800BD310; // type:func
 gOverlayTable = 0x800D4F50;
+osViSwapBuffer = 0x800C2900; // type:func
 // rcp.h and r4300.h
 UT_VEC = 0x80000000; // type:func
 

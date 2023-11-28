@@ -559,6 +559,13 @@ evangelion_charmap = {
 def build_reverse_charmap():
     reverse_charmap = {}
     for k in evangelion_charmap:
+        # if evangelion_charmap[k] in reverse_charmap:
+        #     print("DUPE KEY", evangelion_charmap[k])
+        #     break
         reverse_charmap[evangelion_charmap[k]] = k
 
     return reverse_charmap
+
+if __name__ == "__main__":
+    print(build_reverse_charmap())
+

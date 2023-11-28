@@ -28,7 +28,7 @@ glabel func_800C13D0
 /* 2C038 800C1438 3C01800F */  lui        $at, %hi(D_800F699C)
 /* 2C03C 800C143C AC20699C */  sw         $zero, %lo(D_800F699C)($at)
 .L800C1440:
-/* 2C040 800C1440 0C030A40 */  jal        func_800C2900
+/* 2C040 800C1440 0C030A40 */  jal        osViSwapBuffer
 /* 2C044 800C1444 8E04000C */   lw        $a0, 0xC($s0)
 /* 2C048 800C1448 24020001 */  addiu      $v0, $zero, 0x1
 .L800C144C:
