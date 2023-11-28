@@ -122,6 +122,19 @@ Sound_soundbank_24_bfx_ROM_END = 0x01C31B40;
 
 func_8005A888_ovl3 = 0x8005A888; // overlay:y
 
+// various matrices that need to be resolved
+D_80077300_ovl2 = 0x80077300; // rom:0xC62B0
+D_800D38E0 = 0x800D38E0;
+D_800D3BF8 = 0x800D3BF8; // type:Gfx
+D_800D3CD8 = 0x800D3CD8; // type:Gfx
+D_800D3D20 = 0x800D3D20; // type:Gfx
+D_800D4E60 = 0x800D4E60; // type:Gfx
+D_80100560 = 0x80100560;
+
+// Image banks VRAM
+Palettes_VRAM = 0x803DA800;
+Images_VRAM = 0x803DAA00;
+
 // RCP
 D_A0000000 = 0xA0000000;
 D_A4040000 = 0xA4040000;

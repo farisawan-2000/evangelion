@@ -16,8 +16,8 @@ glabel func_800A9898
 /* 144CC 800A98CC 3C01800D */  lui        $at, %hi(D_800D4C2C)
 /* 144D0 800A98D0 00220821 */  addu       $at, $at, $v0
 /* 144D4 800A98D4 94224C2C */  lhu        $v0, %lo(D_800D4C2C)($at)
-/* 144D8 800A98D8 3C12803E */  lui        $s2, %hi(D_803DAA00)
-/* 144DC 800A98DC 2652AA00 */  addiu      $s2, $s2, %lo(D_803DAA00)
+/* 144D8 800A98D8 3C12803E */  lui        $s2, %hi(Images_VRAM)
+/* 144DC 800A98DC 2652AA00 */  addiu      $s2, $s2, %lo(Images_VRAM)
 /* 144E0 800A98E0 3C05001E */  lui        $a1, %hi(Image_ROM_START)
 /* 144E4 800A98E4 24A59000 */  addiu      $a1, $a1, %lo(Image_ROM_START)
 /* 144E8 800A98E8 00021080 */  sll        $v0, $v0, 2
@@ -31,8 +31,8 @@ glabel func_800A9898
 /* 14508 800A9908 96312082 */  lhu        $s1, %lo(D_800E2082)($s1)
 /* 1450C 800A990C 0C0264C3 */  jal        func_8009930C
 /* 14510 800A9910 02402021 */   addu      $a0, $s2, $zero
-/* 14514 800A9914 3C10803E */  lui        $s0, %hi(D_803DA800)
-/* 14518 800A9918 2610A800 */  addiu      $s0, $s0, %lo(D_803DA800)
+/* 14514 800A9914 3C10803E */  lui        $s0, %hi(Palettes_VRAM)
+/* 14518 800A9918 2610A800 */  addiu      $s0, $s0, %lo(Palettes_VRAM)
 /* 1451C 800A991C 02002021 */  addu       $a0, $s0, $zero
 /* 14520 800A9920 3C050061 */  lui        $a1, %hi(Palettes_ROM_START)
 /* 14524 800A9924 24A5CB80 */  addiu      $a1, $a1, %lo(Palettes_ROM_START)
