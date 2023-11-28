@@ -67,7 +67,7 @@ IDO_CFLAGS = $(TARGET_CFLAGS) -Wab,-r4300_mul -non_shared -G0 -Xcpluscomm -Xfull
 
 LD = $(CROSS)ld
 LD_SCRIPT = evangelion.ld
-USE_UNDEFINED_SYMS = -T undefined_syms_auto.txt -T undefined_funcs_auto.txt
+USE_UNDEFINED_SYMS = -T undefined_syms_all.txt
 LDFLAGS := --no-check-sections -mips3 --accept-unknown-input-arch -T $(LD_SCRIPT) $(USE_UNDEFINED_SYMS)
 # -m elf32btsmip
 
