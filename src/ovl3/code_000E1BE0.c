@@ -57,7 +57,9 @@ typedef struct {
     s16 *description;
 } MissionText;
 
-// TODO: figure out how to best represent these
+String _S01 = R"(攻撃目標 :)";
+String _S02 = R"(使用EVA:)";
+String _S03 = R"(作戦内容 :)";
 String mission4GoalText = R"(目    標 :)";
 
 String TEXT_SACHIEL = R"(第3使徒サキエル)";

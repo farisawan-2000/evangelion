@@ -285,7 +285,7 @@ segments:
     - [0x10DC10, asm, ovl3/code_0010DC10]
     - [0x110570, data, ovl3/data_110570]
     - [0x1113A0, data, ovl3/code_000DAD10]
-    - [0x112250, .data, ovl3/code_000E1BE0]
+    - [0x112220, .data, ovl3/code_000E1BE0]
     - [0x1123C0, data, ovl3/data_1123C0]
     - [0x113370, .rodata, ovl3/code_000E1BE0]
     - [0x113430, rodata, ovl3/data_113430]
