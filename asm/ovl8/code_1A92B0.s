@@ -199,13 +199,13 @@ glabel func_803973E0
 /* 1A9548 803974C8 E6440044 */  swc1       $f4, 0x44($s2)
 /* 1A954C 803974CC 14A00005 */  bnez       $a1, .L803974E4_ovl8
 /* 1A9550 803974D0 E6400048 */   swc1      $f0, 0x48($s2)
-/* 1A9554 803974D4 3C02803A */  lui        $v0, %hi(D_803A16C8)
-/* 1A9558 803974D8 244216C8 */  addiu      $v0, $v0, %lo(D_803A16C8)
+/* 1A9554 803974D4 3C02803A */  lui        $v0, %hi(D_803A16C8_ovl8)
+/* 1A9558 803974D8 244216C8 */  addiu      $v0, $v0, %lo(D_803A16C8_ovl8)
 /* 1A955C 803974DC 080E5D3C */  j          .L803974F0_ovl8
 /* 1A9560 803974E0 AE42004C */   sw        $v0, 0x4C($s2)
 .L803974E4_ovl8:
-/* 1A9564 803974E4 3C02803A */  lui        $v0, %hi(D_803A16E8)
-/* 1A9568 803974E8 244216E8 */  addiu      $v0, $v0, %lo(D_803A16E8)
+/* 1A9564 803974E4 3C02803A */  lui        $v0, %hi(D_803A16E8_ovl8)
+/* 1A9568 803974E8 244216E8 */  addiu      $v0, $v0, %lo(D_803A16E8_ovl8)
 /* 1A956C 803974EC AE42004C */  sw         $v0, 0x4C($s2)
 .L803974F0_ovl8:
 /* 1A9570 803974F0 3C03803B */  lui        $v1, %hi(D_803B3E28)
@@ -749,8 +749,8 @@ glabel func_80397BA4
 /* 1A9D90 80397D10 AC239F94 */  sw         $v1, %lo(gDisplayListHead)($at)
 /* 1A9D94 80397D14 3C03FD50 */  lui        $v1, (0xFD500000 >> 16)
 /* 1A9D98 80397D18 AC430040 */  sw         $v1, 0x40($v0)
-/* 1A9D9C 80397D1C 3C03803A */  lui        $v1, %hi(D_803A15E8)
-/* 1A9DA0 80397D20 246315E8 */  addiu      $v1, $v1, %lo(D_803A15E8)
+/* 1A9D9C 80397D1C 3C03803A */  lui        $v1, %hi(D_803A15E8_ovl8)
+/* 1A9DA0 80397D20 246315E8 */  addiu      $v1, $v1, %lo(D_803A15E8_ovl8)
 /* 1A9DA4 80397D24 AC430044 */  sw         $v1, 0x44($v0)
 /* 1A9DA8 80397D28 24430050 */  addiu      $v1, $v0, 0x50
 /* 1A9DAC 80397D2C 3C018015 */  lui        $at, %hi(gDisplayListHead)
@@ -811,8 +811,8 @@ glabel func_80397BA4
 /* 1A9E84 80397E04 24620008 */  addiu      $v0, $v1, 0x8
 /* 1A9E88 80397E08 3C018015 */  lui        $at, %hi(gDisplayListHead)
 /* 1A9E8C 80397E0C AC229F94 */  sw         $v0, %lo(gDisplayListHead)($at)
-/* 1A9E90 80397E10 3C02803A */  lui        $v0, %hi(D_803A15A8)
-/* 1A9E94 80397E14 244215A8 */  addiu      $v0, $v0, %lo(D_803A15A8)
+/* 1A9E90 80397E10 3C02803A */  lui        $v0, %hi(D_803A15A8_ovl8)
+/* 1A9E94 80397E14 244215A8 */  addiu      $v0, $v0, %lo(D_803A15A8_ovl8)
 /* 1A9E98 80397E18 080E5F90 */  j          .L80397E40_ovl8
 /* 1A9E9C 80397E1C 3484C000 */   ori       $a0, $a0, (0x703C000 & 0xFFFF)
 .L80397E20_ovl8:
@@ -822,8 +822,8 @@ glabel func_80397BA4
 /* 1A9EAC 80397E2C 24620008 */  addiu      $v0, $v1, 0x8
 /* 1A9EB0 80397E30 3C018015 */  lui        $at, %hi(gDisplayListHead)
 /* 1A9EB4 80397E34 AC229F94 */  sw         $v0, %lo(gDisplayListHead)($at)
-/* 1A9EB8 80397E38 3C02803A */  lui        $v0, %hi(D_803A15C8)
-/* 1A9EBC 80397E3C 244215C8 */  addiu      $v0, $v0, %lo(D_803A15C8)
+/* 1A9EB8 80397E38 3C02803A */  lui        $v0, %hi(D_803A15C8_ovl8)
+/* 1A9EBC 80397E3C 244215C8 */  addiu      $v0, $v0, %lo(D_803A15C8_ovl8)
 .L80397E40_ovl8:
 /* 1A9EC0 80397E40 AC620004 */  sw         $v0, 0x4($v1)
 /* 1A9EC4 80397E44 24620010 */  addiu      $v0, $v1, 0x10

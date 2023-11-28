@@ -174,8 +174,8 @@ glabel func_80398330
 /* 1AA450 803983D0 24A58C40 */  addiu      $a1, $a1, %lo(D_803A8C40_ovl8)
 /* 1AA454 803983D4 0C0285D4 */  jal        func_800A1750
 /* 1AA458 803983D8 00000000 */   nop
-/* 1AA45C 803983DC 3C04803A */  lui        $a0, %hi(D_803A1710)
-/* 1AA460 803983E0 24841710 */  addiu      $a0, $a0, %lo(D_803A1710)
+/* 1AA45C 803983DC 3C04803A */  lui        $a0, %hi(D_803A1710_ovl8)
+/* 1AA460 803983E0 24841710 */  addiu      $a0, $a0, %lo(D_803A1710_ovl8)
 /* 1AA464 803983E4 00402821 */  addu       $a1, $v0, $zero
 /* 1AA468 803983E8 0C03006C */  jal        func_800C01B0
 /* 1AA46C 803983EC 24060020 */   addiu     $a2, $zero, 0x20
