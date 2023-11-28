@@ -6,8 +6,8 @@ extern f32 D_800D3BD8, D_800D3BDC, D_800D3BE0;
 
 typedef struct {
     u16 *str;
-    s8 p1;
-    s8 p2;
+    s8 wdSpacing;
+    s8 htSpacing;
     u8 p3;
     u8 p4;
 } FontParams;
@@ -120,8 +120,8 @@ void func_800386D0_ovl3(u8 mission) {
 
     if (mission == 4) {
         parms.str = &mission4GoalText;
-        parms.p1 = -4;
-        parms.p2 = 0;
+        parms.wdSpacing = -4;
+        parms.htSpacing = 0;
         parms.p3 = 1;
         parms.p4 = 2;
         func_80037BDC_ovl3(&parms, 0x40C9, 0x40CC, 0x17, 0x18);
@@ -141,8 +141,8 @@ void func_800386D0_ovl3(u8 mission) {
 
     temp = mission - 1;
     parms.str = sp20[temp].angelName;
-    parms.p1 = -4;
-    parms.p2 = 0;
+    parms.wdSpacing = -4;
+    parms.htSpacing = 0;
     parms.p3 = 1;
     parms.p4 = 2;
     func_80037BDC_ovl3(&parms, 0x40CA, 0x40CB, 0x6C, 0x18);
@@ -150,8 +150,8 @@ void func_800386D0_ovl3(u8 mission) {
     func_80036304_ovl3(0x40CB)->unkC->unk1C = 0x57;
     
     parms.str = sp20[temp].machineType;
-    parms.p1 = -4;
-    parms.p2 = 0;
+    parms.wdSpacing = -4;
+    parms.htSpacing = 0;
     parms.p3 = 1;
     parms.p4 = 2;
     func_80037BDC_ovl3(&parms, 0x40CE, 0x40CF, 0x6C, 0x34);
@@ -159,8 +159,8 @@ void func_800386D0_ovl3(u8 mission) {
     func_80036304_ovl3(0x40CF)->unkC->unk1C = 0x57;
     
     parms.str = sp20[temp].description;
-    parms.p1 = -4;
-    parms.p2 = -2;
+    parms.wdSpacing = -4;
+    parms.htSpacing = -2;
     parms.p3 = 1;
     parms.p4 = 2;
     func_80037BDC_ovl3(&parms, 0x40D1, 0x40D2, 0x6C, 0x50);

@@ -13,4 +13,8 @@
 .word 0x0000004E       /* Cartridge */
 .ascii "EV"            /* Cartridge ID */
 .ascii "J"             /* Country code */
+#ifdef NON_MATCHING
+.byte 0x42             /* Homebrew: Region free; 16k EEPROM */
+#else
 .byte 0x00             /* Version */
+#endif

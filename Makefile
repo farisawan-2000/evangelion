@@ -104,7 +104,7 @@ $(BUILD_DIR)/src/code_13610.o: OPT_FLAGS = -O2
 
 # 	$(PYTHON) tools/str2hex.py $< > $(@:.o=.i)
 $(BUILD_DIR)/%.o: %.s $(SZP_FILES)
-	$(CROSS)gcc -c -x assembler-with-cpp $(ASFLAGS) -o $@ $<
+	$(CROSS)gcc -c -x assembler-with-cpp $(DEFINES) $(ASFLAGS) -o $@ $<
 
 # 	@$(CC_CHECK) -MMD -MP -MT $@ -MF $(BUILD_DIR)/$*.d $(@:.i=.ii)
 $(BUILD_DIR)/%.i : %.c | $(SRC_BUILD_DIRS)
@@ -151,7 +151,10 @@ test: $(ROM)
 	~/Downloads/mupen64plus/mupen64plus-gui $(BUILD_DIR)/$(TARGET).z64
 
 test2: $(ROM)
-	parallel-launcher $(BUILD_DIR)/$(TARGET).z64
+	parallel-launcher $(ROM)
+
+test3: $(ROM)
+	ares $(ROM)
 
 hexedit:
 	wine ~/.wine/drive_c/Program\ Files/HxD/HxD.exe baserom.eva.z64
