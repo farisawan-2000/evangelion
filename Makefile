@@ -1,6 +1,7 @@
 default: all
 
 TARGET = eva
+ROM = $(BUILD_DIR)/$(TARGET).z64
 
 CROSS=mips-n64-
 
@@ -136,16 +137,16 @@ $(BUILD_DIR)/$(TARGET).z64: $(BUILD_DIR)/$(TARGET).elf $(SZP_FILES)
 	$(OBJCOPY) $< $@ -O binary $(OBJCOPY_FLAGS)
 	$(N64CRC) $@
 
-all: $(BUILD_DIR)/$(TARGET).z64
+all: $(ROM)
 	@sha1sum -c evangelion.sha1
 
 clean:
 	rm -rf $(BUILD_DIR)
 
-test:
+test: $(ROM)
 	~/Downloads/mupen64plus/mupen64plus-gui $(BUILD_DIR)/$(TARGET).z64
 
-test2:
+test2: $(ROM)
 	parallel-launcher $(BUILD_DIR)/$(TARGET).z64
 
 hexedit:
