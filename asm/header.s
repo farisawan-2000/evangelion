@@ -2,7 +2,7 @@
 
 .word 0x80371240       /* PI BSB Domain 1 register */
 .word 0x0000000F       /* Clockrate setting */
-.word 0x80096400       /* Entrypoint address */
+.word main_VRAM       /* Entrypoint address */
 .word 0x0000144A       /* Revision */
 .word 0x147E0EDB       /* Checksum 1 */
 .word 0x36C5B12C       /* Checksum 2 */
