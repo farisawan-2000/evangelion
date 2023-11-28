@@ -29,7 +29,7 @@ with sys.stdout as f:
         elif inData:
             if fb[i:i+4] in evangelion_charmap_reverse:
                 f.write(f"{evangelion_charmap_reverse[fb[i:i+4]]}")
-                idx += 4
+                i += 3
             else:
                 f.write(f"{evangelion_charmap_reverse[fb[i]]}")
             f.write(",")

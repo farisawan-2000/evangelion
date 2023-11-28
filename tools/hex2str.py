@@ -32,7 +32,7 @@ for i, l in enumerate(fl):
             finalStr += evangelion_charmap[twoglyphs & 0xFFFF]
 
             if twoglyphs >> 16 == 0 or twoglyphs & 0xFFFF == 0:
-                print(f'{curSym}: EVA_STR(R"({finalStr})")')
+                print(f'String {curSym} = R"({finalStr})";')
                 finalStr = ""
                 inData = False
         # elif ".short" in lin:
