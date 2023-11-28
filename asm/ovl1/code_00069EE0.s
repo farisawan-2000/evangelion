@@ -579,8 +579,8 @@ glabel func_80025E48_ovl1
 /* 6A718 80026438 3C018015 */  lui        $at, %hi(D_8014CF98 + 0x8)
 /* 6A71C 8002643C 00330821 */  addu       $at, $at, $s3
 /* 6A720 80026440 C420CFA0 */  lwc1       $f0, %lo(D_8014CF98 + 0x8)($at)
-/* 6A724 80026444 3C058003 */  lui        $a1, %hi(func_8002FBAC)
-/* 6A728 80026448 24A5FBAC */  addiu      $a1, $a1, %lo(func_8002FBAC)
+/* 6A724 80026444 3C058003 */  lui        $a1, %hi(D_8002FBAC_ovl1)
+/* 6A728 80026448 24A5FBAC */  addiu      $a1, $a1, %lo(D_8002FBAC_ovl1)
 /* 6A72C 8002644C 4600008D */  trunc.w.s  $f2, $f0
 /* 6A730 80026450 44061000 */  mfc1       $a2, $f2
 /* 6A734 80026454 00000000 */  nop

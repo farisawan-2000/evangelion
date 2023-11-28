@@ -1544,10 +1544,13 @@ glabel D_8002FB9C_ovl1
 glabel D_8002FBA4_ovl1
 /* 73E84 8002FBA4 */ .asciz "SX:%3d"
 .align 2
+.size D_8002FBA4_ovl1, . - D_8002FBA4_ovl1
+
 .align 2
+glabel D_8002FBAC_ovl1
 /* 73E8C 8002FBAC */ .asciz "SY:%3d"
 .align 2
-.size D_8002FBA4_ovl1, . - D_8002FBA4_ovl1
+.size D_8002FBAC_ovl1, . - D_8002FBAC_ovl1
 
 .align 2
 glabel D_8002FBB4_ovl1
