@@ -484,6 +484,8 @@ segments:
     - [0x1ADEC0, asm, ovl8/code_1ADEC0]
     - [0x1AE9A0, asm, ovl8/code_1AE9A0]
     - [0x1B06B0, data, ovl8/ovl8]
+    - [0x1BAC20, rodata, ovl8/code_1A2FD0]
+    - [0x1BAC40, rodata, ovl8/1BAC40]
     - [0x1BB280]
     - {type: bss, vram: 0x803A9200, name: ovl8/ovl8}
 

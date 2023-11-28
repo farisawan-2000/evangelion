@@ -944,21 +944,8 @@ SECTIONS
         ovl8_DATA_END = .;
         ovl8_DATA_SIZE = ABSOLUTE(ovl8_DATA_END - ovl8_DATA_START);
         ovl8_RODATA_START = .;
-        build/asm/ovl8/code_1A1880.o(.rodata);
-        build/asm/ovl8/code_1A1DC0.o(.rodata);
-        build/asm/ovl8/code_1A29F0.o(.rodata);
-        build/asm/ovl8/code_1A2FD0.o(.rodata);
-        build/asm/ovl8/code_1A4750.o(.rodata);
-        build/asm/ovl8/code_1A5B60.o(.rodata);
-        build/asm/ovl8/code_1A7580.o(.rodata);
-        build/asm/ovl8/code_1A8BE0.o(.rodata);
-        build/asm/ovl8/code_1A92B0.o(.rodata);
-        build/asm/ovl8/code_1AA220.o(.rodata);
-        build/asm/ovl8/code_1AA7B0.o(.rodata);
-        build/asm/ovl8/code_1ABDB0.o(.rodata);
-        build/asm/ovl8/code_1AC8C0.o(.rodata);
-        build/asm/ovl8/code_1ADEC0.o(.rodata);
-        build/asm/ovl8/code_1AE9A0.o(.rodata);
+        build/asm/data/ovl8/code_1A2FD0.rodata.o(.rodata);
+        build/asm/data/ovl8/1BAC40.rodata.o(.rodata);
         ovl8_RODATA_END = .;
         ovl8_RODATA_SIZE = ABSOLUTE(ovl8_RODATA_END - ovl8_RODATA_START);
     }
