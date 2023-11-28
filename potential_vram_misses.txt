@@ -21,4 +21,18 @@ asm/data/ovl6/ovl6.data.s:/* 16D208 800434A8 */ .word 0x800C42FF
 asm/data/ovl6/ovl6.data.s:/* 16D3A4 80043644 */ .word 0x800D41FF
 asm/data/ovl6/ovl6.data.s:/* 16D3AC 8004364C */ .word 0x800E42FF
 asm/data/ovl6/ovl6.data.s:/* 16D3D4 80043674 */ .word 0x800F42FF
-
+/code_13610/func_800A9140.s:/* 13D48 800A9148 3C04802D */  lui        $a0, (0x802D4000 >> 16)
+/code_13610/func_800A9140.s:/* 13D5C 800A915C 3C048036 */  lui        $a0, (0x8036A000 >> 16)
+/code_2270/func_80097670.s:/* 2290 80097690 3C028000 */  lui        $v0, (0x80000400 >> 16)
+/code_A2B0/func_8009F6B0.s:/* A32C 8009F72C 3C04801B */  lui        $a0, (0x801BE000 >> 16)
+/ovl3/code_000DF470/func_80036014_ovl3.s:/* DF53C 8003602C 3C02802F */  lui        $v0, (0x802F97FF >> 16)
+asm/ovl1/code_00069EE0.s:/* 6FD4C 8002BA6C 3C04801D */  lui        $a0, (0x801D7000 >> 16)
+asm/ovl2/code_00074BB0.s:/* 9134C 8004239C 3C09801D */  lui        $t1, (0x801D7020 >> 16)
+asm/ovl2/code_00074BB0.s:/* 91384 800423D4 3C08801D */  lui        $t0, (0x801D7038 >> 16)
+asm/ovl3/code_000E92F0.s:/* E9CE8 800407D8 3C048031 */  lui        $a0, (0x80317420 >> 16)
+asm/ovl3/code_000E92F0.s:/* E9E18 80040908 3C048032 */   lui       $a0, (0x80326230 >> 16)
+asm/ovl3/code_000ECA30.s:/* EDE70 80044960 3C048033 */  lui        $a0, (0x80335040 >> 16)
+asm/ovl3/code_000ECA30.s:/* EE0CC 80044BBC 3C048034 */  lui        $a0, (0x80343E50 >> 16)
+asm/ovl3/code_00104FB0.s:/* 1098A8 80060398 3C048030 */  lui        $a0, (0x80308610 >> 16)
+asm/ovl4/code_113B10.s:/* 113C78 80025D68 3C04802F */  lui        $a0, (0x802F9800 >> 16)
+asm/ovl4/code_113CB0.s:/* 1140B0 800261A0 3C05802F */  lui        $a1, (0x802F9810 >> 16)
