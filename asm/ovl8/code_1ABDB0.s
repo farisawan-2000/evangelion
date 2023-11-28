@@ -207,27 +207,27 @@ glabel func_80399EE0
 /* 1AC068 80399FE8 080E680A */  j          .L8039A028_ovl8
 /* 1AC06C 80399FEC 00000000 */   nop
 .L80399FF0_ovl8:
-/* 1AC070 80399FF0 3C02803A */  lui        $v0, %hi(D_803A2068)
-/* 1AC074 80399FF4 24422068 */  addiu      $v0, $v0, %lo(D_803A2068)
+/* 1AC070 80399FF0 3C02803A */  lui        $v0, %hi(D_803A2068_ovl8)
+/* 1AC074 80399FF4 24422068 */  addiu      $v0, $v0, %lo(D_803A2068_ovl8)
 /* 1AC078 80399FF8 AE220048 */  sw         $v0, 0x48($s1)
-/* 1AC07C 80399FFC 3C02803A */  lui        $v0, %hi(D_803A2288)
-/* 1AC080 8039A000 24422288 */  addiu      $v0, $v0, %lo(D_803A2288)
+/* 1AC07C 80399FFC 3C02803A */  lui        $v0, %hi(D_803A2288_ovl8)
+/* 1AC080 8039A000 24422288 */  addiu      $v0, $v0, %lo(D_803A2288_ovl8)
 /* 1AC084 8039A004 080E6810 */  j          .L8039A040_ovl8
 /* 1AC088 8039A008 AE22004C */   sw        $v0, 0x4C($s1)
 .L8039A00C_ovl8:
-/* 1AC08C 8039A00C 3C02803A */  lui        $v0, %hi(D_803A2068)
-/* 1AC090 8039A010 24422068 */  addiu      $v0, $v0, %lo(D_803A2068)
+/* 1AC08C 8039A00C 3C02803A */  lui        $v0, %hi(D_803A2068_ovl8)
+/* 1AC090 8039A010 24422068 */  addiu      $v0, $v0, %lo(D_803A2068_ovl8)
 /* 1AC094 8039A014 AE220048 */  sw         $v0, 0x48($s1)
-/* 1AC098 8039A018 3C02803A */  lui        $v0, %hi(D_803A2288)
-/* 1AC09C 8039A01C 24422288 */  addiu      $v0, $v0, %lo(D_803A2288)
+/* 1AC098 8039A018 3C02803A */  lui        $v0, %hi(D_803A2288_ovl8)
+/* 1AC09C 8039A01C 24422288 */  addiu      $v0, $v0, %lo(D_803A2288_ovl8)
 /* 1AC0A0 8039A020 080E6810 */  j          .L8039A040_ovl8
 /* 1AC0A4 8039A024 AE22004C */   sw        $v0, 0x4C($s1)
 .L8039A028_ovl8:
-/* 1AC0A8 8039A028 3C02803A */  lui        $v0, %hi(D_803A2048)
-/* 1AC0AC 8039A02C 24422048 */  addiu      $v0, $v0, %lo(D_803A2048)
+/* 1AC0A8 8039A028 3C02803A */  lui        $v0, %hi(D_803A2048_ovl8)
+/* 1AC0AC 8039A02C 24422048 */  addiu      $v0, $v0, %lo(D_803A2048_ovl8)
 /* 1AC0B0 8039A030 AE220048 */  sw         $v0, 0x48($s1)
-/* 1AC0B4 8039A034 3C02803A */  lui        $v0, %hi(D_803A2088)
-/* 1AC0B8 8039A038 24422088 */  addiu      $v0, $v0, %lo(D_803A2088)
+/* 1AC0B4 8039A034 3C02803A */  lui        $v0, %hi(D_803A2088_ovl8)
+/* 1AC0B8 8039A038 24422088 */  addiu      $v0, $v0, %lo(D_803A2088_ovl8)
 /* 1AC0BC 8039A03C AE22004C */  sw         $v0, 0x4C($s1)
 .L8039A040_ovl8:
 /* 1AC0C0 8039A040 3C03803B */  lui        $v1, %hi(D_803B3E5C)
@@ -256,8 +256,8 @@ glabel func_80399EE0
 .L8039A09C_ovl8:
 /* 1AC11C 8039A09C 0C02591A */  jal        func_80096468
 /* 1AC120 8039A0A0 24040168 */   addiu     $a0, $zero, 0x168
-/* 1AC124 8039A0A4 3C01803B */  lui        $at, %hi(D_803A8C50)
-/* 1AC128 8039A0A8 D4208C50 */  ldc1       $f0, %lo(D_803A8C50)($at)
+/* 1AC124 8039A0A4 3C01803B */  lui        $at, %hi(D_803A8C50_ovl8)
+/* 1AC128 8039A0A8 D4208C50 */  ldc1       $f0, %lo(D_803A8C50_ovl8)($at)
 /* 1AC12C 8039A0AC 3042FFFF */  andi       $v0, $v0, 0xFFFF
 /* 1AC130 8039A0B0 4482A000 */  mtc1       $v0, $f20
 /* 1AC134 8039A0B4 00000000 */  nop
@@ -384,13 +384,13 @@ glabel func_80399EE0
 /* 1AC300 8039A280 A202FFFC */  sb         $v0, -0x4($s0)
 /* 1AC304 8039A284 0C02591A */  jal        func_80096468
 /* 1AC308 8039A288 E600FFF8 */   swc1      $f0, -0x8($s0)
-/* 1AC30C 8039A28C 3C03803A */  lui        $v1, %hi(D_803A2840)
-/* 1AC310 8039A290 24632840 */  addiu      $v1, $v1, %lo(D_803A2840)
+/* 1AC30C 8039A28C 3C03803A */  lui        $v1, %hi(D_803A2840_ovl8)
+/* 1AC310 8039A290 24632840 */  addiu      $v1, $v1, %lo(D_803A2840_ovl8)
 /* 1AC314 8039A294 3042FFFF */  andi       $v0, $v0, 0xFFFF
 /* 1AC318 8039A298 50400004 */  beql       $v0, $zero, .L8039A2AC_ovl8
 /* 1AC31C 8039A29C AE030000 */   sw        $v1, 0x0($s0)
-/* 1AC320 8039A2A0 3C03803A */  lui        $v1, %hi(D_803A27E8)
-/* 1AC324 8039A2A4 246327E8 */  addiu      $v1, $v1, %lo(D_803A27E8)
+/* 1AC320 8039A2A0 3C03803A */  lui        $v1, %hi(D_803A27E8_ovl8)
+/* 1AC324 8039A2A4 246327E8 */  addiu      $v1, $v1, %lo(D_803A27E8_ovl8)
 /* 1AC328 8039A2A8 AE030000 */  sw         $v1, 0x0($s0)
 .L8039A2AC_ovl8:
 /* 1AC32C 8039A2AC 8E220050 */  lw         $v0, 0x50($s1)

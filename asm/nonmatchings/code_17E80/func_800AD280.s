@@ -23,8 +23,8 @@ glabel func_800AD280
 /* 17ED4 800AD2D4 3C14803B */  lui        $s4, %hi(D_803A9200)
 /* 17ED8 800AD2D8 26949200 */  addiu      $s4, $s4, %lo(D_803A9200)
 /* 17EDC 800AD2DC AFB10014 */  sw         $s1, 0x14($sp)
-/* 17EE0 800AD2E0 3C11803B */  lui        $s1, %hi(D_803B3EC0)
-/* 17EE4 800AD2E4 26313EC0 */  addiu      $s1, $s1, %lo(D_803B3EC0)
+/* 17EE0 800AD2E0 3C11803B */  lui        $s1, %hi(ovl8_BSS_END)
+/* 17EE4 800AD2E4 26313EC0 */  addiu      $s1, $s1, %lo(ovl8_BSS_END)
 /* 17EE8 800AD2E8 AFBF0028 */  sw         $ra, 0x28($sp)
 /* 17EEC 800AD2EC 0C02F4F0 */  jal        func_800BD3C0
 /* 17EF0 800AD2F0 02348823 */   subu      $s1, $s1, $s4

@@ -1,2 +1,8 @@
 rom:0x1AF3D0 symbol:func_8002B17C_ovl2 reloc:MIPS_26
 rom:0x1AF410 symbol:func_8002B17C_ovl2 reloc:MIPS_26
+rom:0x16BB0  symbol:func_8002E5D0_ovl1 reloc:MIPS_26
+rom:0x17008  symbol:func_8004FBE4_ovl3 reloc:MIPS_26
+rom:0x17C4C  symbol:func_8003D9F0_ovl7 reloc:MIPS_26
+rom:0x17C84  symbol:func_8003D9F0_ovl7 reloc:MIPS_26
+rom:0x17CBC  symbol:func_8003D9F0_ovl7 reloc:MIPS_26
+rom:0x16EF8  symbol:func_8003DD10_ovl6 reloc:MIPS_26

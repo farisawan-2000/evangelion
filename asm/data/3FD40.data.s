@@ -17175,6 +17175,9 @@ glabel D_800E2082
 /* 4EACE 800E3ECE */ .short 0x052C
 /* 4EAD0 800E3ED0 */ .short 0x0794
 /* 4EAD2 800E3ED2 */ .short 0x052D
+.size D_800E2082, . - D_800E2082
+
+glabel D_800E3ED4
 /* 4EAD4 800E3ED4 */ .short 0x0795
 /* 4EAD6 800E3ED6 */ .short 0x052C
 /* 4EAD8 800E3ED8 */ .short 0x0796
@@ -17407,8 +17410,11 @@ glabel D_800E2082
 /* 4EC9E 800E409E */ .short 0x057C
 /* 4ECA0 800E40A0 */ .short 0x0808
 /* 4ECA2 800E40A2 */ .short 0x057C
+.size D_800E3ED4, . - D_800E3ED4
+
+glabel D_800E40A4
 /* 4ECA4 800E40A4 */ .short 0x0809
-.size D_800E2082, . - D_800E2082
+.size D_800E40A4, . - D_800E40A4
 
 glabel D_800E40A6
 /* 4ECA6 800E40A6 */ .short 0x057D
@@ -17516,8 +17522,14 @@ glabel D_800E40A6
 /* 4ED72 800E4172 */ .short 0x05AC
 /* 4ED74 800E4174 */ .short 0x083D
 /* 4ED76 800E4176 */ .short 0x05AD
+.size D_800E40A6, . - D_800E40A6
+
+glabel D_800E4178
 /* 4ED78 800E4178 */ .short 0x083E
 /* 4ED7A 800E417A */ .short 0x05AE
+.size D_800E4178, . - D_800E4178
+
+glabel D_800E417C
 /* 4ED7C 800E417C */ .short 0x083F
 /* 4ED7E 800E417E */ .short 0x05AE
 /* 4ED80 800E4180 */ .short 0x0840
@@ -17624,6 +17636,9 @@ glabel D_800E40A6
 /* 4EE4A 800E424A */ .short 0x05C5
 /* 4EE4C 800E424C */ .short 0x0873
 /* 4EE4E 800E424E */ .short 0x05C7
+.size D_800E417C, . - D_800E417C
+
+glabel D_800E4250
 /* 4EE50 800E4250 */ .short 0x0874
 /* 4EE52 800E4252 */ .short 0x05C9
 /* 4EE54 800E4254 */ .short 0x0875
@@ -17650,8 +17665,11 @@ glabel D_800E40A6
 /* 4EE7E 800E427E */ .short 0x05C9
 /* 4EE80 800E4280 */ .short 0x0880
 /* 4EE82 800E4282 */ .short 0x05C9
+.size D_800E4250, . - D_800E4250
+
+glabel D_800E4284
 /* 4EE84 800E4284 */ .short 0x0881
-.size D_800E40A6, . - D_800E40A6
+.size D_800E4284, . - D_800E4284
 
 glabel D_800E4286
 /* 4EE86 800E4286 */ .short 0x05CA

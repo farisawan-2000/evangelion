@@ -124,7 +124,7 @@ $(BUILD_DIR)/%.i4.o: %.i4.yay0.png # override
 	tools/slienc $(@:.o=.bin) $(@:.o=.i)
 	$(LD) -r -b binary -o $@ $(@:.o=.i)
 
-$(BUILD_DIR)/$(LD_SCRIPT): $(LD_SCRIPT)
+$(BUILD_DIR)/$(LD_SCRIPT): $(LD_SCRIPT) undefined_syms_all.txt
 	$(CPP) $(VERSION_CFLAGS) -Umips -MMD -MP -MT $@ -MF $@.d -o $@ $< \
 	-DBUILD_DIR=$(BUILD_DIR)
 
