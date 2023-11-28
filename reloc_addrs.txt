@@ -6,3 +6,26 @@ rom:0x17C4C  symbol:func_8003D9F0_ovl7 reloc:MIPS_26
 rom:0x17C84  symbol:func_8003D9F0_ovl7 reloc:MIPS_26
 rom:0x17CBC  symbol:func_8003D9F0_ovl7 reloc:MIPS_26
 rom:0x16EF8  symbol:func_8003DD10_ovl6 reloc:MIPS_26
+
+
+rom:0x17288  symbol:func_80033C58_ovl7 reloc:MIPS_26
+rom:0x172FC  symbol:func_80033EFC_ovl7 reloc:MIPS_26
+rom:0x16EC0  symbol:func_80035090_ovl7 reloc:MIPS_26
+rom:0x17554  symbol:func_80036F20_ovl5 reloc:MIPS_26
+rom:0x17968  symbol:func_800395E0_ovl7 reloc:MIPS_26
+rom:0x179FC  symbol:func_8003AEEC_ovl7 reloc:MIPS_26
+rom:0x177C8  symbol:func_8003B090_ovl6 reloc:MIPS_26
+rom:0x176F4  symbol:func_8003C5B0_ovl6 reloc:MIPS_26
+rom:0x17AB0  symbol:func_8003D13C_ovl7 reloc:MIPS_26
+rom:0x173AC  symbol:func_8003E494_ovl6 reloc:MIPS_26
+rom:0x1739C  symbol:func_8003E4B0_ovl6 reloc:MIPS_26
+rom:0x170E0  symbol:func_8003F4A4_ovl7 reloc:MIPS_26
+rom:0x16C50  symbol:func_8003FD60_ovl3 reloc:MIPS_26
+rom:0x171C8  symbol:func_80040518_ovl7 reloc:MIPS_26
+rom:0x17228  symbol:func_80040CA4_ovl7 reloc:MIPS_26
+rom:0x16FAC  symbol:func_800432D4_ovl3 reloc:MIPS_26
+rom:0x17080  symbol:func_8004334C_ovl3 reloc:MIPS_26
+rom:0x178CC  symbol:func_80047460_ovl5 reloc:MIPS_26
+rom:0x16F20  symbol:func_8004A884_ovl3 reloc:MIPS_26
+rom:0x16F44  symbol:func_8004D0F8_ovl3 reloc:MIPS_26
+rom:0x17CF8  symbol:func_8004F800_ovl5 reloc:MIPS_26
