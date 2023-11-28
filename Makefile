@@ -2,6 +2,7 @@ default: all
 
 TARGET = eva
 ROM = $(BUILD_DIR)/$(TARGET).z64
+NON_MATCHING ?= 0
 
 CROSS=mips-n64-
 
@@ -54,14 +55,18 @@ N64ASFLAGS := -EB -mcpu=vr4300 -mips3 -Ibuild/ -I.
 AS = $(CROSS)as
 ASFLAGS := -march=vr4300 -mtune=vr4300 -mabi=32 -mips3 -Iinclude -I. -I$(BUILD_DIR)
 
-STRIP := $(CROSS)strip
+DEFINES := -DTARGET_N64 -DF3DEX_GBI_2
+ifeq ($(NON_MATCHING),1)
+	DEFINES += -DNON_MATCHING
+endif
+
 CC = VR4300MUL=OFF COMPILER_PATH=tools/gcc_kmc/linux/2.7.2/ tools/gcc_kmc/linux/2.7.2/gcc
 KMC_AS := tools/gcc_kmc/linux/2.7.2/as
 OPT_FLAGS := -O2
 # -mno-split-addresses
-KMC_CFLAGS = $(OPT_FLAGS) -c -G0 -mgp32 -mfp32 -mips3 -mno-abicalls -Wa,--vr4300mul-off
+KMC_CFLAGS = $(DEFINES) $(OPT_FLAGS) -c -G0 -mgp32 -mfp32 -mips3 -mno-abicalls -Wa,--vr4300mul-off
 
-TARGET_CFLAGS := -nostdinc -I include/libc -DTARGET_N64 -DF3DEX_GBI_2
+TARGET_CFLAGS := -nostdinc -I include/libc $(DEFINES)
 KMC_ASFLAGS := -c -mips3 -O2
 CFLAGS = $(KMC_CFLAGS)
 IDO_CFLAGS = $(TARGET_CFLAGS) -Wab,-r4300_mul -non_shared -G0 -Xcpluscomm -Xfullwarn -signed -O2 -Iinclude -I. -Isrc/
@@ -106,7 +111,6 @@ $(BUILD_DIR)/%.i : %.c | $(SRC_BUILD_DIRS)
 	$(PYTHON) tools/str2hex.py $< > $(@:.i=.ii)
 	$(CPP) $(CPPFLAGS) $(@:.i=.ii) -o $@
 
-#$(STRIP) $@ -N $(<:.i=.c)
 $(BUILD_DIR)/%.o : $(BUILD_DIR)/%.i | $(SRC_BUILD_DIRS)
 	$(CC) $(KMC_CFLAGS) -I. -I asm/nonmatchings/ -o $@ $<
 
