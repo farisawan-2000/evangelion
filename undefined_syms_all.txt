@@ -1,6 +1,3 @@
-
-
-
 D_1 = 0x1;
 D_77300 = D_80077300_ovl2 & 0xFFFFFF;
 D_D38E0 = D_800D38E0 & 0xFFFFFF;
