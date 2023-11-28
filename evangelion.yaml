@@ -469,6 +469,20 @@ segments:
     bss_size: 0xACC0
     subsegments:
     - [0x1A1880, asm, ovl8/code_1A1880]
+    - [0x1A1DC0, asm, ovl8/code_1A1DC0]
+    - [0x1A29F0, asm, ovl8/code_1A29F0]
+    - [0x1A2FD0, asm, ovl8/code_1A2FD0]
+    - [0x1A4750, asm, ovl8/code_1A4750]
+    - [0x1A5B60, asm, ovl8/code_1A5B60]
+    - [0x1A7580, asm, ovl8/code_1A7580]
+    - [0x1A8BE0, asm, ovl8/code_1A8BE0]
+    - [0x1A92B0, asm, ovl8/code_1A92B0]
+    - [0x1AA220, asm, ovl8/code_1AA220]
+    - [0x1AA7B0, asm, ovl8/code_1AA7B0]
+    - [0x1ABDB0, asm, ovl8/code_1ABDB0]
+    - [0x1AC8C0, asm, ovl8/code_1AC8C0]
+    - [0x1ADEC0, asm, ovl8/code_1ADEC0]
+    - [0x1AE9A0, asm, ovl8/code_1AE9A0]
     - [0x1B06B0, data, ovl8/ovl8]
     - [0x1BB280]
     - {type: bss, vram: 0x803A9200, name: ovl8/ovl8}
