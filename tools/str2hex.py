@@ -1,6 +1,8 @@
-from charmap import evangelion_charmap_reverse
+from charmap import build_reverse_charmap
 
 import sys
+
+evangelion_charmap_reverse = build_reverse_charmap()
 
 fb = []
 with open(sys.argv[1]) as f:
