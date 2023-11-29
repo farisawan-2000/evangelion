@@ -521,8 +521,8 @@ SECTIONS
         build/src/ovl3/code_000ECA30.o(.text);
         build/asm/ovl3/code_000F3E10.o(.text);
         build/src/ovl3/code_000F6680.o(.text);
-        build/asm/ovl3/code_000F7730.o(.text);
-        build/asm/ovl3/code_000F9170.o(.text);
+        build/src/ovl3/code_000F7730.o(.text);
+        build/src/ovl3/code_000F9170.o(.text);
         build/asm/ovl3/code_000FE9A0.o(.text);
         build/asm/ovl3/code_00103E10.o(.text);
         build/asm/ovl3/code_00104FB0.o(.text);
@@ -547,6 +547,10 @@ SECTIONS
         build/src/ovl3/code_000F6680.o(.data);
         ovl3_data_112780_data = .;
         build/asm/data/ovl3/data_112780.data.o(.data);
+        ovl3_code_000F9170 = .;
+        build/src/ovl3/code_000F9170.o(.data);
+        ovl3_data_112CA0_data = .;
+        build/asm/data/ovl3/data_112CA0.data.o(.data);
         ovl3_DATA_END = .;
         ovl3_DATA_SIZE = ABSOLUTE(ovl3_DATA_END - ovl3_DATA_START);
         ovl3_RODATA_START = .;
