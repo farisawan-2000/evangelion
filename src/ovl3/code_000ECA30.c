@@ -1,5 +1,8 @@
 #include "common.h"
 #include "evangelion_types.h"
+#include "segments.h"
+
+// RODATA 113490-113670
 
 String D_80068FB0_ovl3 = R"(セカンドインパクトから(15)年。)";
 String D_80068FD0_ovl3 = R"(陸上に迫る謎の物体。)";
@@ -34,7 +37,9 @@ u32 D_800691A8_ovl3 = 0;
 u32 D_800691AC_ovl3 = 0;
 u8 D_800691B0_ovl3 = 1;
 
-INCLUDE_ASM("asm/nonmatchings/ovl3/code_000ECA30", func_80043520_ovl3);
+void func_80043520_ovl3() {
+    func_800A3624(func_80036494_ovl3(0x102, 5, 0x17)->unkC, 128, 0x18C);
+}
 
 INCLUDE_ASM("asm/nonmatchings/ovl3/code_000ECA30", func_80043554_ovl3);
 

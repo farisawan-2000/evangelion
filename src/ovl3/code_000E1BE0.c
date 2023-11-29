@@ -1,62 +1,6 @@
 #include "common.h"
 #include "evangelion_types.h"
 
-extern u8 D_800D3BC0, D_800D3BC1, D_800D3BC2, D_800D3BC3, D_800D3BC4, D_800D3BC5, D_800D3BC6;
-extern f32 D_800D3BD8, D_800D3BDC, D_800D3BE0;
-
-typedef struct {
-    u16 *str;
-    s8 wdSpacing;
-    s8 htSpacing;
-    u8 p3;
-    u8 p4;
-} FontParams;
-
-typedef struct {
-    u32 _000;
-    u32 _004;
-    u32 _008;
-    u32 _00C;
-    u32 _010;
-    u32 _014;
-    u32 _018;
-    u32 _01C;
-    u32 _020;
-    u32 _024;
-    u32 _028;
-    u8 _02C;
-    u8 _02D;
-    u8 _02E;
-    u8 unk2F;
-} UnkStruct80036494_1C_00;
-
-typedef struct {
-    UnkStruct80036494_1C_00 *unk0;
-    u32 _004;
-    u32 _008;
-    u32 _00C;
-    u32 _010;
-    u32 _014;
-    u32 _018;
-    u16 unk1C;
-} UnkStruct80036494_1C;
-
-typedef struct {
-    u32 _000;
-    u32 _004;
-    u32 _008;
-    UnkStruct80036494_1C *unkC;
-} UnkStruct80036494;
-
-UnkStruct80036494 *func_80036494_ovl3(u16, s32, s32);
-UnkStruct80036494 *func_80036304_ovl3(u16 arg0);
-
-typedef struct {
-    s16 *angelName;
-    s16 *machineType;
-    s16 *description;
-} MissionText;
-
 String _S01 = R"(攻撃目標 :)";
 String _S02 = R"(使用EVA:)";
 String _S03 = R"(作戦内容 :)";
