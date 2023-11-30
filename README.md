@@ -11,3 +11,7 @@
 ## Contributing + Terminology
  - PR's are welcome always! Contribute to this and Kirby 64 decomp now!
  
+## Acknowledgements
+ - JP text strings (refer C files in src/ovl3, src/ovl7) - IlDucci, Zoinkity
+ - Character Map (refer tools/charmap.py) - IlDucci, Dark_Kudoh
+ - File Tables/Names (refer evangelion.yaml) - IlDucci, Zoinkity, GriffithVIII

@@ -462,7 +462,8 @@ segments:
     - [0x18EE00, asm, ovl7/code_18EE00]
     - [0x18EF90, asm, ovl7/code_18EF90]
     - [0x190050, asm, ovl7/code_190050]
-    - [0x1907e0, data, ovl7/ovl7]
+    - [0x1907e0, data, ovl7/data_1907E0]
+    - [0x193A3C, data, ovl7/data_193A3C]
     - [0x1A1880]
     - {type: bss, vram: 0x80051E40, name: ovl7/ovl7}
 
