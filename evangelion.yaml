@@ -439,7 +439,7 @@ segments:
     bss_size: 0x410
     subsegments:
     - [0x175640, asm, ovl7/code_175640]
-    - [0x175860, asm, ovl7/code_175860]
+    - [0x175860, c, ovl7/code_175860]
     - [0x179E00, asm, ovl7/code_179E00]
     - [0x17AEF0, asm, ovl7/code_17AEF0]
     - [0x17B260, asm, ovl7/code_17B260]

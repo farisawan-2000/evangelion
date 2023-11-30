@@ -857,7 +857,7 @@ SECTIONS
         FILL(0x00000000);
         ovl7_TEXT_START = .;
         build/asm/ovl7/code_175640.o(.text);
-        build/asm/ovl7/code_175860.o(.text);
+        build/src/ovl7/code_175860.o(.text);
         build/asm/ovl7/code_179E00.o(.text);
         build/asm/ovl7/code_17AEF0.o(.text);
         build/asm/ovl7/code_17B260.o(.text);
@@ -891,7 +891,7 @@ SECTIONS
         ovl7_DATA_SIZE = ABSOLUTE(ovl7_DATA_END - ovl7_DATA_START);
         ovl7_RODATA_START = .;
         build/asm/ovl7/code_175640.o(.rodata);
-        build/asm/ovl7/code_175860.o(.rodata);
+        build/src/ovl7/code_175860.o(.rodata);
         build/asm/ovl7/code_179E00.o(.rodata);
         build/asm/ovl7/code_17AEF0.o(.rodata);
         build/asm/ovl7/code_17B260.o(.rodata);
