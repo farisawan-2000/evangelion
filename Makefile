@@ -7,7 +7,7 @@ NON_MATCHING ?= 0
 CROSS=mips-n64-
 
 ASM_DIRS = asm asm/data asm/asm asm/os $(wildcard asm/ovl*) $(wildcard src/ovl*) $(wildcard asm/data/ovl*)
-SRC_DIRS = src src/os src/ovl3
+SRC_DIRS = src src/os src/ovl3 src/ovl7
 BUILD_DIR = build
 
 YAY0_DIR = assets/yay0

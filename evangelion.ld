@@ -885,8 +885,10 @@ SECTIONS
         ovl7_DATA_START = .;
         ovl7_data_1907E0_data = .;
         build/asm/data/ovl7/data_1907E0.data.o(.data);
-        ovl7_data_193A3C_data = .;
-        build/asm/data/ovl7/data_193A3C.data.o(.data);
+        ovl7_code_175860 = .;
+        build/src/ovl7/code_175860.o(.data);
+        ovl7_data_1927B8_data = .;
+        build/asm/data/ovl7/data_1927B8.data.o(.data);
         ovl7_DATA_END = .;
         ovl7_DATA_SIZE = ABSOLUTE(ovl7_DATA_END - ovl7_DATA_START);
         ovl7_RODATA_START = .;
