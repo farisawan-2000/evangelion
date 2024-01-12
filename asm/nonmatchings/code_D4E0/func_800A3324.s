@@ -5,8 +5,8 @@ glabel func_800A3324
 /* DF30 800A3330 3082FFFF */  andi       $v0, $a0, 0xFFFF
 /* DF34 800A3334 3C04001E */  lui        $a0, %hi(Image_ROM_START)
 /* DF38 800A3338 24849000 */  addiu      $a0, $a0, %lo(Image_ROM_START)
-/* DF3C 800A333C 3C05800D */  lui        $a1, %hi(D_800D6AD0)
-/* DF40 800A3340 24A56AD0 */  addiu      $a1, $a1, %lo(D_800D6AD0)
+/* DF3C 800A333C 3C05800D */  lui        $a1, %hi(Image_tbl)
+/* DF40 800A3340 24A56AD0 */  addiu      $a1, $a1, %lo(Image_tbl)
 /* DF44 800A3344 AFB20018 */  sw         $s2, 0x18($sp)
 /* DF48 800A3348 00C09021 */  addu       $s2, $a2, $zero
 /* DF4C 800A334C 00403021 */  addu       $a2, $v0, $zero

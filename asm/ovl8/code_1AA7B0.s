@@ -28,8 +28,8 @@ glabel func_80398730
 /* 1AA7E8 80398768 02002021 */  addu       $a0, $s0, $zero
 /* 1AA7EC 8039876C 3C05001E */  lui        $a1, %hi(Image_ROM_START)
 /* 1AA7F0 80398770 24A59000 */  addiu      $a1, $a1, %lo(Image_ROM_START)
-/* 1AA7F4 80398774 3C06800D */  lui        $a2, %hi(D_800D6AD0)
-/* 1AA7F8 80398778 24C66AD0 */  addiu      $a2, $a2, %lo(D_800D6AD0)
+/* 1AA7F4 80398774 3C06800D */  lui        $a2, %hi(Image_tbl)
+/* 1AA7F8 80398778 24C66AD0 */  addiu      $a2, $a2, %lo(Image_tbl)
 /* 1AA7FC 8039877C 0C0264C3 */  jal        func_8009930C
 /* 1AA800 80398780 2627085A */   addiu     $a3, $s1, 0x85A
 /* 1AA804 80398784 AE500000 */  sw         $s0, 0x0($s2)
@@ -867,8 +867,8 @@ glabel func_80399380
 /* 1AB408 80399388 2484E450 */  addiu      $a0, $a0, %lo(D_803AE450)
 /* 1AB40C 8039938C 3C050061 */  lui        $a1, %hi(Palettes_ROM_START)
 /* 1AB410 80399390 24A5CB80 */  addiu      $a1, $a1, %lo(Palettes_ROM_START)
-/* 1AB414 80399394 3C06800E */  lui        $a2, %hi(D_800DD820)
-/* 1AB418 80399398 24C6D820 */  addiu      $a2, $a2, %lo(D_800DD820)
+/* 1AB414 80399394 3C06800E */  lui        $a2, %hi(Palettes_tbl)
+/* 1AB418 80399398 24C6D820 */  addiu      $a2, $a2, %lo(Palettes_tbl)
 /* 1AB41C 8039939C 24070079 */  addiu      $a3, $zero, 0x79
 /* 1AB420 803993A0 AFBF0018 */  sw         $ra, 0x18($sp)
 /* 1AB424 803993A4 AFB10014 */  sw         $s1, 0x14($sp)
@@ -881,8 +881,8 @@ glabel func_80399380
 /* 1AB43C 803993BC 02202021 */  addu       $a0, $s1, $zero
 /* 1AB440 803993C0 3C05001E */  lui        $a1, %hi(Image_ROM_START)
 /* 1AB444 803993C4 24A59000 */  addiu      $a1, $a1, %lo(Image_ROM_START)
-/* 1AB448 803993C8 3C06800D */  lui        $a2, %hi(D_800D6AD0)
-/* 1AB44C 803993CC 24C66AD0 */  addiu      $a2, $a2, %lo(D_800D6AD0)
+/* 1AB448 803993C8 3C06800D */  lui        $a2, %hi(Image_tbl)
+/* 1AB44C 803993CC 24C66AD0 */  addiu      $a2, $a2, %lo(Image_tbl)
 /* 1AB450 803993D0 0C0264C3 */  jal        func_8009930C
 /* 1AB454 803993D4 260700F9 */   addiu     $a3, $s0, 0xF9
 /* 1AB458 803993D8 26100001 */  addiu      $s0, $s0, 0x1

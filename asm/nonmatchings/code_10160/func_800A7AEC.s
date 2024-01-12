@@ -16,8 +16,8 @@ glabel func_800A7AEC
 /* 12724 800A7B24 00E0B821 */  addu       $s7, $a3, $zero
 /* 12728 800A7B28 AFBE0040 */  sw         $fp, 0x40($sp)
 /* 1272C 800A7B2C 93BE0063 */  lbu        $fp, 0x63($sp)
-/* 12730 800A7B30 3C05800D */  lui        $a1, %hi(D_800D5190)
-/* 12734 800A7B34 24A55190 */  addiu      $a1, $a1, %lo(D_800D5190)
+/* 12730 800A7B30 3C05800D */  lui        $a1, %hi(Font_tbl)
+/* 12734 800A7B34 24A55190 */  addiu      $a1, $a1, %lo(Font_tbl)
 /* 12738 800A7B38 00003821 */  addu       $a3, $zero, $zero
 /* 1273C 800A7B3C AFBF0044 */  sw         $ra, 0x44($sp)
 /* 12740 800A7B40 AFB20028 */  sw         $s2, 0x28($sp)

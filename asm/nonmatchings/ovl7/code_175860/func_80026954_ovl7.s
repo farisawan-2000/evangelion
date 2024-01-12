@@ -19,8 +19,8 @@ glabel func_80026954_ovl7
 /* 1763D8 80026998 92220005 */  lbu        $v0, 0x5($s1)
 /* 1763DC 8002699C 3C04001E */  lui        $a0, %hi(Image_ROM_START)
 /* 1763E0 800269A0 24849000 */  addiu      $a0, $a0, %lo(Image_ROM_START)
-/* 1763E4 800269A4 3C05800D */  lui        $a1, %hi(D_800D6AD0)
-/* 1763E8 800269A8 24A56AD0 */  addiu      $a1, $a1, %lo(D_800D6AD0)
+/* 1763E4 800269A4 3C05800D */  lui        $a1, %hi(Image_tbl)
+/* 1763E8 800269A8 24A56AD0 */  addiu      $a1, $a1, %lo(Image_tbl)
 /* 1763EC 800269AC 3210FFFF */  andi       $s0, $s0, 0xFFFF
 /* 1763F0 800269B0 00108080 */  sll        $s0, $s0, 2
 /* 1763F4 800269B4 3C06800E */  lui        $a2, %hi(D_800E2080)

@@ -5,8 +5,8 @@ glabel func_800A6058
 /* 10C64 800A6064 30A700FF */  andi       $a3, $a1, 0xFF
 /* 10C68 800A6068 3C04001E */  lui        $a0, %hi(Image_ROM_START)
 /* 10C6C 800A606C 24849000 */  addiu      $a0, $a0, %lo(Image_ROM_START)
-/* 10C70 800A6070 3C05800D */  lui        $a1, %hi(D_800D6AD0)
-/* 10C74 800A6074 24A56AD0 */  addiu      $a1, $a1, %lo(D_800D6AD0)
+/* 10C70 800A6070 3C05800D */  lui        $a1, %hi(Image_tbl)
+/* 10C74 800A6074 24A56AD0 */  addiu      $a1, $a1, %lo(Image_tbl)
 /* 10C78 800A6078 0C02648E */  jal        func_80099238
 /* 10C7C 800A607C 00063403 */   sra       $a2, $a2, 16
 /* 10C80 800A6080 8FBF0010 */  lw         $ra, 0x10($sp)

@@ -29,9 +29,9 @@ glabel func_800A4E8C
 /* FAF4 800A4EF4 00031040 */  sll        $v0, $v1, 1
 /* FAF8 800A4EF8 00431021 */  addu       $v0, $v0, $v1
 /* FAFC 800A4EFC 00021080 */  sll        $v0, $v0, 2
-/* FB00 800A4F00 3C01800D */  lui        $at, %hi(D_800D6AD8)
+/* FB00 800A4F00 3C01800D */  lui        $at, %hi(Image_tbl_8)
 /* FB04 800A4F04 00220821 */  addu       $at, $at, $v0
-/* FB08 800A4F08 8C226AD8 */  lw         $v0, %lo(D_800D6AD8)($at)
+/* FB08 800A4F08 8C226AD8 */  lw         $v0, %lo(Image_tbl_8)($at)
 /* FB0C 800A4F0C 26520001 */  addiu      $s2, $s2, 0x1
 /* FB10 800A4F10 2442FFF0 */  addiu      $v0, $v0, -0x10
 /* FB14 800A4F14 00021040 */  sll        $v0, $v0, 1
@@ -86,8 +86,8 @@ glabel func_800A4E8C
 /* FBBC 800A4FBC 3C10800E */  lui        $s0, %hi(D_800E2080)
 /* FBC0 800A4FC0 02138021 */  addu       $s0, $s0, $s3
 /* FBC4 800A4FC4 96102080 */  lhu        $s0, %lo(D_800E2080)($s0)
-/* FBC8 800A4FC8 3C05800D */  lui        $a1, %hi(D_800D6AD0)
-/* FBCC 800A4FCC 24A56AD0 */  addiu      $a1, $a1, %lo(D_800D6AD0)
+/* FBC8 800A4FC8 3C05800D */  lui        $a1, %hi(Image_tbl)
+/* FBCC 800A4FCC 24A56AD0 */  addiu      $a1, $a1, %lo(Image_tbl)
 /* FBD0 800A4FD0 00003821 */  addu       $a3, $zero, $zero
 /* FBD4 800A4FD4 0C02648E */  jal        func_80099238
 /* FBD8 800A4FD8 02003021 */   addu      $a2, $s0, $zero
@@ -97,9 +97,9 @@ glabel func_800A4E8C
 /* FBE8 800A4FE8 00101040 */  sll        $v0, $s0, 1
 /* FBEC 800A4FEC 00501021 */  addu       $v0, $v0, $s0
 /* FBF0 800A4FF0 00021080 */  sll        $v0, $v0, 2
-/* FBF4 800A4FF4 3C01800D */  lui        $at, %hi(D_800D6AD8)
+/* FBF4 800A4FF4 3C01800D */  lui        $at, %hi(Image_tbl_8)
 /* FBF8 800A4FF8 00220821 */  addu       $at, $at, $v0
-/* FBFC 800A4FFC 8C226AD8 */  lw         $v0, %lo(D_800D6AD8)($at)
+/* FBFC 800A4FFC 8C226AD8 */  lw         $v0, %lo(Image_tbl_8)($at)
 /* FC00 800A5000 00002821 */  addu       $a1, $zero, $zero
 /* FC04 800A5004 94900000 */  lhu        $s0, 0x0($a0)
 /* FC08 800A5008 2447FFF0 */  addiu      $a3, $v0, -0x10
@@ -183,8 +183,8 @@ glabel func_800A4E8C
 /* FD1C 800A511C 3C07800E */  lui        $a3, %hi(D_800E2082)
 /* FD20 800A5120 00F03821 */  addu       $a3, $a3, $s0
 /* FD24 800A5124 94E72082 */  lhu        $a3, %lo(D_800E2082)($a3)
-/* FD28 800A5128 3C06800E */  lui        $a2, %hi(D_800DD820)
-/* FD2C 800A512C 24C6D820 */  addiu      $a2, $a2, %lo(D_800DD820)
+/* FD28 800A5128 3C06800E */  lui        $a2, %hi(Palettes_tbl)
+/* FD2C 800A512C 24C6D820 */  addiu      $a2, $a2, %lo(Palettes_tbl)
 /* FD30 800A5130 0C0264C3 */  jal        func_8009930C
 /* FD34 800A5134 26100004 */   addiu     $s0, $s0, 0x4
 /* FD38 800A5138 02228821 */  addu       $s1, $s1, $v0

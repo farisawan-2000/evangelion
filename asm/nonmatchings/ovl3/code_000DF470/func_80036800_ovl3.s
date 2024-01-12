@@ -82,9 +82,9 @@ glabel func_80036800_ovl3
 /* DFE44 80036934 00031040 */  sll        $v0, $v1, 1
 /* DFE48 80036938 00431021 */  addu       $v0, $v0, $v1
 /* DFE4C 8003693C 00021080 */  sll        $v0, $v0, 2
-/* DFE50 80036940 3C03800D */  lui        $v1, %hi(D_800D6AD8)
+/* DFE50 80036940 3C03800D */  lui        $v1, %hi(Image_tbl_8)
 /* DFE54 80036944 00621821 */  addu       $v1, $v1, $v0
-/* DFE58 80036948 8C636AD8 */  lw         $v1, %lo(D_800D6AD8)($v1)
+/* DFE58 80036948 8C636AD8 */  lw         $v1, %lo(Image_tbl_8)($v1)
 /* DFE5C 8003694C 26730001 */  addiu      $s3, $s3, 0x1
 /* DFE60 80036950 2602FFF0 */  addiu      $v0, $s0, -0x10
 /* DFE64 80036954 00438021 */  addu       $s0, $v0, $v1

@@ -117,7 +117,7 @@ $(BUILD_DIR)/%.o : $(BUILD_DIR)/%.i | $(SRC_BUILD_DIRS)
 $(BUILD_DIR)/%.o: %.bin
 	$(LD) -r -b binary -o $@ $<
 $(BUILD_DIR)/%.yay0.o: %.yay0.bin # override
-	tools/slienc $< $@.i
+	tools/slienc $< $@.i 2> $@.size
 	$(LD) -r -b binary -o $@ $@.i
 
 $(BUILD_DIR)/%.i4.o: %.i4.png

@@ -241,6 +241,20 @@ SECTIONS
         build/src/code_162C0.o(.data);
         _3FD40_data = .;
         build/asm/data/3FD40.data.o(.data);
+        Font_tbl_data = .;
+        build/asm/data/Font_tbl.data.o(.data);
+        Images_tbl_data = .;
+        build/asm/data/Images_tbl.data.o(.data);
+        Palettes_tbl_data = .;
+        build/asm/data/Palettes_tbl.data.o(.data);
+        unkShorts_data = .;
+        build/asm/data/unkShorts.data.o(.data);
+        tbl4_data = .;
+        build/asm/data/tbl4.data.o(.data);
+        BLOCK08_tbl_data = .;
+        build/asm/data/BLOCK08_tbl.data.o(.data);
+        code_550F0_data = .;
+        build/asm/data/code_550F0.data.o(.data);
         main_DATA_END = .;
         main_DATA_SIZE = ABSOLUTE(main_DATA_END - main_DATA_START);
         main_RODATA_START = .;
@@ -852,7 +866,7 @@ SECTIONS
 
     ovl7_ROM_START = __romPos;
     ovl7_VRAM = ADDR(.ovl7);
-    .ovl7 0x80025C00 : AT(ovl7_ROM_START) SUBALIGN(16)
+    .ovl7 0x80025C00 : AT(ovl7_ROM_START) SUBALIGN(4)
     {
         FILL(0x00000000);
         ovl7_TEXT_START = .;
@@ -920,7 +934,7 @@ SECTIONS
         ovl7_RODATA_SIZE = ABSOLUTE(ovl7_RODATA_END - ovl7_RODATA_START);
     }
     ovl7_bss_VRAM = ADDR(.ovl7_bss);
-    .ovl7_bss (NOLOAD) : SUBALIGN(16)
+    .ovl7_bss (NOLOAD) : SUBALIGN(4)
     {
         FILL(0x00000000);
         ovl7_BSS_START = .;

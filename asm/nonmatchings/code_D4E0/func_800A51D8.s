@@ -22,9 +22,9 @@ glabel func_800A51D8
 /* FE28 800A5228 00111040 */  sll        $v0, $s1, 1
 /* FE2C 800A522C 00511021 */  addu       $v0, $v0, $s1
 /* FE30 800A5230 00021080 */  sll        $v0, $v0, 2
-/* FE34 800A5234 3C01800D */  lui        $at, %hi(D_800D6AD8)
+/* FE34 800A5234 3C01800D */  lui        $at, %hi(Image_tbl_8)
 /* FE38 800A5238 00220821 */  addu       $at, $at, $v0
-/* FE3C 800A523C 8C226AD8 */  lw         $v0, %lo(D_800D6AD8)($at)
+/* FE3C 800A523C 8C226AD8 */  lw         $v0, %lo(Image_tbl_8)($at)
 /* FE40 800A5240 97A3001E */  lhu        $v1, 0x1E($sp)
 /* FE44 800A5244 2442FFF0 */  addiu      $v0, $v0, -0x10
 /* FE48 800A5248 00430018 */  mult       $v0, $v1
@@ -71,8 +71,8 @@ glabel func_800A51D8
 .L800A52DC:
 /* FEDC 800A52DC 3C04001E */  lui        $a0, %hi(Image_ROM_START)
 /* FEE0 800A52E0 24849000 */  addiu      $a0, $a0, %lo(Image_ROM_START)
-/* FEE4 800A52E4 3C05800D */  lui        $a1, %hi(D_800D6AD0)
-/* FEE8 800A52E8 24A56AD0 */  addiu      $a1, $a1, %lo(D_800D6AD0)
+/* FEE4 800A52E4 3C05800D */  lui        $a1, %hi(Image_tbl)
+/* FEE8 800A52E8 24A56AD0 */  addiu      $a1, $a1, %lo(Image_tbl)
 /* FEEC 800A52EC 02203021 */  addu       $a2, $s1, $zero
 /* FEF0 800A52F0 0C02648E */  jal        func_80099238
 /* FEF4 800A52F4 00003821 */   addu      $a3, $zero, $zero

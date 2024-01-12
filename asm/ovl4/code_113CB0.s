@@ -87,8 +87,8 @@ glabel func_80025DA0_ovl4
 /* 113DC0 80025EB0 24849000 */  addiu      $a0, $a0, %lo(Image_ROM_START)
 /* 113DC4 80025EB4 3C068003 */  lui        $a2, %hi(D_80029584_ovl4)
 /* 113DC8 80025EB8 8CC69584 */  lw         $a2, %lo(D_80029584_ovl4)($a2)
-/* 113DCC 80025EBC 3C05800D */  lui        $a1, %hi(D_800D6AD0)
-/* 113DD0 80025EC0 24A56AD0 */  addiu      $a1, $a1, %lo(D_800D6AD0)
+/* 113DCC 80025EBC 3C05800D */  lui        $a1, %hi(Image_tbl)
+/* 113DD0 80025EC0 24A56AD0 */  addiu      $a1, $a1, %lo(Image_tbl)
 /* 113DD4 80025EC4 0C02648E */  jal        func_80099238
 /* 113DD8 80025EC8 00003821 */   addu      $a3, $zero, $zero
 /* 113DDC 80025ECC 3C018003 */  lui        $at, %hi(D_80029580_ovl4)
@@ -271,11 +271,11 @@ glabel func_80025F98_ovl4
 /* 114058 80026148 00071040 */  sll        $v0, $a3, 1
 /* 11405C 8002614C 00471021 */  addu       $v0, $v0, $a3
 /* 114060 80026150 00021080 */  sll        $v0, $v0, 2
-/* 114064 80026154 3C10800D */  lui        $s0, %hi(D_800D6AD8)
+/* 114064 80026154 3C10800D */  lui        $s0, %hi(Image_tbl_8)
 /* 114068 80026158 02028021 */  addu       $s0, $s0, $v0
-/* 11406C 8002615C 8E106AD8 */  lw         $s0, %lo(D_800D6AD8)($s0)
-/* 114070 80026160 3C06800D */  lui        $a2, %hi(D_800D6AD0)
-/* 114074 80026164 24C66AD0 */  addiu      $a2, $a2, %lo(D_800D6AD0)
+/* 11406C 8002615C 8E106AD8 */  lw         $s0, %lo(Image_tbl_8)($s0)
+/* 114070 80026160 3C06800D */  lui        $a2, %hi(Image_tbl)
+/* 114074 80026164 24C66AD0 */  addiu      $a2, $a2, %lo(Image_tbl)
 /* 114078 80026168 3C11800E */  lui        $s1, %hi(D_800E2082)
 /* 11407C 8002616C 02238821 */  addu       $s1, $s1, $v1
 /* 114080 80026170 96312082 */  lhu        $s1, %lo(D_800E2082)($s1)
@@ -284,8 +284,8 @@ glabel func_80025F98_ovl4
 /* 11408C 8002617C 02002021 */  addu       $a0, $s0, $zero
 /* 114090 80026180 3C050061 */  lui        $a1, %hi(Palettes_ROM_START)
 /* 114094 80026184 24A5CB80 */  addiu      $a1, $a1, %lo(Palettes_ROM_START)
-/* 114098 80026188 3C06800E */  lui        $a2, %hi(D_800DD820)
-/* 11409C 8002618C 24C6D820 */  addiu      $a2, $a2, %lo(D_800DD820)
+/* 114098 80026188 3C06800E */  lui        $a2, %hi(Palettes_tbl)
+/* 11409C 8002618C 24C6D820 */  addiu      $a2, $a2, %lo(Palettes_tbl)
 /* 1140A0 80026190 0C0264C3 */  jal        func_8009930C
 /* 1140A4 80026194 02203821 */   addu      $a3, $s1, $zero
 /* 1140A8 80026198 3C04802F */  lui        $a0, (0x802F9800 >> 16)

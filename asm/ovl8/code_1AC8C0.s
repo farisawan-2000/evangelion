@@ -736,8 +736,8 @@ glabel func_8039B2A0
 /* 1AD358 8039B2D8 02002021 */  addu       $a0, $s0, $zero
 /* 1AD35C 8039B2DC 3C05001E */  lui        $a1, %hi(Image_ROM_START)
 /* 1AD360 8039B2E0 24A59000 */  addiu      $a1, $a1, %lo(Image_ROM_START)
-/* 1AD364 8039B2E4 3C06800D */  lui        $a2, %hi(D_800D6AD0)
-/* 1AD368 8039B2E8 24C66AD0 */  addiu      $a2, $a2, %lo(D_800D6AD0)
+/* 1AD364 8039B2E4 3C06800D */  lui        $a2, %hi(Image_tbl)
+/* 1AD368 8039B2E8 24C66AD0 */  addiu      $a2, $a2, %lo(Image_tbl)
 /* 1AD36C 8039B2EC 0C0264C3 */  jal        func_8009930C
 /* 1AD370 8039B2F0 26270842 */   addiu     $a3, $s1, 0x842
 /* 1AD374 8039B2F4 AE500000 */  sw         $s0, 0x0($s2)

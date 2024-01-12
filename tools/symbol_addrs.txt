@@ -121,6 +121,11 @@ Sound_soundbank_24_bfx_ROM_END = 0x01C31B40;
 // ovl6_ROM_END = 0x00175640;
 // ovl7_ROM_END = 0x001A1880;
 
+Font_tbl = 0x800D5190;
+Image_tbl = 0x800D6AD0;
+Image_tbl_8 = 0x800D6AD8;
+Palettes_tbl = 0x800DD820;
+Palettes_tbl_8 = 0x800DD828;
 
 // actual helpers lol
 func_8005A888_ovl3 = 0x8005A888; // overlay:y

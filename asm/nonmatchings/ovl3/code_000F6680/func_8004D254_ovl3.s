@@ -35,8 +35,8 @@ glabel func_8004D254_ovl3
 /* F67E8 8004D2D8 8E030004 */  lw         $v1, 0x4($s0)
 /* F67EC 8004D2DC 3C04001E */  lui        $a0, %hi(Image_ROM_START)
 /* F67F0 8004D2E0 24849000 */  addiu      $a0, $a0, %lo(Image_ROM_START)
-/* F67F4 8004D2E4 3C05800D */  lui        $a1, %hi(D_800D6AD0)
-/* F67F8 8004D2E8 24A56AD0 */  addiu      $a1, $a1, %lo(D_800D6AD0)
+/* F67F4 8004D2E4 3C05800D */  lui        $a1, %hi(Image_tbl)
+/* F67F8 8004D2E8 24A56AD0 */  addiu      $a1, $a1, %lo(Image_tbl)
 /* F67FC 8004D2EC 90620066 */  lbu        $v0, 0x66($v1)
 /* F6800 8004D2F0 2406085A */  addiu      $a2, $zero, 0x85A
 /* F6804 8004D2F4 00003821 */  addu       $a3, $zero, $zero

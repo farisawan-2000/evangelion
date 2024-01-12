@@ -117,8 +117,8 @@ glabel func_800270A4_ovl7
 /* 176CA4 80027264 0040A021 */  addu       $s4, $v0, $zero
 /* 176CA8 80027268 3C04001E */  lui        $a0, %hi(Image_ROM_START)
 /* 176CAC 8002726C 24849000 */  addiu      $a0, $a0, %lo(Image_ROM_START)
-/* 176CB0 80027270 3C05800D */  lui        $a1, %hi(D_800D6AD0)
-/* 176CB4 80027274 24A56AD0 */  addiu      $a1, $a1, %lo(D_800D6AD0)
+/* 176CB0 80027270 3C05800D */  lui        $a1, %hi(Image_tbl)
+/* 176CB4 80027274 24A56AD0 */  addiu      $a1, $a1, %lo(Image_tbl)
 /* 176CB8 80027278 92220005 */  lbu        $v0, 0x5($s1)
 /* 176CBC 8002727C 3C06800E */  lui        $a2, %hi(D_800E4284)
 /* 176CC0 80027280 94C64284 */  lhu        $a2, %lo(D_800E4284)($a2)

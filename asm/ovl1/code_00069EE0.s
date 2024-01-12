@@ -5463,9 +5463,9 @@ glabel func_8002A9D8_ovl1
 /* 6ED80 8002AAA0 00031040 */  sll        $v0, $v1, 1
 /* 6ED84 8002AAA4 00431021 */  addu       $v0, $v0, $v1
 /* 6ED88 8002AAA8 00021080 */  sll        $v0, $v0, 2
-/* 6ED8C 8002AAAC 3C01800E */  lui        $at, %hi(D_800DD828)
+/* 6ED8C 8002AAAC 3C01800E */  lui        $at, %hi(Palettes_tbl_8)
 /* 6ED90 8002AAB0 00220821 */  addu       $at, $at, $v0
-/* 6ED94 8002AAB4 8C22D828 */  lw         $v0, %lo(D_800DD828)($at)
+/* 6ED94 8002AAB4 8C22D828 */  lw         $v0, %lo(Palettes_tbl_8)($at)
 /* 6ED98 8002AAB8 00021042 */  srl        $v0, $v0, 1
 .L8002AABC_ovl1:
 /* 6ED9C 8002AABC 3C018003 */  lui        $at, %hi(D_80030A34_ovl1)

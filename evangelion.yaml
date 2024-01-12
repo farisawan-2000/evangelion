@@ -213,6 +213,13 @@ segments:
     - [0x3ECD0, data]
     - [0x3FB50, .data, code_162C0]
     - [0x3FD40, data]
+    - [0x3FD90, data, Font_tbl]
+    - [0x416D0, data, Images_tbl]
+    - [0x48420, data, Palettes_tbl]
+    - [0x4CC80, data, unkShorts]
+    - [0x4F210, data, tbl4]
+    - [0x527C0, data, BLOCK08_tbl]
+    - [0x550F0, data, code_550F0]
     - [0x69EE0]
     - {type: bss, vram: 0x800FF2E0, name: mainseg}
 
@@ -437,6 +444,7 @@ segments:
     vram: 0x80025C00
     exclusive_ram_id: 0x80025C00
     bss_size: 0x410
+    subalign: 4
     subsegments:
     - [0x175640, asm, ovl7/code_175640]
     - [0x175860, c, ovl7/code_175860]

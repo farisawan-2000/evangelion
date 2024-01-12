@@ -178,8 +178,8 @@ glabel func_8002C31C_ovl3
 .L8002C538_ovl3:
 /* D5A48 8002C538 3C04001E */  lui        $a0, %hi(Image_ROM_START)
 /* D5A4C 8002C53C 24849000 */  addiu      $a0, $a0, %lo(Image_ROM_START)
-/* D5A50 8002C540 3C05800D */  lui        $a1, %hi(D_800D6AD0)
-/* D5A54 8002C544 24A56AD0 */  addiu      $a1, $a1, %lo(D_800D6AD0)
+/* D5A50 8002C540 3C05800D */  lui        $a1, %hi(Image_tbl)
+/* D5A54 8002C544 24A56AD0 */  addiu      $a1, $a1, %lo(Image_tbl)
 /* D5A58 8002C548 26060586 */  addiu      $a2, $s0, 0x586
 /* D5A5C 8002C54C 0C02648E */  jal        func_80099238
 /* D5A60 8002C550 00003821 */   addu      $a3, $zero, $zero
