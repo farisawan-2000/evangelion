@@ -249,8 +249,8 @@ SECTIONS
         build/asm/data/Palettes_tbl.data.o(.data);
         unkShorts_data = .;
         build/asm/data/unkShorts.data.o(.data);
-        tbl4_data = .;
-        build/asm/data/tbl4.data.o(.data);
+        BLOCK07_tbl_data = .;
+        build/asm/data/BLOCK07_tbl.data.o(.data);
         BLOCK08_tbl_data = .;
         build/asm/data/BLOCK08_tbl.data.o(.data);
         code_550F0_data = .;

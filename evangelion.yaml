@@ -217,7 +217,7 @@ segments:
     - [0x416D0, data, Images_tbl]
     - [0x48420, data, Palettes_tbl]
     - [0x4CC80, data, unkShorts]
-    - [0x4F210, data, tbl4]
+    - [0x4F210, data, BLOCK07_tbl]
     - [0x527C0, data, BLOCK08_tbl]
     - [0x550F0, data, code_550F0]
     - [0x69EE0]
