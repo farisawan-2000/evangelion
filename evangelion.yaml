@@ -216,10 +216,13 @@ segments:
     - [0x3FD90, data, Font_tbl]
     - [0x416D0, data, Images_tbl]
     - [0x48420, data, Palettes_tbl]
-    - [0x4CC80, data, unkShorts]
-    - [0x4F210, data, BLOCK07_tbl]
-    - [0x527C0, data, BLOCK08_tbl]
+    - [0x4CC80, data, imagePaletteAssocs_tbl]
+    - [0x4F210, data, BLOCK04_tbl]
+    - [0x527C0, data, BLOCK05_tbl]
     - [0x550F0, data, code_550F0]
+    - [0x59D40, data, BLOCK06_tbl]
+    - [0x5ACA0, data, BLOCK07_tbl]
+    - [0x5BC00, data, BLOCK08_tbl]
     - [0x69EE0]
     - {type: bss, vram: 0x800FF2E0, name: mainseg}
 
