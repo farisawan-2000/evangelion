@@ -435,7 +435,6 @@ TextParams_ovl7 D_80042224_ovl7[] = {
     {            NULL, 0x00A0, 0x008F, 0x001E, 0x005A, 0x0E, 0x00, 0xFC, 0x00, 0x02, 0x02, 0x0000},
 };
 
-
 INCLUDE_ASM("asm/nonmatchings/ovl7/code_175860", func_80025E20_ovl7);
 
 INCLUDE_ASM("asm/nonmatchings/ovl7/code_175860", func_80026284_ovl7);
