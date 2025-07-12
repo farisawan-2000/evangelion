@@ -1,6 +1,8 @@
 asm-differ/__pycache__/*
 baserom.eva.z64
-#asm/nonmatchings/code_*/*.s
+evangelion.ld
+asm/*
+asm/nonmatchings/*
 bin/*
 build/*
 expected/*
