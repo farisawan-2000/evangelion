@@ -4,6 +4,8 @@ TARGET = eva
 ROM = $(BUILD_DIR)/$(TARGET).z64
 NON_MATCHING ?= 0
 
+V := @
+
 CROSS=mips-n64-
 
 ASM_DIRS = asm asm/data asm/asm asm/os $(wildcard asm/ovl*) $(wildcard src/ovl*) $(wildcard asm/data/ovl*)
@@ -73,7 +75,7 @@ IDO_CFLAGS = $(TARGET_CFLAGS) -Wab,-r4300_mul -non_shared -G0 -Xcpluscomm -Xfull
 
 LD = $(CROSS)ld
 LD_SCRIPT = evangelion.ld
-USE_UNDEFINED_SYMS = -T undefined_syms_all.txt
+USE_UNDEFINED_SYMS = -T undefined_syms_all.txt -T undefined_syms_auto.txt
 LDFLAGS := --no-check-sections -mips3 --accept-unknown-input-arch -T $(LD_SCRIPT) $(USE_UNDEFINED_SYMS)
 # -m elf32btsmip
 
@@ -104,30 +106,35 @@ $(BUILD_DIR)/src/code_13610.o: OPT_FLAGS = -O2
 
 # 	$(PYTHON) tools/str2hex.py $< > $(@:.o=.i)
 $(BUILD_DIR)/%.o: %.s $(SZP_FILES)
-	$(CROSS)gcc -c -x assembler-with-cpp $(DEFINES) $(ASFLAGS) -o $@ $<
+	@printf "[ASM] $@\n"
+	$(V)$(CROSS)gcc -c -x assembler-with-cpp $(DEFINES) $(ASFLAGS) -o $@ $<
 
 # 	@$(CC_CHECK) -MMD -MP -MT $@ -MF $(BUILD_DIR)/$*.d $(@:.i=.ii)
 $(BUILD_DIR)/%.i : %.c | $(SRC_BUILD_DIRS)
-	$(PYTHON) tools/str2hex.py $< > $(@:.i=.ii)
-	$(CPP) $(CPPFLAGS) $(@:.i=.ii) -o $@
+	$(V)$(PYTHON) tools/str2hex.py $< > $(@:.i=.ii)
+	$(V)$(CPP) $(CPPFLAGS) $(@:.i=.ii) -o $@
 
 $(BUILD_DIR)/%.o : $(BUILD_DIR)/%.i | $(SRC_BUILD_DIRS)
-	$(CC) $(KMC_CFLAGS) -I. -I asm/nonmatchings/ -o $@ $<
+	@printf "[CC] $@\n"
+	$(V)$(CC) $(KMC_CFLAGS) -I. -I asm/nonmatchings/ -o $@ $<
 
 $(BUILD_DIR)/%.o: %.bin
-	$(LD) -r -b binary -o $@ $<
+	@printf "[BIN] $@\n"
+	$(V)$(LD) -r -b binary -o $@ $<
 $(BUILD_DIR)/%.yay0.o: %.yay0.bin # override
-	tools/slienc $< $@.i 2> $@.size
-	$(LD) -r -b binary -o $@ $@.i
+	@printf "[YAY0] $@\n"
+	$(V)tools/slienc $< $@.i 2> $@.size
+	$(V)$(LD) -r -b binary -o $@ $@.i
 
 $(BUILD_DIR)/%.i4.o: %.i4.png
-	$(RGB2C) -G i4 -o RAW $< > $(@:.o=.bin)
-	$(LD) -r -b binary -o $@ $(@:.o=.bin)
+	@printf "[IMAGE:I4] $@\n"
+	$(V)$(RGB2C) -G i4 -o RAW $< > $(@:.o=.bin)
+	$(V)$(LD) -r -b binary -o $@ $(@:.o=.bin)
 
 $(BUILD_DIR)/%.i4.o: %.i4.yay0.png # override
-	$(RGB2C) -G i4 -o RAW $< > $(@:.o=.bin)
-	tools/slienc $(@:.o=.bin) $(@:.o=.i)
-	$(LD) -r -b binary -o $@ $(@:.o=.i)
+	$(V)$(RGB2C) -G i4 -o RAW $< > $(@:.o=.bin)
+	$(V)tools/slienc $(@:.o=.bin) $(@:.o=.i)
+	$(V)$(LD) -r -b binary -o $@ $(@:.o=.i)
 
 $(BUILD_DIR)/$(LD_SCRIPT): $(LD_SCRIPT) undefined_syms_all.txt
 	$(CPP) $(VERSION_CFLAGS) -Umips -MMD -MP -MT $@ -MF $@.d -o $@ $< \
@@ -160,7 +167,7 @@ hexedit:
 	wine ~/.wine/drive_c/Program\ Files/HxD/HxD.exe baserom.eva.z64
 
 setup:
-	./splat/split.py evangelion.yaml
+	splat split evangelion.yaml
 	+make -C tools -f kmc.mk
 
 .PHONY: all clean default diff test distclean

@@ -28,6 +28,7 @@ segments:
     start: 0x0040
   - name: main
     type: code
+    folder: main
     start: 0x1000
     end: 0x69EE0
     vram: 0x80096400
@@ -243,6 +244,7 @@ segments:
   - name: ovl2
     symbol_name_format : $VRAM_ovl2
     type: code
+    folder: ovl2
     overlay: yes
     start: 0x00074BB0
     vram: 0x80025C00
@@ -308,6 +310,7 @@ segments:
     type: code
     symbol_name_format : $VRAM_ovl4
     overlay: yes
+    folder: ovl4
     start: 0x00113B10
     vram: 0x80025C00
     exclusive_ram_id: slot_1
@@ -324,6 +327,7 @@ segments:
     type: code
     symbol_name_format : $VRAM_ovl5
     overlay: yes
+    folder: ovl5
     start: 0x00117A00
     vram: 0x80025C00
     exclusive_ram_id: slot_1
@@ -406,6 +410,7 @@ segments:
     type: code
     symbol_name_format : $VRAM_ovl6
     overlay: yes
+    folder: ovl6
     start: 0x0014F960
     vram: 0x80025C00
     exclusive_ram_id: slot_1
@@ -439,6 +444,7 @@ segments:
     type: code
     symbol_name_format : $VRAM_ovl7
     overlay: yes
+    folder: ovl7
     start: 0x00175640
     vram: 0x80025C00
     exclusive_ram_id: slot_1
@@ -479,6 +485,7 @@ segments:
   - name: ovl8
     type: code
     overlay: yes
+    folder: ovl8
     symbol_name_format : $VRAM_ovl8
     start: 0x001A1880
     vram: 0x8038F800
