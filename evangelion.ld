@@ -1507,7 +1507,6 @@ SECTIONS
         build/asm/ovl7/code_18EE00.o(.data);
         build/asm/ovl7/code_18EF90.o(.data);
         build/asm/ovl7/code_190050.o(.data);
-        . += 0x8;
         build/asm/data/ovl7/data_1927B8.data.o(.data);
         . = ALIGN(., 16);
         ovl7_DATA_END = .;

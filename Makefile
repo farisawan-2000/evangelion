@@ -118,6 +118,11 @@ $(BUILD_DIR)/%.o : $(BUILD_DIR)/%.i | $(SRC_BUILD_DIRS)
 	@printf "[CC] $@\n"
 	$(V)$(CC) $(KMC_CFLAGS) -I. -I asm/nonmatchings/ -o $@ $<
 
+$(BUILD_DIR)/src/ovl7/code_175860.o : $(BUILD_DIR)/src/ovl7/code_175860.i | $(SRC_BUILD_DIRS)
+	@printf "[CC] $@\n"
+	$(V)$(CC) $(KMC_CFLAGS) -I. -I asm/nonmatchings/ -o $@ $<
+	$(V)$(PYTHON) tools/shrink_elf.py $@
+
 $(BUILD_DIR)/%.o: %.bin
 	@printf "[BIN] $@\n"
 	$(V)$(LD) -r -b binary -o $@ $<
