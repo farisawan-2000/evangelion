@@ -2,12 +2,12 @@ from itertools import zip_longest
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, TYPE_CHECKING, Union
 
-from util import log, options
-from util.color import unpack_color
+from splat.util import log, options
+from splat.util.color import unpack_color
 
-from segtypes.n64.segment import N64Segment
+from segtypes.segment import Segment
 from segtypes.n64.rgba16 import N64SegRgba16
-from util.symbols import to_cname
+from splat.util.symbols import to_cname
 
 if TYPE_CHECKING:
     from segtypes.n64.ci import N64SegCi as Raster
@@ -21,7 +21,7 @@ def iter_in_groups(iterable, n, fillvalue=None):
 VALID_SIZES = [0x20, 0x40, 0x80, 0x100, 0x200]
 
 
-class N64SegNpalette(N64Segment):
+class N64SegNpalette(Segment):
     require_unique_name = False
 
     def __init__(self, *args, **kwargs):

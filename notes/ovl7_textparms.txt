@@ -1,0 +1,18 @@
+By IlDucci
+
+ovl7 start + 0x1C624
+
+struct P[] {
+    4 bytes as a pointer to the text piece.
+    2 bytes for the X pos on screen.
+    2 bytes for the Y pos on scren.
+    2 bytes for the minimum height of the text texture.
+    2 bytes for the minimum width of the text texture.
+    1 byte for the internal mission number.
+    1 byte for possibly the scene number/text calling code.
+    1 byte for the spacing between characters (has been unified to -2, you will see -4 or -2)
+    1 byte that is always 0
+    1 byte that has the alignment: 2 for left alignment, 3 for centered alignment. This same resulting value is used on code_03.
+    1 byte that marks the type of text/condition: 1 is what I call outline 1 (normal subtitles, with fade ins/outs), 2 (dialogue subtitles, with no fades) and 3 (removal of outlines, used for the Objective screen)
+    2 final bytes that always seem to be zeroes.
+};
