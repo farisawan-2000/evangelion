@@ -1024,7 +1024,7 @@ SECTIONS
 
     ovl5_ROM_START = __romPos;
     ovl5_VRAM = ADDR(.ovl5);
-    .ovl5 0x80025C00 : AT(ovl5_ROM_START) SUBALIGN(16)
+    .ovl5 0x80025C00 : AT(ovl5_ROM_START) SUBALIGN(4)
     {
         FILL(0x00000000);
         ovl5_TEXT_START = .;
@@ -1187,7 +1187,11 @@ SECTIONS
         build/asm/ovl5/code_11C4F0.o(.rodata);
         build/asm/ovl5/code_11C910.o(.rodata);
         build/asm/ovl5/code_11CF60.o(.rodata);
-        build/asm/ovl5/code_11D1B0.o(.rodata);
+        build/asm/data/ovl5/ovl5.rodata.o(.rodata);
+        build/asm/data/ovl5/ovl5_1.rodata.o(.rodata);
+        build/asm/data/ovl5/ovl5_2.rodata.o(.rodata);
+        build/asm/data/ovl5/ovl5_3.rodata.o(.rodata);
+        build/asm/data/ovl5/code_11D1B0.rodata.o(.rodata);
         build/asm/ovl5/code_120B90.o(.rodata);
         build/asm/ovl5/code_1263F0.o(.rodata);
         build/asm/ovl5/code_126830.o(.rodata);
@@ -1244,6 +1248,7 @@ SECTIONS
         build/asm/ovl5/code_142B90.o(.rodata);
         build/asm/ovl5/code_142FB0.o(.rodata);
         build/asm/ovl5/code_143360.o(.rodata);
+        build/asm/data/ovl5/ovl5_14CE70.rodata.o(.rodata);
         . = ALIGN(., 16);
         ovl5_RODATA_END = .;
         ovl5_RODATA_SIZE = ABSOLUTE(ovl5_RODATA_END - ovl5_RODATA_START);

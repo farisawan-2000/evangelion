@@ -345,7 +345,9 @@ segments:
     - [0x11C4F0, asm, ovl5/code_11C4F0]
     - [0x11C910, asm, ovl5/code_11C910]
     - [0x11CF60, asm, ovl5/code_11CF60]
+
     - [0x11D1B0, asm, ovl5/code_11D1B0]
+
     - [0x120B90, asm, ovl5/code_120B90]
     - [0x1263F0, asm, ovl5/code_1263F0]
     - [0x126830, asm, ovl5/code_126830]
@@ -403,6 +405,13 @@ segments:
     - [0x142FB0, asm, ovl5/code_142FB0]
     - [0x143360, asm, ovl5/code_143360]
     - [0x1436f0, data, ovl5/ovl5]
+    - [0x14C3B0, rodata, ovl5/ovl5]
+    - [0x14C450, rodata, ovl5/ovl5_1]
+    - [0x14C4B0, rodata, ovl5/ovl5_2]
+    - [0x14C4D0, rodata, ovl5/ovl5_3]
+    - [0x14C840, rodata, ovl5/code_119C10]
+    - [0x14C854, rodata, ovl5/code_11D1B0]
+    - [0x14CE70, rodata, ovl5/ovl5_14CE70]
     - [0x14F960]
     - {type: bss, vram: 0x8005DB60, name: ovl5/ovl5}
     

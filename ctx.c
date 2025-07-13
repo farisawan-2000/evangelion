@@ -69,6 +69,19 @@ typedef double _Float32x;
 typedef long double _Float64x;
 typedef long double float_t;
 typedef long double double_t;
+enum
+  {
+    FP_INT_UPWARD =
+      0,
+    FP_INT_DOWNWARD =
+      1,
+    FP_INT_TOWARDZERO =
+      2,
+    FP_INT_TONEARESTFROMZERO =
+      3,
+    FP_INT_TONEAREST =
+      4,
+  };
 extern int __fpclassify (double __value)
      ;
 extern int __signbit (double __value)
@@ -89,6 +102,13 @@ extern int __issignaling (double __value)
  extern double cos (double __x) ; extern double __cos (double __x) ;
  extern double sin (double __x) ; extern double __sin (double __x) ;
  extern double tan (double __x) ; extern double __tan (double __x) ;
+extern double acospi (double __x) ; extern double __acospi (double __x) ;
+extern double asinpi (double __x) ; extern double __asinpi (double __x) ;
+extern double atanpi (double __x) ; extern double __atanpi (double __x) ;
+extern double atan2pi (double __y, double __x) ; extern double __atan2pi (double __y, double __x) ;
+ extern double cospi (double __x) ; extern double __cospi (double __x) ;
+ extern double sinpi (double __x) ; extern double __sinpi (double __x) ;
+ extern double tanpi (double __x) ; extern double __tanpi (double __x) ;
  extern double cosh (double __x) ; extern double __cosh (double __x) ;
  extern double sinh (double __x) ; extern double __sinh (double __x) ;
  extern double tanh (double __x) ; extern double __tanh (double __x) ;
@@ -101,6 +121,12 @@ extern double ldexp (double __x, int __exponent) ; extern double __ldexp (double
  extern double log (double __x) ; extern double __log (double __x) ;
  extern double log10 (double __x) ; extern double __log10 (double __x) ;
 extern double modf (double __x, double *__iptr) ; extern double __modf (double __x, double *__iptr) ;
+ extern double exp10 (double __x) ; extern double __exp10 (double __x) ;
+extern double exp2m1 (double __x) ; extern double __exp2m1 (double __x) ;
+extern double exp10m1 (double __x) ; extern double __exp10m1 (double __x) ;
+extern double log2p1 (double __x) ; extern double __log2p1 (double __x) ;
+extern double log10p1 (double __x) ; extern double __log10p1 (double __x) ;
+ extern double logp1 (double __x) ; extern double __logp1 (double __x) ;
  extern double expm1 (double __x) ; extern double __expm1 (double __x) ;
  extern double log1p (double __x) ; extern double __log1p (double __x) ;
 extern double logb (double __x) ; extern double __logb (double __x) ;
@@ -110,9 +136,9 @@ extern double logb (double __x) ; extern double __logb (double __x) ;
 extern double sqrt (double __x) ; extern double __sqrt (double __x) ;
  extern double hypot (double __x, double __y) ; extern double __hypot (double __x, double __y) ;
  extern double cbrt (double __x) ; extern double __cbrt (double __x) ;
-extern double ceil (double __x) ; extern double __ceil (double __x) ;
-extern double fabs (double __x) ; extern double __fabs (double __x) ;
-extern double floor (double __x) ; extern double __floor (double __x) ;
+extern double ceil (double __x) ;
+extern double fabs (double __x) ;
+extern double floor (double __x) ;
 extern double fmod (double __x, double __y) ; extern double __fmod (double __x, double __y) ;
 extern int isinf (double __value)
   ;
@@ -120,7 +146,7 @@ extern int finite (double __value)
   ;
 extern double drem (double __x, double __y) ; extern double __drem (double __x, double __y) ;
 extern double significand (double __x) ; extern double __significand (double __x) ;
-extern double copysign (double __x, double __y) ; extern double __copysign (double __x, double __y) ;
+extern double copysign (double __x, double __y) ;
 extern double nan (const char *__tagb) ; extern double __nan (const char *__tagb) ;
 extern int isnan (double __value)
   ;
@@ -139,13 +165,16 @@ extern double lgamma_r (double, int *__signgamp) ; extern double __lgamma_r (dou
 extern double rint (double __x) ; extern double __rint (double __x) ;
 extern double nextafter (double __x, double __y) ; extern double __nextafter (double __x, double __y) ;
 extern double nexttoward (double __x, long double __y) ; extern double __nexttoward (double __x, long double __y) ;
+extern double nextdown (double __x) ; extern double __nextdown (double __x) ;
+extern double nextup (double __x) ; extern double __nextup (double __x) ;
 extern double remainder (double __x, double __y) ; extern double __remainder (double __x, double __y) ;
 extern double scalbn (double __x, int __n) ; extern double __scalbn (double __x, int __n) ;
 extern int ilogb (double __x) ; extern int __ilogb (double __x) ;
+extern long int llogb (double __x) ; extern long int __llogb (double __x) ;
 extern double scalbln (double __x, long int __n) ; extern double __scalbln (double __x, long int __n) ;
 extern double nearbyint (double __x) ; extern double __nearbyint (double __x) ;
-extern double round (double __x) ; extern double __round (double __x) ;
-extern double trunc (double __x) ; extern double __trunc (double __x) ;
+extern double round (double __x) ;
+extern double trunc (double __x) ;
 extern double remquo (double __x, double __y, int *__quo) ; extern double __remquo (double __x, double __y, int *__quo) ;
 extern long int lrint (double __x) ; extern long int __lrint (double __x) ;
 
@@ -154,9 +183,23 @@ extern long int lround (double __x) ; extern long int __lround (double __x) ;
 
 extern long long int llround (double __x) ; extern long long int __llround (double __x) ;
 extern double fdim (double __x, double __y) ; extern double __fdim (double __x, double __y) ;
-extern double fmax (double __x, double __y) ; extern double __fmax (double __x, double __y) ;
-extern double fmin (double __x, double __y) ; extern double __fmin (double __x, double __y) ;
+extern double fmax (double __x, double __y) ;
+extern double fmin (double __x, double __y) ;
 extern double fma (double __x, double __y, double __z) ; extern double __fma (double __x, double __y, double __z) ;
+extern double roundeven (double __x) ;
+extern __intmax_t fromfp (double __x, int __round, unsigned int __width) ; extern __intmax_t __fromfp (double __x, int __round, unsigned int __width) ;
+extern __uintmax_t ufromfp (double __x, int __round, unsigned int __width) ; extern __uintmax_t __ufromfp (double __x, int __round, unsigned int __width) ;
+extern __intmax_t fromfpx (double __x, int __round, unsigned int __width) ; extern __intmax_t __fromfpx (double __x, int __round, unsigned int __width) ;
+extern __uintmax_t ufromfpx (double __x, int __round, unsigned int __width) ; extern __uintmax_t __ufromfpx (double __x, int __round, unsigned int __width) ;
+extern int canonicalize (double *__cx, const double *__x) ;
+extern double fmaximum (double __x, double __y) ;
+extern double fminimum (double __x, double __y) ;
+extern double fmaximum_num (double __x, double __y) ;
+extern double fminimum_num (double __x, double __y) ;
+extern double fmaximum_mag (double __x, double __y) ;
+extern double fminimum_mag (double __x, double __y) ;
+extern double fmaximum_mag_num (double __x, double __y) ;
+extern double fminimum_mag_num (double __x, double __y) ;
 extern double scalb (double __x, double __n) ; extern double __scalb (double __x, double __n) ;
 extern int __fpclassifyf (float __value)
      ;
@@ -178,6 +221,13 @@ extern int __issignalingf (float __value)
  extern float cosf (float __x) ; extern float __cosf (float __x) ;
  extern float sinf (float __x) ; extern float __sinf (float __x) ;
  extern float tanf (float __x) ; extern float __tanf (float __x) ;
+extern float acospif (float __x) ; extern float __acospif (float __x) ;
+extern float asinpif (float __x) ; extern float __asinpif (float __x) ;
+extern float atanpif (float __x) ; extern float __atanpif (float __x) ;
+extern float atan2pif (float __y, float __x) ; extern float __atan2pif (float __y, float __x) ;
+ extern float cospif (float __x) ; extern float __cospif (float __x) ;
+ extern float sinpif (float __x) ; extern float __sinpif (float __x) ;
+ extern float tanpif (float __x) ; extern float __tanpif (float __x) ;
  extern float coshf (float __x) ; extern float __coshf (float __x) ;
  extern float sinhf (float __x) ; extern float __sinhf (float __x) ;
  extern float tanhf (float __x) ; extern float __tanhf (float __x) ;
@@ -190,6 +240,12 @@ extern float ldexpf (float __x, int __exponent) ; extern float __ldexpf (float _
  extern float logf (float __x) ; extern float __logf (float __x) ;
  extern float log10f (float __x) ; extern float __log10f (float __x) ;
 extern float modff (float __x, float *__iptr) ; extern float __modff (float __x, float *__iptr) ;
+ extern float exp10f (float __x) ; extern float __exp10f (float __x) ;
+extern float exp2m1f (float __x) ; extern float __exp2m1f (float __x) ;
+extern float exp10m1f (float __x) ; extern float __exp10m1f (float __x) ;
+extern float log2p1f (float __x) ; extern float __log2p1f (float __x) ;
+extern float log10p1f (float __x) ; extern float __log10p1f (float __x) ;
+ extern float logp1f (float __x) ; extern float __logp1f (float __x) ;
  extern float expm1f (float __x) ; extern float __expm1f (float __x) ;
  extern float log1pf (float __x) ; extern float __log1pf (float __x) ;
 extern float logbf (float __x) ; extern float __logbf (float __x) ;
@@ -199,9 +255,9 @@ extern float logbf (float __x) ; extern float __logbf (float __x) ;
 extern float sqrtf (float __x) ; extern float __sqrtf (float __x) ;
  extern float hypotf (float __x, float __y) ; extern float __hypotf (float __x, float __y) ;
  extern float cbrtf (float __x) ; extern float __cbrtf (float __x) ;
-extern float ceilf (float __x) ; extern float __ceilf (float __x) ;
-extern float fabsf (float __x) ; extern float __fabsf (float __x) ;
-extern float floorf (float __x) ; extern float __floorf (float __x) ;
+extern float ceilf (float __x) ;
+extern float fabsf (float __x) ;
+extern float floorf (float __x) ;
 extern float fmodf (float __x, float __y) ; extern float __fmodf (float __x, float __y) ;
 extern int isinff (float __value)
   ;
@@ -209,7 +265,7 @@ extern int finitef (float __value)
   ;
 extern float dremf (float __x, float __y) ; extern float __dremf (float __x, float __y) ;
 extern float significandf (float __x) ; extern float __significandf (float __x) ;
-extern float copysignf (float __x, float __y) ; extern float __copysignf (float __x, float __y) ;
+extern float copysignf (float __x, float __y) ;
 extern float nanf (const char *__tagb) ; extern float __nanf (const char *__tagb) ;
 extern int isnanf (float __value)
   ;
@@ -228,13 +284,16 @@ extern float lgammaf_r (float, int *__signgamp) ; extern float __lgammaf_r (floa
 extern float rintf (float __x) ; extern float __rintf (float __x) ;
 extern float nextafterf (float __x, float __y) ; extern float __nextafterf (float __x, float __y) ;
 extern float nexttowardf (float __x, long double __y) ; extern float __nexttowardf (float __x, long double __y) ;
+extern float nextdownf (float __x) ; extern float __nextdownf (float __x) ;
+extern float nextupf (float __x) ; extern float __nextupf (float __x) ;
 extern float remainderf (float __x, float __y) ; extern float __remainderf (float __x, float __y) ;
 extern float scalbnf (float __x, int __n) ; extern float __scalbnf (float __x, int __n) ;
 extern int ilogbf (float __x) ; extern int __ilogbf (float __x) ;
+extern long int llogbf (float __x) ; extern long int __llogbf (float __x) ;
 extern float scalblnf (float __x, long int __n) ; extern float __scalblnf (float __x, long int __n) ;
 extern float nearbyintf (float __x) ; extern float __nearbyintf (float __x) ;
-extern float roundf (float __x) ; extern float __roundf (float __x) ;
-extern float truncf (float __x) ; extern float __truncf (float __x) ;
+extern float roundf (float __x) ;
+extern float truncf (float __x) ;
 extern float remquof (float __x, float __y, int *__quo) ; extern float __remquof (float __x, float __y, int *__quo) ;
 extern long int lrintf (float __x) ; extern long int __lrintf (float __x) ;
 
@@ -243,9 +302,23 @@ extern long int lroundf (float __x) ; extern long int __lroundf (float __x) ;
 
 extern long long int llroundf (float __x) ; extern long long int __llroundf (float __x) ;
 extern float fdimf (float __x, float __y) ; extern float __fdimf (float __x, float __y) ;
-extern float fmaxf (float __x, float __y) ; extern float __fmaxf (float __x, float __y) ;
-extern float fminf (float __x, float __y) ; extern float __fminf (float __x, float __y) ;
+extern float fmaxf (float __x, float __y) ;
+extern float fminf (float __x, float __y) ;
 extern float fmaf (float __x, float __y, float __z) ; extern float __fmaf (float __x, float __y, float __z) ;
+extern float roundevenf (float __x) ;
+extern __intmax_t fromfpf (float __x, int __round, unsigned int __width) ; extern __intmax_t __fromfpf (float __x, int __round, unsigned int __width) ;
+extern __uintmax_t ufromfpf (float __x, int __round, unsigned int __width) ; extern __uintmax_t __ufromfpf (float __x, int __round, unsigned int __width) ;
+extern __intmax_t fromfpxf (float __x, int __round, unsigned int __width) ; extern __intmax_t __fromfpxf (float __x, int __round, unsigned int __width) ;
+extern __uintmax_t ufromfpxf (float __x, int __round, unsigned int __width) ; extern __uintmax_t __ufromfpxf (float __x, int __round, unsigned int __width) ;
+extern int canonicalizef (float *__cx, const float *__x) ;
+extern float fmaximumf (float __x, float __y) ;
+extern float fminimumf (float __x, float __y) ;
+extern float fmaximum_numf (float __x, float __y) ;
+extern float fminimum_numf (float __x, float __y) ;
+extern float fmaximum_magf (float __x, float __y) ;
+extern float fminimum_magf (float __x, float __y) ;
+extern float fmaximum_mag_numf (float __x, float __y) ;
+extern float fminimum_mag_numf (float __x, float __y) ;
 extern float scalbf (float __x, float __n) ; extern float __scalbf (float __x, float __n) ;
 extern int __fpclassifyl (long double __value)
      ;
@@ -267,6 +340,13 @@ extern int __issignalingl (long double __value)
  extern long double cosl (long double __x) ; extern long double __cosl (long double __x) ;
  extern long double sinl (long double __x) ; extern long double __sinl (long double __x) ;
  extern long double tanl (long double __x) ; extern long double __tanl (long double __x) ;
+extern long double acospil (long double __x) ; extern long double __acospil (long double __x) ;
+extern long double asinpil (long double __x) ; extern long double __asinpil (long double __x) ;
+extern long double atanpil (long double __x) ; extern long double __atanpil (long double __x) ;
+extern long double atan2pil (long double __y, long double __x) ; extern long double __atan2pil (long double __y, long double __x) ;
+ extern long double cospil (long double __x) ; extern long double __cospil (long double __x) ;
+ extern long double sinpil (long double __x) ; extern long double __sinpil (long double __x) ;
+ extern long double tanpil (long double __x) ; extern long double __tanpil (long double __x) ;
  extern long double coshl (long double __x) ; extern long double __coshl (long double __x) ;
  extern long double sinhl (long double __x) ; extern long double __sinhl (long double __x) ;
  extern long double tanhl (long double __x) ; extern long double __tanhl (long double __x) ;
@@ -279,6 +359,12 @@ extern long double ldexpl (long double __x, int __exponent) ; extern long double
  extern long double logl (long double __x) ; extern long double __logl (long double __x) ;
  extern long double log10l (long double __x) ; extern long double __log10l (long double __x) ;
 extern long double modfl (long double __x, long double *__iptr) ; extern long double __modfl (long double __x, long double *__iptr) ;
+ extern long double exp10l (long double __x) ; extern long double __exp10l (long double __x) ;
+extern long double exp2m1l (long double __x) ; extern long double __exp2m1l (long double __x) ;
+extern long double exp10m1l (long double __x) ; extern long double __exp10m1l (long double __x) ;
+extern long double log2p1l (long double __x) ; extern long double __log2p1l (long double __x) ;
+extern long double log10p1l (long double __x) ; extern long double __log10p1l (long double __x) ;
+ extern long double logp1l (long double __x) ; extern long double __logp1l (long double __x) ;
  extern long double expm1l (long double __x) ; extern long double __expm1l (long double __x) ;
  extern long double log1pl (long double __x) ; extern long double __log1pl (long double __x) ;
 extern long double logbl (long double __x) ; extern long double __logbl (long double __x) ;
@@ -288,9 +374,9 @@ extern long double logbl (long double __x) ; extern long double __logbl (long do
 extern long double sqrtl (long double __x) ; extern long double __sqrtl (long double __x) ;
  extern long double hypotl (long double __x, long double __y) ; extern long double __hypotl (long double __x, long double __y) ;
  extern long double cbrtl (long double __x) ; extern long double __cbrtl (long double __x) ;
-extern long double ceill (long double __x) ; extern long double __ceill (long double __x) ;
-extern long double fabsl (long double __x) ; extern long double __fabsl (long double __x) ;
-extern long double floorl (long double __x) ; extern long double __floorl (long double __x) ;
+extern long double ceill (long double __x) ;
+extern long double fabsl (long double __x) ;
+extern long double floorl (long double __x) ;
 extern long double fmodl (long double __x, long double __y) ; extern long double __fmodl (long double __x, long double __y) ;
 extern int isinfl (long double __value)
   ;
@@ -298,7 +384,7 @@ extern int finitel (long double __value)
   ;
 extern long double dreml (long double __x, long double __y) ; extern long double __dreml (long double __x, long double __y) ;
 extern long double significandl (long double __x) ; extern long double __significandl (long double __x) ;
-extern long double copysignl (long double __x, long double __y) ; extern long double __copysignl (long double __x, long double __y) ;
+extern long double copysignl (long double __x, long double __y) ;
 extern long double nanl (const char *__tagb) ; extern long double __nanl (const char *__tagb) ;
 extern int isnanl (long double __value)
   ;
@@ -317,13 +403,16 @@ extern long double lgammal_r (long double, int *__signgamp) ; extern long double
 extern long double rintl (long double __x) ; extern long double __rintl (long double __x) ;
 extern long double nextafterl (long double __x, long double __y) ; extern long double __nextafterl (long double __x, long double __y) ;
 extern long double nexttowardl (long double __x, long double __y) ; extern long double __nexttowardl (long double __x, long double __y) ;
+extern long double nextdownl (long double __x) ; extern long double __nextdownl (long double __x) ;
+extern long double nextupl (long double __x) ; extern long double __nextupl (long double __x) ;
 extern long double remainderl (long double __x, long double __y) ; extern long double __remainderl (long double __x, long double __y) ;
 extern long double scalbnl (long double __x, int __n) ; extern long double __scalbnl (long double __x, int __n) ;
 extern int ilogbl (long double __x) ; extern int __ilogbl (long double __x) ;
+extern long int llogbl (long double __x) ; extern long int __llogbl (long double __x) ;
 extern long double scalblnl (long double __x, long int __n) ; extern long double __scalblnl (long double __x, long int __n) ;
 extern long double nearbyintl (long double __x) ; extern long double __nearbyintl (long double __x) ;
-extern long double roundl (long double __x) ; extern long double __roundl (long double __x) ;
-extern long double truncl (long double __x) ; extern long double __truncl (long double __x) ;
+extern long double roundl (long double __x) ;
+extern long double truncl (long double __x) ;
 extern long double remquol (long double __x, long double __y, int *__quo) ; extern long double __remquol (long double __x, long double __y, int *__quo) ;
 extern long int lrintl (long double __x) ; extern long int __lrintl (long double __x) ;
 
@@ -332,10 +421,42 @@ extern long int lroundl (long double __x) ; extern long int __lroundl (long doub
 
 extern long long int llroundl (long double __x) ; extern long long int __llroundl (long double __x) ;
 extern long double fdiml (long double __x, long double __y) ; extern long double __fdiml (long double __x, long double __y) ;
-extern long double fmaxl (long double __x, long double __y) ; extern long double __fmaxl (long double __x, long double __y) ;
-extern long double fminl (long double __x, long double __y) ; extern long double __fminl (long double __x, long double __y) ;
+extern long double fmaxl (long double __x, long double __y) ;
+extern long double fminl (long double __x, long double __y) ;
 extern long double fmal (long double __x, long double __y, long double __z) ; extern long double __fmal (long double __x, long double __y, long double __z) ;
+extern long double roundevenl (long double __x) ;
+extern __intmax_t fromfpl (long double __x, int __round, unsigned int __width) ; extern __intmax_t __fromfpl (long double __x, int __round, unsigned int __width) ;
+extern __uintmax_t ufromfpl (long double __x, int __round, unsigned int __width) ; extern __uintmax_t __ufromfpl (long double __x, int __round, unsigned int __width) ;
+extern __intmax_t fromfpxl (long double __x, int __round, unsigned int __width) ; extern __intmax_t __fromfpxl (long double __x, int __round, unsigned int __width) ;
+extern __uintmax_t ufromfpxl (long double __x, int __round, unsigned int __width) ; extern __uintmax_t __ufromfpxl (long double __x, int __round, unsigned int __width) ;
+extern int canonicalizel (long double *__cx, const long double *__x) ;
+extern long double fmaximuml (long double __x, long double __y) ;
+extern long double fminimuml (long double __x, long double __y) ;
+extern long double fmaximum_numl (long double __x, long double __y) ;
+extern long double fminimum_numl (long double __x, long double __y) ;
+extern long double fmaximum_magl (long double __x, long double __y) ;
+extern long double fminimum_magl (long double __x, long double __y) ;
+extern long double fmaximum_mag_numl (long double __x, long double __y) ;
+extern long double fminimum_mag_numl (long double __x, long double __y) ;
 extern long double scalbl (long double __x, long double __n) ; extern long double __scalbl (long double __x, long double __n) ;
+extern float fadd (double __x, double __y) ;
+extern float fdiv (double __x, double __y) ;
+extern float ffma (double __x, double __y, double __z) ;
+extern float fmul (double __x, double __y) ;
+extern float fsqrt (double __x) ;
+extern float fsub (double __x, double __y) ;
+extern float faddl (long double __x, long double __y) ;
+extern float fdivl (long double __x, long double __y) ;
+extern float ffmal (long double __x, long double __y, long double __z) ;
+extern float fmull (long double __x, long double __y) ;
+extern float fsqrtl (long double __x) ;
+extern float fsubl (long double __x, long double __y) ;
+extern double daddl (long double __x, long double __y) ;
+extern double ddivl (long double __x, long double __y) ;
+extern double dfmal (long double __x, long double __y, long double __z) ;
+extern double dmull (long double __x, long double __y) ;
+extern double dsqrtl (long double __x) ;
+extern double dsubl (long double __x, long double __y) ;
 extern int signgam;
 enum
   {
@@ -350,6 +471,8 @@ enum
     FP_NORMAL =
       4
   };
+extern int __iscanonicall (long double __x)
+     ;
 
 typedef signed char s8;
 typedef unsigned char u8;
@@ -1128,22 +1251,22 @@ typedef struct {
     u8 _02D;
     u8 _02E;
     u8 unk2F;
-} UnkStruct80036494_1C_00;
+} UnkStruct80036494_0C_00;
 typedef struct {
-    UnkStruct80036494_1C_00 *unk0;
+    UnkStruct80036494_0C_00 *unk0;
     u32 _004;
     u32 _008;
     u32 _00C;
     u32 _010;
-    u32 _014;
+    u32 unk14;
     u32 _018;
     u16 unk1C;
-} UnkStruct80036494_1C;
+} UnkStruct80036494_0C;
 typedef struct {
     u32 _000;
     u32 _004;
     u32 _008;
-    UnkStruct80036494_1C *unkC;
+    UnkStruct80036494_0C *unkC;
 } UnkStruct80036494;
 typedef struct {
     s16 *angelName;
@@ -1160,3 +1283,475 @@ extern u8 D_800D3BC0,
 extern f32 D_800D3BD8, D_800D3BDC, D_800D3BE0;
 UnkStruct80036494 *func_80036494_ovl3(u16, s32, s32);
 UnkStruct80036494 *func_80036304_ovl3(u16 arg0);
+void func_80037BDC_ovl3(u16 *, int, int, s16, int);
+typedef u16 String[];
+typedef struct {
+                u16 *str;
+                u16 p1;
+                u16 p2;
+                u16 p3;
+                u16 p4;
+                u8 p5;
+                u8 p6;
+                u8 p7;
+                u8 p8;
+                u8 p9;
+                u8 p10;
+                u16 pad;
+} TextParams_ovl7;
+String D_80040F10_ovl7 = R"(
+「ごめんなさい… 」)";
+String D_80040F28_ovl7 = R"(
+ 「こういう時、 どんな顔を
+   すればいいのかわからないの」)";
+String D_80040F6C_ovl7 = R"(
+「笑えば… いいと思うよ」)";
+String D_80040F8C_ovl7 = R"(日本重化学工業共同体の制作
+した無人の使徒迎撃ロボット)";
+String D_80040FC4_ovl7 = R"(「ジェットアローン」)";
+String D_80040FDC_ovl7 = R"(その完成披露記念会にて
+  起動テストが行われていた。)";
+String D_80041014_ovl7 = R"(炉心融解の恐れあり。)";
+String D_8004102C_ovl7 = R"(目    標 :)";
+String D_80041040_ovl7 = R"(ジェットアローン)";
+String D_80041054_ovl7 = R"(初号機)";
+String D_8004105C_ovl7 = R"(葛城一尉をJA内に
+送り込む、 及び
+JAの活動を鎮圧する。)";
+String D_8004109C_ovl7 = R"(
+「奇跡は用意されていたのよ」)";
+String D_800410BC_ovl7 = R"(
+「 … 誰かにね」)";
+String D_800410D4_ovl7 = R"(第7使徒の襲来が確認され、)";
+String D_800410F0_ovl7 = R"(出撃する初号機と弐号機。)";
+String D_8004110C_ovl7 = R"(
+使徒に敗れる)";
+String D_8004111C_ovl7 = R"(
+初号機と弐号機、)";
+String D_80041130_ovl7 = R"(
+その無様な婆。)";
+String D_80041144_ovl7 = R"(
+現在、 使徒は国連軍が)";
+String D_80041160_ovl7 = R"(
+(N²)爆雷を投下し、 足止めに成功。)";
+String D_80041184_ovl7 = R"(
+しかし、 再度進攻も時間の問題。)";
+String D_800411A8_ovl7 = R"(
+使徒を倒すには、)";
+String D_800411BC_ovl7 = R"(
+2体分離中のコアに対する)";
+String D_800411D8_ovl7 = R"(
+2点同時の荷重攻撃しかない。)";
+String D_800411F8_ovl7 = R"(
+その為には、)";
+String D_80041208_ovl7 = R"(
+シンジとアスカの完壁な)";
+String D_80041224_ovl7 = R"(
+ユニゾンが必要となる。)";
+String D_80041240_ovl7 = R"(第7使徒イスラフェル)";
+String D_80041258_ovl7 = R"(初号機 ・ 弐号機)";
+String D_8004126C_ovl7 = R"(EＶA 2体の使徒に
+対する同時荷重攻撃
+による使徒の殲滅。)";
+String D_800412AC_ovl7 = R"(  浅間山地震研究所
+            からの報告書で)";
+String D_800412EC_ovl7 = R"(  火口内部に、     
+     何かの影が確認された。)";
+String D_8004132C_ovl7 = R"(観測の結果、 パターン青)";
+String D_80041348_ovl7 = R"(  使徒と確認。   )";
+String D_80041360_ovl7 = R"(「失敗は許さん」)";
+String D_80041374_ovl7 = R"(A-17 の要請を受け、
+使徒因収の許可を得るゲンドウ。)";
+String D_800413B0_ovl7 = R"(
+「失敗か… その時は人類     
+      そのものが消えてしまうよ」)";
+String D_80041400_ovl7 = R"(「EＶA D型装備」)";
+String D_80041418_ovl7 = R"(浅間山火口に出撃する弐号機。)";
+String D_80041438_ovl7 = R"(弐号機 下降開始)";
+String D_8004144C_ovl7 = R"(因収成功と思えたが…。)";
+String D_80041464_ovl7 = R"(使徒、 羽化開始 !)";
+String D_8004147C_ovl7 = R"(第8使徒サンダルフォン)";
+String D_80041494_ovl7 = R"(弐号機)";
+String D_8004149C_ovl7 = R"(マグマ中での使徒の
+殲滅。)";
+String D_800414B8_ovl7 = R"( 第10使徒、     
+ その巨大な物体は突如として)";
+String D_800414F0_ovl7 = R"(インド洋上空の、    
+           衛星軌道上に出現。)";
+String D_80041534_ovl7 = R"( 本体ごとネルフ本部に          
+      落下するものと思われる。)";
+String D_80041588_ovl7 = R"(
+(N²)航空爆雷も効果なし。)";
+String D_800415A4_ovl7 = R"(ミサトは特別宣言D-17を発令。)";
+String D_800415C8_ovl7 = R"(半径50キロ以内の      
+        全市民はただちに避難。)";
+String D_80041610_ovl7 = R"(
+ミサトは、 ATフィールド最大)";
+String D_80041634_ovl7 = R"(
+3機のEＶAで直接使徒を)";
+String D_80041650_ovl7 = R"(
+  受け止める事を決意。  )";
+String D_80041670_ovl7 = R"(
+勝算は 0.00001%、)";
+String D_80041690_ovl7 = R"(
+ 奇跡は起きるのか…。)";
+String D_800416AC_ovl7 = R"(第10使徒サハクィエル)";
+String D_800416C4_ovl7 = R"(EＶA 全機)";
+String D_800416D4_ovl7 = R"(EＶA 3機による
+使徒の受け止め、
+及び殲滅。)";
+String D_80041708_ovl7 = R"(
+作戦は見事に成功。)";
+String D_80041720_ovl7 = R"(
+「よくやったな、 シンジ」)";
+String D_80041740_ovl7 = R"(EＶA参号機が移送される。)";
+String D_8004175C_ovl7 = R"(EＶA参号機 起動実験)";
+String D_80041774_ovl7 = R"(
+実験は、 問題ないと思われた…。)";
+String D_80041798_ovl7 = R"(
+            しかし、
+  突如シンクログラフが反転、)";
+String D_800417DC_ovl7 = R"(
+体内に高エネルギー反応 !!)";
+String D_800417FC_ovl7 = R"(
+「実験中止、 まさか使徒 !?」)";
+String D_80041820_ovl7 = R"(使徒に乗取られたEＶA参号機。)";
+String D_80041840_ovl7 = R"(
+「参号機は現時刻を以て破棄、)";
+String D_80041860_ovl7 = R"(
+目標を第13使徒と識別する」)";
+String D_80041880_ovl7 = R"(EＶA参号機の前に、         
+       敗れる弐号機と零号機。)";
+String D_800418D0_ovl7 = R"(
+ 「因路をダミープラグに切り替えろ」)";
+String D_800418F8_ovl7 = R"(第13使徒バルディエル)";
+String D_80041910_ovl7 = R"(初号機)";
+String D_80041918_ovl7 = R"(ダミープラグによる
+使徒の殲滅。)";
+String D_8004193C_ovl7 = R"(  何の前ぶれもなく
+       第14使徒が現れた。)";
+String D_80041978_ovl7 = R"((N²)爆雷を手に殲滅を試みるレイ。)";
+String D_80041998_ovl7 = R"(第14使徒ぜルエル)";
+String D_800419AC_ovl7 = R"(初号機)";
+String D_800419B4_ovl7 = R"(ジオフロント上へ
+使徒を射出、 及び
+殲滅。)";
+String D_800419E4_ovl7 = R"(
+衛星軌道上に第15使徒出現。)";
+String D_80041A04_ovl7 = R"(
+巨大な翼を広げたまま、)";
+String D_80041A20_ovl7 = R"(
+ 動かない使徒。   )";
+String D_80041A3C_ovl7 = R"(
+ポジトロンライフルにて、)";
+String D_80041A58_ovl7 = R"(
+使徒の殲滅を試みる弐号機。)";
+String D_80041A78_ovl7 = R"(
+その時、 謎の光が…。)";
+String D_80041A94_ovl7 = R"(
+使徒の心理攻撃 ?)";
+String D_80041AAC_ovl7 = R"(
+アスカの精神汚染がYに突入 !)";
+String D_80041AD0_ovl7 = R"(
+このままでは…。)";
+String D_80041AE4_ovl7 = R"(零号機、
+大出力ポジトロンライフル改で)";
+String D_80041B0C_ovl7 = R"(
+使徒を狙う。 )";
+String D_80041B20_ovl7 = R"(
+直撃…。)";
+String D_80041B2C_ovl7 = R"(
+しかし、 ATフィールドに)";
+String D_80041B4C_ovl7 = R"(
+ はじかれてしまう。  )";
+String D_80041B68_ovl7 = R"(
+「かまわん、 レイ」)";
+String D_80041B80_ovl7 = R"(
+「ドグマを降りて槍を使え」)";
+String D_80041BA0_ovl7 = R"(零号機、
+ロンギヌスの槍を手にする。)";
+String D_80041BC8_ovl7 = R"(第15使徒アラエル)";
+String D_80041BDC_ovl7 = R"(零号機)";
+String D_80041BE4_ovl7 = R"(ロンギヌスの槍による、
+衛星軌道上の使徒の
+殲滅。)";
+String D_80041C18_ovl7 = R"(
+第16使徒との戦いにより、)";
+String D_80041C38_ovl7 = R"(
+墟塘となった第3新東京市、)";
+String D_80041C58_ovl7 = R"(
+その光景を見つめるシンジ…。)";
+String D_80041C78_ovl7 = R"(
+5(th)チルドレン 渚カヲル。)";
+String D_80041C98_ovl7 = R"(
+「歌はいいね」)";
+String D_80041CAC_ovl7 = R"(
+「カヲルでいいよ。 碇シンジ君」)";
+String D_80041CD0_ovl7 = R"(
+5(th)チルドレン シンクロテスト。)";
+String D_80041CF4_ovl7 = R"(
+コアの変換もなしに、
+シンクロするカヲル)";
+String D_80041D20_ovl7 = R"(
+この少年はいったい…。)";
+String D_80041D3C_ovl7 = R"(
+シンジは、)";
+String D_80041D4C_ovl7 = R"(
+カヲルに対して安心を覚え…)";
+String D_80041D6C_ovl7 = R"(
+交流を深めていった…。)";
+String D_80041D88_ovl7 = R"(
+突如、 EＶA弐号機起動 !?)";
+String D_80041DAC_ovl7 = R"(
+いったい誰が操るのか…。)";
+String D_80041DC8_ovl7 = R"(弐号機を操るのは
+5(th)チルドレン 渚カヲル。)";
+String D_80041DF8_ovl7 = R"(
+そして最後のシ者…。)";
+String D_80041E10_ovl7 = R"(第17使徒タブリス)";
+String D_80041E24_ovl7 = R"(初号機)";
+String D_80041E2C_ovl7 = R"(カヲルの制御下にある
+弐号機の沈黙、 及び
+殲滅。)";
+String D_80041E60_ovl7 = R"(
+「約束の時が来た」)";
+String D_80041E78_ovl7 = R"(
+最後の使徒は殲滅した。)";
+String D_80041E94_ovl7 = R"(ぜーレは、
+己の最終目的を達成する為)";
+String D_80041EBC_ovl7 = R"(
+NERV本部の直接占拠を謀る。)";
+String D_80041EE0_ovl7 = R"(
+「死は何も生みませんよ」)";
+String D_80041EFC_ovl7 = R"(
+「死は君たちに与えよう」)";
+String D_80041F18_ovl7 = R"(戦自によるNERVへの    
+          猛攻撃が開始された。  )";
+String D_80041F68_ovl7 = R"(
+ 「やはり最後の敵は   
+          同じ人間だったな…」)";
+String D_80041FB0_ovl7 = R"(
+安全の為、 地底湖に隠された)";
+String D_80041FD0_ovl7 = R"(
+アスカと弐号機。)";
+String D_80041FE4_ovl7 = R"(
+呆熱自失状態だったアスカが…)";
+String D_80042004_ovl7 = R"(
+今、 目覚める…。)";
+String D_8004201C_ovl7 = R"(戦略自衛隊)";
+String D_80042028_ovl7 = R"(弐号機)";
+String D_80042030_ovl7 = R"(ジオフロント上の
+戦略自衛隊の撃退。)";
+String D_80042058_ovl7 = R"(
+「忌むべき存在のEＶA」)";
+String D_80042074_ovl7 = R"(「やはり、 毒には毒を       
+        もって制すべきだな」)";
+String D_800420C0_ovl7 = R"(
+「EＶAシリーズ…」)";
+String D_800420D8_ovl7 = R"(
+「完成していたの…」)";
+String D_800420F0_ovl7 = R"(
+「必ず殲滅… ね…」)";
+String D_80042108_ovl7 = R"(EＶAシリーズ)";
+String D_80042118_ovl7 = R"(弐号機)";
+String D_80042120_ovl7 = R"(全てのEＶAシリーズの
+殲滅。)";
+String D_80042140_ovl7 = R"(殲滅したはずの…        
+     EＶAシリーズが復活 !)";
+String D_80042188_ovl7 = R"(
+「EＶAシリーズ… 活動再開 !!」)";
+String D_800421B0_ovl7 = R"(
+「こ… これが弐号機 !?」)";
+String D_800421D0_ovl7 = R"(「シンジ君…弐号機が…
+アスカが…アスカがー」)";
+String D_80042200_ovl7 = R"(その時…)";
+String D_8004220C_ovl7 = R"(初号機が立ち上がる…。)";
+TextParams_ovl7 D_80042224_ovl7[] = {
+    {&D_80040F8C_ovl7, 0x00A0, 0x00AF, 0x001E, 0x00F0, 0x04, 0x02, 0xFC, 0x00, 0x02, 0x01, 0x0000},
+    {&D_80040FC4_ovl7, 0x00A0, 0x00AF, 0x010E, 0x021C, 0x04, 0x02, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80040FDC_ovl7, 0x00A0, 0x008F, 0x001E, 0x00F0, 0x04, 0x04, 0xFC, 0x00, 0x02, 0x01, 0x0000},
+    {&D_80041014_ovl7, 0x00A0, 0x00AF, 0x001E, 0x0082, 0x04, 0x07, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_8004102C_ovl7, 0x0017, 0x0018, 0x001E, 0x005A, 0x04, 0x09, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80041040_ovl7, 0x006C, 0x0018, 0x001E, 0x005A, 0x04, 0x09, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80041054_ovl7, 0x006C, 0x0034, 0x001E, 0x005A, 0x04, 0x09, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_8004105C_ovl7, 0x006C, 0x0050, 0x001E, 0x005A, 0x04, 0x09, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_8004109C_ovl7, 0x00A0, 0x00AF, 0x012C, 0x0186, 0x04, 0x63, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_800410BC_ovl7, 0x00A0, 0x00AF, 0x0186, 0x0384, 0x04, 0x63, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_800410D4_ovl7, 0x00A0, 0x00AF, 0x001E, 0x0096, 0x05, 0x01, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_800410F0_ovl7, 0x00A0, 0x00AF, 0x0096, 0x012C, 0x05, 0x01, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_8004110C_ovl7, 0x00A0, 0x008F, 0x001E, 0x0064, 0x05, 0x07, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_8004111C_ovl7, 0x00A0, 0x008F, 0x0064, 0x00B4, 0x05, 0x07, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041130_ovl7, 0x00A0, 0x008F, 0x001E, 0x00A0, 0x05, 0x08, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041144_ovl7, 0x00A0, 0x008F, 0x001E, 0x008C, 0x05, 0x09, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041160_ovl7, 0x00A0, 0x008F, 0x008C, 0x00FA, 0x05, 0x09, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041184_ovl7, 0x00A0, 0x008F, 0x00FA, 0x0190, 0x05, 0x09, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_800411A8_ovl7, 0x00A0, 0x008F, 0x001E, 0x0096, 0x05, 0x0B, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_800411BC_ovl7, 0x00A0, 0x008F, 0x0096, 0x012C, 0x05, 0x0B, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_800411D8_ovl7, 0x00A0, 0x008F, 0x001E, 0x0096, 0x05, 0x0C, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_800411F8_ovl7, 0x00A0, 0x008F, 0x0096, 0x012C, 0x05, 0x0C, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041208_ovl7, 0x00A0, 0x008F, 0x001E, 0x0096, 0x05, 0x0D, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041224_ovl7, 0x00A0, 0x008F, 0x0096, 0x012C, 0x05, 0x0D, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041240_ovl7, 0x006C, 0x0018, 0x001E, 0x005A, 0x05, 0x0E, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80041258_ovl7, 0x006C, 0x0034, 0x001E, 0x005A, 0x05, 0x0E, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_8004126C_ovl7, 0x006C, 0x0050, 0x001E, 0x005A, 0x05, 0x0E, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_800412AC_ovl7, 0x00A0, 0x00AF, 0x003C, 0x00B4, 0x06, 0x01, 0xFC, 0x00, 0x02, 0x01, 0x0000},
+    {&D_800412EC_ovl7, 0x00A0, 0x00AF, 0x00B4, 0x01E0, 0x06, 0x01, 0xFC, 0x00, 0x02, 0x01, 0x0000},
+    {&D_8004132C_ovl7, 0x00A0, 0x00AF, 0x001E, 0x0064, 0x06, 0x02, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041348_ovl7, 0x00A0, 0x00AF, 0x0064, 0x00BE, 0x06, 0x02, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041374_ovl7, 0x00A0, 0x00AF, 0x001E, 0x0082, 0x06, 0x03, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041360_ovl7, 0x00A0, 0x00AF, 0x00B4, 0x0104, 0x06, 0x03, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_800413B0_ovl7, 0x00A0, 0x008F, 0x003C, 0x00FA, 0x06, 0x04, 0xFC, 0x00, 0x02, 0x02, 0x0000},
+    {&D_80041400_ovl7, 0x00A0, 0x00AF, 0x001E, 0x00FA, 0x06, 0x08, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041418_ovl7, 0x00A0, 0x00AF, 0x001E, 0x0096, 0x06, 0x09, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041438_ovl7, 0x00A0, 0x00AF, 0x001E, 0x0082, 0x06, 0x0A, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_8004144C_ovl7, 0x00A0, 0x00AF, 0x001E, 0x0082, 0x06, 0x0E, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041464_ovl7, 0x00A0, 0x00AF, 0x001E, 0x0082, 0x06, 0x0F, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_8004147C_ovl7, 0x006C, 0x0018, 0x001E, 0x005A, 0x06, 0x11, 0xFB, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80041494_ovl7, 0x006C, 0x0034, 0x001E, 0x005A, 0x06, 0x11, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_8004149C_ovl7, 0x006C, 0x0050, 0x001E, 0x005A, 0x06, 0x11, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_800414B8_ovl7, 0x00A0, 0x00AF, 0x001E, 0x0082, 0x07, 0x01, 0xFC, 0x00, 0x02, 0x01, 0x0000},
+    {&D_800414F0_ovl7, 0x00A0, 0x00AF, 0x0082, 0x00E6, 0x07, 0x01, 0xFC, 0x00, 0x02, 0x01, 0x0000},
+    {&D_80041534_ovl7, 0x00A0, 0x00AF, 0x001E, 0x00D2, 0x07, 0x02, 0xFC, 0x00, 0x02, 0x01, 0x0000},
+    {&D_80041588_ovl7, 0x00A0, 0x008F, 0x001E, 0x0096, 0x07, 0x03, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_800415A4_ovl7, 0x00A0, 0x00AF, 0x001E, 0x005A, 0x07, 0x04, 0xFC, 0x00, 0x02, 0x01, 0x0000},
+    {&D_800415C8_ovl7, 0x00A0, 0x00AF, 0x005A, 0x00B4, 0x07, 0x04, 0xFC, 0x00, 0x02, 0x01, 0x0000},
+    {&D_80041610_ovl7, 0x00A0, 0x008F, 0x001E, 0x0064, 0x07, 0x08, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041634_ovl7, 0x00A0, 0x008F, 0x0064, 0x00A0, 0x07, 0x08, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041650_ovl7, 0x00A0, 0x008F, 0x00A0, 0x010E, 0x07, 0x08, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041670_ovl7, 0x00A0, 0x008F, 0x001E, 0x0096, 0x07, 0x09, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041690_ovl7, 0x00A0, 0x008F, 0x0096, 0x0118, 0x07, 0x09, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_800416AC_ovl7, 0x006C, 0x0018, 0x001E, 0x005A, 0x07, 0x0A, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_800416C4_ovl7, 0x006C, 0x0034, 0x001E, 0x005A, 0x07, 0x0A, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_800416D4_ovl7, 0x006C, 0x0050, 0x001E, 0x005A, 0x07, 0x0A, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80041708_ovl7, 0x00A0, 0x008F, 0x001E, 0x00B4, 0x07, 0x63, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041720_ovl7, 0x00A0, 0x008F, 0x012C, 0x01A4, 0x07, 0x63, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_80041740_ovl7, 0x00A0, 0x00AF, 0x001E, 0x0082, 0x08, 0x01, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_8004175C_ovl7, 0x00A0, 0x00AF, 0x001E, 0x00A0, 0x08, 0x05, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041774_ovl7, 0x00A0, 0x008F, 0x001E, 0x0078, 0x08, 0x07, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041798_ovl7, 0x00A0, 0x008F, 0x0078, 0x00D2, 0x08, 0x07, 0xFC, 0x00, 0x02, 0x01, 0x0000},
+    {&D_800417DC_ovl7, 0x00A0, 0x008F, 0x00D2, 0x012C, 0x08, 0x07, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_800417FC_ovl7, 0x00A0, 0x008F, 0x003C, 0x00A0, 0x08, 0x08, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_80041820_ovl7, 0x00A0, 0x00AF, 0x001E, 0x00B4, 0x08, 0x0A, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041840_ovl7, 0x00A0, 0x008F, 0x003C, 0x0096, 0x08, 0x0C, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_80041860_ovl7, 0x00A0, 0x008F, 0x0096, 0x00FA, 0x08, 0x0C, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_80041880_ovl7, 0x00A0, 0x00AF, 0x001E, 0x0096, 0x08, 0x12, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_800418D0_ovl7, 0x00A0, 0x008F, 0x0005, 0x0064, 0x08, 0x13, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_800418F8_ovl7, 0x006C, 0x0018, 0x001E, 0x005A, 0x08, 0x14, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80041910_ovl7, 0x006C, 0x0034, 0x001E, 0x005A, 0x08, 0x14, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80041918_ovl7, 0x006C, 0x0050, 0x001E, 0x005A, 0x08, 0x14, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_8004193C_ovl7, 0x00A0, 0x00AF, 0x003C, 0x00DC, 0x09, 0x01, 0xFC, 0x00, 0x02, 0x01, 0x0000},
+    {&D_80041978_ovl7, 0x00A0, 0x00AF, 0x001E, 0x00BE, 0x09, 0x08, 0xFC, 0x00, 0x02, 0x01, 0x0000},
+    {&D_80041998_ovl7, 0x006C, 0x0018, 0x001E, 0x005A, 0x09, 0x0D, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_800419AC_ovl7, 0x006C, 0x0034, 0x001E, 0x005A, 0x09, 0x0D, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_800419B4_ovl7, 0x006C, 0x0050, 0x001E, 0x005A, 0x09, 0x0D, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_800419E4_ovl7, 0x00A0, 0x008F, 0x001E, 0x0082, 0x0A, 0x01, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041A04_ovl7, 0x00A0, 0x008F, 0x0082, 0x00E6, 0x0A, 0x01, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041A20_ovl7, 0x00A0, 0x008F, 0x00E6, 0x0154, 0x0A, 0x01, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041A3C_ovl7, 0x00A0, 0x008F, 0x001E, 0x0078, 0x0A, 0x03, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041A58_ovl7, 0x00A0, 0x008F, 0x0078, 0x00D2, 0x0A, 0x03, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041A78_ovl7, 0x00A0, 0x008F, 0x00D2, 0x0118, 0x0A, 0x03, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041A94_ovl7, 0x00A0, 0x008F, 0x001E, 0x00A0, 0x0A, 0x04, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041AAC_ovl7, 0x00A0, 0x008F, 0x001E, 0x0078, 0x0A, 0x05, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041AD0_ovl7, 0x00A0, 0x008F, 0x0078, 0x00DC, 0x0A, 0x05, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041AE4_ovl7, 0x00A0, 0x008F, 0x001E, 0x006E, 0x0A, 0x06, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041B0C_ovl7, 0x00A0, 0x008F, 0x006E, 0x00BE, 0x0A, 0x06, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041B20_ovl7, 0x00A0, 0x008F, 0x001E, 0x005A, 0x0A, 0x07, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041B2C_ovl7, 0x00A0, 0x008F, 0x001E, 0x0064, 0x0A, 0x08, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041B4C_ovl7, 0x00A0, 0x008F, 0x0064, 0x00A0, 0x0A, 0x08, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041B68_ovl7, 0x00A0, 0x008F, 0x001E, 0x0050, 0x0A, 0x09, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_80041B80_ovl7, 0x00A0, 0x008F, 0x0050, 0x00A0, 0x0A, 0x09, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_80041BA0_ovl7, 0x00A0, 0x00AF, 0x001E, 0x00A0, 0x0A, 0x0B, 0xFC, 0x00, 0x02, 0x01, 0x0000},
+    {&D_80041BC8_ovl7, 0x006C, 0x0018, 0x001E, 0x005A, 0x0A, 0x0D, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80041BDC_ovl7, 0x006C, 0x0034, 0x001E, 0x005A, 0x0A, 0x0D, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80041BE4_ovl7, 0x006C, 0x0050, 0x001E, 0x005A, 0x0A, 0x0D, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80041C18_ovl7, 0x00A0, 0x008F, 0x001E, 0x0082, 0x0B, 0x01, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041C38_ovl7, 0x00A0, 0x008F, 0x0082, 0x00E6, 0x0B, 0x01, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041C58_ovl7, 0x00A0, 0x008F, 0x00E6, 0x014A, 0x0B, 0x01, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041C78_ovl7, 0x00A0, 0x008F, 0x001E, 0x0096, 0x0B, 0x02, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041C98_ovl7, 0x00A0, 0x008F, 0x0168, 0x01F4, 0x0B, 0x02, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_80041CAC_ovl7, 0x00A0, 0x008F, 0x003C, 0x00BE, 0x0B, 0x03, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_80041CD0_ovl7, 0x00A0, 0x008F, 0x001E, 0x0078, 0x0B, 0x06, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041CF4_ovl7, 0x00A0, 0x008F, 0x0078, 0x00D2, 0x0B, 0x06, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041D20_ovl7, 0x00A0, 0x008F, 0x00D2, 0x012C, 0x0B, 0x06, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041D3C_ovl7, 0x00A0, 0x008F, 0x001E, 0x0064, 0x0B, 0x07, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041D4C_ovl7, 0x00A0, 0x008F, 0x001E, 0x00D2, 0x0B, 0x08, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041D6C_ovl7, 0x00A0, 0x008F, 0x001E, 0x0082, 0x0B, 0x09, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041D88_ovl7, 0x00A0, 0x008F, 0x001E, 0x0064, 0x0B, 0x0C, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041DAC_ovl7, 0x00A0, 0x008F, 0x001E, 0x0082, 0x0B, 0x0D, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041DC8_ovl7, 0x00A0, 0x00AF, 0x001E, 0x005A, 0x0B, 0x0E, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041DF8_ovl7, 0x00A0, 0x00AF, 0x005A, 0x00A0, 0x0B, 0x0E, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041E10_ovl7, 0x006C, 0x0018, 0x001E, 0x005A, 0x0B, 0x0F, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80041E24_ovl7, 0x006C, 0x0034, 0x001E, 0x005A, 0x0B, 0x0F, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80041E2C_ovl7, 0x006C, 0x0050, 0x001E, 0x005A, 0x0B, 0x0F, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80041E60_ovl7, 0x00A0, 0x008F, 0x003C, 0x00DC, 0x0C, 0x01, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_80041E78_ovl7, 0x00A0, 0x008F, 0x001E, 0x00BE, 0x0C, 0x02, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041E94_ovl7, 0x00A0, 0x008F, 0x00BE, 0x0154, 0x0C, 0x02, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041EBC_ovl7, 0x00A0, 0x008F, 0x0154, 0x01EA, 0x0C, 0x02, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041EE0_ovl7, 0x00A0, 0x008F, 0x003C, 0x00BE, 0x0C, 0x03, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_80041EFC_ovl7, 0x00A0, 0x008F, 0x003C, 0x00B4, 0x0C, 0x04, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_80041F68_ovl7, 0x00A0, 0x008F, 0x003C, 0x00DC, 0x0C, 0x09, 0xFC, 0x00, 0x02, 0x02, 0x0000},
+    {&D_80041FB0_ovl7, 0x00A0, 0x008F, 0x003C, 0x008C, 0x0C, 0x0B, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041FD0_ovl7, 0x00A0, 0x008F, 0x008C, 0x0120, 0x0C, 0x0B, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041FE4_ovl7, 0x00A0, 0x008F, 0x0120, 0x0190, 0x0C, 0x0B, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80042004_ovl7, 0x00A0, 0x008F, 0x0190, 0x01EA, 0x0C, 0x0B, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_8004201C_ovl7, 0x006C, 0x0018, 0x001E, 0x005A, 0x0C, 0x1C, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80042028_ovl7, 0x006C, 0x0034, 0x001E, 0x005A, 0x0C, 0x1C, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80042030_ovl7, 0x006C, 0x0050, 0x001E, 0x005A, 0x0C, 0x1C, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80042058_ovl7, 0x00A0, 0x008F, 0x003C, 0x0172, 0x0D, 0x01, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_80042074_ovl7, 0x00A0, 0x008F, 0x0096, 0x0172, 0x0D, 0x02, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_800420C0_ovl7, 0x00A0, 0x008F, 0x001E, 0x0046, 0x0D, 0x09, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_800420D8_ovl7, 0x00A0, 0x008F, 0x0046, 0x0136, 0x0D, 0x09, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_800420F0_ovl7, 0x00A0, 0x008F, 0x001E, 0x0082, 0x0D, 0x0D, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_80042108_ovl7, 0x006C, 0x0018, 0x001E, 0x005A, 0x0D, 0x0E, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80042118_ovl7, 0x006C, 0x0034, 0x001E, 0x005A, 0x0D, 0x0E, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80042120_ovl7, 0x006C, 0x0050, 0x001E, 0x005A, 0x0D, 0x0E, 0xFC, 0x00, 0x02, 0x03, 0x0000},
+    {&D_80042140_ovl7, 0x00A0, 0x00AF, 0x0014, 0x00DC, 0x0E, 0x02, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80042188_ovl7, 0x00A0, 0x008F, 0x001E, 0x00B4, 0x0E, 0x07, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_800421B0_ovl7, 0x00A0, 0x008F, 0x001E, 0x00B4, 0x0E, 0x0C, 0xFC, 0x00, 0x03, 0x02, 0x0000},
+    {&D_80042200_ovl7, 0x00A0, 0x00AF, 0x001E, 0x0082, 0x0E, 0x0F, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_8004220C_ovl7, 0x00A0, 0x00AF, 0x001E, 0x0082, 0x0E, 0x10, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    {&D_80041F18_ovl7, 0x00A0, 0x00AF, 0x001E, 0x0384, 0x0C, 0x06, 0xFC, 0x00, 0x03, 0x01, 0x0000},
+    { (void *)0, 0x00A0, 0x008F, 0x001E, 0x005A, 0x0E, 0x00, 0xFC, 0x00, 0x02, 0x02, 0x0000},
+};
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80025E20_ovl7""\n" "\t.type ""func_80025E20_ovl7"", @function\n" "\t.ent\t""func_80025E20_ovl7""\n" "func_80025E20_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80025E20_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80025E20_ovl7""\n" ".end""func_80025E20_ovl7"":\n" "\t.size\t""func_80025E20_ovl7"",.end""func_80025E20_ovl7""-""func_80025E20_ovl7" "\n" "\t.globl\t" "func_80025E20_ovl7" ".NON_MATCHING\n" "\t" "func_80025E20_ovl7" ".NON_MATCHING" " = " "func_80025E20_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80026284_ovl7""\n" "\t.type ""func_80026284_ovl7"", @function\n" "\t.ent\t""func_80026284_ovl7""\n" "func_80026284_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80026284_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80026284_ovl7""\n" ".end""func_80026284_ovl7"":\n" "\t.size\t""func_80026284_ovl7"",.end""func_80026284_ovl7""-""func_80026284_ovl7" "\n" "\t.globl\t" "func_80026284_ovl7" ".NON_MATCHING\n" "\t" "func_80026284_ovl7" ".NON_MATCHING" " = " "func_80026284_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80026560_ovl7""\n" "\t.type ""func_80026560_ovl7"", @function\n" "\t.ent\t""func_80026560_ovl7""\n" "func_80026560_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80026560_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80026560_ovl7""\n" ".end""func_80026560_ovl7"":\n" "\t.size\t""func_80026560_ovl7"",.end""func_80026560_ovl7""-""func_80026560_ovl7" "\n" "\t.globl\t" "func_80026560_ovl7" ".NON_MATCHING\n" "\t" "func_80026560_ovl7" ".NON_MATCHING" " = " "func_80026560_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80026664_ovl7""\n" "\t.type ""func_80026664_ovl7"", @function\n" "\t.ent\t""func_80026664_ovl7""\n" "func_80026664_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80026664_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80026664_ovl7""\n" ".end""func_80026664_ovl7"":\n" "\t.size\t""func_80026664_ovl7"",.end""func_80026664_ovl7""-""func_80026664_ovl7" "\n" "\t.globl\t" "func_80026664_ovl7" ".NON_MATCHING\n" "\t" "func_80026664_ovl7" ".NON_MATCHING" " = " "func_80026664_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80026768_ovl7""\n" "\t.type ""func_80026768_ovl7"", @function\n" "\t.ent\t""func_80026768_ovl7""\n" "func_80026768_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80026768_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80026768_ovl7""\n" ".end""func_80026768_ovl7"":\n" "\t.size\t""func_80026768_ovl7"",.end""func_80026768_ovl7""-""func_80026768_ovl7" "\n" "\t.globl\t" "func_80026768_ovl7" ".NON_MATCHING\n" "\t" "func_80026768_ovl7" ".NON_MATCHING" " = " "func_80026768_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_800267DC_ovl7""\n" "\t.type ""func_800267DC_ovl7"", @function\n" "\t.ent\t""func_800267DC_ovl7""\n" "func_800267DC_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_800267DC_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_800267DC_ovl7""\n" ".end""func_800267DC_ovl7"":\n" "\t.size\t""func_800267DC_ovl7"",.end""func_800267DC_ovl7""-""func_800267DC_ovl7" "\n" "\t.globl\t" "func_800267DC_ovl7" ".NON_MATCHING\n" "\t" "func_800267DC_ovl7" ".NON_MATCHING" " = " "func_800267DC_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_8002691C_ovl7""\n" "\t.type ""func_8002691C_ovl7"", @function\n" "\t.ent\t""func_8002691C_ovl7""\n" "func_8002691C_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_8002691C_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_8002691C_ovl7""\n" ".end""func_8002691C_ovl7"":\n" "\t.size\t""func_8002691C_ovl7"",.end""func_8002691C_ovl7""-""func_8002691C_ovl7" "\n" "\t.globl\t" "func_8002691C_ovl7" ".NON_MATCHING\n" "\t" "func_8002691C_ovl7" ".NON_MATCHING" " = " "func_8002691C_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80026934_ovl7""\n" "\t.type ""func_80026934_ovl7"", @function\n" "\t.ent\t""func_80026934_ovl7""\n" "func_80026934_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80026934_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80026934_ovl7""\n" ".end""func_80026934_ovl7"":\n" "\t.size\t""func_80026934_ovl7"",.end""func_80026934_ovl7""-""func_80026934_ovl7" "\n" "\t.globl\t" "func_80026934_ovl7" ".NON_MATCHING\n" "\t" "func_80026934_ovl7" ".NON_MATCHING" " = " "func_80026934_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80026954_ovl7""\n" "\t.type ""func_80026954_ovl7"", @function\n" "\t.ent\t""func_80026954_ovl7""\n" "func_80026954_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80026954_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80026954_ovl7""\n" ".end""func_80026954_ovl7"":\n" "\t.size\t""func_80026954_ovl7"",.end""func_80026954_ovl7""-""func_80026954_ovl7" "\n" "\t.globl\t" "func_80026954_ovl7" ".NON_MATCHING\n" "\t" "func_80026954_ovl7" ".NON_MATCHING" " = " "func_80026954_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80026AA4_ovl7""\n" "\t.type ""func_80026AA4_ovl7"", @function\n" "\t.ent\t""func_80026AA4_ovl7""\n" "func_80026AA4_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80026AA4_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80026AA4_ovl7""\n" ".end""func_80026AA4_ovl7"":\n" "\t.size\t""func_80026AA4_ovl7"",.end""func_80026AA4_ovl7""-""func_80026AA4_ovl7" "\n" "\t.globl\t" "func_80026AA4_ovl7" ".NON_MATCHING\n" "\t" "func_80026AA4_ovl7" ".NON_MATCHING" " = " "func_80026AA4_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80026CA8_ovl7""\n" "\t.type ""func_80026CA8_ovl7"", @function\n" "\t.ent\t""func_80026CA8_ovl7""\n" "func_80026CA8_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80026CA8_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80026CA8_ovl7""\n" ".end""func_80026CA8_ovl7"":\n" "\t.size\t""func_80026CA8_ovl7"",.end""func_80026CA8_ovl7""-""func_80026CA8_ovl7" "\n" "\t.globl\t" "func_80026CA8_ovl7" ".NON_MATCHING\n" "\t" "func_80026CA8_ovl7" ".NON_MATCHING" " = " "func_80026CA8_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80026D30_ovl7""\n" "\t.type ""func_80026D30_ovl7"", @function\n" "\t.ent\t""func_80026D30_ovl7""\n" "func_80026D30_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80026D30_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80026D30_ovl7""\n" ".end""func_80026D30_ovl7"":\n" "\t.size\t""func_80026D30_ovl7"",.end""func_80026D30_ovl7""-""func_80026D30_ovl7" "\n" "\t.globl\t" "func_80026D30_ovl7" ".NON_MATCHING\n" "\t" "func_80026D30_ovl7" ".NON_MATCHING" " = " "func_80026D30_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80026F88_ovl7""\n" "\t.type ""func_80026F88_ovl7"", @function\n" "\t.ent\t""func_80026F88_ovl7""\n" "func_80026F88_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80026F88_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80026F88_ovl7""\n" ".end""func_80026F88_ovl7"":\n" "\t.size\t""func_80026F88_ovl7"",.end""func_80026F88_ovl7""-""func_80026F88_ovl7" "\n" "\t.globl\t" "func_80026F88_ovl7" ".NON_MATCHING\n" "\t" "func_80026F88_ovl7" ".NON_MATCHING" " = " "func_80026F88_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80027018_ovl7""\n" "\t.type ""func_80027018_ovl7"", @function\n" "\t.ent\t""func_80027018_ovl7""\n" "func_80027018_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80027018_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80027018_ovl7""\n" ".end""func_80027018_ovl7"":\n" "\t.size\t""func_80027018_ovl7"",.end""func_80027018_ovl7""-""func_80027018_ovl7" "\n" "\t.globl\t" "func_80027018_ovl7" ".NON_MATCHING\n" "\t" "func_80027018_ovl7" ".NON_MATCHING" " = " "func_80027018_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_800270A4_ovl7""\n" "\t.type ""func_800270A4_ovl7"", @function\n" "\t.ent\t""func_800270A4_ovl7""\n" "func_800270A4_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_800270A4_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_800270A4_ovl7""\n" ".end""func_800270A4_ovl7"":\n" "\t.size\t""func_800270A4_ovl7"",.end""func_800270A4_ovl7""-""func_800270A4_ovl7" "\n" "\t.globl\t" "func_800270A4_ovl7" ".NON_MATCHING\n" "\t" "func_800270A4_ovl7" ".NON_MATCHING" " = " "func_800270A4_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_800273F4_ovl7""\n" "\t.type ""func_800273F4_ovl7"", @function\n" "\t.ent\t""func_800273F4_ovl7""\n" "func_800273F4_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_800273F4_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_800273F4_ovl7""\n" ".end""func_800273F4_ovl7"":\n" "\t.size\t""func_800273F4_ovl7"",.end""func_800273F4_ovl7""-""func_800273F4_ovl7" "\n" "\t.globl\t" "func_800273F4_ovl7" ".NON_MATCHING\n" "\t" "func_800273F4_ovl7" ".NON_MATCHING" " = " "func_800273F4_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80027510_ovl7""\n" "\t.type ""func_80027510_ovl7"", @function\n" "\t.ent\t""func_80027510_ovl7""\n" "func_80027510_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80027510_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80027510_ovl7""\n" ".end""func_80027510_ovl7"":\n" "\t.size\t""func_80027510_ovl7"",.end""func_80027510_ovl7""-""func_80027510_ovl7" "\n" "\t.globl\t" "func_80027510_ovl7" ".NON_MATCHING\n" "\t" "func_80027510_ovl7" ".NON_MATCHING" " = " "func_80027510_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80027610_ovl7""\n" "\t.type ""func_80027610_ovl7"", @function\n" "\t.ent\t""func_80027610_ovl7""\n" "func_80027610_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80027610_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80027610_ovl7""\n" ".end""func_80027610_ovl7"":\n" "\t.size\t""func_80027610_ovl7"",.end""func_80027610_ovl7""-""func_80027610_ovl7" "\n" "\t.globl\t" "func_80027610_ovl7" ".NON_MATCHING\n" "\t" "func_80027610_ovl7" ".NON_MATCHING" " = " "func_80027610_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80027B90_ovl7""\n" "\t.type ""func_80027B90_ovl7"", @function\n" "\t.ent\t""func_80027B90_ovl7""\n" "func_80027B90_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80027B90_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80027B90_ovl7""\n" ".end""func_80027B90_ovl7"":\n" "\t.size\t""func_80027B90_ovl7"",.end""func_80027B90_ovl7""-""func_80027B90_ovl7" "\n" "\t.globl\t" "func_80027B90_ovl7" ".NON_MATCHING\n" "\t" "func_80027B90_ovl7" ".NON_MATCHING" " = " "func_80027B90_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80027FA8_ovl7""\n" "\t.type ""func_80027FA8_ovl7"", @function\n" "\t.ent\t""func_80027FA8_ovl7""\n" "func_80027FA8_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80027FA8_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80027FA8_ovl7""\n" ".end""func_80027FA8_ovl7"":\n" "\t.size\t""func_80027FA8_ovl7"",.end""func_80027FA8_ovl7""-""func_80027FA8_ovl7" "\n" "\t.globl\t" "func_80027FA8_ovl7" ".NON_MATCHING\n" "\t" "func_80027FA8_ovl7" ".NON_MATCHING" " = " "func_80027FA8_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80028024_ovl7""\n" "\t.type ""func_80028024_ovl7"", @function\n" "\t.ent\t""func_80028024_ovl7""\n" "func_80028024_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80028024_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80028024_ovl7""\n" ".end""func_80028024_ovl7"":\n" "\t.size\t""func_80028024_ovl7"",.end""func_80028024_ovl7""-""func_80028024_ovl7" "\n" "\t.globl\t" "func_80028024_ovl7" ".NON_MATCHING\n" "\t" "func_80028024_ovl7" ".NON_MATCHING" " = " "func_80028024_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80028084_ovl7""\n" "\t.type ""func_80028084_ovl7"", @function\n" "\t.ent\t""func_80028084_ovl7""\n" "func_80028084_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80028084_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80028084_ovl7""\n" ".end""func_80028084_ovl7"":\n" "\t.size\t""func_80028084_ovl7"",.end""func_80028084_ovl7""-""func_80028084_ovl7" "\n" "\t.globl\t" "func_80028084_ovl7" ".NON_MATCHING\n" "\t" "func_80028084_ovl7" ".NON_MATCHING" " = " "func_80028084_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_800287D0_ovl7""\n" "\t.type ""func_800287D0_ovl7"", @function\n" "\t.ent\t""func_800287D0_ovl7""\n" "func_800287D0_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_800287D0_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_800287D0_ovl7""\n" ".end""func_800287D0_ovl7"":\n" "\t.size\t""func_800287D0_ovl7"",.end""func_800287D0_ovl7""-""func_800287D0_ovl7" "\n" "\t.globl\t" "func_800287D0_ovl7" ".NON_MATCHING\n" "\t" "func_800287D0_ovl7" ".NON_MATCHING" " = " "func_800287D0_ovl7" "\n" );
+void func_80028AFC_ovl7(void) {
+}
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80028B04_ovl7""\n" "\t.type ""func_80028B04_ovl7"", @function\n" "\t.ent\t""func_80028B04_ovl7""\n" "func_80028B04_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80028B04_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80028B04_ovl7""\n" ".end""func_80028B04_ovl7"":\n" "\t.size\t""func_80028B04_ovl7"",.end""func_80028B04_ovl7""-""func_80028B04_ovl7" "\n" "\t.globl\t" "func_80028B04_ovl7" ".NON_MATCHING\n" "\t" "func_80028B04_ovl7" ".NON_MATCHING" " = " "func_80028B04_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80028C40_ovl7""\n" "\t.type ""func_80028C40_ovl7"", @function\n" "\t.ent\t""func_80028C40_ovl7""\n" "func_80028C40_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80028C40_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80028C40_ovl7""\n" ".end""func_80028C40_ovl7"":\n" "\t.size\t""func_80028C40_ovl7"",.end""func_80028C40_ovl7""-""func_80028C40_ovl7" "\n" "\t.globl\t" "func_80028C40_ovl7" ".NON_MATCHING\n" "\t" "func_80028C40_ovl7" ".NON_MATCHING" " = " "func_80028C40_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80028CE0_ovl7""\n" "\t.type ""func_80028CE0_ovl7"", @function\n" "\t.ent\t""func_80028CE0_ovl7""\n" "func_80028CE0_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80028CE0_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80028CE0_ovl7""\n" ".end""func_80028CE0_ovl7"":\n" "\t.size\t""func_80028CE0_ovl7"",.end""func_80028CE0_ovl7""-""func_80028CE0_ovl7" "\n" "\t.globl\t" "func_80028CE0_ovl7" ".NON_MATCHING\n" "\t" "func_80028CE0_ovl7" ".NON_MATCHING" " = " "func_80028CE0_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80028D88_ovl7""\n" "\t.type ""func_80028D88_ovl7"", @function\n" "\t.ent\t""func_80028D88_ovl7""\n" "func_80028D88_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80028D88_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80028D88_ovl7""\n" ".end""func_80028D88_ovl7"":\n" "\t.size\t""func_80028D88_ovl7"",.end""func_80028D88_ovl7""-""func_80028D88_ovl7" "\n" "\t.globl\t" "func_80028D88_ovl7" ".NON_MATCHING\n" "\t" "func_80028D88_ovl7" ".NON_MATCHING" " = " "func_80028D88_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80028DC8_ovl7""\n" "\t.type ""func_80028DC8_ovl7"", @function\n" "\t.ent\t""func_80028DC8_ovl7""\n" "func_80028DC8_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80028DC8_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80028DC8_ovl7""\n" ".end""func_80028DC8_ovl7"":\n" "\t.size\t""func_80028DC8_ovl7"",.end""func_80028DC8_ovl7""-""func_80028DC8_ovl7" "\n" "\t.globl\t" "func_80028DC8_ovl7" ".NON_MATCHING\n" "\t" "func_80028DC8_ovl7" ".NON_MATCHING" " = " "func_80028DC8_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80028EBC_ovl7""\n" "\t.type ""func_80028EBC_ovl7"", @function\n" "\t.ent\t""func_80028EBC_ovl7""\n" "func_80028EBC_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80028EBC_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80028EBC_ovl7""\n" ".end""func_80028EBC_ovl7"":\n" "\t.size\t""func_80028EBC_ovl7"",.end""func_80028EBC_ovl7""-""func_80028EBC_ovl7" "\n" "\t.globl\t" "func_80028EBC_ovl7" ".NON_MATCHING\n" "\t" "func_80028EBC_ovl7" ".NON_MATCHING" " = " "func_80028EBC_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80029034_ovl7""\n" "\t.type ""func_80029034_ovl7"", @function\n" "\t.ent\t""func_80029034_ovl7""\n" "func_80029034_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80029034_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80029034_ovl7""\n" ".end""func_80029034_ovl7"":\n" "\t.size\t""func_80029034_ovl7"",.end""func_80029034_ovl7""-""func_80029034_ovl7" "\n" "\t.globl\t" "func_80029034_ovl7" ".NON_MATCHING\n" "\t" "func_80029034_ovl7" ".NON_MATCHING" " = " "func_80029034_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80029170_ovl7""\n" "\t.type ""func_80029170_ovl7"", @function\n" "\t.ent\t""func_80029170_ovl7""\n" "func_80029170_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80029170_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80029170_ovl7""\n" ".end""func_80029170_ovl7"":\n" "\t.size\t""func_80029170_ovl7"",.end""func_80029170_ovl7""-""func_80029170_ovl7" "\n" "\t.globl\t" "func_80029170_ovl7" ".NON_MATCHING\n" "\t" "func_80029170_ovl7" ".NON_MATCHING" " = " "func_80029170_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80029314_ovl7""\n" "\t.type ""func_80029314_ovl7"", @function\n" "\t.ent\t""func_80029314_ovl7""\n" "func_80029314_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80029314_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80029314_ovl7""\n" ".end""func_80029314_ovl7"":\n" "\t.size\t""func_80029314_ovl7"",.end""func_80029314_ovl7""-""func_80029314_ovl7" "\n" "\t.globl\t" "func_80029314_ovl7" ".NON_MATCHING\n" "\t" "func_80029314_ovl7" ".NON_MATCHING" " = " "func_80029314_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_800294A4_ovl7""\n" "\t.type ""func_800294A4_ovl7"", @function\n" "\t.ent\t""func_800294A4_ovl7""\n" "func_800294A4_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_800294A4_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_800294A4_ovl7""\n" ".end""func_800294A4_ovl7"":\n" "\t.size\t""func_800294A4_ovl7"",.end""func_800294A4_ovl7""-""func_800294A4_ovl7" "\n" "\t.globl\t" "func_800294A4_ovl7" ".NON_MATCHING\n" "\t" "func_800294A4_ovl7" ".NON_MATCHING" " = " "func_800294A4_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80029698_ovl7""\n" "\t.type ""func_80029698_ovl7"", @function\n" "\t.ent\t""func_80029698_ovl7""\n" "func_80029698_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80029698_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80029698_ovl7""\n" ".end""func_80029698_ovl7"":\n" "\t.size\t""func_80029698_ovl7"",.end""func_80029698_ovl7""-""func_80029698_ovl7" "\n" "\t.globl\t" "func_80029698_ovl7" ".NON_MATCHING\n" "\t" "func_80029698_ovl7" ".NON_MATCHING" " = " "func_80029698_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80029B50_ovl7""\n" "\t.type ""func_80029B50_ovl7"", @function\n" "\t.ent\t""func_80029B50_ovl7""\n" "func_80029B50_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80029B50_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80029B50_ovl7""\n" ".end""func_80029B50_ovl7"":\n" "\t.size\t""func_80029B50_ovl7"",.end""func_80029B50_ovl7""-""func_80029B50_ovl7" "\n" "\t.globl\t" "func_80029B50_ovl7" ".NON_MATCHING\n" "\t" "func_80029B50_ovl7" ".NON_MATCHING" " = " "func_80029B50_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80029D34_ovl7""\n" "\t.type ""func_80029D34_ovl7"", @function\n" "\t.ent\t""func_80029D34_ovl7""\n" "func_80029D34_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80029D34_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80029D34_ovl7""\n" ".end""func_80029D34_ovl7"":\n" "\t.size\t""func_80029D34_ovl7"",.end""func_80029D34_ovl7""-""func_80029D34_ovl7" "\n" "\t.globl\t" "func_80029D34_ovl7" ".NON_MATCHING\n" "\t" "func_80029D34_ovl7" ".NON_MATCHING" " = " "func_80029D34_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_80029EBC_ovl7""\n" "\t.type ""func_80029EBC_ovl7"", @function\n" "\t.ent\t""func_80029EBC_ovl7""\n" "func_80029EBC_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_80029EBC_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_80029EBC_ovl7""\n" ".end""func_80029EBC_ovl7"":\n" "\t.size\t""func_80029EBC_ovl7"",.end""func_80029EBC_ovl7""-""func_80029EBC_ovl7" "\n" "\t.globl\t" "func_80029EBC_ovl7" ".NON_MATCHING\n" "\t" "func_80029EBC_ovl7" ".NON_MATCHING" " = " "func_80029EBC_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_8002A0F4_ovl7""\n" "\t.type ""func_8002A0F4_ovl7"", @function\n" "\t.ent\t""func_8002A0F4_ovl7""\n" "func_8002A0F4_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_8002A0F4_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_8002A0F4_ovl7""\n" ".end""func_8002A0F4_ovl7"":\n" "\t.size\t""func_8002A0F4_ovl7"",.end""func_8002A0F4_ovl7""-""func_8002A0F4_ovl7" "\n" "\t.globl\t" "func_8002A0F4_ovl7" ".NON_MATCHING\n" "\t" "func_8002A0F4_ovl7" ".NON_MATCHING" " = " "func_8002A0F4_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_8002A1C0_ovl7""\n" "\t.type ""func_8002A1C0_ovl7"", @function\n" "\t.ent\t""func_8002A1C0_ovl7""\n" "func_8002A1C0_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_8002A1C0_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_8002A1C0_ovl7""\n" ".end""func_8002A1C0_ovl7"":\n" "\t.size\t""func_8002A1C0_ovl7"",.end""func_8002A1C0_ovl7""-""func_8002A1C0_ovl7" "\n" "\t.globl\t" "func_8002A1C0_ovl7" ".NON_MATCHING\n" "\t" "func_8002A1C0_ovl7" ".NON_MATCHING" " = " "func_8002A1C0_ovl7" "\n" );
+__asm__( ".section .text\n" "\t.set noat\n" "\t.set noreorder\n" "\t.align\t2\n" "\t.globl\t""func_8002A2F8_ovl7""\n" "\t.type ""func_8002A2F8_ovl7"", @function\n" "\t.ent\t""func_8002A2F8_ovl7""\n" "func_8002A2F8_ovl7" ":\n" "\t.include \"""asm/nonmatchings/ovl7/code_175860""/""func_8002A2F8_ovl7"".s\"\n" "\t.set reorder\n" "\t.set at\n" "\t.end\t""func_8002A2F8_ovl7""\n" ".end""func_8002A2F8_ovl7"":\n" "\t.size\t""func_8002A2F8_ovl7"",.end""func_8002A2F8_ovl7""-""func_8002A2F8_ovl7" "\n" "\t.globl\t" "func_8002A2F8_ovl7" ".NON_MATCHING\n" "\t" "func_8002A2F8_ovl7" ".NON_MATCHING" " = " "func_8002A2F8_ovl7" "\n" );
